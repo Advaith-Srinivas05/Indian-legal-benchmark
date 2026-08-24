@@ -52,7 +52,7 @@ import threading
 import time
 import traceback as traceback_module
 from collections import Counter
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Callable, Iterable, Iterator, Optional
@@ -328,6 +328,33 @@ def skipped_record(document: CorpusDocument, reason: str, *, attempt: int = 1) -
         "processor": f"processing v{__version__}",
         "seconds": 0.0,
     }
+
+
+def timeout_record(
+    document: CorpusDocument, seconds: float, *, attempt: int = 1
+) -> dict:
+    """A document the runner stopped waiting for.
+
+    Recorded as ``FAILED`` — so it stays retryable, as every failure does — with
+    ``error_stage: "timeout"`` so it can be told apart from a PDF that could not
+    be read. The two want different responses: an unreadable PDF is a corpus
+    finding, an overrun is a scheduling one.
+
+    The worker thread is **abandoned, not killed**; Python cannot kill a thread.
+    It runs on until it finishes and anything it writes afterwards belongs to a
+    document the journal already calls ``FAILED``, so the next run reprocesses
+    it from scratch. Nothing on disk is left in a state that could verify as
+    complete.
+    """
+    result = ProcessedDocument(document=document)
+    result.error_type = "DocumentTimeout"
+    result.error_message = (
+        f"still running after {seconds:.0f}s and was abandoned so the run could "
+        "continue. Retry it on its own, or raise --document-timeout."
+    )
+    result.seconds = seconds
+    return result_record(
+        document, result, "FAILED", error_stage="timeout", attempt=attempt)
 
 
 def result_record(
@@ -665,6 +692,7 @@ class RunStats:
     quarantined: int = 0
     failed: int = 0
     skipped: int = 0
+    timed_out: int = 0
     pages: int = 0
     pages_ocr: int = 0
     documents_pending_ocr: int = 0
@@ -947,6 +975,7 @@ def build_report(
             "successful_with_ocr": stats.successful_with_ocr,
             "quarantined": stats.quarantined,
             "failed": stats.failed,
+            "timed_out": stats.timed_out,
             "skipped": stats.skipped,
             "already_complete": len(plan.already_complete) if plan else None,
             "held_back_failed": len(plan.held_back) if plan else None,
@@ -1187,6 +1216,8 @@ def execute(
     on_progress: Optional[Callable[[RunStats], None]] = None,
     stop: Optional[threading.Event] = None,
     min_headroom_bytes: int = config.RUN_MIN_HEADROOM_BYTES,
+    document_timeout: Optional[float] = config.RUN_DOCUMENT_TIMEOUT_SECONDS,
+    poll_seconds: float = config.RUN_POLL_SECONDS,
 ) -> RunStats:
     """Process every document in *plan*, journalling each outcome as it lands.
 
@@ -1195,10 +1226,23 @@ def execute(
 
     One thread claims one document. The journal is the only shared writer and it
     serialises its own appends, so two workers can never interleave a line.
+
+    A document that overruns *document_timeout* is journalled ``FAILED`` and
+    dropped from the wait set, so an unattended run cannot be held up
+    indefinitely by one PDF. Its thread is abandoned rather than killed — see
+    :func:`timeout_record` — which is why the executor is shut down without
+    waiting once that has happened: the report must reach disk whether or not
+    the stray thread ever finishes.
     """
     stop = stop or threading.Event()
     stats = RunStats(total=len(plan.todo) + len(plan.missing_pdf))
     data_dir = Path(data_dir)
+    # A timeout can only be as sharp as the interval that checks it. Left
+    # unclamped, a poll longer than the timeout means the check never runs
+    # before the document finishes and the setting silently does nothing.
+    if document_timeout and document_timeout > 0:
+        poll_seconds = min(poll_seconds, document_timeout / 2)
+    poll_seconds = max(0.01, poll_seconds)
 
     for document in plan.missing_pdf:
         record = skipped_record(document, "pdf_not_on_disk")
@@ -1213,6 +1257,10 @@ def execute(
     claimed: set[str] = set()
     claim_lock = threading.Lock()
     progress_lock = threading.Lock()
+    # When each document's thread actually began. A document still queued has
+    # not started, and timing it out for the queue's sake would abandon work
+    # that never had a chance to run.
+    began: dict[str, float] = {}
 
     def work(item: WorkItem) -> Optional[dict]:
         if stop.is_set():
@@ -1223,32 +1271,61 @@ def execute(
                             item.document.document_id)
                 return None
             claimed.add(item.document.document_id)
+            began[item.document.document_id] = time.monotonic()
         return process_one(
             item.document, data_dir, backend=backend,
             detect_tables=detect_tables, attempt=item.attempt,
         )
 
     executor = ThreadPoolExecutor(max_workers=max(1, workers))
+    abandoned = 0
     try:
         futures = {executor.submit(work, item): item for item in plan.todo}
+        pending = set(futures)
         try:
-            for future in as_completed(futures):
-                record = future.result()
-                if record is None:
+            while pending:
+                finished, pending = wait(
+                    pending, timeout=poll_seconds, return_when=FIRST_COMPLETED)
+                for future in finished:
+                    record = future.result()
+                    if record is None:
+                        continue
+                    journal.append(record)
+                    with progress_lock:
+                        stats.record(record)
+                        done = stats.completed
+                    if progress_every and (done % progress_every == 0):
+                        (on_progress or _log_progress)(stats)
+                    if free_bytes(data_dir) < min_headroom_bytes:
+                        stats.interrupted = True
+                        stop.set()
+                        log.error(
+                            "Less than %s free on the data drive; stopping. Free "
+                            "space and re-run the same command to continue.",
+                            format_bytes(min_headroom_bytes),
+                        )
+                if not document_timeout or document_timeout <= 0:
                     continue
-                journal.append(record)
-                with progress_lock:
-                    stats.record(record)
-                    done = stats.completed
-                if progress_every and (done % progress_every == 0):
-                    (on_progress or _log_progress)(stats)
-                if free_bytes(data_dir) < min_headroom_bytes:
-                    stats.interrupted = True
-                    stop.set()
+                now = time.monotonic()
+                for future in list(pending):
+                    item = futures[future]
+                    with claim_lock:
+                        started_at = began.get(item.document.document_id)
+                    if started_at is None or now - started_at <= document_timeout:
+                        continue
+                    pending.discard(future)
+                    abandoned += 1
+                    record = timeout_record(
+                        item.document, now - started_at, attempt=item.attempt)
+                    journal.append(record)
+                    with progress_lock:
+                        stats.record(record)
+                        stats.timed_out += 1
                     log.error(
-                        "Less than %s free on the data drive; stopping. Free space "
-                        "and re-run the same command to continue.",
-                        format_bytes(min_headroom_bytes),
+                        "%s has run for %s without finishing; recording it FAILED "
+                        "and moving on. Its thread is abandoned, not stopped.",
+                        item.document.document_id,
+                        format_duration(now - started_at),
                     )
         except KeyboardInterrupt:
             stats.interrupted = True
@@ -1257,7 +1334,16 @@ def execute(
                 "Interrupted. Letting running documents finish; %d of %d done. "
                 "Re-run the same command to resume.", stats.completed, stats.total)
     finally:
-        executor.shutdown(wait=True)
+        if abandoned:
+            # Waiting here would hand the run straight back to the document the
+            # timeout existed to escape, and the report would never be written.
+            log.warning(
+                "%d document(s) were abandoned and may still be running; not "
+                "waiting for them. The journal and the report are complete.",
+                abandoned)
+            executor.shutdown(wait=False, cancel_futures=True)
+        else:
+            executor.shutdown(wait=True)
     return stats
 
 
@@ -1284,6 +1370,7 @@ def run(
     progress_every: int = config.RUN_PROGRESS_EVERY,
     min_free_bytes: int = config.RUN_MIN_FREE_BYTES,
     min_headroom_bytes: int = config.RUN_MIN_HEADROOM_BYTES,
+    document_timeout: Optional[float] = config.RUN_DOCUMENT_TIMEOUT_SECONDS,
     backend: Optional[PdfBackend] = None,
     write_report_file: bool = True,
 ) -> dict:
@@ -1321,6 +1408,7 @@ def run(
             plan, data_dir, journal, backend=backend, detect_tables=detect_tables,
             workers=workers, progress_every=progress_every,
             min_headroom_bytes=min_headroom_bytes,
+            document_timeout=document_timeout,
         )
         report = build_report(
             journal, stats, workers=workers, backend_name=backend.name,
@@ -1362,6 +1450,33 @@ def dry_run(
 
 
 # --- CLI ------------------------------------------------------------------------
+
+
+def read_document_ids(path: Path) -> list[str]:
+    """One document id per line. Blank lines and ``#`` comments are ignored.
+
+    Exists because a stratified subset of the corpus cannot be expressed any
+    other way: ``--limit N`` takes the first N documents in ``document_id``
+    order, which is deterministic but alphabetical rather than representative,
+    and a thousand ``--only`` arguments do not fit on a command line. Pair it
+    with :func:`processing.sample.select` to run a proportional pilot.
+    """
+    path = Path(path)
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except OSError as exc:
+        raise ProcessingError(f"Cannot read document ids from {path}: {exc}") from exc
+    ids = []
+    seen = set()
+    for line in lines:
+        entry = line.split("#", 1)[0].strip()
+        if not entry or entry in seen:
+            continue
+        seen.add(entry)
+        ids.append(entry)
+    if not ids:
+        raise ProcessingError(f"{path} lists no document ids.")
+    return ids
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -1411,6 +1526,12 @@ def build_parser() -> argparse.ArgumentParser:
                              "rule, regulation). Repeatable.")
     parser.add_argument("--only", action="append", metavar="DOCUMENT_ID",
                         help="Restrict to one document id. Repeatable.")
+    parser.add_argument("--only-from", type=Path, metavar="FILE",
+                        dest="only_from",
+                        help="Restrict to the document ids listed in FILE, one "
+                             "per line ('#' comments and blank lines ignored). "
+                             "Combines with --only. Use it to run a stratified "
+                             "subset that --limit cannot express.")
     parser.add_argument("--skip-failed", action="store_true",
                         help="Do not retry documents that previously FAILED "
                              "(default: they are retried).")
@@ -1420,6 +1541,12 @@ def build_parser() -> argparse.ArgumentParser:
                         default=config.RUN_PROGRESS_EVERY, metavar="N",
                         help="Documents between progress blocks (default: "
                              f"{config.RUN_PROGRESS_EVERY}). 0 silences them.")
+    parser.add_argument("--document-timeout", type=float, metavar="SECONDS",
+                        default=config.RUN_DOCUMENT_TIMEOUT_SECONDS,
+                        help="Stop waiting for a document after this long, record "
+                             "it FAILED and carry on (default: "
+                             f"{config.RUN_DOCUMENT_TIMEOUT_SECONDS:.0f}). Its "
+                             "thread is abandoned, not killed. 0 waits forever.")
     parser.add_argument("--min-free-gb", type=float,
                         default=config.RUN_MIN_FREE_BYTES / 1024 ** 3, metavar="GB",
                         help="Refuse to start with less free space than this "
@@ -1451,11 +1578,22 @@ def main(argv: Optional[list[str]] = None) -> int:
     min_free_bytes = int(args.min_free_gb * 1024 ** 3)
 
     try:
+        only = list(args.only or [])
+        if args.only_from:
+            only.extend(read_document_ids(args.only_from))
+            log.info("%d document ids selected from %s.",
+                     len(only), args.only_from)
+        only = only or None
+    except ProcessingError as exc:
+        log.error("%s", exc)
+        return 2
+
+    try:
         if args.dry_run:
             plan, context = dry_run(
                 args.data_dir, limit=args.limit, verify=args.verify,
                 categories=args.category, document_types=args.document_types,
-                only=args.only, retry_failed=not args.skip_failed, force=args.force,
+                only=only, retry_failed=not args.skip_failed, force=args.force,
             )
             print(render_dry_run(
                 plan, context, data_dir=args.data_dir, workers=args.workers,
@@ -1467,9 +1605,10 @@ def main(argv: Optional[list[str]] = None) -> int:
             args.data_dir,
             workers=args.workers, limit=args.limit, verify=args.verify,
             categories=args.category, document_types=args.document_types,
-            only=args.only, retry_failed=not args.skip_failed, force=args.force,
+            only=only, retry_failed=not args.skip_failed, force=args.force,
             force_unlock=args.force_unlock, detect_tables=not args.no_tables,
             progress_every=args.progress_every, min_free_bytes=min_free_bytes,
+            document_timeout=args.document_timeout,
         )
     except (RunLockError, InsufficientSpaceError) as exc:
         log.error("%s", exc)

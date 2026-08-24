@@ -15,13 +15,14 @@ from __future__ import annotations
 
 import json
 import threading
+import time
 from pathlib import Path
 
 import pytest
 
 from processing import config, run as runner
 from processing.corpus import Corpus
-from processing.errors import RunLockError
+from processing.errors import ProcessingError, RunLockError
 from processing.models import ProcessedDocument
 from processing.process import output_dir
 from tests import corpusbuild
@@ -920,6 +921,193 @@ class TestFreeSpace:
 
 
 # --- CLI --------------------------------------------------------------------------------
+
+
+# --- A document that will not finish ------------------------------------------------
+
+
+def slow_process_document(slow_ids, seconds, *, only_while=None):
+    """A ``process_document`` that stalls on *slow_ids*.
+
+    *only_while* is an event: while it is set the delay applies, so a test can
+    make the first run overrun and the retry finish normally.
+    """
+    real = runner.process_document
+
+    def process(document, data_dir, **kwargs):
+        if document.document_id in slow_ids and (
+                only_while is None or only_while.is_set()):
+            time.sleep(seconds)
+        return real(document, data_dir, **kwargs)
+
+    return process
+
+
+class TestDocumentTimeout:
+    """One PDF must not be able to hold up an unattended overnight run.
+
+    Python cannot kill a thread, so the runner abandons the document rather than
+    stopping it. What is being tested is the part that matters: the run
+    continues, the outcome is journalled, and the document stays retryable.
+    """
+
+    def test_a_document_that_overruns_is_recorded_failed(
+            self, monkeypatch, mixed_corpus):
+        monkeypatch.setattr(runner, "process_document",
+                            slow_process_document({"act-b__handle-2"}, 1.0))
+        report = runner.run(mixed_corpus, workers=4, document_timeout=0.2,
+                            **NO_SPACE_CHECK)
+        record = runner.StatusJournal(runner.journal_path(mixed_corpus)).load()[
+            "act-b__handle-2"]
+        assert record["status"] == "FAILED"
+        assert record["error_type"] == "DocumentTimeout"
+        assert record["error_stage"] == "timeout"
+        assert "abandoned" in record["error_message"]
+        assert report["this_run"]["timed_out"] == 1
+
+    def test_the_rest_of_the_run_still_completes(self, monkeypatch, mixed_corpus):
+        monkeypatch.setattr(runner, "process_document",
+                            slow_process_document({"act-b__handle-2"}, 1.0))
+        runner.run(mixed_corpus, workers=4, document_timeout=0.2, **NO_SPACE_CHECK)
+        recorded = statuses(mixed_corpus)
+        assert len(recorded) == 4
+        assert recorded["act-a__handle-1"] == "SUCCESS"
+
+    def test_a_timed_out_document_is_retried_on_the_next_run(
+            self, monkeypatch, mixed_corpus):
+        stall = threading.Event()
+        stall.set()
+        monkeypatch.setattr(
+            runner, "process_document",
+            slow_process_document({"act-b__handle-2"}, 1.0, only_while=stall))
+        runner.run(mixed_corpus, workers=4, document_timeout=0.2, **NO_SPACE_CHECK)
+        assert statuses(mixed_corpus)["act-b__handle-2"] == "FAILED"
+
+        stall.clear()                                  # it behaves this time
+        runner.run(mixed_corpus, workers=4, document_timeout=5.0, **NO_SPACE_CHECK)
+        assert statuses(mixed_corpus)["act-b__handle-2"] != "FAILED"
+
+    def test_a_queued_document_is_not_timed_out_for_waiting(
+            self, monkeypatch, mixed_corpus):
+        """The clock starts when a document starts, not when it is submitted.
+
+        With one worker the last document sits in the queue for longer than the
+        timeout before it ever runs. Timing from submission would abandon work
+        that never had a chance.
+        """
+        monkeypatch.setattr(
+            runner, "process_document",
+            slow_process_document(
+                {"act-a__handle-1", "act-b__handle-2", "scan-c__handle-3",
+                 "broken-d__handle-4"}, 0.3))
+        report = runner.run(mixed_corpus, workers=1, document_timeout=0.8,
+                            **NO_SPACE_CHECK)
+        assert report["this_run"]["timed_out"] == 0
+        assert len(statuses(mixed_corpus)) == 4
+
+    def test_zero_disables_the_timeout(self, monkeypatch, mixed_corpus):
+        monkeypatch.setattr(runner, "process_document",
+                            slow_process_document({"act-b__handle-2"}, 0.5))
+        report = runner.run(mixed_corpus, workers=4, document_timeout=0,
+                            **NO_SPACE_CHECK)
+        assert report["this_run"]["timed_out"] == 0
+        assert statuses(mixed_corpus)["act-b__handle-2"] != "FAILED"
+
+    def test_timeout_record_carries_the_documents_provenance(self, mixed_corpus):
+        corpus = Corpus.load(mixed_corpus)
+        document = corpus.documents[0]
+        record = runner.timeout_record(document, 1801.0, attempt=2)
+        assert record["document_id"] == document.document_id
+        assert record["sha256"] == document.sha256
+        assert record["status"] == "FAILED"
+        assert record["attempt"] == 2
+        assert "1801" in record["error_message"]
+
+    def test_the_default_is_generous_enough_for_the_largest_documents(self):
+        # 18 corpus documents are over 100 MB and the largest is 300 MB; at the
+        # benchmark's rate those need 450-1,350 s. A tighter default would
+        # abandon real work and call it a failure.
+        assert config.RUN_DOCUMENT_TIMEOUT_SECONDS >= 1500
+        assert runner.build_parser().parse_args([]).document_timeout == (
+            config.RUN_DOCUMENT_TIMEOUT_SECONDS)
+
+
+# --- Running a subset that --limit cannot express -----------------------------------
+
+
+class TestOnlyFrom:
+    """``--limit N`` is deterministic but alphabetical. A representative subset
+    has to be named, and a thousand names do not fit on a command line."""
+
+    def test_ids_are_read_from_a_file(self, tmp_path, mixed_corpus):
+        listing = tmp_path / "pilot.txt"
+        listing.write_text("scan-c__handle-3\nact-a__handle-1\n", encoding="utf-8")
+        assert runner.read_document_ids(listing) == [
+            "scan-c__handle-3", "act-a__handle-1"]
+
+    def test_comments_blanks_and_duplicates_are_ignored(self, tmp_path):
+        listing = tmp_path / "pilot.txt"
+        listing.write_text(
+            "# the pilot sample\n"
+            "act-a__handle-1\n"
+            "\n"
+            "act-a__handle-1\n"
+            "scan-c__handle-3   # a scanned one\n",
+            encoding="utf-8")
+        assert runner.read_document_ids(listing) == [
+            "act-a__handle-1", "scan-c__handle-3"]
+
+    def test_a_missing_file_is_an_error_not_an_empty_run(self, tmp_path):
+        with pytest.raises(ProcessingError):
+            runner.read_document_ids(tmp_path / "nope.txt")
+
+    def test_an_empty_file_is_an_error_not_an_empty_run(self, tmp_path):
+        listing = tmp_path / "empty.txt"
+        listing.write_text("# nothing but a comment\n", encoding="utf-8")
+        with pytest.raises(ProcessingError):
+            runner.read_document_ids(listing)
+
+    def test_the_cli_restricts_the_run_to_the_listed_documents(
+            self, tmp_path, mixed_corpus):
+        listing = tmp_path / "pilot.txt"
+        listing.write_text("act-a__handle-1\nscan-c__handle-3\n", encoding="utf-8")
+        code = runner.main([
+            "--data-dir", str(mixed_corpus), "--only-from", str(listing),
+            "--workers", "2", "--min-free-gb", "0",
+        ])
+        assert code == 0
+        assert sorted(statuses(mixed_corpus)) == [
+            "act-a__handle-1", "scan-c__handle-3"]
+
+    def test_it_combines_with_only(self, tmp_path, mixed_corpus):
+        listing = tmp_path / "pilot.txt"
+        listing.write_text("act-a__handle-1\n", encoding="utf-8")
+        runner.main([
+            "--data-dir", str(mixed_corpus), "--only-from", str(listing),
+            "--only", "scan-c__handle-3", "--workers", "2", "--min-free-gb", "0",
+        ])
+        assert sorted(statuses(mixed_corpus)) == [
+            "act-a__handle-1", "scan-c__handle-3"]
+
+    def test_a_bad_file_exits_non_zero_without_running_anything(
+            self, tmp_path, mixed_corpus):
+        code = runner.main([
+            "--data-dir", str(mixed_corpus),
+            "--only-from", str(tmp_path / "nope.txt"), "--min-free-gb", "0",
+        ])
+        assert code == 2
+        assert not runner.journal_path(mixed_corpus).exists()
+
+    def test_a_dry_run_honours_it(self, tmp_path, mixed_corpus, capsys):
+        listing = tmp_path / "pilot.txt"
+        listing.write_text("act-a__handle-1\n", encoding="utf-8")
+        code = runner.main([
+            "--data-dir", str(mixed_corpus), "--only-from", str(listing),
+            "--dry-run",
+        ])
+        assert code == 0
+        assert not runner.journal_path(mixed_corpus).exists()
+        assert "1" in capsys.readouterr().out
 
 
 class TestCli:

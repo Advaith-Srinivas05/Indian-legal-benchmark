@@ -88,6 +88,28 @@ RUN_DEFAULT_WORKERS = 4
 #: Documents between progress blocks.
 RUN_PROGRESS_EVERY = 25
 
+#: Seconds one document may take before the runner stops waiting for it, records
+#: it ``FAILED`` with ``error_stage: "timeout"`` and carries on. ``0`` disables
+#: the check.
+#:
+#: This is a safety net for an unattended overnight run, not a performance
+#: target, so it is deliberately generous. At the benchmark's ~0.45
+#: worker-seconds per page, the corpus's largest documents (18 are over 100 MB,
+#: the largest 300 MB) can legitimately need 450-1,350 s; a tighter bound would
+#: abandon real work and report it as a failure.
+#:
+#: **A Python thread cannot be killed.** The document is therefore *abandoned*,
+#: not stopped: its worker thread runs on until it finishes on its own. What the
+#: timeout buys is that the run continues, the journal is written, and the
+#: report is produced instead of a night being spent waiting on one PDF. The
+#: document stays retryable, because ``FAILED`` always does.
+RUN_DOCUMENT_TIMEOUT_SECONDS = 1800.0
+
+#: How often the run loop wakes to collect finished documents and to look for
+#: ones that have overrun. Short enough that a timeout is noticed promptly,
+#: long enough that the polling itself costs nothing.
+RUN_POLL_SECONDS = 1.0
+
 #: Free space the run requires before it starts, and the headroom below which a
 #: running batch stops rather than fill the disk. The corpus is expected to
 #: produce 5-10 GB of output (48.1 MB for the 100-document benchmark), so 20 GB
