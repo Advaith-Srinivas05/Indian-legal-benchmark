@@ -18,6 +18,7 @@ from types import SimpleNamespace
 import pytest
 
 from processing import config, language
+from processing.structure import parse_structure
 
 ENGLISH = """
     Whoever, being a public servant, knowingly disobeys any direction of the law
@@ -57,8 +58,29 @@ DAMAGED_ENGLISH = """
 
 
 def pages(*texts: str):
-    return [SimpleNamespace(text=t, page_number=i)
+    return [SimpleNamespace(text=t, page_number=i, furniture=[], footnotes=[])
             for i, t in enumerate(texts, start=1)]
+
+
+#: A Devanagari sentence long enough for a page of it to be measurable, set out
+#: as numbered dash-headed provisions -- the shape ``processing.patterns`` reads
+#: as a section, and the shape a Hindi translation of a rule actually takes.
+_HINDI_SENTENCE = (
+    "\u0907\u0928 \u0928\u093f\u092f\u092e\u094b\u0902 \u0915\u093e "
+    "\u0938\u0902\u0915\u094d\u0937\u093f\u092a\u094d\u0924 \u0928\u093e\u092e "
+    "\u0936\u093f\u0915\u094d\u0937\u0941\u0924\u093e \u0928\u093f\u092f\u092e "
+    "\u0939\u0948\u0964"
+)
+HINDI_SECTION_PAGE = "".join(
+    f"{n}. {_HINDI_SENTENCE}\u2014{_HINDI_SENTENCE} {_HINDI_SENTENCE}\n"
+    for n in range(1, 9)
+)
+ENGLISH_SECTION_PAGE = (
+    "1. Short title and commencement.\u2014These rules may be called the Model "
+    "Rules, 2019, and they shall come into force at once.\n"
+    "2. Definitions.\u2014In these rules, unless the context otherwise requires, "
+    "the expressions used shall have the meaning assigned to them.\n"
+) + ENGLISH
 
 
 class TestEnglishContent:
@@ -203,6 +225,81 @@ class TestEvidence:
         # "White-browed" is two correctly-cased words, not a mis-cased one.
         assert language.clean_words("White-browed Fulvetta") == \
             ["white", "browed", "fulvetta"]
+
+
+class TestBilingualDocumentsAndLegalStructure:
+    """What page routing is ultimately protecting: the section index.
+
+    Language routing would be an accounting change if it stopped at a verdict.
+    It does not -- ``process_document`` parses structure over the indexable
+    pages, and that is what keeps Devanagari out of the legal hierarchy.
+    """
+
+    def test_no_legal_unit_is_emitted_from_a_non_english_page(self):
+        """Devanagari must never be emitted as a provision of English law.
+
+        Observed on a real corpus document before this was fixed
+        (``apprenticeship-amendment-rules-2019``): 8 of its 9 detected sections
+        were Devanagari, each one a ``LegalUnit`` with Hindi body text, indexed
+        as Indian law in English.
+        """
+        page_list = pages(ENGLISH_SECTION_PAGE, ENGLISH,
+                          HINDI_SECTION_PAGE, HINDI_SECTION_PAGE)
+        assessment = language.assess_pages(page_list, metadata_language="en")
+        assert assessment.content_language == "bilingual_en"
+
+        keep = language.indexable_pages(page_list, assessment)
+        structure = parse_structure(keep, metadata_title="Model Rules, 2019")
+        excluded = {3, 4}
+        for unit in structure.all_units():
+            assert unit.page_start not in excluded, (
+                f"a {unit.unit_type} was emitted from Devanagari page "
+                f"{unit.page_start}: {(unit.heading or unit.text or '')[:40]!r}")
+
+    def test_the_translation_had_been_crowding_out_the_real_sections(self):
+        """Not merely extra units -- the English ones were being displaced.
+
+        Only one section style is used per document, so eight numbered Hindi
+        provisions per page outvoted the two real English ones and took the
+        index for themselves. Parsed over all four pages this document's entire
+        section index is Devanagari; over the English pages it is the two
+        sections the act actually has.
+        """
+        page_list = pages(ENGLISH_SECTION_PAGE, ENGLISH,
+                          HINDI_SECTION_PAGE, HINDI_SECTION_PAGE)
+        over_everything = parse_structure(page_list, metadata_title="Model Rules")
+        sections = [u for u in over_everything.all_units()
+                    if u.unit_type == "section"]
+        assert sections, "fixture no longer reproduces the defect"
+        assert all(u.page_start in (3, 4) for u in sections)
+
+        assessment = language.assess_pages(page_list, metadata_language="en")
+        keep = language.indexable_pages(page_list, assessment)
+        recovered = [u for u in parse_structure(
+            keep, metadata_title="Model Rules").all_units()
+            if u.unit_type == "section"]
+        assert [u.number for u in recovered] == ["1", "2"]
+        assert all(u.page_start == 1 for u in recovered)
+
+    def test_page_provenance_stays_absolute_after_filtering(self):
+        """A citation names a page of the PDF, not a page of the filtered subset.
+
+        ``structure.py`` works from ``line.page_number`` rather than from a
+        position in the list it was handed, which is what makes filtering safe.
+        If that ever changes, a bilingual document's sections start citing the
+        wrong pages -- silently, and in a way only this test would notice.
+        """
+        page_list = pages(HINDI_SECTION_PAGE, HINDI_SECTION_PAGE,
+                          ENGLISH_SECTION_PAGE, ENGLISH)
+        assessment = language.assess_pages(page_list, metadata_language="en")
+        keep = language.indexable_pages(page_list, assessment)
+        assert [p.page_number for p in keep] == [3, 4]
+
+        structure = parse_structure(keep, metadata_title="Model Rules, 2019")
+        sections = [u for u in structure.all_units() if u.unit_type == "section"]
+        assert sections
+        # Page 3 of the PDF, not page 1 of the two pages that survived.
+        assert all(u.page_start >= 3 for u in sections)
 
 
 class TestControlledVocabulary:
