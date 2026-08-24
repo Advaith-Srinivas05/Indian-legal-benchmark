@@ -129,6 +129,11 @@ def build_line_stream(pages: Iterable[PageText]) -> list[Line]:
         skip = set()
         for block in getattr(page, "footnotes", []) or []:
             skip.update(range(block.line_start, block.line_end + 1))
+        # Lines in another script. A translation printed beside the English text
+        # is not legal hierarchy in English, and parsing it as such emitted
+        # Devanagari LegalUnits -- on one real document, 8 of its 9 sections.
+        for mark in getattr(page, "non_english_lines", []) or []:
+            skip.add(mark["line_index"])
         for page_line_index, text in content_lines(page.text, page.furniture):
             if page_line_index in skip or not text.strip():
                 continue

@@ -211,6 +211,10 @@ class PageText:
     #: What language this page is written in, judged on script alone by
     #: :func:`processing.language.classify_page`. ``None`` until that has run.
     language: Optional[dict] = None
+    #: Lines written in another script, by index into this page's own line
+    #: stream. Labelled here and skipped by the structure parser, never removed
+    #: from :attr:`text` -- the same contract furniture and footnotes have.
+    non_english_lines: list[dict] = field(default_factory=list)
     #: Whether this page's text may be indexed as English law. False for the
     #: other-language pages of a bilingual document, which print the same law in
     #: translation. Set from the language verdict; every page of an ordinary
@@ -252,6 +256,7 @@ class PageText:
             "footnotes": [f.to_dict() for f in self.footnotes],
             "orientation": self.orientation.to_dict() if self.orientation else None,
             "language": self.language,
+            "non_english_lines": self.non_english_lines,
             "indexable": self.indexable,
             "warnings": self.warnings,
         }

@@ -44,6 +44,7 @@ from dataclasses import dataclass, field
 from typing import Iterable
 
 from . import config
+from .textutils import split_lines
 from .wordlists import FUNCTION_WORDS
 
 #: Runs of letters. Hyphens and apostrophes split a token rather than joining
@@ -256,6 +257,80 @@ def assess_text(text: str) -> LanguageAssessment:
     return LanguageAssessment("uncertain", False, signals, reasons)
 
 
+#: Letters a single line needs before its script is evidence of anything.
+#: Far below the per-page figure because a line is far shorter than a page, and
+#: high enough that "(2)", "New Delhi" and a bare numeral stay neutral.
+LINE_MIN_LETTERS = 10
+
+
+def classify_line(text: str) -> str:
+    """``non_en``, ``en`` or ``neutral`` for a single line.
+
+    Only a line with positive evidence of another script is called ``non_en``.
+    A line too short to carry evidence is ``neutral`` and is kept: dropping a
+    bare "(2)" or a page number because it contains no Latin letters would put
+    holes in provisions for no gain, and the invariant is that text is discarded
+    only on evidence, never on the absence of it.
+    """
+    if not text or not text.strip():
+        return "neutral"
+    profile = script_profile(text)
+    letters = profile["letters"]
+    if letters < LINE_MIN_LETTERS:
+        return "neutral"
+    latin = profile["by_script"].get("LATIN", 0)
+    unknown = profile["by_script"].get("UNKNOWN", 0)
+    ratio = (letters - latin - unknown) / letters
+    return "non_en" if ratio >= config.LANGUAGE_NON_LATIN_LETTER_RATIO else "en"
+
+
+def non_english_lines(page) -> list[dict]:
+    """The lines of *page* written in another script, by index.
+
+    Labelled, never removed: ``pages.json`` keeps the page text byte for byte
+    and the index travels with the label, exactly as running headers and
+    footnote blocks are handled. :func:`processing.structure.build_line_stream`
+    adds these to the same skip set it already builds for furniture and
+    footnotes.
+
+    Page-level routing was tried first and is too coarse. A bilingual gazette
+    commonly ends its Hindi text partway down a page and begins the English
+    notification below it; that page is ~31% Devanagari, so excluding it whole
+    discarded the opening of the English rule -- its G.S.R. number, its date and
+    the provision it was made under. On the pilot that cost 4.2% of all English
+    in bilingual documents, concentrated in the headers that make a rule
+    citable. Line-level routing recovers 66% of it.
+    """
+    marked = []
+    for index, line in enumerate(split_lines(getattr(page, "text", "") or "")):
+        if classify_line(line) == "non_en":
+            profile = script_profile(line)
+            letters = profile["letters"]
+            latin = profile["by_script"].get("LATIN", 0)
+            unknown = profile["by_script"].get("UNKNOWN", 0)
+            marked.append({
+                "line_index": index,
+                "reason": (
+                    f"{(letters - latin - unknown) / letters:.0%} of this line's "
+                    f"{letters} letters are in another script"
+                ),
+            })
+    return marked
+
+
+def english_line_text(page) -> str:
+    """*page*'s text with its other-script lines left out.
+
+    For the stages that measure the English content of a document -- the quality
+    panel above all, which reads word shape and would report a Devanagari half
+    as extraction damage.
+    """
+    skip = {m["line_index"] for m in non_english_lines(page)}
+    return "\n".join(line for index, line in
+                      enumerate(split_lines(getattr(page, "text", "") or ""))
+                      if index not in skip)
+
+
 def classify_page(page) -> dict:
     """Judge one page's language **on script alone**.
 
@@ -397,8 +472,15 @@ def indexable_pages(pages: Iterable, assessment) -> list:
         return []
     if verdict != "bilingual_en":
         return page_list
+    # A page qualifies if anything survives removing its other-script lines.
+    # Not ``classify_page(...) != "non_en"``: that is a whole-page verdict, and
+    # a transition page carrying the end of the Hindi text and the start of the
+    # English notification fails it while holding the most citable text in the
+    # document.
     return [page for page in page_list
-            if classify_page(page)["verdict"] != "non_en"]
+            if script_profile(english_line_text(page))["letters"]
+            >= config.LANGUAGE_PAGE_MIN_LETTERS
+            or classify_page(page)["verdict"] != "non_en"]
 
 
 def assess_pages(pages: Iterable, *, metadata_language: str | None = None) -> LanguageAssessment:

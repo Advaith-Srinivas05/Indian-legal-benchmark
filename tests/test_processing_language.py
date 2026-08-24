@@ -302,6 +302,109 @@ class TestBilingualDocumentsAndLegalStructure:
         assert all(u.page_start >= 3 for u in sections)
 
 
+class TestLineLevelRouting:
+    """A page is not the right unit when both languages share one.
+
+    Page-level routing was measured on the pilot and lost 4.2% of all English in
+    bilingual documents. The loss was not spread evenly: a gazette commonly ends
+    its Hindi text partway down a page and starts the English notification
+    below, so the page excluded whole was the one carrying the rule's number,
+    its date and the provision it was made under -- the part a citation needs
+    most. Line-level routing recovers 66% of that.
+    """
+
+    def test_a_line_is_only_excluded_on_positive_evidence(self):
+        assert language.classify_line(
+            "These rules may be called the Model Rules, 2019.") == "en"
+        assert language.classify_line(_HINDI_SENTENCE) == "non_en"
+        # Too short to carry evidence: kept, because discarding text requires
+        # evidence and "no Latin letters here" is not evidence.
+        assert language.classify_line("(2)") == "neutral"
+        assert language.classify_line("21") == "neutral"
+        assert language.classify_line("") == "neutral"
+        assert language.classify_line("   ") == "neutral"
+
+    def test_a_transition_page_keeps_its_english_half(self):
+        """The G.S.R. 495(E) case, reduced to its shape.
+
+        Real document: the Hindi text ends mid-page and the English begins with
+        NOTIFICATION / New Delhi / G.S.R.495(E). Excluding the page lost all of
+        it.
+        """
+        transition = (
+            f"{_HINDI_SENTENCE}\n{_HINDI_SENTENCE}\n{_HINDI_SENTENCE}\n"
+            "\n"
+            "NOTIFICATION\n"
+            "New Delhi, the 23rd May, 2017\n"
+            "1. Short title.\u2014These rules may be called the Prevention of "
+            "Cruelty to Animals Rules, 2017, and shall come into force at once.\n"
+        ) + ENGLISH
+        page_list = pages(ENGLISH_SECTION_PAGE, HINDI_SECTION_PAGE, transition)
+        assessment = language.assess_pages(page_list, metadata_language="en")
+        assert assessment.content_language == "bilingual_en"
+
+        keep = language.indexable_pages(page_list, assessment)
+        assert 3 in [pg.page_number for pg in keep], (
+            "the transition page was excluded whole; its English is lost")
+
+    def test_the_other_script_lines_are_labelled_not_removed(self):
+        """``pages.json`` text stays byte for byte what the backend produced."""
+        transition = f"{_HINDI_SENTENCE}\nThese rules may be called the Model "\
+                     f"Rules, 2019 and come into force at once.\n"
+        page = pages(transition)[0]
+        marked = language.non_english_lines(page)
+        assert [m["line_index"] for m in marked] == [0]
+        assert "another script" in marked[0]["reason"]
+        # The text is untouched; only the label knows.
+        assert page.text == transition
+        assert _HINDI_SENTENCE in page.text
+
+    def test_english_line_text_drops_only_the_marked_lines(self):
+        transition = f"{_HINDI_SENTENCE}\nThese rules may be called the Model "\
+                     f"Rules, 2019 and come into force at once.\n(2)\n"
+        page = pages(transition)[0]
+        english = language.english_line_text(page)
+        assert _HINDI_SENTENCE not in english
+        assert "Model Rules, 2019" in english
+        assert "(2)" in english          # neutral lines survive
+
+    def test_a_provision_on_a_transition_page_reaches_the_structure_parser(self):
+        """The whole point, asserted end to end.
+
+        A section printed below the end of the Hindi text must be found, and
+        must be cited at its real page number.
+        """
+        transition = (
+            f"{_HINDI_SENTENCE}\n{_HINDI_SENTENCE}\n"
+            "1. Short title and commencement.\u2014These rules may be called "
+            "the Prevention of Cruelty to Animals Rules, 2017.\n"
+            "2. Definitions.\u2014In these rules, unless the context otherwise "
+            "requires, the expressions used shall have the meaning assigned.\n"
+        ) + ENGLISH
+        page_list = pages(ENGLISH, HINDI_SECTION_PAGE, transition)
+        assessment = language.assess_pages(page_list, metadata_language="en")
+        keep = language.indexable_pages(page_list, assessment)
+        for pg in keep:
+            pg.non_english_lines = language.non_english_lines(pg)
+
+        structure = parse_structure(keep, metadata_title="PCA Rules, 2017")
+        sections = [u for u in structure.all_units() if u.unit_type == "section"]
+        assert [u.number for u in sections] == ["1", "2"]
+        assert all(u.page_start == 3 for u in sections)
+        for unit in structure.all_units():
+            assert _HINDI_SENTENCE not in unit.text
+
+    def test_a_stray_other_script_line_is_excluded_from_a_plain_english_act(self):
+        """Marked whatever the document is, not only in bilingual ones.
+
+        The old page-ratio rule ignored anything under 15% of pages, so a single
+        Devanagari line inside an English act went into the index unremarked.
+        """
+        page = pages(ENGLISH + "\n" + _HINDI_SENTENCE + "\n")[0]
+        assert [m["line_index"] for m in language.non_english_lines(page)] == [
+            len(page.text.split("\n")) - 2]
+
+
 class TestControlledVocabulary:
     def test_only_the_three_documented_values_are_produced(self):
         for text in (ENGLISH, TRANSLITERATED_NOISE, DAMAGED_ENGLISH, "", "x y z"):

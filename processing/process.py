@@ -38,6 +38,8 @@ from .structure import parse_structure
 
 log = logging.getLogger(__name__)
 
+NEWLINE = chr(10)
+
 
 def output_dir(data_dir: Path, document_id: str) -> Path:
     return Path(data_dir) / config.PROCESSED_SUBDIR / document_id
@@ -92,6 +94,10 @@ def process_document(
             extraction.pages, metadata_language=document.language)
         for page in extraction.pages:
             page.language = language.classify_page(page)
+            # Marked whatever the document turns out to be: a stray Devanagari
+            # line in an otherwise English act is the same finding as a block of
+            # them, and the old page-ratio rule let exactly that through.
+            page.non_english_lines = language.non_english_lines(page)
         indexable = language.indexable_pages(extraction.pages, language_assessment)
         indexable_numbers = {p.page_number for p in indexable}
         for page in extraction.pages:
@@ -104,7 +110,15 @@ def process_document(
         # the difference is whether the record says why.
         assessed = indexable or extraction.pages
         structure = parse_structure(assessed, metadata_title=document.title)
-        quality_assessment = quality.assess(assessed, structure=structure)
+        # Quality is given the English lines explicitly rather than the pages,
+        # because it pools page text and a translation left in that pool reads
+        # as extraction damage: unfamiliar word shapes, no English function
+        # words. A bilingual act would be quarantined as `extraction_quality_bad`
+        # -- the same document lost, for a different stated reason.
+        quality_assessment = quality.assess(
+            assessed, structure=structure,
+            text=NEWLINE.join(language.english_line_text(p) for p in assessed),
+        )
         decision = ocr.decide(
             extraction, quality_assessment, language=language_assessment)
 
