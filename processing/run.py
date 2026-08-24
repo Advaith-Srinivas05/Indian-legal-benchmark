@@ -64,6 +64,7 @@ from . import __version__, config
 from .backends import PdfBackend, default_backend
 from .corpus import Corpus
 from .errors import ProcessingError, RunLockError
+from . import ocr_engine
 from .models import CorpusDocument, ProcessedDocument
 from .process import output_dir, process_document, write_outputs
 
@@ -282,16 +283,23 @@ def quarantine_reasons(result: ProcessedDocument) -> list[str]:
 def classify(result: ProcessedDocument) -> str:
     """Map a processing result onto :data:`processing.config.PROCESSING_STATUSES`.
 
-    ``SUCCESS_OCR`` is deliberately never returned. It means "the text written to
-    disk came out of an OCR engine", and no code path in this repository runs one
-    — :mod:`processing.ocr` decides and stops. A document whose text needs
-    replacing is ``QUARANTINED`` with an ``ocr_…`` reason, which is the honest
-    description of its state. See
-    :data:`processing.config.PROCESSING_STATUSES`.
+    ``SUCCESS_OCR`` means the text written to disk came out of an OCR engine on
+    at least one page. It was reserved in the vocabulary long before anything
+    could emit it, precisely so the journal and the report would not have to
+    change shape when OCR was built; this is where it starts being used.
+
+    It is distinguished from ``SUCCESS`` because the two are not equally
+    trustworthy. OCR text has been judged better than what it replaced, which is
+    a weaker claim than a clean text layer, and a document indexed on the
+    strength of it should be findable later without re-reading 19,802 files.
     """
     if not result.ok:
         return "FAILED"
-    return "SUCCESS" if result.eligible_for_indexing else "QUARANTINED"
+    if not result.eligible_for_indexing:
+        return "QUARANTINED"
+    if getattr(result.extraction, "ocr_page_count", 0):
+        return "SUCCESS_OCR"
+    return "SUCCESS"
 
 
 def _identity(document: CorpusDocument) -> dict:
@@ -405,6 +413,15 @@ def result_record(
         "ocr_action": getattr(result.ocr_decision, "action", None),
         "ocr_text_source": getattr(result.ocr_decision, "text_source", None),
         "ocr_estimated_pages": getattr(result.ocr_decision, "estimated_pages", 0) or 0,
+        # What the OCR stage actually did, as against what it was told to do.
+        # Read by plan_run(): a document recorded as never OCR'd is outstanding
+        # work for a run that has OCR enabled, however complete its output is.
+        "ocr_executed": bool(getattr(result.ocr_run, "executed", False)),
+        "ocr_pages_attempted": getattr(result.ocr_run, "attempted", 0) or 0,
+        "ocr_pages_accepted": getattr(result.ocr_run, "accepted", 0) or 0,
+        "ocr_seconds": round(getattr(result.ocr_run, "seconds", 0.0) or 0.0, 3),
+        "ocr_truncated": bool(getattr(result.ocr_run, "truncated", False)),
+        "ocr_pages_in_output": getattr(result.extraction, "ocr_page_count", 0) or 0,
         # Structure
         "structure_confidence": getattr(structure, "confidence", None),
         "unit_vocabulary": getattr(structure, "unit_vocabulary", None),
@@ -423,6 +440,23 @@ def result_record(
 
 
 # --- Is output a journal record claims to exist actually there? -----------------
+
+
+def needs_ocr_pass(row: Optional[dict], *, ocr_enabled: bool) -> bool:
+    """Whether *row* describes output that predates OCR and should be redone.
+
+    Without this a document processed with ``--no-ocr`` verifies as complete
+    forever: its files are on disk, the right size, and about the right PDF, so
+    every check passes and the pages that needed reading never get read.
+
+    Only documents the router actually sent to OCR qualify. Re-running the
+    engine over a clean born-digital act would cost the run and change nothing.
+    """
+    if not ocr_enabled or not row:
+        return False
+    if row.get("ocr_executed"):
+        return False
+    return row.get("ocr_action") in config.OCR_ACTIONS_BLOCKING_INDEX
 
 
 def verify_output(
@@ -620,6 +654,7 @@ def plan_run(
     retry_failed: bool = True,
     force: bool = False,
     attempts: Optional[Counter] = None,
+    ocr_enabled: bool = False,
 ) -> WorkPlan:
     """Decide what to process. Reads the journal and the output; writes nothing.
 
@@ -663,6 +698,8 @@ def plan_run(
                 plan.held_back.append(document)
                 continue
             reason = verify_output(corpus.data_dir, document, row, level=verify)
+            if reason is None and needs_ocr_pass(row, ocr_enabled=ocr_enabled):
+                reason = "OCR was never run on this document"
             if reason is None:
                 plan.already_complete.append(document)
                 continue
@@ -695,6 +732,9 @@ class RunStats:
     timed_out: int = 0
     pages: int = 0
     pages_ocr: int = 0
+    ocr_documents: int = 0
+    ocr_pages_accepted: int = 0
+    ocr_seconds: float = 0.0
     documents_pending_ocr: int = 0
     pages_pending_ocr: int = 0
     characters: int = 0
@@ -739,6 +779,11 @@ class RunStats:
         else:
             self.failed += 1
             self.errors_by_type[record.get("error_type") or "Unknown"] += 1
+        if record.get("ocr_executed"):
+            self.ocr_documents += 1
+        self.ocr_pages_accepted += record.get("ocr_pages_accepted") or 0
+        self.ocr_seconds += record.get("ocr_seconds") or 0.0
+        self.pages_ocr += record.get("ocr_pages_in_output") or 0
         self.pages += record.get("pages") or 0
         self.characters += record.get("chars") or 0
         self.bytes_read += record.get("bytes") or 0
@@ -982,6 +1027,9 @@ def build_report(
             "deferred_by_limit": plan.deferred_by_limit if plan else None,
             "pages_processed": stats.pages,
             "pages_ocr": stats.pages_ocr,
+            "ocr_documents": stats.ocr_documents,
+            "ocr_pages_accepted": stats.ocr_pages_accepted,
+            "ocr_seconds": round(stats.ocr_seconds, 1),
             "characters": stats.characters,
             "bytes_read": stats.bytes_read,
             "documents_per_hour": round(stats.rate * 3600, 1),
@@ -1070,8 +1118,28 @@ def _count(value) -> str:
     return "unknown" if value is None else f"{value:>7,}"
 
 
+def _ocr_line(run_ocr: bool) -> str:
+    """What this run will do about OCR, checked rather than assumed.
+
+    A dry run that promised OCR the machine cannot perform would be worse than
+    one that said nothing, so the engine is probed here exactly as ``run()``
+    probes it.
+    """
+    if not run_ocr:
+        return ("  OCR will NOT run (--no-ocr). Documents needing it are routed "
+                "and quarantined, not read.")
+    available, why = ocr_engine.engine_available()
+    if not available:
+        return (f"  OCR was requested but no engine is available ({why}). "
+                "Documents needing it will be quarantined as before.")
+    return (f"  OCR will run ({config.OCR_ENGINE_NAME}, at most "
+            f"{config.OCR_MAX_PAGES_PER_DOCUMENT} pages per document) over pages "
+            "extraction could not read.")
+
+
 def render_dry_run(plan: WorkPlan, context: dict, *, data_dir: Path,
-                   workers: int, verify: str, min_free_bytes: int) -> str:
+                   workers: int, verify: str, min_free_bytes: int,
+                   run_ocr: bool = False) -> str:
     """What a run would do, and roughly what it would cost. Writes nothing."""
     # Extrapolated from the 100-document benchmark two ways, because the two
     # disagree and the honest answer is a range. Per document it is 6.14 s at 4
@@ -1123,7 +1191,7 @@ def render_dry_run(plan: WorkPlan, context: dict, *, data_dir: Path,
         f"{format_duration(high)}",
         f"    free space available  : {format_bytes(free)}",
         f"    free space required   : {format_bytes(min_free_bytes)}",
-        "  OCR will NOT run. processing.ocr routes documents; no engine is called.",
+        _ocr_line(run_ocr),
         "=================================================================",
     ]
     return "\n".join(lines)
@@ -1151,6 +1219,7 @@ def process_one(
     backend: Optional[PdfBackend] = None,
     detect_tables: bool = True,
     attempt: int = 1,
+    run_ocr: bool = False,
 ) -> dict:
     """Process one document and return its journal record. Never raises.
 
@@ -1164,7 +1233,7 @@ def process_one(
     try:
         result = process_document(
             document, data_dir, backend=backend,
-            detect_tables=detect_tables, write=False,
+            detect_tables=detect_tables, write=False, run_ocr=run_ocr,
         )
     except Exception as exc:                         # anything the backend raises
         log.warning("%s raised out of process_document: %s: %s",
@@ -1218,6 +1287,7 @@ def execute(
     min_headroom_bytes: int = config.RUN_MIN_HEADROOM_BYTES,
     document_timeout: Optional[float] = config.RUN_DOCUMENT_TIMEOUT_SECONDS,
     poll_seconds: float = config.RUN_POLL_SECONDS,
+    run_ocr: bool = False,
 ) -> RunStats:
     """Process every document in *plan*, journalling each outcome as it lands.
 
@@ -1274,7 +1344,7 @@ def execute(
             began[item.document.document_id] = time.monotonic()
         return process_one(
             item.document, data_dir, backend=backend,
-            detect_tables=detect_tables, attempt=item.attempt,
+            detect_tables=detect_tables, attempt=item.attempt, run_ocr=run_ocr,
         )
 
     executor = ThreadPoolExecutor(max_workers=max(1, workers))
@@ -1371,6 +1441,7 @@ def run(
     min_free_bytes: int = config.RUN_MIN_FREE_BYTES,
     min_headroom_bytes: int = config.RUN_MIN_HEADROOM_BYTES,
     document_timeout: Optional[float] = config.RUN_DOCUMENT_TIMEOUT_SECONDS,
+    run_ocr: bool = False,
     backend: Optional[PdfBackend] = None,
     write_report_file: bool = True,
 ) -> dict:
@@ -1397,10 +1468,21 @@ def run(
         corpus = Corpus.load(data_dir)
         journal = StatusJournal(journal_path(data_dir))
         state = journal.load()
+        if run_ocr:
+            available, why = ocr_engine.engine_available()
+            if not available:
+                # Said once, at the start, rather than 19,802 times. The run is
+                # still worth doing: everything except OCR still happens.
+                log.warning(
+                    "OCR was requested but no engine is available (%s). "
+                    "Documents needing OCR will be processed and quarantined as "
+                    "before. Install Tesseract, or pass --no-ocr to say so "
+                    "deliberately.", why)
+                run_ocr = False
         plan = plan_run(
             corpus, state, verify=verify, limit=limit, categories=categories,
             document_types=document_types, only=only, retry_failed=retry_failed,
-            force=force, attempts=journal.attempt_counts(),
+            force=force, attempts=journal.attempt_counts(), ocr_enabled=run_ocr,
         )
         log.info("%d documents to process, %d already complete, %d without a PDF.",
                  len(plan.todo), len(plan.already_complete), len(plan.missing_pdf))
@@ -1408,7 +1490,7 @@ def run(
             plan, data_dir, journal, backend=backend, detect_tables=detect_tables,
             workers=workers, progress_every=progress_every,
             min_headroom_bytes=min_headroom_bytes,
-            document_timeout=document_timeout,
+            document_timeout=document_timeout, run_ocr=run_ocr,
         )
         report = build_report(
             journal, stats, workers=workers, backend_name=backend.name,
@@ -1431,6 +1513,7 @@ def dry_run(
     only: Optional[Iterable[str]] = None,
     retry_failed: bool = True,
     force: bool = False,
+    run_ocr: bool = False,
 ) -> tuple[WorkPlan, dict]:
     """Inspect and estimate. Touches nothing: no journal, no output, no lock.
 
@@ -1444,7 +1527,7 @@ def dry_run(
     plan = plan_run(
         corpus, journal.load(), verify=verify, limit=limit, categories=categories,
         document_types=document_types, only=only, retry_failed=retry_failed,
-        force=force,
+        force=force, ocr_enabled=run_ocr and ocr_engine.engine_available()[0],
     )
     return plan, corpus_context(data_dir, corpus)
 
@@ -1537,6 +1620,14 @@ def build_parser() -> argparse.ArgumentParser:
                              "(default: they are retried).")
     parser.add_argument("--no-tables", action="store_true",
                         help="Skip table detection (faster; tables unreported).")
+    ocr_group = parser.add_mutually_exclusive_group()
+    ocr_group.add_argument("--ocr", dest="run_ocr", action="store_true",
+                           default=config.OCR_ENABLED_DEFAULT,
+                           help="Run OCR over pages extraction could not read "
+                                "(default). Needs Tesseract installed.")
+    ocr_group.add_argument("--no-ocr", dest="run_ocr", action="store_false",
+                           help="Route documents to OCR but do not perform it. "
+                                "Faster; documents needing OCR stay quarantined.")
     parser.add_argument("--progress-every", type=int,
                         default=config.RUN_PROGRESS_EVERY, metavar="N",
                         help="Documents between progress blocks (default: "
@@ -1594,10 +1685,12 @@ def main(argv: Optional[list[str]] = None) -> int:
                 args.data_dir, limit=args.limit, verify=args.verify,
                 categories=args.category, document_types=args.document_types,
                 only=only, retry_failed=not args.skip_failed, force=args.force,
+                run_ocr=args.run_ocr,
             )
             print(render_dry_run(
                 plan, context, data_dir=args.data_dir, workers=args.workers,
                 verify=args.verify, min_free_bytes=min_free_bytes,
+                run_ocr=args.run_ocr,
             ))
             return 0
 
@@ -1608,7 +1701,7 @@ def main(argv: Optional[list[str]] = None) -> int:
             only=only, retry_failed=not args.skip_failed, force=args.force,
             force_unlock=args.force_unlock, detect_tables=not args.no_tables,
             progress_every=args.progress_every, min_free_bytes=min_free_bytes,
-            document_timeout=args.document_timeout,
+            document_timeout=args.document_timeout, run_ocr=args.run_ocr,
         )
     except (RunLockError, InsufficientSpaceError) as exc:
         log.error("%s", exc)

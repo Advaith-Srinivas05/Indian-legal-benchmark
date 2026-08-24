@@ -302,7 +302,7 @@ def non_english_lines(page) -> list[dict]:
     citable. Line-level routing recovers 66% of it.
     """
     marked = []
-    for index, line in enumerate(split_lines(getattr(page, "text", "") or "")):
+    for index, line in enumerate(split_lines(getattr(page, "selected_text", None) or getattr(page, "text", "") or "")):
         if classify_line(line) == "non_en":
             profile = script_profile(line)
             letters = profile["letters"]
@@ -327,7 +327,7 @@ def english_line_text(page) -> str:
     """
     skip = {m["line_index"] for m in non_english_lines(page)}
     return "\n".join(line for index, line in
-                      enumerate(split_lines(getattr(page, "text", "") or ""))
+                      enumerate(split_lines(getattr(page, "selected_text", None) or getattr(page, "text", "") or ""))
                       if index not in skip)
 
 
@@ -345,7 +345,7 @@ def classify_page(page) -> dict:
     part-title, a blank -- and is never treated as a finding in either
     direction.
     """
-    text = getattr(page, "text", "") or ""
+    text = getattr(page, "selected_text", None) or getattr(page, "text", "") or ""
     profile = script_profile(text)
     letters = profile["letters"]
     latin = profile["by_script"].get("LATIN", 0)
@@ -492,7 +492,7 @@ def assess_pages(pages: Iterable, *, metadata_language: str | None = None) -> La
     but it can no longer clear a document on its own.
     """
     page_list = list(pages)
-    text = "\n".join(getattr(page, "text", "") or "" for page in page_list)
+    text = "\n".join(getattr(page, "selected_text", None) or getattr(page, "text", "") or "" for page in page_list)
     assessment = assess_text(text)
     assessment.signals["metadata_language"] = metadata_language
 

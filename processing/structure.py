@@ -134,7 +134,8 @@ def build_line_stream(pages: Iterable[PageText]) -> list[Line]:
         # Devanagari LegalUnits -- on one real document, 8 of its 9 sections.
         for mark in getattr(page, "non_english_lines", []) or []:
             skip.add(mark["line_index"])
-        for page_line_index, text in content_lines(page.text, page.furniture):
+        page_text = getattr(page, "selected_text", None) or page.text
+        for page_line_index, text in content_lines(page_text, page.furniture):
             if page_line_index in skip or not text.strip():
                 continue
             stream.append(

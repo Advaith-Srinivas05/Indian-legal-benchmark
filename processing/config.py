@@ -198,6 +198,45 @@ TEXT_EXTRACTION_STATUSES = ("ok", "partial", "requires_ocr")
 OCR_ACTIONS_BLOCKING_INDEX = (
     "ocr_required", "ocr_recommended", "rasterize_then_ocr")
 
+# --- Running OCR ----------------------------------------------------------------
+#
+# Distinct from the routing above: OCR_ACTIONS_BLOCKING_INDEX says which
+# documents *need* OCR, and these say how it is performed when it is.
+
+#: The engine, as recorded on every page it reads. Chosen by measurement in
+#: :mod:`processing.ocr_eval` against RapidOCR and EasyOCR over 25 problem
+#: pages: Tesseract recovered the most text (49,645 chars vs 39,760 and 48,775),
+#: the most clause markers, read 18 of 25 pages as English against 17 and 17,
+#: and ran 3.5-14x faster. Do not swap it without another evaluation.
+OCR_ENGINE_NAME = "tesseract@300"
+OCR_LANGUAGE = "eng"
+
+#: Render resolution. 300 over 200 dpi costs 39% more time (1.87 vs 1.35 s/page
+#: measured) and recovers materially more section/subsection/clause markers,
+#: which is what the chunking phase is built on -- a page of statute whose
+#: numbering is lost is much less useful than one whose prose is slightly worse.
+#:
+#: There is a hard floor here regardless of preference: Tesseract's orientation
+#: detection stops answering below 200 dpi rather than answering wrongly, so any
+#: OCR pass that straightens pages must render at 200 or better.
+OCR_DPI = 300
+
+#: Pages one document may have OCR'd before the rest are deferred. A fully
+#: scanned 764-page gazette at ~1.9 s/page is 24 minutes on its own, and an
+#: unattended overnight run cannot afford several of those. Over the cap the
+#: document records ``truncated`` and stays quarantined -- and stays retryable,
+#: which is the point: deferring is honest, silently spending the night is not.
+OCR_MAX_PAGES_PER_DOCUMENT = 200
+
+#: Whether ``python -m processing.run`` executes OCR unless told otherwise.
+#: The routing decision is always made; this is only about performing it.
+#:
+#: Only the CLI reads this. ``process_document(run_ocr=...)`` defaults to False
+#: instead: OCR costs seconds per page against milliseconds for everything else
+#: and needs a system Tesseract, so the library call stays cheap and the command
+#: that spends the time is the one that decides to.
+OCR_ENABLED_DEFAULT = True
+
 # --- Vector-outlined pages ------------------------------------------------------
 #
 # A distinct third failure mode, found in the first benchmark run: a converter

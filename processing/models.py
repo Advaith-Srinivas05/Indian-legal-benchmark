@@ -215,6 +215,19 @@ class PageText:
     #: stream. Labelled here and skipped by the structure parser, never removed
     #: from :attr:`text` -- the same contract furniture and footnotes have.
     non_english_lines: list[dict] = field(default_factory=list)
+    #: What an OCR engine made of this page, when one was run: the trigger, the
+    #: engine, any rotation applied, the text it read, and whether that reading
+    #: was accepted over :attr:`text`. ``None`` when OCR was never attempted.
+    #:
+    #: The engine's text lives here and never in :attr:`text`, which stays
+    #: byte-for-byte what the extraction backend produced. Both readings are
+    #: kept so a bad OCR pass is diagnosable after the fact instead of having
+    #: silently overwritten the evidence.
+    ocr: Optional[dict] = None
+    #: Which reading later stages should use: ``backend`` or ``ocr``. Resolved
+    #: by :func:`processing.ocr_engine.page_text`.
+    text_source: str = "backend"
+
     #: Whether this page's text may be indexed as English law. False for the
     #: other-language pages of a bilingual document, which print the same law in
     #: translation. Set from the language verdict; every page of an ordinary
@@ -257,9 +270,27 @@ class PageText:
             "orientation": self.orientation.to_dict() if self.orientation else None,
             "language": self.language,
             "non_english_lines": self.non_english_lines,
+            "ocr": self.ocr,
+            "text_source": self.text_source,
             "indexable": self.indexable,
             "warnings": self.warnings,
         }
+
+    @property
+    def selected_text(self) -> str:
+        """The reading of this page that later stages should use.
+
+        :attr:`text` when extraction's output stands, the engine's text when OCR
+        was run and its result was judged better. The one place that resolves
+        which reading is authoritative, so no downstream stage has to decide for
+        itself -- and so :attr:`text` can stay byte-for-byte what the backend
+        produced without every consumer having to remember that.
+        """
+        if self.text_source == "ocr":
+            text = (self.ocr or {}).get("text")
+            if text:
+                return text
+        return self.text
 
     @property
     def is_sideways(self) -> bool:
@@ -322,6 +353,11 @@ class ExtractedDocument:
         return sum(1 for p in self.pages if p.indexable)
 
     @property
+    def ocr_page_count(self) -> int:
+        """Pages whose stored reading came out of an OCR engine."""
+        return sum(1 for p in self.pages if p.text_source == "ocr")
+
+    @property
     def sideways_page_count(self) -> int:
         return sum(1 for p in self.pages if p.is_sideways)
 
@@ -344,6 +380,7 @@ class ExtractedDocument:
             "table_candidate_count": self.table_candidate_count,
             "footnote_count": self.footnote_count,
             "indexable_page_count": self.indexable_page_count,
+            "ocr_page_count": self.ocr_page_count,
             "vector_outlined_page_count": self.vector_outlined_page_count,
             "sideways_page_count": self.sideways_page_count,
             "direction_inconsistent_page_count": self.direction_inconsistent_page_count,
@@ -498,6 +535,9 @@ class ProcessedDocument:
     language: Optional[object] = None          # processing.language.LanguageAssessment
     quality: Optional[object] = None           # processing.quality.QualityAssessment
     ocr_decision: Optional[OcrDecision] = None
+    #: :class:`processing.ocr_engine.OcrRun` -- what the OCR stage actually did,
+    #: as against :attr:`ocr_decision`, which is what it was told to do.
+    ocr_run: Optional[object] = None
     ok: bool = False
     error_type: Optional[str] = None
     error_message: Optional[str] = None

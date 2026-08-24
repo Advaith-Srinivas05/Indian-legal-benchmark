@@ -29,7 +29,8 @@ from typing import Optional
 
 from ingestion.utils import atomic_write_text, utcnow_iso
 
-from . import __version__, config, language, ocr, quality
+from . import (__version__, config, furniture, language, ocr, ocr_engine,
+               quality)
 from .backends import PdfBackend
 from .errors import ProcessingError
 from .extract import extract_document
@@ -52,6 +53,8 @@ def process_document(
     backend: Optional[PdfBackend] = None,
     detect_tables: bool = True,
     write: bool = True,
+    run_ocr: bool = False,
+    ocr_reader=None,
 ) -> ProcessedDocument:
     """Extract, parse and (optionally) write one document.
 
@@ -59,6 +62,12 @@ def process_document(
     :class:`~processing.models.ProcessedDocument` with ``ok=False`` and the error
     recorded, so a run over 100 documents reports 100 outcomes rather than
     stopping at the first unreadable PDF.
+
+    *run_ocr* is **off by default**, unlike every other stage. OCR costs seconds
+    per page rather than milliseconds and needs a Tesseract install, so a caller
+    gets it by asking. ``processing.run`` asks (see ``--ocr``/``--no-ocr``, on by
+    default), which puts the policy in the command that spends the time and
+    keeps this function cheap for everything else that calls it.
     """
     started = time.monotonic()
     result = ProcessedDocument(document=document)
@@ -98,6 +107,16 @@ def process_document(
             # line in an otherwise English act is the same finding as a block of
             # them, and the old page-ratio rule let exactly that through.
             page.non_english_lines = language.non_english_lines(page)
+        # OCR, page by page, over what extraction could not read. The only
+        # stage that adds text rather than measuring it -- and it adds it beside
+        # page.text, never over it. See processing.ocr_engine.
+        if run_ocr:
+            result.ocr_run = _run_ocr(
+                extraction, document, language_assessment, reader=ocr_reader)
+            if result.ocr_run.accepted:
+                language_assessment = language.assess_pages(
+                    extraction.pages, metadata_language=document.language)
+
         indexable = language.indexable_pages(extraction.pages, language_assessment)
         indexable_numbers = {p.page_number for p in indexable}
         for page in extraction.pages:
@@ -142,6 +161,54 @@ def process_document(
     return result
 
 
+def _run_ocr(extraction, document, language_assessment, *, reader=None):
+    """Run the OCR stage and repair what replacing a page's text invalidates.
+
+    Furniture and footnotes were established against the extraction backend's
+    text. Where OCR has replaced that text, they describe lines that no longer
+    exist, and a stale line index is worse than no label: the structure parser
+    skips by index, so it would drop whichever line now happens to sit there.
+
+    The two are not repairable in the same way. Furniture is recurrence across
+    page *text* and is simply re-detected over the new readings. Footnotes are
+    established from type size and position on the page -- geometry an OCR engine
+    does not produce -- so for a re-read page they are cleared and the page says
+    so. Losing the amendment-note separation on a scanned page is a real cost,
+    and it is smaller than mislabelling arbitrary lines as footnotes.
+    """
+    run = ocr_engine.ocr_document(
+        extraction, document.pdf_path, reader=reader,
+        document_language=getattr(language_assessment, "content_language", None),
+    )
+    if not run.accepted:
+        return run
+
+    for page in extraction.pages:
+        if page.text_source != "ocr":
+            continue
+        # The reading changed, so the verdicts taken over the old one are re-taken.
+        page.language = language.classify_page(page)
+        page.non_english_lines = language.non_english_lines(page)
+        if page.footnotes:
+            page.footnotes = []
+            page.warnings.append(
+                "footnote blocks were detected in the original text layer and "
+                "dropped when OCR replaced it: they are located by type size and "
+                "position, which an OCR engine does not report"
+            )
+
+    claimed = [
+        {i for block in page.footnotes
+         for i in range(block.line_start, block.line_end + 1)}
+        for page in extraction.pages
+    ]
+    detected = furniture.detect(
+        [p.selected_text for p in extraction.pages], skip_indices=claimed)
+    for page in extraction.pages:
+        page.furniture = detected.get(page.page_number, [])
+    return run
+
+
 def write_outputs(result: ProcessedDocument, data_dir: Path) -> Path:
     """Write ``document.json`` and ``pages.json`` atomically."""
     document = result.document
@@ -174,6 +241,7 @@ def write_outputs(result: ProcessedDocument, data_dir: Path) -> Path:
         "content_language": result.language.to_dict() if result.language else None,
         "extraction_quality": result.quality.to_dict() if result.quality else None,
         "ocr_decision": result.ocr_decision.to_dict() if result.ocr_decision else None,
+        "ocr_run": result.ocr_run.to_dict() if result.ocr_run else None,
         "eligible_for_indexing": result.eligible_for_indexing,
         "structure": structure.to_dict(),
         "artifacts": {
