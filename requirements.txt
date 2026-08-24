@@ -1,0 +1,14 @@
+# Runtime dependencies. Pinned to compatible ranges so experiments stay
+# reproducible (see the project spec).
+
+# Phase 1 — corpus download (ingestion/).
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
+
+# Phase 2 — PDF extraction and legal-structure parsing (processing/).
+# PyMuPDF is the extraction backend: it reports image placement per page (how a
+# scanned page is recognised without OCRing it) and is roughly an order of
+# magnitude faster than pdfminer-based readers, which matters at 19,802
+# documents / 39 GB. It is AGPL-3.0, which is why processing/backends.py keeps
+# it behind a swappable interface.
+pymupdf>=1.24,<2

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+  A synthetic act page exercising the subordinate-legislation cases the live
+  Passports Act page does not happen to contain:
+
+    Rules table (headers "Files(Eng)" / "Files(Hindi)"):
+      row 1  English + Hindi files      -> English taken, Hindi ignored
+      row 2  Hindi file only            -> rejected (hindi_rejected)
+      row 3  described, no file at all  -> rejected (no_pdf)
+      row 4  Devanagari description in the English column -> rejected (hindi)
+
+    Regulations table with generic, unlabelled file columns:
+      row 1  a file, but nothing states its language -> rejected (ambiguous),
+             NOT assumed to be English just because a description exists.
+
+  The unclosed <tr> markup of the real site is reproduced deliberately.
+-->
+<html lang="en">
+<head>
+  <meta name="DC.identifier" content="http://hdl.handle.net/123456789/8100" scheme="DCTERMS.URI" />
+  <meta name="DC.title" content="Edge Case Act, 1990" />
+  <meta name="citation_title" content="Edge Case Act, 1990" />
+  <meta name="citation_pdf_url" content="http://indiacode.nic.in/bitstream/123456789/8100/1/A1990-07.pdf" />
+  <title>India Code: Edge Case Act, 1990</title>
+</head>
+<body>
+<div class="display-item">
+  <table class="table itemDisplayTable">
+    <tr><td class="metadataFieldLabel">Act Number:&nbsp;</td><td class="metadataFieldValue">7</td></tr>
+    <tr><td class="metadataFieldLabel">Act Year:&nbsp;</td><td class="metadataFieldValue">1990</td></tr>
+    <tr><td class="metadataFieldLabel">Short Title:&nbsp;</td><td class="metadataFieldValue">The Edge Case Act, 1990</td></tr>
+    <tr><td class="metadataFieldLabel">Ministry:&nbsp;</td><td class="metadataFieldValue">Ministry of Testing</td></tr>
+  </table>
+
+  <div class="row" style="margin: 0;">
+    <a href="/bitstream/123456789/8100/1/A1990-07.pdf" target="_blank"><p class="standard">The Edge Case Act, 1990</p></a>
+  </div>
+
+  <div id="subordinate" class="text-center panel panel-default">
+    <div class="panel-body">
+      <a href="#" class="btn cl3" data-toggle="modal" data-target="#myModal1">Rules</a>
+      <a href="#" class="btn cl200" data-toggle="modal" data-target="#myModal2">Regulations</a>
+      <a href="#" class="btn cl6" data-toggle="modal" data-target="#myModal3">Notifications</a>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal1">
+    <table id="myTableRules" class="table">
+      <th>Year</th><th>Description</th><th>Hindi Description</th><th>Files(Eng)</th><th>Files(Hindi)</th></tr>
+      <tr>
+        <td class="modaltd1">01-01-1991</td>
+        <td class="modaltd2">The Edge Case Rules, 1991</td>
+        <td class="modaltd2">&#2319;&#2337;&#2381;&#2332; &#2325;&#2375;&#2360; &#2344;&#2367;&#2351;&#2350;, 1991</td>
+        <td class="modaltd3"><a href="/ViewFileUploaded?path=AC_CEN_TEST_8100/rulesindividualfile/&amp;file=edge_case_rules_1991.pdf " target="_blank" title="edge_case_rules_1991.pdf"><img src="/image/pdfdownload.png" /></a></td>
+        <td class="modaltd3"><a href="/ViewFileUploaded?path=AC_CEN_TEST_8100/ruleshindifile/&amp;file=H_edge_case_rules_1991.pdf " target="_blank" title="H_edge_case_rules_1991.pdf"><img src="/image/pdfdownload.png" /></a></td>
+      <tr>
+        <td class="modaltd1">02-02-1992</td>
+        <td class="modaltd2">The Edge Case (Amendment) Rules, 1992</td>
+        <td class="modaltd2">&#2319;&#2337;&#2381;&#2332; &#2325;&#2375;&#2360; &#2360;&#2306;&#2358;&#2379;&#2343;&#2344; &#2344;&#2367;&#2351;&#2350;, 1992</td>
+        <td class="modaltd3"></td>
+        <td class="modaltd3"><a href="/ViewFileUploaded?path=AC_CEN_TEST_8100/ruleshindifile/&amp;file=H_edge_case_amend_1992.pdf " target="_blank" title="H_edge_case_amend_1992.pdf"><img src="/image/pdfdownload.png" /></a></td>
+      <tr>
+        <td class="modaltd1">03-03-1993</td>
+        <td class="modaltd2">The Edge Case (Second Amendment) Rules, 1993</td>
+        <td class="modaltd2"></td>
+        <td class="modaltd3"></td>
+        <td class="modaltd3"></td>
+      <tr>
+        <td class="modaltd1">04-04-1994</td>
+        <td class="modaltd2">&#2319;&#2337;&#2381;&#2332; &#2325;&#2375;&#2360; &#2344;&#2367;&#2351;&#2350;, 1994</td>
+        <td class="modaltd2"></td>
+        <td class="modaltd3"><a href="/ViewFileUploaded?path=AC_CEN_TEST_8100/rulesindividualfile/&amp;file=devanagari_row_1994.pdf " target="_blank" title="devanagari_row_1994.pdf"><img src="/image/pdfdownload.png" /></a></td>
+        <td class="modaltd3"></td>
+    </table>
+  </div>
+
+  <div class="modal fade" id="myModal2">
+    <table id="myTableRegulations" class="table">
+      <th>Year</th><th>Description</th><th>Hindi Description</th><th>Files</th><th>Other Files</th></tr>
+      <tr>
+        <td class="modaltd1">05-05-1995</td>
+        <td class="modaltd2">The Edge Case Regulations, 1995</td>
+        <td class="modaltd2"></td>
+        <td class="modaltd3"><a href="/ViewFileUploaded?path=AC_CEN_TEST_8100/regulationsindividualfile/&amp;file=edge_case_regs_1995.pdf " target="_blank" title="edge_case_regs_1995.pdf"><img src="/image/pdfdownload.png" /></a></td>
+        <td class="modaltd3"></td>
+    </table>
+  </div>
+
+  <div class="modal fade" id="myModal3">
+    <table id="myTableNotifications" class="table">
+      <th>Year</th><th>Description</th><th>Hindi Description</th><th>Files(Eng)</th><th>Files(Hindi)</th></tr>
+      <tr>
+        <td class="modaltd1">06-06-1996</td>
+        <td class="modaltd2">Out-of-scope notification, 1996</td>
+        <td class="modaltd2"></td>
+        <td class="modaltd3"><a href="/ViewFileUploaded?path=AC_CEN_TEST_8100/notificationsindividualfile/&amp;file=notification_1996.pdf " target="_blank" title="notification_1996.pdf"><img src="/image/pdfdownload.png" /></a></td>
+        <td class="modaltd3"></td>
+    </table>
+  </div>
+</div>
+</body>
+</html>

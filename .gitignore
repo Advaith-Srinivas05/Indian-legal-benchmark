@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+venv/
+.coverage
+htmlcov/
+
+# Hidden files and directories: environments, editor settings, tool state
+.*
+!.gitignore
+
+# Documentation and examples are kept out of the repository
+*.md
+/docs/
+/examples/
+
+# Corpus data: downloaded PDFs, extraction output and run logs.
+# Regenerable by running the ingestion and processing pipelines.
+/data/
+
+# Interrupted downloads
+*.part
+
+# OS
+Thumbs.db

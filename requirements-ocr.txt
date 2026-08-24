@@ -1,0 +1,36 @@
+# Optional: OCR engines, needed only to run `python -m processing.ocr_eval`.
+#
+# Deliberately separate from requirements.txt. The processing pipeline *decides*
+# what needs OCR without any of these installed (see processing/ocr.py); only the
+# engine comparison actually reads pixels, and these packages are large — easyocr
+# pulls in PyTorch.
+#
+# Install with:  pip install -r requirements-ocr.txt
+#
+# Tesseract needs a system-level install as well as the wrapper below, because
+# the engine is a binary and the language data is a separate download. It is the
+# standard document-OCR engine, so an evaluation without it is not an
+# evaluation — the first benchmark run reported it as unavailable and that was
+# the largest hole in the comparison.
+#
+#   Windows:  winget install --id UB-Mannheim.TesseractOCR
+#   Debian:   apt install tesseract-ocr tesseract-ocr-eng
+#   macOS:    brew install tesseract
+#
+# The installers do not always put the binary on PATH; nothing here needs them
+# to, because processing.orientation.tesseract_binary() also looks in the
+# standard install locations.
+#
+# `osd.traineddata` ships with all three and is required — it is what decides
+# which of the four rotations a page needs, and it is the only component in this
+# project that can answer that question.
+pytesseract>=0.3.10,<0.4
+
+# RapidOCR — PP-OCRv4 models on ONNX Runtime. Self-contained, CPU-only, no
+# framework dependency.
+rapidocr-onnxruntime>=1.4,<2
+
+# EasyOCR — CRAFT detector + CRNN recogniser on PyTorch. Install the CPU build of
+# torch first, or this pulls the CUDA wheels:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+easyocr>=1.7,<2

@@ -1,0 +1,14 @@
+# Minimal project config. Runtime dependencies live in requirements.txt (as per
+# the structure in the project spec); this file only configures the test runner so we
+# do not duplicate the dependency list in two places.
+
+[tool.pytest.ini_options]
+# Make the repo root importable so `import ingestion` works without installing.
+pythonpath = ["."]
+testpaths = ["tests"]
+# Live-site tests are opt-in (`pytest -m network`) so the default run needs no
+# network and cannot be broken by India Code being slow or unreachable.
+addopts = "-q -m 'not network'"
+markers = [
+    "network: hits the live India Code website (deselected by default)",
+]
