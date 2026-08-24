@@ -1185,3 +1185,25 @@ class TestOcrEngineMissingGuard:
         state = {"doc-a": {"ocr_pages_accepted": 199}}
         at_risk = [d for d, row in state.items() if row.get("ocr_pages_accepted")]
         assert at_risk == ["doc-a"]
+
+
+class TestIndexablePageSubtotal:
+    """`pages_indexable` is a subtotal until every record carries it.
+
+    The field arrived after 783 of the pilot's 1,003 documents had been
+    journalled. Summing the absences as zero reported "3,135 pages indexable" of
+    21,803 processed -- a number that reads as a corpus total and is a subtotal
+    over a fifth of it.
+    """
+
+    def test_absent_fields_are_not_counted_as_zero(self):
+        rows = [{"pages_indexable": 10}, {"pages_indexable": 5}, {"pages": 40}]
+        total = sum(r["pages_indexable"] for r in rows if "pages_indexable" in r)
+        measured = sum(1 for r in rows if "pages_indexable" in r)
+        assert (total, measured) == (15, 2)
+
+    def test_an_explicit_zero_is_still_counted(self):
+        """A document that really contributed no page is data, not absence."""
+        rows = [{"pages_indexable": 0}, {"pages_indexable": 7}]
+        measured = sum(1 for r in rows if "pages_indexable" in r)
+        assert measured == 2

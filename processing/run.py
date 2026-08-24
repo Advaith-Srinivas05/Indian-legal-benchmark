@@ -938,6 +938,7 @@ def build_report(
     failure_rows: list[dict] = []
     pages = characters = 0
     pages_indexable = 0
+    pages_indexable_documents = 0
     pages_pending_ocr = documents_pending_ocr = 0
     eligible = 0
     processing_seconds = 0.0
@@ -949,7 +950,12 @@ def build_report(
         by_category[category] += 1
         by_category_status.setdefault(category, Counter())[status] += 1
         pages += row.get("pages") or 0
-        pages_indexable += row.get("pages_indexable") or 0
+        # Counted only over the records that carry the field. A journal written
+        # across a schema change holds both, and summing the absences as zero
+        # would report a corpus-wide page count that is silently a subtotal.
+        if "pages_indexable" in row:
+            pages_indexable += row["pages_indexable"] or 0
+            pages_indexable_documents += 1
         characters += row.get("chars") or 0
         processing_seconds += row.get("seconds") or 0.0
         if row.get("pdf_type"):
@@ -1057,9 +1063,12 @@ def build_report(
             "never_attempted": never_attempted,
             "pages_processed": pages,
             # The count that matters downstream: pages, not documents, are what
-            # chunking and retrieval consume, and a partially recovered document
-            # contributes some of its pages and not others.
+            # chunking and retrieval consume. Reported with the number of
+            # documents it was measured over, because it is a subtotal until
+            # every record carries the field, and a bare number would read as a
+            # corpus total.
             "pages_indexable": pages_indexable,
+            "pages_indexable_measured_over_documents": pages_indexable_documents,
             "pages_ocr": 0,
             "total_extracted_characters": characters,
             "total_processing_seconds": round(processing_seconds, 2),
@@ -1126,7 +1135,11 @@ def render_summary(report: dict) -> str:
         f"  documents in journal    : {totals['documents_in_journal']:>7,}",
         f"  never attempted         : {_count(totals['never_attempted'])}",
         f"  pages processed         : {totals['pages_processed']:>7,}",
-        f"  pages indexable         : {totals['pages_indexable']:>7,}",
+        f"  pages indexable         : {totals['pages_indexable']:>7,}"
+        + (f"  (over {totals['pages_indexable_measured_over_documents']:,} of "
+           f"{totals['documents_in_journal']:,} documents)"
+           if totals['pages_indexable_measured_over_documents']
+           != totals['documents_in_journal'] else ""),
         f"  characters extracted    : {totals['total_extracted_characters']:>7,}",
         f"  eligible for indexing   : {eligibility['eligible_for_indexing']:>7,}",
         f"  pending OCR             : {totals['documents_pending_ocr']:>7,} "
