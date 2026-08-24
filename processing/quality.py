@@ -157,17 +157,125 @@ def text_signals(text: str) -> dict:
 def page_is_suspect(text: str) -> bool:
     """Whether one page's text fails the shape checks on its own.
 
-    Used only for the consistency signal, and only on pages with enough text for
-    the ratios to mean anything.
+    Used for the consistency signal and for page-level indexability, and only on
+    pages with enough text for the ratios to mean anything.
+
+    Note the asymmetry: a page too short to judge is **not** suspect, because
+    this answers "is there evidence against this page", not "is this page
+    sound". :func:`page_is_judgeable` is the question to ask before trusting a
+    ``False``, and :func:`indexable_pages` asks it.
     """
     signals = text_signals(text)
-    if signals["word_count"] < 60:
+    if signals["word_count"] < config.QUALITY_PAGE_MIN_WORDS:
         return False
     return (
         signals["mean_word_length"] < config.QUALITY_MEAN_WORD_LENGTH_MIN
         or signals["single_char_rate"] > config.QUALITY_SINGLE_CHAR_RATE_MAX
         or signals["mixed_case_rate"] > config.QUALITY_MIXED_CASE_RATE_MAX
     )
+
+
+def page_is_judgeable(text: str) -> bool:
+    """Whether this page carries enough English words to judge its quality."""
+    return len(_WORD.findall(text)) >= config.QUALITY_PAGE_MIN_WORDS
+
+
+def indexable_pages(pages: Iterable, assessment, *, page_text=None) -> list:
+    """The pages whose text passes the page-level checks.
+
+    **Not wired to eligibility, deliberately.** ``process_document`` records each
+    page's verdict and does not use this to decide indexability. Read
+    :attr:`processing.models.ProcessedDocument.eligible_for_indexing` before
+    reaching for it.
+
+    It was built to salvage the sound pages of a document quarantined on quality
+    -- 36% of the judgeable English pages in the pilot's quarantined set pass
+    these checks -- and reverted when the pages it admits turned out to be
+    corrupted in ways the checks do not see: ``thereil``, ``fixecj``,
+    ``concerngd``, ``recognuon``. These three checks were designed as one
+    contributor to a weighted document-level panel, where the aggregate and the
+    page-consistency ratio do the discriminating. Promoted to an admission gate
+    they admit text that is not quotable as law.
+
+    Measured against pages from documents that were never quarantined, the
+    admitted pages are worse on every discriminating signal, and the clearest of
+    them -- English common-word rate, median 0.54 against 0.63 -- overlaps so
+    heavily that no threshold separates the populations: 0.50 rejects a third of
+    the admitted pages and an eighth of the trusted ones.
+
+    Kept because the per-page verdict is worth recording, and because a real
+    word-validity signal -- which needs a dictionary this project does not carry,
+    and labels it has declined to produce -- would slot in exactly here.
+
+    Three cases:
+
+    *Judgeable and sound* — indexable.
+
+    *Judgeable and suspect* — not indexable, whatever the document's average.
+
+    *Too short to judge* — a cover, a part-title, a page of signatures. Indexable
+    only if the document's judged pages came out ``good``. An unjudgeable page
+    carries no evidence of its own, so it inherits the company it keeps rather
+    than being waved through: the alternative admits the empty pages of a
+    document that is unreadable everywhere it can be read.
+
+    A document whose quality could not be established at all -- no judgeable page
+    anywhere -- has no indexable pages. Nothing is established about it, and
+    ``insufficient_text`` says exactly that.
+
+    *page_text* extracts the text to judge from a page; it defaults to the page's
+    selected reading. :mod:`processing.process` passes the English-only lines,
+    for the same reason :func:`assess` is given them: a translation left in the
+    pool reads as extraction damage.
+    """
+    if page_text is None:
+        def page_text(page):
+            return getattr(page, "selected_text", None) or getattr(page, "text", "") or ""
+
+    page_list = list(pages)
+    if getattr(assessment, "insufficient_text", False):
+        return []
+
+    document_is_good = getattr(assessment, "classification", "") == "good"
+    indexable = []
+    for page in page_list:
+        text = page_text(page)
+        if not page_is_judgeable(text):
+            if document_is_good:
+                indexable.append(page)
+            continue
+        if not page_is_suspect(text):
+            indexable.append(page)
+    return indexable
+
+
+def page_verdict(text: str) -> dict:
+    """This page's own quality verdict, for the page record.
+
+    ``good`` / ``suspect`` / ``unjudged`` — never a score. The score is a
+    document-level summary of a weighted panel; a page runs the three shape
+    checks and nothing else, and reporting a number here would imply the two are
+    comparable.
+    """
+    if not page_is_judgeable(text):
+        return {
+            "verdict": "unjudged",
+            "reason": (
+                f"fewer than {config.QUALITY_PAGE_MIN_WORDS} English words: too "
+                "little text to judge, which is not the same as bad text"
+            ),
+        }
+    if not page_is_suspect(text):
+        return {"verdict": "good", "reason": "the page-level shape checks pass"}
+    signals = text_signals(text)
+    failed = []
+    if signals["mean_word_length"] < config.QUALITY_MEAN_WORD_LENGTH_MIN:
+        failed.append(f"mean word length {signals['mean_word_length']}")
+    if signals["single_char_rate"] > config.QUALITY_SINGLE_CHAR_RATE_MAX:
+        failed.append(f"{signals['single_char_rate']:.1%} single-letter words")
+    if signals["mixed_case_rate"] > config.QUALITY_MIXED_CASE_RATE_MAX:
+        failed.append(f"{signals['mixed_case_rate']:.2%} words with capitals inside")
+    return {"verdict": "suspect", "reason": "; ".join(failed)}
 
 
 def section_number_plausibility(structure) -> Optional[float]:

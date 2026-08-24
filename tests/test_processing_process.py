@@ -156,3 +156,77 @@ class TestWriteToggle:
         assert result.ok
         assert result.output_dir is None
         assert not output_dir(data_dir, "sample-act-1999__handle-1").exists()
+
+
+class TestQualityStaysADocumentGate:
+    """Quality gates the document, not the page, and that is a decision.
+
+    Making it page-level was built and reverted. 36% of the judgeable English
+    pages inside quality-quarantined documents pass the page-level shape checks,
+    but reading them showed the checks do not see the damage that matters
+    ("thereil", "concerngd", "recognuon") — they were designed as one contributor
+    to a weighted document panel, not as an admission gate. Against pages from
+    documents that were never quarantined, the admitted pages are worse on every
+    discriminating signal and no threshold separates the populations.
+
+    These tests exist so the revert is not silently undone by someone who
+    rediscovers the 36% and not the reason it was rejected.
+    """
+
+    @staticmethod
+    def _document(quality_classification="good", pages=None):
+        from processing.models import ExtractedDocument, ProcessedDocument
+
+        extraction = ExtractedDocument(
+            document_id="doc", page_count=len(pages or []), pages=pages or [],
+            pdf_type="text_based", text_extraction_status="ok", orientation={},
+        )
+        return ProcessedDocument(
+            document=None,
+            extraction=extraction,
+            language=type("L", (), {"eligible_for_indexing": True})(),
+            quality=type("Q", (), {"classification": quality_classification})(),
+            ok=True,
+        )
+
+    @staticmethod
+    def _page(number, indexable):
+        from processing.models import PageText
+        return PageText(page_number=number, text="x", char_count=1,
+                        indexable=indexable)
+
+    def test_a_bad_document_is_quarantined_however_clean_a_page_looks(self):
+        result = self._document(
+            "bad", [self._page(1, True), self._page(2, False)])
+        assert not result.eligible_for_indexing
+
+    def test_a_good_document_is_eligible(self):
+        result = self._document(
+            "good", [self._page(1, True), self._page(2, True)])
+        assert result.eligible_for_indexing
+
+    def test_indexable_pages_still_reports_the_language_gate(self):
+        """The page count is still worth reporting — it is what bilingual
+        routing excludes, and what a later word-validity signal would refine."""
+        result = self._document(
+            "good", [self._page(1, True), self._page(2, False)])
+        assert result.indexable_page_count == 1
+
+
+class TestProcessDocumentPageQuality:
+    def test_pages_carry_their_own_quality_verdict(self, tmp_path):
+        """Every page is judged, and says so on the record."""
+        from processing import quality
+        assert quality.page_verdict("SCHEDULE II")["verdict"] == "unjudged"
+
+    def test_an_excluded_page_keeps_its_text_and_says_why(self):
+        """The contract furniture, footnotes and non-English lines all have:
+        labelled, never removed."""
+        from processing.models import PageText
+        page = PageText(page_number=1, text="the original text",
+                        char_count=len("the original text"))
+        page.warnings.append(
+            "excluded from indexing: 40.0% single-letter words -- the text is "
+            "kept here in full and is not altered")
+        assert page.text == "the original text"
+        assert page.to_dict()["text"] == "the original text"

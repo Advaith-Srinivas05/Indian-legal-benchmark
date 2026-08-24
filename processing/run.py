@@ -165,7 +165,8 @@ class RunLock:
 _PROJECTED_FIELDS = (
     "document_id", "status", "category", "document_type", "title", "pdf_relpath",
     "sha256", "journal_schema_version", "processing_schema_version",
-    "pages", "chars", "empty_pages", "bytes", "seconds",
+    "pages", "pages_indexable", "pages_excluded", "chars", "empty_pages",
+    "bytes", "seconds",
     "pdf_type", "text_extraction_status", "extraction_quality", "content_language",
     "orientation_suspect", "ocr_action", "ocr_text_source", "ocr_estimated_pages",
     "structure_confidence", "eligible_for_indexing", "quarantine_reasons",
@@ -402,6 +403,14 @@ def result_record(
         "pages": getattr(extraction, "page_count", 0) or 0,
         "chars": getattr(extraction, "char_count", 0) or 0,
         "empty_pages": getattr(extraction, "empty_page_count", 0) or 0,
+        # What this document actually contributes downstream. Documents are the
+        # unit the runner schedules; pages are the unit that gets indexed, and
+        # since quality is decided per page the two counts diverge. A report
+        # that only counted documents would show a partially-recovered document
+        # as a whole success.
+        "pages_indexable": result.indexable_page_count,
+        "pages_excluded": ((getattr(extraction, "page_count", 0) or 0)
+                           - result.indexable_page_count),
         "pdf_type": getattr(extraction, "pdf_type", None),
         "text_extraction_status": getattr(extraction, "text_extraction_status", None),
         "backend": getattr(extraction, "backend", None),
@@ -731,6 +740,9 @@ class RunStats:
     skipped: int = 0
     timed_out: int = 0
     pages: int = 0
+    #: Pages that survived the language and quality gates -- what this run
+    #: actually contributes downstream, as against what it read.
+    pages_indexable: int = 0
     pages_ocr: int = 0
     ocr_documents: int = 0
     ocr_pages_accepted: int = 0
@@ -785,6 +797,7 @@ class RunStats:
         self.ocr_seconds += record.get("ocr_seconds") or 0.0
         self.pages_ocr += record.get("ocr_pages_in_output") or 0
         self.pages += record.get("pages") or 0
+        self.pages_indexable += record.get("pages_indexable") or 0
         self.characters += record.get("chars") or 0
         self.bytes_read += record.get("bytes") or 0
         if record.get("ocr_action") in config.OCR_ACTIONS_BLOCKING_INDEX:
@@ -825,7 +838,7 @@ def render_progress(stats: RunStats) -> str:
         f"  remaining     : {stats.remaining:,}",
         f"  pending OCR   : {stats.documents_pending_ocr:,} documents "
         f"({stats.pages_pending_ocr:,} pages) — decided, not performed",
-        f"  pages         : {stats.pages:,}",
+        f"  pages         : {stats.pages:,} ({stats.pages_indexable:,} indexable)",
         f"  characters    : {stats.characters:,}",
         f"  elapsed       : {format_duration(stats.elapsed)}",
         f"  rate          : {stats.rate * 60:.1f} docs/min",
@@ -924,6 +937,7 @@ def build_report(
     errors: dict[str, dict] = {}
     failure_rows: list[dict] = []
     pages = characters = 0
+    pages_indexable = 0
     pages_pending_ocr = documents_pending_ocr = 0
     eligible = 0
     processing_seconds = 0.0
@@ -935,6 +949,7 @@ def build_report(
         by_category[category] += 1
         by_category_status.setdefault(category, Counter())[status] += 1
         pages += row.get("pages") or 0
+        pages_indexable += row.get("pages_indexable") or 0
         characters += row.get("chars") or 0
         processing_seconds += row.get("seconds") or 0.0
         if row.get("pdf_type"):
@@ -1026,6 +1041,7 @@ def build_report(
             "held_back_failed": len(plan.held_back) if plan else None,
             "deferred_by_limit": plan.deferred_by_limit if plan else None,
             "pages_processed": stats.pages,
+            "pages_indexable": stats.pages_indexable,
             "pages_ocr": stats.pages_ocr,
             "ocr_documents": stats.ocr_documents,
             "ocr_pages_accepted": stats.ocr_pages_accepted,
@@ -1040,6 +1056,10 @@ def build_report(
             "documents_in_journal": len(current),
             "never_attempted": never_attempted,
             "pages_processed": pages,
+            # The count that matters downstream: pages, not documents, are what
+            # chunking and retrieval consume, and a partially recovered document
+            # contributes some of its pages and not others.
+            "pages_indexable": pages_indexable,
             "pages_ocr": 0,
             "total_extracted_characters": characters,
             "total_processing_seconds": round(processing_seconds, 2),
@@ -1106,6 +1126,7 @@ def render_summary(report: dict) -> str:
         f"  documents in journal    : {totals['documents_in_journal']:>7,}",
         f"  never attempted         : {_count(totals['never_attempted'])}",
         f"  pages processed         : {totals['pages_processed']:>7,}",
+        f"  pages indexable         : {totals['pages_indexable']:>7,}",
         f"  characters extracted    : {totals['total_extracted_characters']:>7,}",
         f"  eligible for indexing   : {eligibility['eligible_for_indexing']:>7,}",
         f"  pending OCR             : {totals['documents_pending_ocr']:>7,} "
@@ -1468,6 +1489,7 @@ def run(
         corpus = Corpus.load(data_dir)
         journal = StatusJournal(journal_path(data_dir))
         state = journal.load()
+        engine_missing = False
         if run_ocr:
             available, why = ocr_engine.engine_available()
             if not available:
@@ -1479,11 +1501,32 @@ def run(
                     "before. Install Tesseract, or pass --no-ocr to say so "
                     "deliberately.", why)
                 run_ocr = False
+                engine_missing = True
         plan = plan_run(
             corpus, state, verify=verify, limit=limit, categories=categories,
             document_types=document_types, only=only, retry_failed=retry_failed,
             force=force, attempts=journal.attempt_counts(), ocr_enabled=run_ocr,
         )
+        if engine_missing:
+            # Processing without an engine is a fair first pass. Reprocessing a
+            # document that already holds accepted OCR text is not: it replaces a
+            # reading that beat extraction on evidence with the reading it beat,
+            # and the record afterwards looks like an ordinary complete document.
+            # Nothing downstream could tell the difference, so the run stops here
+            # rather than quietly undoing work.
+            at_risk = [item.document.document_id for item in plan.todo
+                       if (state.get(item.document.document_id) or {})
+                       .get("ocr_pages_accepted")]
+            if at_risk:
+                raise ProcessingError(
+                    f"{len(at_risk)} of the {len(plan.todo)} selected documents "
+                    f"already hold OCR text that was accepted over their "
+                    f"extracted text ({', '.join(at_risk[:3])}"
+                    f"{', ...' if len(at_risk) > 3 else ''}), and no OCR engine "
+                    f"is available now ({why}). Reprocessing them would discard "
+                    "those readings. Install Tesseract and run again, or pass "
+                    "--no-ocr to accept the loss deliberately."
+                )
         log.info("%d documents to process, %d already complete, %d without a PDF.",
                  len(plan.todo), len(plan.already_complete), len(plan.missing_pdf))
         stats = execute(

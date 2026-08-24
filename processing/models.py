@@ -208,6 +208,15 @@ class PageText:
     #: :class:`processing.orientation.PageOrientation` — whether this page's text
     #: is the right way round, and on what evidence.
     orientation: Optional[object] = None
+    #: This page's own extraction-quality verdict -- ``good``, ``suspect`` or
+    #: ``unjudged`` -- from :func:`processing.quality.page_verdict`, judged over
+    #: its English lines. ``None`` until that has run.
+    #:
+    #: A page-level fact, kept beside the document-level
+    #: :class:`~processing.quality.QualityAssessment` rather than replacing it:
+    #: a document can be sound overall and have three ruined pages, and both
+    #: halves of that sentence are worth recording.
+    quality: Optional[dict] = None
     #: What language this page is written in, judged on script alone by
     #: :func:`processing.language.classify_page`. ``None`` until that has run.
     language: Optional[dict] = None
@@ -230,8 +239,10 @@ class PageText:
 
     #: Whether this page's text may be indexed as English law. False for the
     #: other-language pages of a bilingual document, which print the same law in
-    #: translation. Set from the language verdict; every page of an ordinary
-    #: English document stays True.
+    #: translation, and for pages whose own extracted text is too damaged to
+    #: quote. Set from the language verdict and the page quality verdict
+    #: together; every page of an ordinary, soundly extracted English document
+    #: stays True.
     #:
     #: Not on its own a licence to index: the *document* must also be eligible.
     #: Chunking reads the intersection.
@@ -268,6 +279,7 @@ class PageText:
             "furniture": [f.to_dict() for f in self.furniture],
             "footnotes": [f.to_dict() for f in self.footnotes],
             "orientation": self.orientation.to_dict() if self.orientation else None,
+            "quality": self.quality,
             "language": self.language,
             "non_english_lines": self.non_english_lines,
             "ocr": self.ocr,
@@ -570,6 +582,16 @@ class ProcessedDocument:
         whether extraction actually produced a document, because quality is
         computed over the text that *did* come out — which, for a document that
         is 97% empty, is a small and unrepresentative sample of it.
+
+        The quality gate is deliberately **document-level**, and making it
+        page-level was tried and reverted on the evidence. The premise — that a
+        document quarantined on quality holds sound pages worth keeping — is true
+        of some of them, and the page-level checks cannot tell which: the pages
+        they admit are visibly corrupted ("thereil", "concerngd", "recognuon")
+        and measurably worse than pages from documents that were never
+        quarantined, with no threshold separating the two populations. Recording
+        each page's verdict is useful; letting it admit text is not. See
+        :attr:`PageText.quality` and docs/KNOWN_ISSUES.md D6.
         """
         if not self.ok or self.language is None or self.quality is None:
             return False
@@ -581,3 +603,19 @@ class ProcessedDocument:
             and not orientation.get("orientation_suspect")
             and action not in config.OCR_ACTIONS_BLOCKING_INDEX
         )
+
+    @property
+    def indexable_pages(self) -> list:
+        """The pages this document may contribute downstream.
+
+        Marked during processing by the language gate. Quality is judged for
+        each page too (:attr:`PageText.quality`) but deliberately does not
+        decide this — see :attr:`eligible_for_indexing`.
+        """
+        pages = getattr(self.extraction, "pages", None) or []
+        return [page for page in pages if getattr(page, "indexable", False)]
+
+    @property
+    def indexable_page_count(self) -> int:
+        return len(self.indexable_pages)
+

@@ -117,10 +117,8 @@ def process_document(
                 language_assessment = language.assess_pages(
                     extraction.pages, metadata_language=document.language)
 
+        english_of = language.english_line_text
         indexable = language.indexable_pages(extraction.pages, language_assessment)
-        indexable_numbers = {p.page_number for p in indexable}
-        for page in extraction.pages:
-            page.indexable = page.page_number in indexable_numbers
 
         # Judged over the indexable pages -- but never over an empty list. A
         # document whose language was never established has none, and measuring
@@ -136,8 +134,38 @@ def process_document(
         # -- the same document lost, for a different stated reason.
         quality_assessment = quality.assess(
             assessed, structure=structure,
-            text=NEWLINE.join(language.english_line_text(p) for p in assessed),
+            text=NEWLINE.join(english_of(p) for p in assessed),
         )
+        # Each page's own quality verdict is recorded, and deliberately does NOT
+        # decide indexability. It was built to, and the pilot said no.
+        #
+        # The premise was that a document quarantined on quality holds sound
+        # pages worth keeping -- 36% of the judgeable English pages in the
+        # quarantined set pass the page-level shape checks. Reading them showed
+        # the premise was false: pages that pass are routinely damaged in ways
+        # the page-level checks do not see ("thereil", "fixecj", "concerngd",
+        # "recognuon"), because those checks were designed as one contributor to
+        # a weighted document panel, not as an admission gate. Promoted to a
+        # gate, they admit text that is not quotable as law.
+        #
+        # Measured against pages from documents that were never quarantined, the
+        # admitted pages are worse on every discriminating signal, and the
+        # clearest of them -- English common-word rate, 0.54 against 0.63 --
+        # overlaps so heavily that no threshold separates the two populations: at
+        # 0.50 it rejects a third of the admitted pages and an eighth of the
+        # trusted ones. Separating them needs a word-validity signal this project
+        # does not have (COMMON_WORDS is 307 words, not a dictionary) and
+        # ground-truth labels it has declined to produce.
+        #
+        # So the verdict is recorded for whoever builds that signal, and quality
+        # remains a document-level gate. See docs/KNOWN_ISSUES.md D-page-quality.
+        for page in extraction.pages:
+            page.quality = quality.page_verdict(english_of(page))
+
+        indexable_numbers = {p.page_number for p in indexable}
+        for page in extraction.pages:
+            page.indexable = page.page_number in indexable_numbers
+
         decision = ocr.decide(
             extraction, quality_assessment, language=language_assessment)
 

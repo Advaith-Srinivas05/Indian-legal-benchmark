@@ -306,6 +306,17 @@ QUALITY_LEVELS = ("good", "questionable", "bad")
 #: page-level inconsistency counts against the document.
 QUALITY_SUSPECT_PAGE_RATIO = 0.30
 
+#: English words a page must carry before its own quality can be judged. The
+#: same floor as :data:`QUALITY_MIN_WORDS` and for the same reason -- below it
+#: the ratios measure nothing -- but named separately because it governs a
+#: page-level decision and would move independently if either ever changed.
+#:
+#: Governs the recorded per-page verdict only. Page quality does **not** decide
+#: indexability: 36% of the judgeable English pages inside the pilot's
+#: quality-quarantined documents pass these checks, and reading them showed the
+#: checks miss the damage that matters. See :func:`processing.quality.indexable_pages`.
+QUALITY_PAGE_MIN_WORDS = 60
+
 # --- Content-level language validation -------------------------------------------
 #
 # India Code's own file labels are evidence but not proof: the first benchmark

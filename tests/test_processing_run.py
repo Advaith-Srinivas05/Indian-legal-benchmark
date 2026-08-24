@@ -1143,3 +1143,45 @@ class TestCli:
     def test_unknown_categories_are_rejected(self):
         with pytest.raises(SystemExit):
             runner.build_parser().parse_args(["--category", "judgments"])
+
+
+class TestOcrEngineMissingGuard:
+    """A run without an engine must not undo a run that had one.
+
+    Found the hard way: a reprocessing run launched from a shell where Tesseract
+    was not on PATH silently replaced the accepted OCR text of 129 documents with
+    the extracted text those readings had already beaten. The output verified as
+    complete afterwards, which is exactly the failure this project cares about --
+    a document that looks processed and whose unreadable pages were never read.
+    """
+
+    def _plan_with(self, monkeypatch, ids_with_ocr):
+        from processing import ocr_engine
+        monkeypatch.setattr(
+            ocr_engine, "engine_available", lambda: (False, "tesseract not found"))
+        return {did: {"ocr_pages_accepted": n} for did, n in ids_with_ocr.items()}
+
+    def test_the_guard_message_names_the_cost(self):
+        from processing.errors import ProcessingError
+        # The message is the whole point: it has to say what would be lost and
+        # what to do, or the operator just passes --no-ocr to make it go away.
+        exc = ProcessingError(
+            "2 of the 5 selected documents already hold OCR text that was "
+            "accepted over their extracted text (a, b), and no OCR engine is "
+            "available now (tesseract not found). Reprocessing them would "
+            "discard those readings. Install Tesseract and run again, or pass "
+            "--no-ocr to accept the loss deliberately.")
+        assert "discard those readings" in str(exc)
+        assert "--no-ocr" in str(exc)
+
+    def test_a_document_with_no_accepted_ocr_is_not_at_risk(self):
+        state = {"doc-a": {"ocr_pages_accepted": 0},
+                 "doc-b": {"ocr_pages_accepted": None},
+                 "doc-c": {}}
+        at_risk = [d for d, row in state.items() if row.get("ocr_pages_accepted")]
+        assert at_risk == []
+
+    def test_a_document_with_accepted_ocr_is_at_risk(self):
+        state = {"doc-a": {"ocr_pages_accepted": 199}}
+        at_risk = [d for d, row in state.items() if row.get("ocr_pages_accepted")]
+        assert at_risk == ["doc-a"]

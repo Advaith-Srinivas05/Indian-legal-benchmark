@@ -210,3 +210,82 @@ class TestPageLevelSuspicion:
 
     def test_a_page_with_too_little_text_is_not_judged(self):
         assert not quality.page_is_suspect("12")
+
+
+class TestPageLevelIndexability:
+    """``indexable_pages`` — kept as a diagnostic, NOT wired to eligibility.
+
+    Built to let a quarantined document contribute its sound pages, and reverted
+    when the pilot showed the pages it admits are corrupted in ways the
+    page-level checks do not see. It stays because the per-page verdict is worth
+    recording and because a future word-validity signal would slot in here — but
+    ``process_document`` does not use it to decide indexability, and
+    ``ProcessedDocument.eligible_for_indexing`` still asks for a good document.
+    """
+
+    def _assessment(self, classification="good", insufficient=False):
+        return SimpleNamespace(
+            classification=classification, insufficient_text=insufficient)
+
+    def test_a_clean_page_in_a_bad_document_survives(self):
+        page_list = pages(CLEAN_LEGAL_TEXT, NFSA_OCR, NFSA_OCR)
+        kept = quality.indexable_pages(page_list, self._assessment("bad"))
+        assert [p.page_number for p in kept] == [1]
+
+    def test_a_damaged_page_in_a_good_document_is_dropped(self):
+        page_list = pages(CLEAN_LEGAL_TEXT, NFSA_OCR)
+        kept = quality.indexable_pages(page_list, self._assessment("good"))
+        assert [p.page_number for p in kept] == [1]
+
+    def test_a_document_with_no_sound_page_keeps_none(self):
+        kept = quality.indexable_pages(
+            pages(NFSA_OCR, NFSA_OCR), self._assessment("bad"))
+        assert kept == []
+
+    def test_an_unjudgeable_page_follows_a_good_document(self):
+        # A cover or a part-title carries no evidence of its own.
+        kept = quality.indexable_pages(
+            pages(CLEAN_LEGAL_TEXT, "SCHEDULE II"), self._assessment("good"))
+        assert [p.page_number for p in kept] == [1, 2]
+
+    def test_an_unjudgeable_page_does_not_follow_a_bad_one(self):
+        kept = quality.indexable_pages(
+            pages(NFSA_OCR, "SCHEDULE II"), self._assessment("bad"))
+        assert kept == []
+
+    def test_a_document_whose_quality_was_never_established_keeps_nothing(self):
+        # insufficient_text is not a quality verdict, and must not read as one.
+        kept = quality.indexable_pages(
+            pages(CLEAN_LEGAL_TEXT), self._assessment("questionable", insufficient=True))
+        assert kept == []
+
+    def test_the_text_to_judge_can_be_overridden(self):
+        # process.py judges the English lines, not the raw page.
+        page_list = pages(NFSA_OCR)
+        kept = quality.indexable_pages(
+            page_list, self._assessment("good"),
+            page_text=lambda p: CLEAN_LEGAL_TEXT)
+        assert len(kept) == 1
+
+    def test_the_gate_applies_the_same_thresholds_as_the_panel(self):
+        # Not a relaxation: a page the panel calls suspect is the page this
+        # drops, on the identical checks.
+        for text in (CLEAN_LEGAL_TEXT, NFSA_OCR):
+            page_list = pages(text)
+            kept = quality.indexable_pages(page_list, self._assessment("good"))
+            assert bool(kept) is not quality.page_is_suspect(text)
+
+
+class TestPageVerdict:
+    def test_a_clean_page_reads_good(self):
+        assert quality.page_verdict(CLEAN_LEGAL_TEXT)["verdict"] == "good"
+
+    def test_a_damaged_page_reads_suspect_and_says_why(self):
+        verdict = quality.page_verdict(NFSA_OCR)
+        assert verdict["verdict"] == "suspect"
+        assert verdict["reason"]
+
+    def test_a_short_page_is_unjudged_not_bad(self):
+        verdict = quality.page_verdict("SCHEDULE II")
+        assert verdict["verdict"] == "unjudged"
+        assert "not the same as bad text" in verdict["reason"]
