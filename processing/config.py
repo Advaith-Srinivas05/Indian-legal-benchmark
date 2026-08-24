@@ -146,7 +146,7 @@ VALIDATION_MAX_PAGES_PER_DOCUMENT = 3
 #: unwieldy; OCR is run separately at the engine's own dpi.
 VALIDATION_RENDER_DPI = 150
 
-PROCESSING_SCHEMA_VERSION = 1
+PROCESSING_SCHEMA_VERSION = 2
 
 # --- Page classification --------------------------------------------------------
 
@@ -280,7 +280,21 @@ QUALITY_SUSPECT_PAGE_RATIO = 0.30
 # acts quote Devanagari titles. What separates them is whether the *readable*
 # words are English.
 
-CONTENT_LANGUAGES = ("en", "non_en", "uncertain")
+#: ``bilingual_en`` is a document that prints the same law twice, once in
+#: English and once in another language, on *separable pages* -- the form most
+#: Central Government gazette notifications take. Its English pages are
+#: indexable and its other-language pages are not; the document as a whole is
+#: neither "English" nor "not English", and saying so is more useful than
+#: either.
+#:
+#: Evidence (1,000-document proportional pilot, 2026-08-24): 95 documents came
+#: back ``non_en``, and 69 of them had English function-word rates of 0.28-0.56
+#: -- inside the healthy English band of 0.28-0.63 -- while carrying 25-36%
+#: Devanagari letters. Their English-page share ran 0.25 to 0.67 (median 0.48)
+#: and every one of the 69 had at least one English page. The other 26 scored
+#: 0.00-0.01 on function words and are genuinely not English. Extrapolated,
+#: ~1,370 corpus documents.
+CONTENT_LANGUAGES = ("en", "bilingual_en", "non_en", "uncertain")
 
 #: Clean words (alphabetic, >= 2 letters, consistently cased) needed before a
 #: language call means anything. Below it the answer is ``uncertain``.
@@ -304,6 +318,21 @@ LANGUAGE_MIN_DISTINCT_FUNCTION_WORDS = 12
 #: Share of *letters* in a non-Latin script before the document is non-English
 #: on script grounds alone. Well above the handful of Devanagari characters an
 #: English act carries when it quotes a Hindi title.
+#:
+#: **This test no longer settles the question by itself.** It was written for a
+#: document *written* in another script, and it also caught documents that print
+#: the English text alongside a translation: a 50/50 bilingual notification
+#: lands at 0.25-0.36, above this line, while its English half is perfectly
+#: good law. The script ratio is therefore now read together with the
+#: function-word evidence -- see :func:`processing.language.assess_text`. A
+#: document over this ratio whose readable words are independently established
+#: English is bilingual, not foreign, and is routed page by page instead of
+#: being rejected whole.
+#:
+#: The two populations are far apart, so no new threshold is needed to separate
+#: them: on the 1,000-document pilot the bilingual documents scored 0.28-0.56 on
+#: English function words and the genuinely non-English ones 0.00-0.01. The
+#: existing :data:`LANGUAGE_ENGLISH_RATE` bar of 0.15 sits in the gap.
 LANGUAGE_NON_LATIN_LETTER_RATIO = 0.25
 
 # A whole-document average hides a document that is part English and part not:
@@ -321,6 +350,18 @@ LANGUAGE_NON_LATIN_LETTER_RATIO = 0.25
 LANGUAGE_PAGE_MIN_LETTERS = 200
 #: Share of a document's measurable pages that may be decisively non-English
 #: before the document as a whole stops being established English.
+#:
+#: **Retained as a reporting signal only; it no longer gates anything.** It used
+#: to decide whether a part-English document was quarantined whole, and that was
+#: wrong in both directions. Above the line, a bilingual act was thrown away
+#: including its English half. Below it, a document with one Devanagari page in
+#: twenty was cleared *and that page was indexed as English law* -- the ratio
+#: was 0.05, under the limit, so nothing objected.
+#:
+#: Both are now handled per page: a decisively non-Latin page is marked
+#: not indexable wherever it appears, and the pages around it are unaffected.
+#: That is stricter about what enters the index and less blunt about what is
+#: discarded, which is the right trade in both directions.
 LANGUAGE_MIXED_NON_EN_PAGE_RATIO = 0.15
 
 # --- Page orientation -------------------------------------------------------------

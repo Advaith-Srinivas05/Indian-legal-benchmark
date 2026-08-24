@@ -164,15 +164,44 @@ def assess_text(text: str) -> LanguageAssessment:
     }
     reasons: list[str] = []
 
-    # A script other than Latin carrying the bulk of the letters settles it
-    # outright, and names the script so the call can be checked.
+    english_established = (
+        rate >= config.LANGUAGE_ENGLISH_RATE
+        and distinct >= config.LANGUAGE_MIN_DISTINCT_FUNCTION_WORDS
+        and len(words) >= config.LANGUAGE_MIN_CLEAN_WORDS
+    )
+    signals["english_established"] = english_established
+
+    # A script other than Latin carrying the bulk of the letters settles it --
+    # unless the readable words are independently, unambiguously English, in
+    # which case both things are true at once and the document is bilingual.
+    #
+    # This test used to return outright, before the vocabulary evidence was ever
+    # consulted. That is correct for a document *written* in Devanagari and
+    # wrong for one that prints the English text alongside a translation, which
+    # is the ordinary form of a Central Government gazette notification: 32% of
+    # its letters are Devanagari and its English half is perfectly good law.
+    # On the 1,000-document pilot that mistake cost 69 documents in 1,000.
+    #
+    # Deciding *which* pages are the English ones is not this function's job --
+    # it is handed one block of text and cannot see page boundaries. It reports
+    # the conflict; :func:`assess_pages` resolves it against the page profile.
     if non_latin_ratio >= config.LANGUAGE_NON_LATIN_LETTER_RATIO and letters >= 200:
         script = dominant_other[0].lower() if dominant_other else "non-Latin"
+        if not english_established:
+            reasons.append(
+                f"{non_latin_ratio:.0%} of letters are {script}, above the "
+                f"{config.LANGUAGE_NON_LATIN_LETTER_RATIO:.0%} limit"
+            )
+            return LanguageAssessment("non_en", False, signals, reasons)
+        signals["bilingual_candidate"] = True
         reasons.append(
             f"{non_latin_ratio:.0%} of letters are {script}, above the "
-            f"{config.LANGUAGE_NON_LATIN_LETTER_RATIO:.0%} limit"
+            f"{config.LANGUAGE_NON_LATIN_LETTER_RATIO:.0%} limit, but "
+            f"{rate:.1%} of readable words are English function words "
+            f"({distinct} distinct over {len(words)} words): both languages are "
+            "present in quantity, so this is a translation printed alongside "
+            "the English text rather than a document in another language"
         )
-        return LanguageAssessment("non_en", False, signals, reasons)
 
     decisive_short = (
         len(words) >= config.LANGUAGE_SHORT_MIN_CLEAN_WORDS
@@ -227,6 +256,55 @@ def assess_text(text: str) -> LanguageAssessment:
     return LanguageAssessment("uncertain", False, signals, reasons)
 
 
+def classify_page(page) -> dict:
+    """Judge one page's language **on script alone**.
+
+    Script, not vocabulary, for the reason recorded at length in
+    :func:`page_language_profile`: a page of Latin species names is Latin, and a
+    page listing tariff headings carries no English function words while being
+    unambiguously part of an English statute. Vocabulary is the right test for a
+    document and the wrong one for a page.
+
+    Returns ``verdict`` in ``en`` | ``non_en`` | ``unknown``. ``unknown`` means
+    the page carries too few letters to be evidence of anything -- a cover, a
+    part-title, a blank -- and is never treated as a finding in either
+    direction.
+    """
+    text = getattr(page, "text", "") or ""
+    profile = script_profile(text)
+    letters = profile["letters"]
+    latin = profile["by_script"].get("LATIN", 0)
+    unknown = profile["by_script"].get("UNKNOWN", 0)
+    non_latin = letters - latin - unknown
+    ratio = (non_latin / letters) if letters else 0.0
+
+    if letters < config.LANGUAGE_PAGE_MIN_LETTERS:
+        verdict, reason = "unknown", (
+            f"only {letters} letters (need {config.LANGUAGE_PAGE_MIN_LETTERS}); "
+            "too little to establish a language either way"
+        )
+    elif ratio >= config.LANGUAGE_NON_LATIN_LETTER_RATIO:
+        dominant = max(
+            ((name, count) for name, count in profile["by_script"].items()
+             if name not in ("LATIN", "UNKNOWN")),
+            key=lambda item: item[1], default=None)
+        script = dominant[0].lower() if dominant else "non-Latin"
+        verdict, reason = "non_en", (
+            f"{ratio:.0%} of letters are {script}, at or above the "
+            f"{config.LANGUAGE_NON_LATIN_LETTER_RATIO:.0%} limit"
+        )
+    else:
+        verdict, reason = "en", (
+            f"{1 - ratio:.0%} of {letters} letters are Latin"
+        )
+    return {
+        "verdict": verdict,
+        "letters": letters,
+        "non_latin_letter_ratio": round(ratio, 4),
+        "reason": reason,
+    }
+
+
 def page_language_profile(pages: Iterable) -> dict:
     """Count the pages written in a script other than Latin.
 
@@ -263,24 +341,26 @@ def page_language_profile(pages: Iterable) -> dict:
     """
     measurable = 0
     non_english: list[int] = []
+    english: list[int] = []
     for page in pages:
-        text = getattr(page, "text", "") or ""
-        profile = script_profile(text)
-        letters = profile["letters"]
-        if letters < config.LANGUAGE_PAGE_MIN_LETTERS:
+        verdict = classify_page(page)["verdict"]
+        if verdict == "unknown":
             continue                        # a cover or a part-title page
         measurable += 1
-        latin = profile["by_script"].get("LATIN", 0)
-        unknown = profile["by_script"].get("UNKNOWN", 0)
-        if (letters - latin - unknown) / letters >= \
-                config.LANGUAGE_NON_LATIN_LETTER_RATIO:
+        if verdict == "non_en":
             non_english.append(getattr(page, "page_number", 0))
+        else:
+            english.append(getattr(page, "page_number", 0))
     ratio = len(non_english) / measurable if measurable else 0.0
     return {
         "measurable_pages": measurable,
         "non_english_pages": len(non_english),
         "non_english_page_numbers": non_english[:50],
+        "english_pages": len(english),
+        "english_page_numbers": english[:50],
         "non_english_page_ratio": round(ratio, 4),
+        # Reported, no longer a gate. See the note on
+        # config.LANGUAGE_MIXED_NON_EN_PAGE_RATIO.
         "mixed_language": ratio >= config.LANGUAGE_MIXED_NON_EN_PAGE_RATIO,
         "basis": "non_latin_script",
         "thresholds": {
@@ -289,6 +369,36 @@ def page_language_profile(pages: Iterable) -> dict:
             "mixed_non_en_page_ratio": config.LANGUAGE_MIXED_NON_EN_PAGE_RATIO,
         },
     }
+
+
+def indexable_pages(pages: Iterable, assessment) -> list:
+    """The pages whose text may be indexed as English law.
+
+    Every page of an established-English document, the English pages of a
+    bilingual one, and none at all of a document whose language was never
+    established.
+
+    Pages too short to classify stay in. A cover or a part-title carries no
+    language either way, and dropping it would put a hole in the page sequence
+    for no gain.
+
+    Built by re-classifying rather than from
+    ``page_language_profile()["english_page_numbers"]``, which is capped at 50
+    entries for display and would silently truncate a long document.
+
+    This is a page-level fact and not on its own a licence to index anything:
+    the document must also pass
+    :attr:`processing.models.ProcessedDocument.eligible_for_indexing`. Chunking
+    reads the intersection of the two.
+    """
+    verdict = getattr(assessment, "content_language", None)
+    page_list = list(pages)
+    if verdict in ("non_en", "uncertain"):
+        return []
+    if verdict != "bilingual_en":
+        return page_list
+    return [page for page in page_list
+            if classify_page(page)["verdict"] != "non_en"]
 
 
 def assess_pages(pages: Iterable, *, metadata_language: str | None = None) -> LanguageAssessment:
@@ -306,24 +416,37 @@ def assess_pages(pages: Iterable, *, metadata_language: str | None = None) -> La
 
     profile = page_language_profile(page_list)
     assessment.signals["page_language"] = profile
-    if profile["mixed_language"] and assessment.content_language == "en":
-        # Only a document the pooled check *cleared* can be downgraded here. One
-        # already found non-English stays non-English: "mixed" would be a weaker
-        # and less accurate statement about it, and the page profile of a
-        # wholly non-English document trivially satisfies this rule.
-        #
-        # The downgrade is to ``uncertain`` rather than to ``non_en``, because
-        # the document *is* substantially English and calling it another language
-        # would be as wrong as calling it English. What is true is that its
-        # language is not uniform — so it is not established English, and under
-        # the project spec, unestablished means quarantined.
+
+    # A document carrying both languages in quantity is routed page by page
+    # rather than accepted or rejected whole. Reaching here requires the pooled
+    # vocabulary evidence to have established English (``assess_text`` returns
+    # ``non_en`` outright otherwise), so a wholly non-English document never
+    # arrives -- which matters, because a transliterated Devanagari document
+    # extracts as *Latin* glyphs and its pages therefore read as English on
+    # script. Vocabulary rejects it at the document level; script then picks the
+    # pages inside the documents vocabulary has already cleared. Neither test is
+    # sufficient alone and the order is what makes them safe together.
+    if (assessment.content_language == "en"
+            and profile["non_english_pages"]
+            and profile["english_pages"]):
+        assessment.content_language = "bilingual_en"
+        assessment.reasons.append(
+            f"{profile['english_pages']} of {profile['measurable_pages']} "
+            f"measurable pages are English and {profile['non_english_pages']} "
+            "are not: the same law is printed in both languages, so the English "
+            "pages are indexed and the others are excluded page by page"
+        )
+    elif assessment.content_language == "en" and profile["non_english_pages"]:
+        # Non-English pages but no English ones among the *measurable* pages,
+        # while the pooled text still reads as English. The pooled evidence must
+        # be coming from pages too short to measure, so nothing here is
+        # established.
         assessment.content_language = "uncertain"
         assessment.eligible_for_indexing = False
         assessment.reasons.append(
             f"{profile['non_english_pages']} of {profile['measurable_pages']} "
-            f"measurable pages ({profile['non_english_page_ratio']:.0%}) are "
-            "decisively not English, so this document is mixed-language even "
-            "though its text pooled together reads as English"
+            "measurable pages are decisively not English and none is decisively "
+            "English, so this document's language is not established"
         )
     if metadata_language and metadata_language != "en":
         assessment.eligible_for_indexing = False

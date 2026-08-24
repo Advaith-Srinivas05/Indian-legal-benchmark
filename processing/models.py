@@ -208,6 +208,17 @@ class PageText:
     #: :class:`processing.orientation.PageOrientation` — whether this page's text
     #: is the right way round, and on what evidence.
     orientation: Optional[object] = None
+    #: What language this page is written in, judged on script alone by
+    #: :func:`processing.language.classify_page`. ``None`` until that has run.
+    language: Optional[dict] = None
+    #: Whether this page's text may be indexed as English law. False for the
+    #: other-language pages of a bilingual document, which print the same law in
+    #: translation. Set from the language verdict; every page of an ordinary
+    #: English document stays True.
+    #:
+    #: Not on its own a licence to index: the *document* must also be eligible.
+    #: Chunking reads the intersection.
+    indexable: bool = True
     warnings: list[str] = field(default_factory=list)
     #: Per-line geometry from the backend, used to place footnotes. Transient:
     #: it is an order of magnitude larger than the page text and adds nothing
@@ -240,6 +251,8 @@ class PageText:
             "furniture": [f.to_dict() for f in self.furniture],
             "footnotes": [f.to_dict() for f in self.footnotes],
             "orientation": self.orientation.to_dict() if self.orientation else None,
+            "language": self.language,
+            "indexable": self.indexable,
             "warnings": self.warnings,
         }
 
@@ -300,6 +313,10 @@ class ExtractedDocument:
         return sum(1 for p in self.pages if p.is_vector_outlined)
 
     @property
+    def indexable_page_count(self) -> int:
+        return sum(1 for p in self.pages if p.indexable)
+
+    @property
     def sideways_page_count(self) -> int:
         return sum(1 for p in self.pages if p.is_sideways)
 
@@ -321,6 +338,7 @@ class ExtractedDocument:
             "table_count": self.table_count,
             "table_candidate_count": self.table_candidate_count,
             "footnote_count": self.footnote_count,
+            "indexable_page_count": self.indexable_page_count,
             "vector_outlined_page_count": self.vector_outlined_page_count,
             "sideways_page_count": self.sideways_page_count,
             "direction_inconsistent_page_count": self.direction_inconsistent_page_count,

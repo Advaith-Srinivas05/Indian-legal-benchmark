@@ -257,13 +257,26 @@ SPECIES_SCHEDULE = """
 class TestMixedLanguageDocuments:
     """A document that is part English and part written in another script.
 
-    The regression this guards: a pooled non-Latin letter ratio is diluted by
-    every English page in an act, so a substantial Hindi section can sit under
-    the document-level threshold and be indexed as English law.
+    Such a document is routed **page by page**: the English pages are indexed
+    and the others are not. It is neither accepted whole nor rejected whole,
+    because both were wrong in practice and in opposite directions.
 
-    The regression it must *not* re-introduce: counting pages that merely fail
-    the English test quarantined the Wild Life (Protection) Act, 1972 for
-    containing its own schedules of species. Both directions are tested.
+    Rejecting whole threw away real law. On the 1,000-document proportional
+    pilot, 69 of the 95 documents called ``non_en`` scored 0.28-0.56 on English
+    function words -- inside the healthy English band -- and were rejected only
+    for carrying 25-36% Devanagari. They are gazette notifications printing the
+    same rule in both languages on separate pages. Extrapolated: ~1,370 corpus
+    documents.
+
+    Accepting whole was worse and quieter. The old rule only fired above 15%
+    non-English pages, so one Devanagari page in twenty passed unremarked **and
+    was indexed as English law**. Page-level routing closes that.
+
+    Two regressions this must not re-introduce, both tested below: judging pages
+    on vocabulary rather than script quarantined the Wild Life (Protection) Act,
+    1972 for its own schedules of species; and a document transliterated into
+    Latin glyphs has pages that *read* as English on script, so script must
+    never be trusted to clear a document vocabulary has not already cleared.
     """
 
     def test_a_wholly_english_document_is_not_called_mixed(self):
@@ -274,18 +287,40 @@ class TestMixedLanguageDocuments:
         assert result.signals["page_language"]["mixed_language"] is False
         assert result.signals["page_language"]["non_english_pages"] == 0
 
-    def test_a_block_of_devanagari_pages_quarantines_the_document(self):
-        result = language.assess_pages(
-            pages(*([ENGLISH] * 8 + [DEVANAGARI_PAGE] * 2)),
-            metadata_language="en",
-        )
+    def test_a_block_of_devanagari_pages_is_routed_page_by_page(self):
+        """Previously this quarantined the whole document, English half included.
+
+        The Devanagari pages must not be indexed -- that part has not changed
+        and is asserted below. What changed is that the eight English pages are
+        no longer thrown away with them.
+        """
+        page_list = pages(*([ENGLISH] * 8 + [DEVANAGARI_PAGE] * 2))
+        result = language.assess_pages(page_list, metadata_language="en")
         profile = result.signals["page_language"]
         assert profile["non_english_pages"] == 2
         assert profile["non_english_page_numbers"] == [9, 10]
-        assert profile["mixed_language"] is True
-        assert result.content_language == "uncertain"
-        assert not result.eligible_for_indexing
-        assert any("mixed-language" in reason for reason in result.reasons)
+        assert profile["english_pages"] == 8
+        assert result.content_language == "bilingual_en"
+        assert result.eligible_for_indexing
+
+        keep = language.indexable_pages(page_list, result)
+        assert [p.page_number for p in keep] == [1, 2, 3, 4, 5, 6, 7, 8]
+        assert 9 not in [p.page_number for p in keep]
+        assert 10 not in [p.page_number for p in keep]
+
+    def test_the_devanagari_pages_are_never_indexable(self):
+        """The invariant the old whole-document quarantine was protecting.
+
+        It survives the change, and now holds at any ratio rather than only
+        above 15%.
+        """
+        for english, hindi in ((8, 2), (19, 1), (2, 8), (1, 1)):
+            page_list = pages(*([ENGLISH] * english + [DEVANAGARI_PAGE] * hindi))
+            result = language.assess_pages(page_list, metadata_language="en")
+            keep = language.indexable_pages(page_list, result)
+            for page in keep:
+                assert language.classify_page(page)["verdict"] != "non_en", (
+                    f"a Devanagari page was indexable at {english}/{hindi}")
 
     def test_the_pooled_check_alone_would_have_cleared_it(self):
         """The reason the page-level pass exists, stated as a test.
@@ -312,14 +347,23 @@ class TestMixedLanguageDocuments:
         assert result.content_language == "en"
         assert result.eligible_for_indexing
 
-    def test_one_devanagari_page_in_a_long_document_is_not_enough(self):
-        """A single facing-page translation is not a mixed-language document."""
-        result = language.assess_pages(
-            pages(*([ENGLISH] * 19 + [DEVANAGARI_PAGE])),
-            metadata_language="en",
-        )
+    def test_one_devanagari_page_is_excluded_rather_than_indexed(self):
+        """The hole the old ratio rule left open.
+
+        One Devanagari page in twenty is 5% -- under the old 15% limit -- so the
+        document was cleared as English *and the Devanagari page went into the
+        index as English law*. Nothing objected, because nothing looked.
+
+        The document is still usable; it is the page that is excluded.
+        """
+        page_list = pages(*([ENGLISH] * 19 + [DEVANAGARI_PAGE]))
+        result = language.assess_pages(page_list, metadata_language="en")
         assert result.signals["page_language"]["mixed_language"] is False
-        assert result.content_language == "en"
+        assert result.content_language == "bilingual_en"
+        assert result.eligible_for_indexing
+        keep = language.indexable_pages(page_list, result)
+        assert len(keep) == 19
+        assert 20 not in [p.page_number for p in keep]
 
     def test_short_pages_are_not_counted_either_way(self):
         """Covers and part-title pages establish nothing about language."""
@@ -334,6 +378,48 @@ class TestMixedLanguageDocuments:
         page = ENGLISH + "\nपासपोर्ट अधिनियम, 1967\n"
         profile = language.page_language_profile(pages(*[page] * 5))
         assert profile["non_english_pages"] == 0
+
+    def test_script_never_clears_what_vocabulary_rejected(self):
+        """Why the two tests are ordered, and why neither is enough alone.
+
+        A transliterated Devanagari document extracts as *Latin* glyphs, so
+        every one of its pages reads as English on script. If page-level script
+        were allowed to pick indexable pages inside a document the vocabulary
+        test had rejected, the whole thing would be indexed as English law.
+
+        Vocabulary rejects the document; script then only chooses among the
+        pages of documents vocabulary has already cleared.
+        """
+        page_list = pages(*[TRANSLITERATED_NOISE] * 6)
+        result = language.assess_pages(page_list, metadata_language="en")
+        assert result.content_language == "non_en"
+        assert language.indexable_pages(page_list, result) == []
+
+    def test_an_ordinary_english_document_keeps_every_page(self):
+        page_list = pages(*[ENGLISH] * 10)
+        result = language.assess_pages(page_list, metadata_language="en")
+        assert result.content_language == "en"
+        assert len(language.indexable_pages(page_list, result)) == 10
+
+    def test_the_indexable_list_is_not_truncated_at_fifty(self):
+        """``english_page_numbers`` is capped at 50 for display.
+
+        Building the indexable list from it would silently drop every English
+        page after the fiftieth in a long bilingual act.
+        """
+        page_list = pages(*([ENGLISH] * 120 + [DEVANAGARI_PAGE] * 10))
+        result = language.assess_pages(page_list, metadata_language="en")
+        assert result.content_language == "bilingual_en"
+        assert len(language.indexable_pages(page_list, result)) == 120
+
+    def test_short_pages_stay_in_rather_than_leaving_a_hole(self):
+        """A cover carries no language and dropping it would break the run."""
+        page_list = pages(*(["CHAPTER IV"] + [ENGLISH] * 6 + [DEVANAGARI_PAGE] * 2))
+        result = language.assess_pages(page_list, metadata_language="en")
+        assert result.content_language == "bilingual_en"
+        kept = [p.page_number for p in language.indexable_pages(page_list, result)]
+        assert 1 in kept                      # the short cover page
+        assert kept == [1, 2, 3, 4, 5, 6, 7]
 
     def test_a_wholly_non_english_document_stays_non_en(self):
         """``uncertain`` would be a weaker and less accurate answer than

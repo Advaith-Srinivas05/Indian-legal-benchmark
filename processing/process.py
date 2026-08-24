@@ -71,13 +71,40 @@ def process_document(
             backend=backend,
             detect_tables=detect_tables,
         )
-        structure = parse_structure(extraction.pages, metadata_title=document.title)
-        # Order matters: quality reads the parsed structure (section numbering is
-        # an independent witness to text quality), and the OCR decision reads
+        # Order matters, and language now comes first.
+        #
+        # Language is judged over *every* page, because deciding a document is
+        # bilingual means comparing the pages against each other. Everything
+        # after it is judged over the pages that survive: structure, because a
+        # Hindi translation of an act contains no English sections to find, and
+        # quality, because pooling a Devanagari half into an English document's
+        # word-shape signals reports the translation as extraction damage. A
+        # bilingual document quarantined for `extraction_quality_bad` is the same
+        # document lost for a different stated reason.
+        #
+        # For a document that is entirely English -- which is almost all of them
+        # -- nothing is filtered and this is exactly what it was before.
+        #
+        # Quality still reads the parsed structure (section numbering is an
+        # independent witness to text quality), and the OCR decision still reads
         # both quality and language.
         language_assessment = language.assess_pages(
             extraction.pages, metadata_language=document.language)
-        quality_assessment = quality.assess(extraction.pages, structure=structure)
+        for page in extraction.pages:
+            page.language = language.classify_page(page)
+        indexable = language.indexable_pages(extraction.pages, language_assessment)
+        indexable_numbers = {p.page_number for p in indexable}
+        for page in extraction.pages:
+            page.indexable = page.page_number in indexable_numbers
+
+        # Judged over the indexable pages -- but never over an empty list. A
+        # document whose language was never established has none, and measuring
+        # its structure and quality against nothing would report an empty
+        # document rather than an unreadable one. It is quarantined either way;
+        # the difference is whether the record says why.
+        assessed = indexable or extraction.pages
+        structure = parse_structure(assessed, metadata_title=document.title)
+        quality_assessment = quality.assess(assessed, structure=structure)
         decision = ocr.decide(
             extraction, quality_assessment, language=language_assessment)
 
