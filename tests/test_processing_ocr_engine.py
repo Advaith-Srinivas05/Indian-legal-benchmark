@@ -30,6 +30,7 @@ import pytest
 
 from processing import config, ocr_engine
 from processing.models import ExtractedDocument, FootnoteBlock, PageText
+from tests import pdfbuild
 
 # Real statutory English, long enough for the panel and the language test to
 # have something to measure.
@@ -299,3 +300,101 @@ class TestConfiguration:
         """Below 200 dpi Tesseract's OSD stops answering rather than answering
         wrongly, and a page read in the wrong orientation is confidently wrong."""
         assert config.OCR_DPI >= 200
+
+
+class TestThePixelBudget:
+    """An oversized page is rendered smaller rather than rendered forever.
+
+    The 286 documents journalled FAILED after the 2026-08-27 corpus run were all
+    ``DocumentTimeout``, and about ten of them would not have finished however
+    long the timeout was: their pages rasterise to 50-185 MP at 300 dpi, where
+    PIL warns about a decompression bomb at 132 and a single Tesseract call on a
+    two-page document was still running after thirteen minutes. See
+    KNOWN_ISSUES B8. The budget lowers the resolution for those pages only.
+    """
+
+    def test_an_ordinary_page_is_not_touched(self):
+        """The case that must not change: A4 at 300 dpi is 8.7 MP, well under."""
+        assert ocr_engine.budgeted_dpi(*pdfbuild.A4, 300) == 300
+
+    def test_an_oversized_page_is_lowered_just_far_enough(self):
+        dpi = ocr_engine.budgeted_dpi(1600.0, 1600.0, 300, max_megapixels=40.0)
+        assert 200 < dpi < 300
+        megapixels = (1600 / 72 * dpi) ** 2 / 1_000_000
+        assert megapixels <= 40.0
+
+    def test_an_enormous_page_stops_at_the_orientation_floor(self):
+        """Below 200 dpi Tesseract's OSD stops answering, and a page read the
+        wrong way up is worse than a page read slowly from a large image."""
+        assert ocr_engine.budgeted_dpi(
+            3000.0, 3000.0, 300, max_megapixels=40.0, min_dpi=200) == 200
+
+    def test_the_budget_never_raises_the_resolution(self):
+        """A caller asking for less than the floor gets what it asked for."""
+        assert ocr_engine.budgeted_dpi(
+            3000.0, 3000.0, 150, max_megapixels=40.0, min_dpi=200) == 150
+
+    def test_a_degenerate_page_size_is_left_alone(self):
+        assert ocr_engine.budgeted_dpi(0.0, 842.0, 300) == 300
+
+    def test_the_floor_is_what_orientation_detection_needs(self):
+        assert config.OCR_MIN_DPI >= 200
+        assert config.OCR_DPI >= config.OCR_MIN_DPI
+
+
+class TestRenderPageRespectsTheBudget:
+    """The budget has to reach the pixels, not just the arithmetic."""
+
+    @staticmethod
+    def _rendered_size(pdf: Path) -> tuple[int, int]:
+        """Width and height of the PNG, read from its IHDR chunk.
+
+        Read from the bytes rather than through PIL so the test needs nothing
+        from ``requirements-ocr.txt`` and runs on a machine with no OCR at all.
+        """
+        png = ocr_engine.render_page(pdf, 1)
+        assert png[:8] == b"\x89PNG\r\n\x1a\n"
+        return (int.from_bytes(png[16:20], "big"), int.from_bytes(png[20:24], "big"))
+
+    @staticmethod
+    def _size_at(pdf: Path, dpi: int) -> tuple[int, int]:
+        import pymupdf
+
+        document = pymupdf.open(pdf)
+        try:
+            pixmap = document.load_page(0).get_pixmap(dpi=dpi)
+            return (pixmap.width, pixmap.height)
+        finally:
+            document.close()
+
+    def test_an_ordinary_page_still_renders_at_the_configured_resolution(
+            self, tmp_path):
+        pdf = pdfbuild.text_pdf(tmp_path / "a4.pdf", [GOOD])
+        assert self._rendered_size(pdf) == self._size_at(pdf, config.OCR_DPI)
+
+    def test_an_over_budget_page_renders_smaller(self, tmp_path, monkeypatch):
+        """A4 at 300 dpi is 8.7 MP; a 6 MP budget lowers it without hitting the
+        floor, which is the behaviour a real oversized page gets."""
+        monkeypatch.setattr(config, "OCR_MAX_MEGAPIXELS", 6.0)
+        pdf = pdfbuild.text_pdf(tmp_path / "big.pdf", [GOOD])
+        lowered = ocr_engine.budgeted_dpi(
+            *pdfbuild.A4, config.OCR_DPI, max_megapixels=6.0,
+            min_dpi=config.OCR_MIN_DPI)
+        assert config.OCR_MIN_DPI < lowered < config.OCR_DPI
+        assert self._rendered_size(pdf) == self._size_at(pdf, lowered)
+
+    def test_it_stops_at_the_floor_however_small_the_budget(
+            self, tmp_path, monkeypatch):
+        monkeypatch.setattr(config, "OCR_MAX_MEGAPIXELS", 0.5)
+        pdf = pdfbuild.text_pdf(tmp_path / "huge.pdf", [GOOD])
+        assert self._rendered_size(pdf) == self._size_at(pdf, config.OCR_MIN_DPI)
+
+    def test_the_upright_render_inherits_it(self, tmp_path, monkeypatch):
+        """``render_page_upright`` is the path the OCR pass actually uses."""
+        monkeypatch.setattr(config, "OCR_MAX_MEGAPIXELS", 0.5)
+        monkeypatch.setattr(
+            ocr_engine.orientation, "upright_image", lambda image, **k: (image, None))
+        pdf = pdfbuild.text_pdf(tmp_path / "upright.pdf", [GOOD])
+        png, _ = ocr_engine.render_page_upright(pdf, 1)
+        width = int.from_bytes(png[16:20], "big")
+        assert width == self._size_at(pdf, config.OCR_MIN_DPI)[0]

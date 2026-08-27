@@ -271,6 +271,23 @@ OCR_LANGUAGE = "eng"
 #: OCR pass that straightens pages must render at 200 or better.
 OCR_DPI = 300
 
+#: Ceiling on the pixels one rendered page may occupy, and the floor the dpi may
+#: be lowered to in order to respect it.
+#:
+#: A4 at 300 dpi is 8.7 MP, so this leaves better than 4x headroom and no
+#: ordinary page is touched. The documents that need it are not ordinary: the
+#: 286 timeouts of the 2026-08-27 run include pages rasterising to 50-185 MP at
+#: 300 dpi (KNOWN_ISSUES B8), where PIL raises a decompression-bomb warning at
+#: 132 MP and a single Tesseract call on a 2-page document was still running
+#: after 13 minutes. More patience does not fix that; fewer pixels does.
+#:
+#: The floor is the same 200 dpi ``OCR_DPI`` documents above: Tesseract's
+#: orientation detection stops answering below it, and a page read the wrong way
+#: up is worse than a page read from a large image slowly. A page so big that
+#: even 200 dpi exceeds the ceiling is rendered at 200 anyway.
+OCR_MAX_MEGAPIXELS = 40.0
+OCR_MIN_DPI = 200
+
 #: Pages one document may have OCR'd before the rest are deferred. A fully
 #: scanned 764-page gazette at ~1.9 s/page is 24 minutes on its own, and an
 #: unattended overnight run cannot afford several of those. Over the cap the

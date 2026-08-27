@@ -46,11 +46,22 @@ def _page_image(width: float, height: float, shade: int = 235) -> pymupdf.Pixmap
     return pix
 
 
-def text_pdf(path: Path, pages: Sequence[str], *, fontsize: float = 9.0) -> Path:
-    """A normal typeset PDF: one page per string, no images."""
+def text_pdf(
+    path: Path,
+    pages: Sequence[str],
+    *,
+    fontsize: float = 9.0,
+    size: tuple[float, float] = A4,
+) -> Path:
+    """A normal typeset PDF: one page per string, no images.
+
+    ``size`` is the page's width and height in points. It exists for the pages
+    this corpus has that are not A4 at all -- oversized gazette reproductions,
+    which are what the OCR pixel budget is for.
+    """
     document = pymupdf.open()
     for body in pages:
-        page = document.new_page(width=A4[0], height=A4[1])
+        page = document.new_page(width=size[0], height=size[1])
         if body:
             _textbox(page, body, fontsize=fontsize)
     document.save(path)

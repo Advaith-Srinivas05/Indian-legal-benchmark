@@ -37,6 +37,7 @@ evaluation.
 from __future__ import annotations
 
 import logging
+import math
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -54,14 +55,60 @@ log = logging.getLogger(__name__)
 # duplicated in ocr_eval.py and validation.py, which is where they used to live.
 
 
+def budgeted_dpi(
+    width_points: float,
+    height_points: float,
+    dpi: int = config.OCR_DPI,
+    *,
+    max_megapixels: float = config.OCR_MAX_MEGAPIXELS,
+    min_dpi: int = config.OCR_MIN_DPI,
+) -> int:
+    """The resolution a page of this size may be rendered at.
+
+    Ordinary pages come back unchanged; an oversized one is lowered just far
+    enough to fit the pixel budget, and never below ``min_dpi`` or above the dpi
+    the caller asked for. Pure arithmetic on the page's size in points, so the
+    budget is testable without a PDF.
+
+    A page so large that even ``min_dpi`` overruns the budget is rendered at
+    ``min_dpi``: losing orientation detection is worse than a large image. See
+    :data:`processing.config.OCR_MAX_MEGAPIXELS`.
+    """
+    if width_points <= 0 or height_points <= 0 or dpi <= 0:
+        return dpi
+    megapixels = (
+        (width_points / 72.0 * dpi) * (height_points / 72.0 * dpi) / 1_000_000.0
+    )
+    if megapixels <= max_megapixels:
+        return dpi
+    # Pixel count scales with the square of the dpi, so the shrink factor is the
+    # square root of how far over budget the page is.
+    lowered = int(dpi * math.sqrt(max_megapixels / megapixels))
+    return min(dpi, max(min_dpi, lowered))
+
+
 def render_page(pdf_path: Path, page_number: int, dpi: int = config.OCR_DPI) -> bytes:
-    """Render one 1-based page to PNG bytes."""
+    """Render one 1-based page to PNG bytes, inside the pixel budget."""
     import pymupdf                                          # noqa: PLC0415
 
     document = pymupdf.open(pdf_path)
     try:
         index = max(0, min(page_number - 1, document.page_count - 1))
-        return document.load_page(index).get_pixmap(dpi=dpi).tobytes("png")
+        page = document.load_page(index)
+        rect = page.rect
+        effective_dpi = budgeted_dpi(
+            rect.width, rect.height, dpi,
+            max_megapixels=config.OCR_MAX_MEGAPIXELS,
+            min_dpi=config.OCR_MIN_DPI,
+        )
+        if effective_dpi != dpi:
+            log.debug(
+                "%s page %s measures %.0fx%.0f pt: rendering at %d dpi rather "
+                "than %d to stay inside the %.0f MP budget",
+                pdf_path.name, page_number, rect.width, rect.height,
+                effective_dpi, dpi, config.OCR_MAX_MEGAPIXELS,
+            )
+        return page.get_pixmap(dpi=effective_dpi).tobytes("png")
     finally:
         document.close()
 
