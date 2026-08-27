@@ -167,7 +167,8 @@ def process_document(
             page.indexable = page.page_number in indexable_numbers
 
         decision = ocr.decide(
-            extraction, quality_assessment, language=language_assessment)
+            extraction, quality_assessment, language=language_assessment,
+            ocr_run=result.ocr_run)
 
         result.extraction = extraction
         result.structure = structure

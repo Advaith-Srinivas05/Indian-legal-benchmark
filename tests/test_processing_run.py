@@ -14,9 +14,13 @@ corpus.
 from __future__ import annotations
 
 import json
+import os
+import platform
 import threading
 import time
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from unittest import mock
 
 import pytest
 
@@ -26,6 +30,10 @@ from processing.errors import ProcessingError, RunLockError
 from processing.models import ProcessedDocument
 from processing.process import output_dir
 from tests import corpusbuild
+
+#: A pid no process on this machine holds. Windows allocates pids well below
+#: this and the POSIX default maximum is 4,194,304.
+_DEAD_PID = 9_999_991
 
 # The tmp_path drive can be anywhere; the free-space guard is a production
 # concern and is exercised on its own rather than in every run.
@@ -188,13 +196,43 @@ class TestOcrRouting:
         assert record["eligible_for_indexing"] is False
         assert any(r.startswith("ocr_") for r in record["quarantine_reasons"])
 
-    def test_the_existing_router_decides_and_no_engine_runs(self, mixed_corpus):
+    def test_the_router_decides_without_the_engine_when_ocr_is_off(self, mixed_corpus):
+        # `runner.run` defaults to run_ocr=False, so this is the --no-ocr path:
+        # documents are routed to OCR and no reading is ever taken. The zeros
+        # below are now *summed from the journal* rather than hardcoded — before
+        # D25 `pages_ocr` was a literal 0 and could not have failed this.
         report = runner.run(mixed_corpus, workers=2, **NO_SPACE_CHECK)
-        # SUCCESS_OCR is reserved; nothing in this repository OCRs a document.
         assert report["this_run"]["successful_with_ocr"] == 0
         assert report["corpus_totals"]["pages_ocr"] == 0
+        assert report["corpus_totals"]["ocr_pages_attempted"] == 0
+        assert report["corpus_totals"]["ocr_documents"] == 0
         assert report["corpus_totals"]["documents_pending_ocr"] >= 1
-        assert "must not be read as" in report["note"]
+        # The note must explain what pending means without claiming, as it did
+        # until D25, that OCR is never executed anywhere.
+        assert "reading was not adopted" in report["note"]
+        assert "never executed" not in report["note"]
+
+    def test_the_report_counts_ocr_the_engine_actually_did(self, monkeypatch,
+                                                           mixed_corpus):
+        # The other half of D25: when OCR has run, the corpus totals must say
+        # so. Guards the regression where a corpus holding 33,677 accepted OCR
+        # pages reported `corpus_totals.pages_ocr: 0` — a literal that no
+        # assertion could ever have caught.
+        from processing import ocr_engine
+
+        def fake_ocr_document(extraction, pdf_path, **kwargs):
+            return ocr_engine.OcrRun(
+                executed=True, attempted=3, accepted=2, seconds=1.5)
+
+        monkeypatch.setattr(ocr_engine, "ocr_document", fake_ocr_document)
+        report = runner.run(mixed_corpus, workers=2, run_ocr=True,
+                            **NO_SPACE_CHECK)
+        totals = report["corpus_totals"]
+        documents = totals["documents_in_journal"] - report["this_run"]["failed"]
+        assert totals["ocr_documents"] == documents
+        assert totals["ocr_pages_attempted"] == 3 * documents
+        assert totals["pages_ocr"] == 2 * documents
+        assert "never executed" not in report["note"]
 
     def test_ocr_usage_is_recorded_in_the_report(self, mixed_corpus):
         report = runner.run(mixed_corpus, workers=2, **NO_SPACE_CHECK)
@@ -691,6 +729,110 @@ class TestConcurrency:
             assert str(json.loads(lock.describe())["pid"])
         finally:
             lock.release()
+
+
+# --- Reclaiming an abandoned lock -----------------------------------------------------
+
+
+class TestAbandonedLock:
+    """``release()`` only runs when a run ends through its own code.
+
+    A runner killed by Ctrl-C twice, a closed terminal or a shutdown leaves its
+    lock behind, and before this every later run had to be talked past it with
+    ``--force-unlock`` — including runs started after a reboot, when the holder
+    provably could not exist. The rule is that a lock may be reclaimed only on
+    positive evidence that its holder is gone; "probably dead" is not evidence.
+    """
+
+    def _write_lock(self, path, **fields):
+        holder = {
+            "pid": os.getpid(),
+            "host": platform.node(),
+            "started_at": runner.utcnow_iso(),
+            "processor": "processing v0.0.0",
+        }
+        holder.update(fields)
+        path.write_text(json.dumps(holder), encoding="utf-8")
+        return holder
+
+    def test_a_lock_left_by_a_dead_process_is_reclaimed(self, mixed_corpus):
+        path = runner.lock_path(mixed_corpus)
+        self._write_lock(path, pid=_DEAD_PID)
+        report = runner.run(mixed_corpus, workers=2, **NO_SPACE_CHECK)
+        assert report["this_run"]["attempted"] == 4
+        assert not path.exists()
+
+    def test_a_lock_taken_before_the_last_boot_is_reclaimed(self, mixed_corpus):
+        # The reboot case, and the one that needs its own rule: after a restart
+        # the old pid may well have been handed to something else that is very
+        # much alive. Nothing written before the boot can still hold the lock.
+        path = runner.lock_path(mixed_corpus)
+        self._write_lock(path, pid=os.getpid(), started_at="2001-01-01T00:00:00+00:00")
+        report = runner.run(mixed_corpus, workers=2, **NO_SPACE_CHECK)
+        assert report["this_run"]["attempted"] == 4
+
+    def test_a_lock_held_by_a_live_process_is_still_refused(self, mixed_corpus):
+        path = runner.lock_path(mixed_corpus)
+        self._write_lock(path, pid=os.getpid())
+        with pytest.raises(RunLockError):
+            runner.run(mixed_corpus, workers=2, **NO_SPACE_CHECK)
+        assert path.exists()               # and it is left where it was
+
+    def test_a_lock_from_another_machine_is_never_reclaimed(self, mixed_corpus):
+        # A pid from another host says nothing about a process on this one, and
+        # a data directory can be reached over a share.
+        path = runner.lock_path(mixed_corpus)
+        self._write_lock(path, pid=_DEAD_PID, host="some-other-machine")
+        with pytest.raises(RunLockError):
+            runner.run(mixed_corpus, workers=2, **NO_SPACE_CHECK)
+
+    def test_an_unreadable_lock_is_never_reclaimed(self, mixed_corpus):
+        path = runner.lock_path(mixed_corpus)
+        path.write_text("not json at all", encoding="utf-8")
+        with pytest.raises(RunLockError):
+            runner.run(mixed_corpus, workers=2, **NO_SPACE_CHECK)
+
+    def test_force_unlock_still_breaks_a_lock_that_looks_live(self, mixed_corpus):
+        path = runner.lock_path(mixed_corpus)
+        self._write_lock(path, pid=os.getpid())
+        report = runner.run(mixed_corpus, workers=2, force_unlock=True,
+                            **NO_SPACE_CHECK)
+        assert report["this_run"]["attempted"] == 4
+
+
+class TestProcessLiveness:
+    """The three-valued liveness probe the reclaim rule rests on.
+
+    Only a definite ``False`` may break a lock, so the important property is
+    that nothing answers ``False`` unless the process is genuinely gone.
+    """
+
+    def test_this_process_is_alive(self):
+        assert runner._pid_is_running(os.getpid()) is True
+
+    def test_an_unused_pid_is_not_alive(self):
+        assert runner._pid_is_running(_DEAD_PID) is False
+
+    def test_nonsense_pids_are_not_alive(self):
+        assert runner._pid_is_running(0) is False
+        assert runner._pid_is_running(-1) is False
+        assert runner._pid_is_running("3592") is False
+
+    def test_os_kill_is_never_used_to_probe_on_windows(self):
+        # CPython implements os.kill on Windows with TerminateProcess, so using
+        # it as a liveness probe would kill the process being asked about.
+        called = []
+        with mock.patch.object(os, "kill", side_effect=lambda *a: called.append(a)):
+            runner._pid_is_running(os.getpid())
+        assert called == ([] if os.name == "nt" else [(os.getpid(), 0)])
+
+    def test_boot_time_is_in_the_past_and_plausible(self):
+        boot = runner._boot_time()
+        if boot is None:                   # an unfamiliar platform: allowed
+            return
+        now = datetime.now(timezone.utc)
+        assert boot < now
+        assert boot > now - timedelta(days=3650)
 
 
 # --- Dry run -------------------------------------------------------------------------

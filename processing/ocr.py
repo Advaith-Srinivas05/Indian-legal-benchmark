@@ -92,11 +92,61 @@ def text_source(extraction: ExtractedDocument, quality) -> str:
     return "scan_with_good_ocr" if classification == "good" else "scan_with_bad_ocr"
 
 
+def _ocr_settled_partial(ocr_run, classification: str) -> bool:
+    """Has OCR already answered the question ``partial`` was asking?
+
+    ``partial`` does not say the text is bad. It says *some pages yielded no
+    text*, and it recommends OCR to find out whether anything is there. When OCR
+    has since run over exactly those pages and adopted **nothing**, that question
+    has been answered: there is nothing on them to recover. Continuing to
+    quarantine the whole document for pages that are provably unrecoverable —
+    and that are already excluded from indexing one by one — blocks a good text
+    layer on the strength of a question that is closed.
+
+    Every condition here is load-bearing:
+
+    ``executed`` and ``attempted``
+        A run that never happened, or that found no page worth attempting, has
+        answered nothing. Absence of OCR is not evidence about the pages.
+
+    ``accepted == 0``
+        The moment OCR contributes a single reading, the document's text is
+        partly unreviewed OCR output, and KNOWN_ISSUES C1 applies — no human has
+        checked OCR acceptance anywhere in this corpus. Those documents keep the
+        flag. This is the line that stops the fix spreading from 823 documents to
+        1,451, and it is drawn where the evidence stops, not where it would be
+        convenient.
+
+    ``not truncated``
+        A run stopped by ``OCR_MAX_PAGES_PER_DOCUMENT`` never reached the later
+        pages, so it cannot say anything about them.
+
+    ``classification == "good"``
+        Quality still gates. A ``bad`` document returned earlier; a
+        ``questionable`` one must keep falling through to ``review_text``.
+
+    Measured on the 2026-08-27 corpus run: 823 documents qualify. All are
+    ``partial``, all ``good``, 709 of 823 ``text_based``, and **none** has a
+    single OCR-sourced indexable page. Their COMMON_WORDS rate is 0.629 against
+    0.622 for documents that were never quarantined — indistinguishable. See
+    DECISIONS D26.
+    """
+    return bool(
+        ocr_run is not None
+        and getattr(ocr_run, "executed", False)
+        and getattr(ocr_run, "attempted", 0) > 0
+        and getattr(ocr_run, "accepted", 0) == 0
+        and not getattr(ocr_run, "truncated", False)
+        and classification == "good"
+    )
+
+
 def decide(
     extraction: ExtractedDocument,
     quality,
     *,
     language=None,
+    ocr_run=None,
 ) -> OcrDecision:
     """Choose the action for one document.
 
@@ -105,6 +155,13 @@ def decide(
     unusable text more slowly. It is quarantined instead, and OCR in the right
     language is a decision for whoever decides whether this corpus should hold
     non-English law at all.
+
+    *ocr_run* is accepted for one narrow case, and only that one: a ``partial``
+    document whose good text layer survived a completed OCR pass that adopted
+    nothing. See :func:`_ocr_settled_partial`. Every other input to this
+    function still describes the document as extraction first found it, which is
+    deliberate — the classification and the quality panel are statements about
+    the PDF, not about what OCR later did to it.
     """
     source = text_source(extraction, quality)
     pages = extraction.page_count
@@ -197,6 +254,20 @@ def decide(
 
     if extraction.text_extraction_status == "partial":
         missing = pages - extraction.classification_evidence.get("pages_with_text", 0)
+        if _ocr_settled_partial(ocr_run, classification):
+            return OcrDecision(
+                action="use_extracted_text",
+                text_source=source,
+                reason=(
+                    f"{missing} of {pages} pages yielded no text, OCR was run "
+                    f"over {ocr_run.attempted} of them and none of its readings "
+                    "improved on what was already there; the text layer that "
+                    "remains passes every quality check, and the pages OCR "
+                    "could not rescue are excluded individually"
+                ) + sideways_note,
+                priority=0,
+                estimated_pages=0,
+            )
         return OcrDecision(
             action="ocr_recommended",
             text_source=source,

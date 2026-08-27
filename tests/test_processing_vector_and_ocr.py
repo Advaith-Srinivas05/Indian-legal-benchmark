@@ -89,6 +89,13 @@ def _page(number: int, text: str = "", **kwargs) -> PageText:
     return PageText(page_number=number, text=text, char_count=len(text), **kwargs)
 
 
+def _ocr_run(*, executed=True, attempted=0, accepted=0, truncated=False):
+    """A completed OCR pass, as `processing.ocr_engine` reports one."""
+    from processing.ocr_engine import OcrRun
+    return OcrRun(executed=executed, attempted=attempted,
+                  accepted=accepted, truncated=truncated)
+
+
 class TestTextSourceStates:
     """The three states hiding inside "scanned"."""
 
@@ -168,6 +175,59 @@ class TestOcrDecisions:
         decision = ocr.decide(document, quality.assess(pages))
         assert decision.action == "ocr_recommended"
         assert decision.estimated_pages == 2
+
+    def test_partial_is_settled_when_a_full_ocr_pass_adopted_nothing(self):
+        # 823 documents of the 2026-08-27 corpus run. `partial` asks "is there
+        # anything on the pages that yielded no text?"; a completed OCR pass that
+        # adopted nothing has answered it. See DECISIONS D26.
+        pages = [_page(1, PROSE * 6), _page(2, ""), _page(3, "")]
+        document = _document(pages, "text_based", "partial", pages_with_text=1)
+        decision = ocr.decide(
+            document, quality.assess(pages), ocr_run=_ocr_run(attempted=2))
+        assert decision.action == "use_extracted_text"
+        assert decision.estimated_pages == 0
+        assert "none of its readings improved" in decision.reason
+
+    def test_one_accepted_page_keeps_the_document_queued(self):
+        # The line that holds the fix to 823 documents instead of 1,451: the
+        # moment OCR contributes a reading, the text is partly unreviewed OCR
+        # output and KNOWN_ISSUES C1 applies.
+        pages = [_page(1, PROSE * 6), _page(2, ""), _page(3, "")]
+        document = _document(pages, "text_based", "partial", pages_with_text=1)
+        decision = ocr.decide(
+            document, quality.assess(pages),
+            ocr_run=_ocr_run(attempted=2, accepted=1))
+        assert decision.action == "ocr_recommended"
+
+    def test_an_absent_ocr_run_is_not_evidence(self):
+        # Not running OCR says nothing about the pages. The default path — and
+        # every caller that leaves run_ocr off — must be unchanged.
+        pages = [_page(1, PROSE * 6), _page(2, ""), _page(3, "")]
+        document = _document(pages, "text_based", "partial", pages_with_text=1)
+        assert ocr.decide(document, quality.assess(pages)).action == "ocr_recommended"
+        for run in (_ocr_run(executed=False, attempted=2), _ocr_run(attempted=0)):
+            decision = ocr.decide(document, quality.assess(pages), ocr_run=run)
+            assert decision.action == "ocr_recommended"
+
+    def test_a_truncated_run_never_reached_the_later_pages(self):
+        pages = [_page(1, PROSE * 6), _page(2, ""), _page(3, "")]
+        document = _document(pages, "text_based", "partial", pages_with_text=1)
+        decision = ocr.decide(
+            document, quality.assess(pages),
+            ocr_run=_ocr_run(attempted=2, truncated=True))
+        assert decision.action == "ocr_recommended"
+
+    def test_quality_still_gates_a_settled_partial(self):
+        # An empty OCR run does not launder bad text. The quality panel decides
+        # first and this branch is only ever reached by a `good` document.
+        from tests.test_processing_quality import NFSA_OCR
+        pages = [_page(1, NFSA_OCR), _page(2, "")]
+        document = _document(pages, "scanned", "partial", pages_with_text=1)
+        assessment = quality.assess(pages)
+        assert assessment.classification != "good"
+        decision = ocr.decide(
+            document, assessment, ocr_run=_ocr_run(attempted=1))
+        assert decision.action != "use_extracted_text"
 
     def test_a_non_english_document_is_quarantined_not_queued(self):
         from processing.language import LanguageAssessment

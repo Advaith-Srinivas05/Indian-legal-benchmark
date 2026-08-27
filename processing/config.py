@@ -56,13 +56,15 @@ PROCESSING_REPORT_SCHEMA_VERSION = 1
 #: The controlled vocabulary of per-document outcomes.
 #:
 #: ``SUCCESS``      processed, output written, eligible for legal indexing.
-#: ``SUCCESS_OCR``  processed, output written, and the stored text came from an
-#:                  OCR engine. **Reserved and never emitted today** — the
-#:                  pipeline decides OCR (:mod:`processing.ocr`) and never runs
-#:                  it, so nothing on disk is OCR-derived. It exists so the
-#:                  journal, the aggregator and the report already have a place
-#:                  for OCR output when that step is built, instead of the
-#:                  vocabulary having to change under an existing journal.
+#: ``SUCCESS_OCR``  processed, output written, and at least one page's stored
+#:                  reading came from an OCR engine. :mod:`processing.ocr`
+#:                  routes and :mod:`processing.ocr_engine` reads; the engine's
+#:                  text never overwrites ``page.text``, and
+#:                  ``PageText.selected_text`` resolves which reading applies.
+#:                  On the 2026-08-27 corpus run: 2,963 documents. The status
+#:                  says OCR text is present, **not** that it is correct — OCR
+#:                  acceptance has never been reviewed by a human
+#:                  (``docs/KNOWN_ISSUES.md`` C1).
 #: ``QUARANTINED``  processed, output written, **not** eligible for indexing.
 #:                  The reasons are recorded on the record; nothing is deleted.
 #: ``FAILED``       the PDF could not be processed. No output was written; the
@@ -160,6 +162,54 @@ MIN_PAGE_ALPHA_CHARS = 100
 #: gazettes place one image over the whole page (ratio ~1.0); a diagram inside
 #: an otherwise typeset page sits far below this.
 IMAGE_BACKED_AREA_RATIO = 0.5
+
+#: Above this many distinct image placements on one page,
+#: :func:`processing.textutils.union_area` stops computing the covered area
+#: exactly and rasterises instead.
+#:
+#: The exact method compresses coordinates into a grid and tests every cell
+#: against every rectangle, which is O(n^4) in the placement count. Measured on
+#: this machine, a 612x792 page: 32 rects = 4.4 ms, 64 = 33 ms, 128 = 238 ms,
+#: 192 = 774 ms. 128 is the last power of two that stays inside a quarter of a
+#: second, and the cost is paid on very few pages.
+#:
+#: Surveyed over 16,098 pages from 793 documents (every 25th in the manifest):
+#: 64.7 % of pages carry no image at all, 97.0 % carry four or fewer, and only
+#: 0.27 % carry more than 32. Raising the cap from 32 to 128 moves 20 of those
+#: 44 pages back onto the exact method — including the only page found anywhere
+#: near the decision boundary (79 placements, ratio 0.52) — and leaves the
+#: genuinely pathological ones rasterised.
+#:
+#: Those are what forced this. The Uttarakhand state acts that hung the first
+#: full-corpus run carry thousands of *speckles*: image placements 0.2-0.8 pt
+#: across — scanner dust kept as individual images — scattered over a page that
+#: has a perfectly good text layer. ``uttarakhand-public-library-act__handle-3439``
+#: page 12 has 16,376 of them over 3,014 characters of text, and
+#: ``uttarakhand-police-act-2007__handle-4680`` page 39 has 10,630. Together
+#: they cover 0.3 % and 0.7 % of their pages, so the answer was never in doubt —
+#: only reaching it was. At 16,376 the exact method needs ~1.8e13 operations and
+#: never returns. See KNOWN_ISSUES.
+UNION_AREA_EXACT_MAX_RECTS = 128
+
+#: Cells per axis for that raster fallback. 512x512 over a 612x792 pt page is a
+#: cell of 1.20 x 1.55 pt.
+#:
+#: The fallback samples cell centres, so its error is two-sided and scales with
+#: the perimeter of the covered region rather than its area. Measured against
+#: the exact method:
+#:
+#: * abutting tiles (what a tiled scan is, and the only shape that reaches this
+#:   code in this corpus): matches the true covered fraction to better than
+#:   0.1 % at 400, 4,000, 10,630 and 16,376 tiles;
+#: * 114 synthetic pages generated inside the 0.35-0.65 band where a wrong
+#:   answer could actually move ``IMAGE_BACKED_AREA_RATIO``: **zero** verdicts
+#:   changed, worst absolute error in the ratio 0.0018;
+#: * scattered placements a few points across: error reaches several per cent,
+#:   but such pages sit at ~0.05 coverage and are nowhere near the threshold.
+#:
+#: 1024 halves the residual error and costs ~50 % more time; 512 was kept
+#: because no measured case needed it.
+UNION_AREA_RASTER_CELLS = 512
 
 # --- Document classification ----------------------------------------------------
 #

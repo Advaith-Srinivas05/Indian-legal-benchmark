@@ -13,6 +13,7 @@ text, and the audit trail would be worthless.
 
 from __future__ import annotations
 
+import math
 import re
 import unicodedata
 
@@ -136,9 +137,22 @@ def union_area(rects, clip: tuple[float, float, float, float]) -> float:
     common (a scan laid down as several strips), and summing their areas would
     report >100% coverage and make the threshold meaningless.
 
-    Exact, via coordinate compression — the rectangle counts here are small
-    (a handful per page), so the O(n^2) grid costs nothing.
+    Exact via coordinate compression while the placement count is small, which
+    is the ordinary case — a typeset page carries none and a scanned one
+    usually carries a single full-page image. Above
+    ``config.UNION_AREA_EXACT_MAX_RECTS`` the exact grid is unaffordable (it is
+    O(n^4) in the count) and the area is rasterised instead; see
+    :func:`_raster_area` for what that costs in accuracy.
+
+    The fallback is not an optimisation. Pages carrying thousands of speckles —
+    sub-point image placements left by a scanner, over an ordinary text layer —
+    exist in this corpus, and on those the exact method does not return at all.
+    The first full-corpus run lost seven of its eight workers to pages like
+    them, each holding the GIL inside this function while the rest of the
+    process starved.
     """
+    from . import config
+
     cx0, cy0, cx1, cy1 = clip
     if cx1 <= cx0 or cy1 <= cy0:
         return 0.0
@@ -152,6 +166,15 @@ def union_area(rects, clip: tuple[float, float, float, float]) -> float:
     if not clipped:
         return 0.0
 
+    if len(clipped) > config.UNION_AREA_EXACT_MAX_RECTS:
+        # A tiled scan repeats the same placement often. De-duplicating is free
+        # and exact — the union of a set of rectangles does not count a repeat
+        # twice — and it alone brings many of these pages back under the cap.
+        # ``dict.fromkeys`` preserves order, so the result stays deterministic.
+        clipped = list(dict.fromkeys(clipped))
+    if len(clipped) > config.UNION_AREA_EXACT_MAX_RECTS:
+        return _raster_area(clipped, clip, config.UNION_AREA_RASTER_CELLS)
+
     xs = sorted({v for r in clipped for v in (r[0], r[2])})
     ys = sorted({v for r in clipped for v in (r[1], r[3])})
     area = 0.0
@@ -164,3 +187,63 @@ def union_area(rects, clip: tuple[float, float, float, float]) -> float:
                     area += (x1 - x0) * (y1 - y0)
                     break
     return area
+
+
+def _raster_area(
+    clipped: list[tuple[float, float, float, float]],
+    clip: tuple[float, float, float, float],
+    cells: int,
+) -> float:
+    """Covered area of *clipped*, approximated on a fixed *cells* x *cells* grid.
+
+    Bounded at O(rects x cells) regardless of how the placements overlap, which
+    is the whole point: the exact method's cost depends on the *arrangement* of
+    the rectangles, and this one's does not.
+
+    A cell counts when its **centre** falls inside a rectangle. Sampling the
+    centre rather than requiring the whole cell to be contained is what keeps
+    the estimate unbiased, and it matters most for exactly the pages that reach
+    this code. A scan laid down as abutting tiles covers its page completely;
+    testing for whole-cell containment would drop the cells straddling every
+    tile boundary, and with tiles a few points across that is most of them — a
+    fully covered page could report well under half, which is the wrong side of
+    ``IMAGE_BACKED_AREA_RATIO``. Centre sampling assigns each boundary cell to
+    whichever tile owns its centre, so abutting tiles reconstruct the page
+    whatever the grid alignment.
+
+    The residual error is therefore two-sided and proportional to the perimeter
+    of the covered region, not to its area: tight where coverage is high (the
+    case that decides anything) and loosest on scattered small placements,
+    whose coverage is nowhere near the threshold either way.
+    """
+    cx0, cy0, cx1, cy1 = clip
+    cell_w = (cx1 - cx0) / cells
+    cell_h = (cy1 - cy0) / cells
+    grid = bytearray(cells * cells)
+
+    # Largest first, so a full-page scan fills the grid on the first rectangle
+    # and the thousands of tiles laid over it are answered by the early exit
+    # below rather than redrawn. Ties broken on geometry to stay deterministic.
+    order = sorted(
+        clipped,
+        key=lambda r: (-(r[2] - r[0]) * (r[3] - r[1]), r[0], r[1], r[2], r[3]),
+    )
+    for index, (x0, y0, x1, y1) in enumerate(order):
+        # Cell i's centre sits at cx0 + (i + 0.5) * cell_w, so the cells whose
+        # centres lie within [x0, x1) are i in [(x0-cx0)/w - 0.5, ...).
+        col0 = max(0, math.ceil((x0 - cx0) / cell_w - 0.5))
+        col1 = min(cells, math.ceil((x1 - cx0) / cell_w - 0.5))
+        row0 = max(0, math.ceil((y0 - cy0) / cell_h - 0.5))
+        row1 = min(cells, math.ceil((y1 - cy0) / cell_h - 0.5))
+        if col1 <= col0 or row1 <= row0:
+            continue                      # no cell centre falls inside it
+        span = b"\x01" * (col1 - col0)
+        for row in range(row0, row1):
+            base = row * cells
+            grid[base + col0:base + col1] = span
+        # Checking for a full grid costs a C-speed scan of the whole bytearray,
+        # so it is worth doing periodically but not per rectangle.
+        if index % 512 == 511 and 0 not in grid:
+            break
+
+    return grid.count(1) * cell_w * cell_h

@@ -54,6 +54,7 @@ import traceback as traceback_module
 from collections import Counter
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from dataclasses import dataclass, field
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable, Iterable, Iterator, Optional
 
@@ -98,6 +99,79 @@ def lock_path(data_dir: Path) -> Path:
 # --- One runner at a time -------------------------------------------------------
 
 
+def _boot_time() -> Optional[datetime]:
+    """When this machine last booted, or ``None`` if it cannot be determined.
+
+    A lock written before the last boot cannot still be held: nothing survives
+    a restart. This is the cheapest possible proof that a lock is stale, and it
+    covers the case that produced the problem in practice — a run killed by
+    shutting the laptop down, whose lock then blocked every later run.
+    """
+    try:
+        if os.name == "nt":
+            import ctypes                                       # noqa: PLC0415
+
+            uptime_ms = ctypes.WinDLL("kernel32").GetTickCount64()
+            return datetime.now(timezone.utc) - timedelta(milliseconds=uptime_ms)
+        for name in ("CLOCK_BOOTTIME", "CLOCK_UPTIME"):
+            clock = getattr(time, name, None)
+            if clock is not None:
+                uptime = time.clock_gettime(clock)
+                return datetime.now(timezone.utc) - timedelta(seconds=uptime)
+    except Exception:                       # a diagnostic, never worth raising over
+        return None
+    return None
+
+
+def _pid_is_running(pid: int) -> Optional[bool]:
+    """Whether *pid* is a live process. ``None`` means "cannot tell".
+
+    The three-valued answer is the point. Only a definite ``False`` may break a
+    lock, so every path that cannot establish death — an unfamiliar platform, a
+    refused query, a malformed pid — answers ``None`` and the lock stands.
+
+    ``os.kill(pid, 0)`` is the POSIX idiom and is **not** used on Windows, where
+    CPython implements ``os.kill`` with ``TerminateProcess`` and it would kill
+    the very process it was asked about.
+    """
+    if not isinstance(pid, int) or pid <= 0:
+        return False
+    try:
+        if os.name == "nt":
+            import ctypes                                       # noqa: PLC0415
+            from ctypes import wintypes                         # noqa: PLC0415
+
+            PROCESS_QUERY_LIMITED_INFORMATION = 0x1000
+            ERROR_INVALID_PARAMETER = 87                # no process has this id
+            STILL_ACTIVE = 259
+
+            kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+            handle = kernel32.OpenProcess(
+                PROCESS_QUERY_LIMITED_INFORMATION, False, pid)
+            if not handle:
+                if ctypes.get_last_error() == ERROR_INVALID_PARAMETER:
+                    return False
+                return None            # access denied, or something unexplained
+            try:
+                code = wintypes.DWORD()
+                if not kernel32.GetExitCodeProcess(handle, ctypes.byref(code)):
+                    return None
+                # A process that has exited reports its exit code instead. An
+                # exit code that happens to be 259 reads as alive, which errs
+                # towards keeping the lock — the safe direction.
+                return code.value == STILL_ACTIVE
+            finally:
+                kernel32.CloseHandle(handle)
+        os.kill(pid, 0)
+        return True
+    except ProcessLookupError:
+        return False
+    except PermissionError:                 # alive, just not ours to signal
+        return True
+    except Exception:
+        return None
+
+
 class RunLock:
     """One runner at a time, per data directory.
 
@@ -107,15 +181,66 @@ class RunLock:
     created with ``O_CREAT | O_EXCL``, which is atomic on both Windows and POSIX,
     and carries who holds it so a stale one can be identified rather than guessed
     at.
+
+    ``release()`` only runs when a run ends through its own code, so a runner
+    that is killed — Ctrl-C twice, a closed terminal, a shutdown — leaves its
+    lock behind and blocks every later run until someone passes
+    ``--force-unlock``. :meth:`stale_reason` removes that chore where it can be
+    done safely, by breaking a lock only on *positive evidence* that its holder
+    is gone. Anything short of proof leaves the lock standing and asks the human.
     """
 
     def __init__(self, path: Path):
         self.path = Path(path)
         self.held = False
 
+    def stale_reason(self) -> Optional[str]:
+        """Why this lock is provably abandoned, or ``None`` if it may be live.
+
+        Deliberately asymmetric: it answers "certainly dead" or "don't know",
+        never "probably dead". Two runners writing one journal is a far worse
+        outcome than one unnecessary ``--force-unlock``.
+        """
+        try:
+            holder = json.loads(self.path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return None                     # unreadable: assume it means something
+
+        if holder.get("host") != platform.node():
+            # A pid from another machine says nothing about a process on this
+            # one, and the same data directory can be reached over a share.
+            return None
+
+        started_at = holder.get("started_at")
+        boot = _boot_time()
+        if isinstance(started_at, str) and boot is not None:
+            try:
+                written = datetime.fromisoformat(started_at)
+            except ValueError:
+                written = None
+            if written is not None:
+                if written.tzinfo is None:
+                    written = written.replace(tzinfo=timezone.utc)
+                if written < boot:
+                    return (f"it was taken at {started_at}, before this machine "
+                            f"last booted at {boot.replace(microsecond=0).isoformat()}")
+
+        pid = holder.get("pid")
+        if _pid_is_running(pid) is False:
+            return f"process {pid} on {holder.get('host')} is no longer running"
+        return None
+
     def acquire(self, *, force: bool = False) -> None:
-        if force and self.path.exists():
-            self.break_lock()
+        if self.path.exists():
+            if force:
+                self.break_lock()
+            else:
+                reason = self.stale_reason()
+                if reason:
+                    log.warning(
+                        "Reclaiming an abandoned run lock: %s. (%s)",
+                        reason, self.describe())
+                    self.path.unlink(missing_ok=True)
         self.path.parent.mkdir(parents=True, exist_ok=True)
         payload = json.dumps({
             "pid": os.getpid(),
@@ -128,8 +253,10 @@ class RunLock:
         except FileExistsError as exc:
             raise RunLockError(
                 f"Another processing run holds {self.path} ({self.describe()}). "
-                "Wait for it to finish, or re-run with --force-unlock if you are "
-                "certain no runner is alive."
+                "Its holder could not be shown to be gone — it is either alive, "
+                "on another machine, or not answerable from here — so the lock "
+                "stands. Wait for it to finish, or re-run with --force-unlock if "
+                "you are certain no runner is alive."
             ) from exc
         with os.fdopen(handle, "w", encoding="utf-8", newline="\n") as fh:
             fh.write(payload)
@@ -169,6 +296,10 @@ _PROJECTED_FIELDS = (
     "bytes", "seconds",
     "pdf_type", "text_extraction_status", "extraction_quality", "content_language",
     "orientation_suspect", "ocr_action", "ocr_text_source", "ocr_estimated_pages",
+    # What OCR did, as opposed to what the router asked for. Without these three
+    # the corpus totals cannot tell a document OCR rescued from one it never
+    # touched, which is how `corpus_totals.pages_ocr` came to be a hardcoded 0.
+    "ocr_executed", "ocr_pages_attempted", "ocr_pages_accepted",
     "structure_confidence", "eligible_for_indexing", "quarantine_reasons",
     "error_type", "error_message", "error_stage", "skip_reason",
     "output_relpath", "output_bytes", "attempt", "processed_at",
@@ -836,8 +967,8 @@ def render_progress(stats: RunStats) -> str:
         f"  failed        : {stats.failed:,}",
         f"  skipped       : {stats.skipped:,}",
         f"  remaining     : {stats.remaining:,}",
-        f"  pending OCR   : {stats.documents_pending_ocr:,} documents "
-        f"({stats.pages_pending_ocr:,} pages) — decided, not performed",
+        f"  still need OCR: {stats.documents_pending_ocr:,} documents "
+        f"({stats.pages_pending_ocr:,} pages) — routed to OCR, reading not adopted",
         f"  pages         : {stats.pages:,} ({stats.pages_indexable:,} indexable)",
         f"  characters    : {stats.characters:,}",
         f"  elapsed       : {format_duration(stats.elapsed)}",
@@ -940,6 +1071,7 @@ def build_report(
     pages_indexable = 0
     pages_indexable_documents = 0
     pages_pending_ocr = documents_pending_ocr = 0
+    pages_ocr = ocr_pages_attempted = ocr_documents = 0
     eligible = 0
     processing_seconds = 0.0
 
@@ -976,6 +1108,14 @@ def build_report(
                 pages_pending_ocr += row.get("ocr_estimated_pages") or 0
         if row.get("ocr_text_source"):
             by_text_source[row["ocr_text_source"]] += 1
+        # What OCR actually did, corpus-wide. Summed from the journal like every
+        # other total here — it used to be hardcoded to 0, left over from when
+        # the engine did not exist, and it reported 0 for a corpus with 33,677
+        # accepted OCR pages in it.
+        if row.get("ocr_executed"):
+            ocr_documents += 1
+            ocr_pages_attempted += row.get("ocr_pages_attempted") or 0
+            pages_ocr += row.get("ocr_pages_accepted") or 0
         if row.get("eligible_for_indexing"):
             eligible += 1
         for reason in row.get("quarantine_reasons") or []:
@@ -1016,10 +1156,13 @@ def build_report(
         "processor": f"processing v{__version__}",
         "backend": backend_name,
         "note": (
-            "OCR is decided and never executed. 'pages_ocr' is therefore always 0 "
-            "and 'pages_pending_ocr' counts pages processing.ocr routed to an "
-            "engine that has not been built. This report must not be read as "
-            "'the corpus has been OCR'd'."
+            "'pages_ocr' counts pages whose stored reading came from the OCR "
+            "engine; 'pages_pending_ocr' counts pages processing.ocr routed to "
+            "OCR whose reading was not adopted — because the run was launched "
+            "with --no-ocr, because no engine was available, or because the "
+            "engine's reading did not improve on the text layer. Neither number "
+            "says the readings are correct: OCR acceptance has never been "
+            "reviewed by a human (KNOWN_ISSUES C1)."
         ),
         "corpus": {
             "inventory_records": context.get("inventory_records"),
@@ -1069,7 +1212,9 @@ def build_report(
             # corpus total.
             "pages_indexable": pages_indexable,
             "pages_indexable_measured_over_documents": pages_indexable_documents,
-            "pages_ocr": 0,
+            "pages_ocr": pages_ocr,
+            "ocr_pages_attempted": ocr_pages_attempted,
+            "ocr_documents": ocr_documents,
             "total_extracted_characters": characters,
             "total_processing_seconds": round(processing_seconds, 2),
             "documents_pending_ocr": documents_pending_ocr,
@@ -1142,8 +1287,12 @@ def render_summary(report: dict) -> str:
            != totals['documents_in_journal'] else ""),
         f"  characters extracted    : {totals['total_extracted_characters']:>7,}",
         f"  eligible for indexing   : {eligibility['eligible_for_indexing']:>7,}",
-        f"  pending OCR             : {totals['documents_pending_ocr']:>7,} "
-        f"({totals['pages_pending_ocr']:,} pages, decided not performed)",
+        f"  pages read by OCR       : {totals['pages_ocr']:>7,}"
+        + (f"  (of {totals['ocr_pages_attempted']:,} attempted over "
+           f"{totals['ocr_documents']:,} documents)"
+           if totals.get('ocr_pages_attempted') else ""),
+        f"  still need OCR          : {totals['documents_pending_ocr']:>7,} "
+        f"({totals['pages_pending_ocr']:,} pages, reading not adopted)",
         "==================================================",
     ])
 
