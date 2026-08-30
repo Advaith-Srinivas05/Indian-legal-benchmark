@@ -188,16 +188,73 @@ class TestOcrDecisions:
         assert decision.estimated_pages == 0
         assert "none of its readings improved" in decision.reason
 
-    def test_one_accepted_page_keeps_the_document_queued(self):
-        # The line that holds the fix to 823 documents instead of 1,451: the
-        # moment OCR contributes a reading, the text is partly unreviewed OCR
-        # output and KNOWN_ISSUES C1 applies.
-        pages = [_page(1, PROSE * 6), _page(2, ""), _page(3, "")]
+    def test_an_accepted_page_no_longer_keeps_the_document_queued(self):
+        # This assertion was inverted on 2026-08-29, deliberately. It used to
+        # require `accepted == 0`, on the argument that OCR-contributed text is
+        # unreviewed (KNOWN_ISSUES C1). The argument is sound; the line was in
+        # the wrong place. 3,036 documents that were already eligible carry
+        # 14,124 accepted OCR pages indexed as law, so the condition excluded one
+        # subset of documents for a property the rest of the corpus already had
+        # -- a subset defined by where extraction happened to fail. C1 asks that
+        # OCR text be labelled, and it is, on the page and on every chunk.
+        # Quality still gates, which is the protection that does the work.
+        # See DECISIONS D27.
+        # PROSE * 30, not * 6: once OCR has contributed a reading, admission also
+        # requires a measurable word-validity rate, and that needs at least
+        # QUALITY_WORD_VALIDITY_MIN_WORDS long words to judge.
+        pages = [_page(1, PROSE * 30), _page(2, ""), _page(3, "")]
         document = _document(pages, "text_based", "partial", pages_with_text=1)
         decision = ocr.decide(
             document, quality.assess(pages),
             ocr_run=_ocr_run(attempted=2, accepted=1))
+        assert decision.action == "use_extracted_text"
+        assert "were adopted" in decision.reason
+
+    def test_an_accepted_page_is_not_admitted_on_unreadable_words(self):
+        # The protection that replaces the old `accepted == 0` line, and the
+        # reason it is safe to remove it. This text has the shape of English and
+        # is not English: the quality panel passes it and word validity does not.
+        damaged = ("the Clticf Municipal Auditor shall have access to all lhe "
+                   "accounts of the Corporaiion and all ilie records and "
+                   "correspond ence of the Cheptcr thereil concerngd ") * 20
+        pages = [_page(1, damaged), _page(2, "")]
+        document = _document(pages, "text_based", "partial", pages_with_text=1)
+        assessment = quality.assess(pages)
+        assert assessment.signals["word_validity"]["measurable"] is True
+        assert (assessment.signals["word_validity"]["rate"]
+                < config.QUALITY_WORD_VALIDITY_MIN)
+        decision = ocr.decide(
+            document, assessment, ocr_run=_ocr_run(attempted=1, accepted=1))
         assert decision.action == "ocr_recommended"
+
+    def test_too_little_text_to_judge_is_not_a_pass(self):
+        # Ambiguous evidence is quarantined, never admitted.
+        pages = [_page(1, PROSE), _page(2, "")]
+        document = _document(pages, "text_based", "partial", pages_with_text=1)
+        assessment = quality.assess(pages)
+        assert assessment.signals["word_validity"]["measurable"] is False
+        decision = ocr.decide(
+            document, assessment, ocr_run=_ocr_run(attempted=1, accepted=1))
+        assert decision.action != "use_extracted_text"
+
+    def test_a_scan_whose_ocr_succeeded_is_no_longer_queued(self):
+        # The same rule on the `requires_ocr` branch: a scan with no text layer
+        # that OCR has since read, without truncation, to a `good` result.
+        pages = [_page(1, PROSE * 6), _page(2, PROSE * 6)]
+        document = _document(pages, "scanned", "requires_ocr", pages_with_text=0)
+        decision = ocr.decide(
+            document, quality.assess(pages),
+            ocr_run=_ocr_run(attempted=2, accepted=2))
+        assert decision.action == "use_extracted_text"
+
+    def test_a_scan_whose_ocr_adopted_nothing_stays_queued(self):
+        # Nothing was recovered, so the document still needs OCR that works.
+        pages = [_page(1, PROSE * 6), _page(2, PROSE * 6)]
+        document = _document(pages, "scanned", "requires_ocr", pages_with_text=0)
+        decision = ocr.decide(
+            document, quality.assess(pages),
+            ocr_run=_ocr_run(attempted=2, accepted=0))
+        assert decision.action == "ocr_required"
 
     def test_an_absent_ocr_run_is_not_evidence(self):
         # Not running OCR says nothing about the pages. The default path — and

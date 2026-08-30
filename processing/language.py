@@ -44,7 +44,7 @@ from dataclasses import dataclass, field
 from typing import Iterable
 
 from . import config
-from .textutils import split_lines
+from .textutils import quality_signals, split_lines
 from .wordlists import FUNCTION_WORDS
 
 #: Runs of letters. Hyphens and apostrophes split a token rather than joining
@@ -331,6 +331,79 @@ def english_line_text(page) -> str:
                       if index not in skip)
 
 
+_LATIN_WORD = re.compile(r"[A-Za-z]+")
+
+
+def mangled_script(text: str) -> dict:
+    """Whether Latin-looking *text* is really another script in a legacy font.
+
+    A Devanagari page set in an ASCII-mapped font extracts as Latin characters,
+    so :func:`script_profile` reports it as fully Latin and
+    :func:`classify_page` admits it as English. This is the test that sees it.
+
+    It is **not** a second opinion on whether a page is English prose, and must
+    never become one: a schedule of species names and a tariff table both carry
+    almost no function words while being unambiguously part of an English
+    statute, which is the reason `classify_page` judges on script in the first
+    place. So the absence of English vocabulary is necessary here but never
+    sufficient -- the word *shape* must have collapsed as well, and legal English
+    under even heavy scan damage keeps a mean word length and a symbol rate
+    nowhere near these limits.
+
+    Two clauses. The first is vocabulary-led and shape-guarded. The second is
+    shape-led, for pages whose fragments are so short that a stray ``"a"`` or
+    ``"in"`` lifts them over the function-word bar while the shape has plainly
+    gone. Thresholds and their measurement live in :mod:`processing.config`.
+
+    Returns the verdict and the signals behind it, so a page can record *why* it
+    was excluded rather than merely that it was.
+    """
+    words = [w.lower() for w in _LATIN_WORD.findall(text)]
+    signals = quality_signals(text)
+    mean_length = (sum(len(w) for w in words) / len(words)) if words else 0.0
+    function_rate = (sum(1 for w in words if w in FUNCTION_WORDS) / len(words)
+                     if words else 0.0)
+    result = {
+        "mangled": False,
+        "word_count": len(words),
+        "mean_word_length": round(mean_length, 3),
+        "function_word_rate": round(function_rate, 4),
+        "symbol_ratio": signals["symbol_ratio"],
+        "vowelless_ratio": signals["vowelless_ratio"],
+        "reason": "",
+    }
+    if len(words) < config.LANGUAGE_MANGLED_MIN_WORDS:
+        result["reason"] = (
+            f"only {len(words)} words (need "
+            f"{config.LANGUAGE_MANGLED_MIN_WORDS}); too little to judge"
+        )
+        return result
+
+    shape_led = (
+        mean_length < config.LANGUAGE_MANGLED_SHAPE_MEAN_WORD_LENGTH
+        and signals["symbol_ratio"] >= config.LANGUAGE_MANGLED_SHAPE_SYMBOL_RATIO
+        and function_rate < config.LANGUAGE_MANGLED_SHAPE_FUNCTION_WORD_RATE
+    )
+    vocabulary_led = (
+        function_rate < config.LANGUAGE_MANGLED_FUNCTION_WORD_RATE
+        and mean_length < config.LANGUAGE_MANGLED_MEAN_WORD_LENGTH
+        and (signals["symbol_ratio"] >= config.LANGUAGE_MANGLED_SYMBOL_RATIO
+             or signals["vowelless_ratio"] >= config.LANGUAGE_MANGLED_VOWELLESS_RATIO)
+    )
+    if shape_led or vocabulary_led:
+        result["mangled"] = True
+        result["reason"] = (
+            f"words average {mean_length:.2f} characters and only "
+            f"{function_rate:.1%} are English function words, with "
+            f"{signals['symbol_ratio']:.1%} mis-mapped glyphs and "
+            f"{signals['vowelless_ratio']:.0%} of long words vowelless: this is "
+            "another script extracted through a legacy font, not English"
+        )
+    else:
+        result["reason"] = "word shape and vocabulary are consistent with English"
+    return result
+
+
 def classify_page(page) -> dict:
     """Judge one page's language **on script alone**.
 
@@ -369,15 +442,24 @@ def classify_page(page) -> dict:
             f"{config.LANGUAGE_NON_LATIN_LETTER_RATIO:.0%} limit"
         )
     else:
-        verdict, reason = "en", (
-            f"{1 - ratio:.0%} of {letters} letters are Latin"
-        )
-    return {
+        # Latin letters are necessary evidence of English and not sufficient:
+        # a legacy-font Devanagari page is 100% Latin. Ask the shape too.
+        damage = mangled_script(text)
+        if damage["mangled"]:
+            verdict, reason = "non_en", damage["reason"]
+        else:
+            verdict, reason = "en", (
+                f"{1 - ratio:.0%} of {letters} letters are Latin"
+            )
+    result = {
         "verdict": verdict,
         "letters": letters,
         "non_latin_letter_ratio": round(ratio, 4),
         "reason": reason,
     }
+    if verdict == "non_en" and ratio < config.LANGUAGE_NON_LATIN_LETTER_RATIO:
+        result["mangled_script"] = True
+    return result
 
 
 def page_language_profile(pages: Iterable) -> dict:
@@ -477,10 +559,21 @@ def indexable_pages(pages: Iterable, assessment) -> list:
     # a transition page carrying the end of the Hindi text and the start of the
     # English notification fails it while holding the most citable text in the
     # document.
-    return [page for page in page_list
-            if script_profile(english_line_text(page))["letters"]
-            >= config.LANGUAGE_PAGE_MIN_LETTERS
-            or classify_page(page)["verdict"] != "non_en"]
+    keep = []
+    for page in page_list:
+        # Encoding damage is a property of the whole text run, not of individual
+        # lines: the font applies to the page. So line-level recovery, which
+        # rescues the English header off a Devanagari page, has nothing to
+        # recover here -- every line is damaged and every line reads as Latin.
+        # This page is excluded outright, and its text stays in pages.json
+        # labelled with the reason, as every excluded page does.
+        if classify_page(page).get("mangled_script"):
+            continue
+        if (script_profile(english_line_text(page))["letters"]
+                >= config.LANGUAGE_PAGE_MIN_LETTERS
+                or classify_page(page)["verdict"] != "non_en"):
+            keep.append(page)
+    return keep
 
 
 def assess_pages(pages: Iterable, *, metadata_language: str | None = None) -> LanguageAssessment:

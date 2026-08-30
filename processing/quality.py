@@ -51,6 +51,7 @@ from typing import Iterable, Optional
 
 from . import config
 from .textutils import quality_signals
+from .vocabulary import word_validity
 from .wordlists import COMMON_WORDS
 
 #: Runs of letters. Hyphens and apostrophes split rather than join, because a
@@ -319,6 +320,13 @@ def assess(
         text = "\n".join(getattr(p, "text", "") or "" for p in page_list)
 
     signals = text_signals(text)
+    # Recorded, never scored. The panel's checks measure word *shape*, and this
+    # measures whether the words are words -- the signal DECISIONS D21 said was
+    # missing. It deliberately contributes nothing to `score` or `classification`:
+    # imposing it corpus-wide would quarantine a quarter of the documents already
+    # accepted (25th percentile 0.937). One caller consults it, on the one path
+    # where a document is admitted on unreviewed OCR. See config and D28.
+    signals["word_validity"] = word_validity(text)
     checks: list[tuple[str, bool, str]] = []       # (name, passed, description)
 
     def check(name: str, passed: bool, description: str) -> None:

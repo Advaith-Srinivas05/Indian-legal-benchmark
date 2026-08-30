@@ -481,6 +481,114 @@ LANGUAGE_PAGE_MIN_LETTERS = 200
 #: discarded, which is the right trade in both directions.
 LANGUAGE_MIXED_NON_EN_PAGE_RATIO = 0.15
 
+# --- Encoding-damaged non-Latin text ----------------------------------------------
+#
+# The script test above asks what alphabet a page's letters belong to, and there
+# is one case it cannot see: a Devanagari page whose PDF font is a legacy
+# ASCII-mapped one. Its glyphs render as Hindi on screen and extract as *Latin*
+# characters, so `script_profile` reports "100% of letters are Latin" and the
+# page is admitted as English.
+#
+# `processing.language.assess_pages` was built knowing this and defends against
+# it at the document level: pooled vocabulary rejects a wholly transliterated
+# document before the script test is ever consulted. The gap is the **bilingual**
+# document -- the same law printed twice, once per language. Its genuine English
+# half supplies enough function words for the pooled vocabulary to read as
+# English, so the document is cleared, and the script test then finds nothing
+# wrong with the Hindi pages because they contain no Devanagari. Both gates pass
+# and the damaged pages are indexed.
+#
+# The cost is not only that garbage enters the index. The quality panel is
+# computed over the admitted pages, so a document that is half damaged scores as
+# damaged, and it is quarantined **whole** -- its sound English half with it. The
+# Indian Railways (Open Lines) General and Subsidiary Rules is the worked
+# example: 710 pages of strictly alternating English and Hindi, every page
+# admitted, document score 0.46, all 710 pages quarantined.
+#
+# What separates the two populations is word *shape*. Legacy-font Hindi extracts
+# as short vowelless fragments studded with mis-mapped symbols; English does not.
+# Measured over 4,003 pages drawn from 150 currently-eligible documents and 108
+# hand-confirmed Hindi pages from that Railways document:
+#
+#     signal              English pages    damaged Hindi pages
+#     mean word length         4.82               1.59
+#     function-word rate       0.473              0.029
+#     vowelless ratio          0.000              0.387
+#     symbol ratio             0.000              0.160
+#
+# The thresholds below sit in the gap. They fire on 9 of those 4,003 pages, and
+# all nine were read by hand and are themselves damaged Hindi inside documents
+# that are eligible today -- so the measured false-positive count on genuine
+# English is **zero**, and the rule also removes nine non-English pages currently
+# indexed as English law. Recall on the hand-confirmed set is 94.4%; the six
+# misses are transition pages that carry real English alongside the Hindi, and
+# keeping them is the same judgement `indexable_pages` already makes.
+#
+# Two clauses, because one threshold could not have both. The primary clause is
+# vocabulary-led and shape-guarded; the second catches pages so short-worded that
+# a stray "a" or "in" lifts them over the function-word bar while the shape has
+# plainly collapsed.
+
+#: Below this mean word length a page's words are fragments, not words.
+LANGUAGE_MANGLED_MEAN_WORD_LENGTH = 3.0
+#: English function-word rate beneath which a Latin-script page is not English
+#: prose. Deliberately far below :data:`LANGUAGE_ENGLISH_RATE` (0.15): this test
+#: must not fire on a schedule of species names or a tariff table.
+LANGUAGE_MANGLED_FUNCTION_WORD_RATE = 0.06
+#: Mis-mapped glyph share that corroborates the vocabulary evidence.
+LANGUAGE_MANGLED_SYMBOL_RATIO = 0.05
+#: Vowelless-word share that does the same, for fonts that map onto letters
+#: rather than symbols.
+LANGUAGE_MANGLED_VOWELLESS_RATIO = 0.25
+#: Second clause -- shape-led. A page whose words average under this length and
+#: which carries this many mis-mapped glyphs is damaged whatever its function-word
+#: rate, provided that rate stays under
+#: :data:`LANGUAGE_MANGLED_SHAPE_FUNCTION_WORD_RATE`.
+LANGUAGE_MANGLED_SHAPE_MEAN_WORD_LENGTH = 2.0
+LANGUAGE_MANGLED_SHAPE_SYMBOL_RATIO = 0.15
+LANGUAGE_MANGLED_SHAPE_FUNCTION_WORD_RATE = 0.15
+#: Words a page needs before any of this is measurable at all.
+LANGUAGE_MANGLED_MIN_WORDS = 40
+
+# --- Word validity -----------------------------------------------------------------
+#
+# The signal DECISIONS D21 said was missing. The page-level shape checks admit
+# text that is visibly damaged, because damaged English keeps the *shape* of
+# English: "thereil", "concerngd", "recognuon" all have ordinary word lengths and
+# ordinary capitalisation. What they do not have is membership of the language.
+#
+# :mod:`processing.vocabulary` measures that against a list derived from the
+# corpus's own born-digital documents. The worked example is the Calcutta
+# Municipal Corporation Act, 1980, whose 506 pages score **1.00** on the quality
+# panel and read like this:
+#
+#     The KotkeiUi Municipal Corporation Acl, J980.
+#     (Pari HI.-Finance.-Cheptcr XL-Accounts and Audi!.-Sections 157, 158)
+#     ...the Clticf Municipal Auditor shall have access to all lhe accounts
+#
+# Its word-validity rate is 0.870. Documents of the same kind that are genuinely
+# clean -- the Chhattisgarh Municipalities Act, the Goa Land Revenue Code, the
+# Chhattisgarh Municipal Corporation Act -- score 0.974 to 0.985.
+#
+# The limit is set at 0.90: above the known-bad example and comfortably below the
+# clean ones.
+#
+# **It gates one path only, and that is deliberate.** It is not applied to the
+# corpus at large, because it must not be: measured over 230 documents that are
+# eligible today, the 25th percentile is 0.937 and the 5th is 0.770, so imposing
+# it corpus-wide would quarantine a quarter of a corpus that has already been
+# accepted -- exactly the blunt instrument D21 warned about. It is applied where a
+# document is being *admitted* on the strength of an OCR pass no human has
+# reviewed (KNOWN_ISSUES C1), which is where the evidence is weakest and where the
+# old OCR-action gate used to stand. See DECISIONS D27 and D28.
+
+#: Share of a document's long words that must appear in the reference vocabulary
+#: before an OCR-settled document may be admitted.
+QUALITY_WORD_VALIDITY_MIN = 0.90
+#: Long words a document needs before the rate is measurable at all. Below this
+#: the verdict is "unknown", which is not a pass.
+QUALITY_WORD_VALIDITY_MIN_WORDS = 200
+
 # --- Page orientation -------------------------------------------------------------
 #
 # A page can be sideways without the PDF saying so. The Rajasthan Legislative

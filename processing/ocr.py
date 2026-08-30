@@ -92,7 +92,7 @@ def text_source(extraction: ExtractedDocument, quality) -> str:
     return "scan_with_good_ocr" if classification == "good" else "scan_with_bad_ocr"
 
 
-def _ocr_settled_partial(ocr_run, classification: str) -> bool:
+def _ocr_settled_partial(ocr_run, classification: str, quality=None) -> bool:
     """Has OCR already answered the question ``partial`` was asking?
 
     ``partial`` does not say the text is bad. It says *some pages yielded no
@@ -109,13 +109,27 @@ def _ocr_settled_partial(ocr_run, classification: str) -> bool:
         A run that never happened, or that found no page worth attempting, has
         answered nothing. Absence of OCR is not evidence about the pages.
 
-    ``accepted == 0``
-        The moment OCR contributes a single reading, the document's text is
-        partly unreviewed OCR output, and KNOWN_ISSUES C1 applies — no human has
-        checked OCR acceptance anywhere in this corpus. Those documents keep the
-        flag. This is the line that stops the fix spreading from 823 documents to
-        1,451, and it is drawn where the evidence stops, not where it would be
-        convenient.
+    ``accepted == 0`` — **removed 2026-08-29, and this is why**
+        It used to be required. The argument was that OCR-contributed text is
+        unreviewed and KNOWN_ISSUES C1 applies, so a document carrying any of it
+        keeps the flag. The argument is sound and the line was drawn in the wrong
+        place: the corpus does not apply it anywhere else. **3,036 documents that
+        are eligible today carry 14,124 accepted OCR pages**, indexed and chunked
+        as law, and every one of those pages is exactly as unreviewed. The
+        condition was not protecting the index from unreviewed OCR; it was
+        excluding one subset of documents for a property the rest of the corpus
+        already has, and the subset it excluded was defined by where extraction
+        happened to fail rather than by anything about the text.
+
+        What C1 asks for is that OCR-sourced text be *labelled*, and it is —
+        ``text_source`` on every page, ``ocr_page_count`` on the document, and
+        the ``ocr_sourced`` flag on every chunk built from one. Labelled, not
+        withheld, is the same contract furniture, footnotes, tables and
+        non-English lines already have.
+
+        Quality still gates, which is the real protection: a document whose OCR
+        produced unusable text fails ``classification == "good"`` below and never
+        reaches here. See DECISIONS D27.
 
     ``not truncated``
         A run stopped by ``OCR_MAX_PAGES_PER_DOCUMENT`` never reached the later
@@ -131,14 +145,26 @@ def _ocr_settled_partial(ocr_run, classification: str) -> bool:
     0.622 for documents that were never quarantined — indistinguishable. See
     DECISIONS D26.
     """
-    return bool(
-        ocr_run is not None
-        and getattr(ocr_run, "executed", False)
-        and getattr(ocr_run, "attempted", 0) > 0
-        and getattr(ocr_run, "accepted", 0) == 0
-        and not getattr(ocr_run, "truncated", False)
-        and classification == "good"
-    )
+    if not (ocr_run is not None
+            and getattr(ocr_run, "executed", False)
+            and getattr(ocr_run, "attempted", 0) > 0
+            and not getattr(ocr_run, "truncated", False)
+            and classification == "good"):
+        return False
+    if not getattr(ocr_run, "accepted", 0):
+        # Nothing was adopted, so the text here is the original text layer and
+        # the quality panel has already judged it. This is the 2026-08-27 case
+        # (D26) and it is unchanged.
+        return True
+    # OCR contributed text, so the panel is judging a reading no human has seen.
+    # The panel measures word shape and damaged English keeps the shape of
+    # English, so it is asked one further question: are these words words?
+    validity = (getattr(quality, "signals", None) or {}).get("word_validity") or {}
+    if not validity.get("measurable"):
+        # Too little text to judge. Ambiguous evidence is quarantined, not
+        # admitted -- this document keeps its existing routing.
+        return False
+    return validity.get("rate", 0.0) >= config.QUALITY_WORD_VALIDITY_MIN
 
 
 def decide(
@@ -227,6 +253,30 @@ def decide(
         )
 
     if extraction.text_extraction_status == "requires_ocr":
+        # A scan with no text layer is what OCR exists for. When OCR has since
+        # run over it, was not cut short, and the reading it produced passes the
+        # quality panel, "this document requires OCR" is a description of the PDF
+        # that has been acted on -- not an outstanding instruction. Leaving it
+        # standing quarantines the document for a job that is done.
+        #
+        # The same two protections as the `partial` branch apply and are the
+        # reason this is safe: quality gates the result, and every OCR-sourced
+        # page stays labelled. See DECISIONS D27.
+        if (_ocr_settled_partial(ocr_run, classification, quality)
+                and ocr_run.accepted):
+            return OcrDecision(
+                action="use_extracted_text",
+                text_source=source,
+                reason=(
+                    f"no usable text layer, so OCR was run over "
+                    f"{ocr_run.attempted} of {pages} pages and "
+                    f"{ocr_run.accepted} of its readings were adopted; the "
+                    "resulting text passes every quality check, and each "
+                    "OCR-sourced page is labelled as such"
+                ) + sideways_note,
+                priority=0,
+                estimated_pages=0,
+            )
         return OcrDecision(
             action="ocr_required",
             text_source=source,
@@ -254,17 +304,27 @@ def decide(
 
     if extraction.text_extraction_status == "partial":
         missing = pages - extraction.classification_evidence.get("pages_with_text", 0)
-        if _ocr_settled_partial(ocr_run, classification):
-            return OcrDecision(
-                action="use_extracted_text",
-                text_source=source,
-                reason=(
+        if _ocr_settled_partial(ocr_run, classification, quality):
+            if ocr_run.accepted:
+                settled = (
+                    f"{missing} of {pages} pages yielded no text, OCR was run "
+                    f"over {ocr_run.attempted} of them and {ocr_run.accepted} "
+                    "of its readings were adopted; the resulting text passes "
+                    "every quality check, and each OCR-sourced page is labelled "
+                    "as such on the page and on every chunk built from it"
+                )
+            else:
+                settled = (
                     f"{missing} of {pages} pages yielded no text, OCR was run "
                     f"over {ocr_run.attempted} of them and none of its readings "
                     "improved on what was already there; the text layer that "
                     "remains passes every quality check, and the pages OCR "
                     "could not rescue are excluded individually"
-                ) + sideways_note,
+                )
+            return OcrDecision(
+                action="use_extracted_text",
+                text_source=source,
+                reason=settled + sideways_note,
                 priority=0,
                 estimated_pages=0,
             )
