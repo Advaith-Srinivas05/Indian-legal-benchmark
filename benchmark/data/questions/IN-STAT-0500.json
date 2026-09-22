@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0500",
+  "question": "In Karnataka, can the government exempt a particular horse race from the racecourse licensing law?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "karnataka-race-courses-licensing-act-1952__handle-17224",
+          "key": "section:10",
+          "citation": "Karnataka Race Courses Licensing Act, 1952., s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 9036,
+          "char_end": 9190,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "b748d6204d83179de8838a9ffbca74b869239042715367a8db554bda3ec8b9a0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes, by general or special order published in the Gazette.",
+  "required_facts": [
+    [
+      "exempt"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "karnataka-race-courses-licensing-act-1952__handle-17224",
+      "key": "section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 154,
+    "number_ambiguity": 6559,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 761,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#761"
+  }
+}

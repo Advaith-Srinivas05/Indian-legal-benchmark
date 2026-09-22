@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0509",
+  "question": "In Karnataka, does the ban on cruelty to animals stop traditional buffalo races in paddy fields?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "prevention-of-cruelty-to-animals-karnataka-second-amendment__handle-17236",
+          "key": "section:5",
+          "citation": "prevention of cruelty to animals (karnataka second amendment) Act 2017, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 5136,
+          "char_end": 5411,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "d922a8f521afae5e29056a73d85960cf7d320e79ff1777f18fd284a3c388e48e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. A proviso excludes the conduct of Kambala and bull or bullock cart races from that section.",
+  "required_facts": [
+    [
+      "Kambala"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prevention-of-cruelty-to-animals-karnataka-second-amendment__handle-17236",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 275,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 841,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#841"
+  }
+}

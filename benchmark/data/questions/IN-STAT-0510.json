@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0510",
+  "question": "In Karnataka, what becomes of a goods carrier's operating licence while its road levy remains overdue?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "karnataka-motor-vehicles-taxation-act-1957__handle-7605",
+          "key": "chapter:I/section:14",
+          "citation": "KARNATAKA  MOTOR VEHICLES TAXATION ACT, 1957., s. 14",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "14"
+            }
+          ],
+          "char_start": 96416,
+          "char_end": 98743,
+          "page_start": 34,
+          "page_end": 34,
+          "text_sha256": "1f4447aa5ed8db6765afc760772b0494ae10a989062ac89853c50a60dbbb0a5d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The permit becomes ineffective from the expiry of the prescribed period until the tax is actually paid.",
+  "required_facts": [
+    [
+      "ineffective"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "karnataka-motor-vehicles-taxation-act-1957__handle-7605",
+      "key": "chapter:I/section:14"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2327,
+    "number_ambiguity": 5435,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 843,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#843"
+  }
+}

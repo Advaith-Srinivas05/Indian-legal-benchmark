@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0495",
+  "question": "In Karnataka, what can the state do with a convict who is found to be mentally ill?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "karnataka-prisoners-act-1963__handle-8184",
+          "key": "section:9",
+          "citation": "KARNATAKA PRISONERS ACT, 1963, s. 9",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "9"
+            }
+          ],
+          "char_start": 6924,
+          "char_end": 10854,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "a4cdced892b8f00fb64ab9ac6019e6ce222124969e6e4e571739d95613e8e99c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "By a warrant stating the grounds, order his removal to a mental hospital or other place of safe custody in the State to be kept and treated.",
+  "required_facts": [
+    [
+      "mental hospital"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "karnataka-prisoners-act-1963__handle-8184",
+      "key": "section:9"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3930,
+    "number_ambiguity": 6389,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 743,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#743"
+  }
+}

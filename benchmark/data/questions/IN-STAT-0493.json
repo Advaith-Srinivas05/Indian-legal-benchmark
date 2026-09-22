@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0493",
+  "question": "After a jail carries out a court's warrant or releases the person named in it, what must the jail superintendent do with the warrant?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "prisoners-act-1900__handle-14992",
+          "key": "part:II/section:4",
+          "citation": "Prisoners Act 1900, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 2853,
+          "char_end": 3658,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "baebda430212590f93defa2215f98a96b1eddcad14f81620ede3f250d3e5bc1e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Forthwith return it to the issuing court with a certificate endorsed on it showing how it was executed or why the person was discharged.",
+  "required_facts": [
+    [
+      "return"
+    ],
+    [
+      "certificate"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prisoners-act-1900__handle-14992",
+      "key": "part:II/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 805,
+    "number_ambiguity": 8272,
+    "title_collisions": 5,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 763,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#763"
+  }
+}

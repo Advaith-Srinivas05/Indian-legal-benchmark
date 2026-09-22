@@ -1,0 +1,96 @@
+{
+  "question_id": "IN-STAT-0507",
+  "question": "In Punjab's municipal polls, what happens if someone finds that another person has already voted in their name?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Punjab",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "punjab-municipal-election-rules-1994__handle-22369",
+          "key": "part:III/section:63",
+          "citation": "PUNJAB MUNICIPAL ELECTION RULES, 1994, s. 63",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "63"
+            }
+          ],
+          "char_start": 49190,
+          "char_end": 50242,
+          "page_start": 19,
+          "page_end": 19,
+          "text_sha256": "7b406a4259428b947212cd3f3fc0a1eb92aba8754e043a73e8611d60d7a6b54c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "the-punjab-municipal-election-rules-1994__rule-5e0ebb36cf",
+          "key": "part:III/section:63",
+          "citation": "The Punjab Municipal Election Rules,1994, r. 63",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "63"
+            }
+          ],
+          "char_start": 49190,
+          "char_end": 50242,
+          "page_start": 19,
+          "page_end": 19,
+          "text_sha256": "7b406a4259428b947212cd3f3fc0a1eb92aba8754e043a73e8611d60d7a6b54c",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "After the Presiding Officer's enquiry he may cast a tendered ballot paper, first signing against his entry in a list in Form 31.",
+  "required_facts": [
+    [
+      "tendered ballot paper"
+    ],
+    [
+      "Form 31"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "punjab-municipal-election-rules-1994__handle-22369",
+      "key": "part:III/section:63"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1052,
+    "number_ambiguity": 866,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 825,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#825"
+  }
+}

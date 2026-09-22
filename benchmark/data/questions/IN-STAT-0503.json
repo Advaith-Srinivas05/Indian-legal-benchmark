@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0503",
+  "question": "In Kerala, may headload workers enter an employer's premises uninvited and block work?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Kerala",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "kerala-loading-and-unloading-regulation-of-wages-and-restric__handle-22269",
+          "key": "chapter:II/section:7",
+          "citation": "KERALA LOADING AND UNLOADING ( REGULATION OF WAGES AND RESTRICTION OF UNLAWFUL PRACTICES)  ACT, 2002, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 8235,
+          "char_end": 8668,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "123362b615fe05c851196ec6d8af7cb012ad21500e40d69643d6d7a9c13c512e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. No worker may make unauthorised entry into the property of an employer or other person and obstruct work or cause damage.",
+  "required_facts": [
+    [
+      "unauthorised entry"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "kerala-loading-and-unloading-regulation-of-wages-and-restric__handle-22269",
+      "key": "chapter:II/section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 433,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 771,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#771"
+  }
+}

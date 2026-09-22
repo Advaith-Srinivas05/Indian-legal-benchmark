@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0496",
+  "question": "In Jharkhand, can a co-operative society recover a member's debt from that member's shares and deposits?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Jharkhand",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bihar-co-operative-societies-act-1935__handle-6670",
+          "key": "chapter:III/section:22",
+          "citation": "Bihar Co-operative Societies Act, 1935, s. 22",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "22"
+            }
+          ],
+          "char_start": 28549,
+          "char_end": 29055,
+          "page_start": 9,
+          "page_end": 9,
+          "text_sha256": "852101d1b901ee419bacb1757a3d517318e55c0861d3f28a85ed69a887d1bc0b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. The society has a charge on the member's share, capital interest, deposits and profits payable, and may set off sums credited to him against his debt.",
+  "required_facts": [
+    [
+      "charge"
+    ],
+    [
+      "set off"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bihar-co-operative-societies-act-1935__handle-6670",
+      "key": "chapter:III/section:22"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 506,
+    "number_ambiguity": 3781,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 745,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#745"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0499",
+  "question": "In Bengaluru's metropolitan transport authority, does a non-official member who resigns leave office immediately?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bengaluru-metropolitan-land-transport-authority-act-2022__handle-19589",
+          "key": "section:8",
+          "citation": "BENGALURU METROPOLITAN LAND TRANSPORT AUTHORITY ACT, 2022, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 21359,
+          "char_end": 23134,
+          "page_start": 9,
+          "page_end": 10,
+          "text_sha256": "2cdc89024e65778a0d15a6302c11e61a62a66cc3e7699935e3f78473ca0879c3",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. He continues to hold office until the Authority accepts the resignation.",
+  "required_facts": [
+    [
+      "acceptance of the resignation"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bengaluru-metropolitan-land-transport-authority-act-2022__handle-19589",
+      "key": "section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1775,
+    "number_ambiguity": 6826,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 754,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#754"
+  }
+}

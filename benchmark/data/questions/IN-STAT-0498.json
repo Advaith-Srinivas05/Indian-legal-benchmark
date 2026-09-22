@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0498",
+  "question": "In Rajasthan, how can the state housing agency recover unpaid instalments on a flat?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Rajasthan",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "rajasthan-housing-board-act-1970__handle-18743",
+          "key": "chapter:V/section:51-A",
+          "citation": "rajasthan housing board act, 1970, s. 51-A",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "51-A"
+            }
+          ],
+          "char_start": 46669,
+          "char_end": 47257,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "eebcee4efb98e9e59acfcbf8279447d8bb995e7bc725810bf1d1f40926102c75",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "As arrears of land revenue, by the Board or an officer it authorises.",
+  "required_facts": [
+    [
+      "arrears of land revenue"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "rajasthan-housing-board-act-1970__handle-18743",
+      "key": "chapter:V/section:51-A"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 588,
+    "number_ambiguity": 2,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 753,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#753"
+  }
+}

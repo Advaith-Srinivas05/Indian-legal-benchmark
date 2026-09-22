@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0497",
+  "question": "In Himachal Pradesh, how often must the state commission for protecting cattle meet?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Himachal Pradesh",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "himachal-pradesh-gauvansh-sanrakshan-and-samvardhan-act-2018__handle-16784",
+          "key": "section:10",
+          "citation": "Himachal Pradesh Gauvansh Sanrakshan and Samvardhan Act, 2018, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 7918,
+          "char_end": 8788,
+          "page_start": 5,
+          "page_end": 6,
+          "text_sha256": "02a4ba0c801c0572e51db637cff3658aa953d9ee4a34e41ab25e35f5cfc1cf47",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Once every quarter and at least four times a year, presided over by the Chairperson or, in his absence, the Vice-Chairperson.",
+  "required_facts": [
+    [
+      "quarterly"
+    ],
+    [
+      "four meetings"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "himachal-pradesh-gauvansh-sanrakshan-and-samvardhan-act-2018__handle-16784",
+      "key": "section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 870,
+    "number_ambiguity": 6559,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 746,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#746"
+  }
+}

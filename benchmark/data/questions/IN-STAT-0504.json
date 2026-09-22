@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0504",
+  "question": "In Goa, where must offices publicise which services they offer and how fast they must deliver them?",
+  "category": "jurisdictional",
+  "answer_type": "list",
+  "jurisdiction_hint": "Goa",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-right-of-citizens-to-time-bound-delivery-of-public-servi__handle-12982",
+          "key": "section:8",
+          "citation": "Goa (Right of Citizens to Time-Bound Delivery of Public Services) Act, 2013, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 8535,
+          "char_end": 8882,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "29e85ce90c99943bbc0584d94210fc4bb4102c5312ae8d6548e7013a56a3ae18",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "On the notice-board of every authority, in the Official Gazette and Citizens Charter, and on the authority's website.",
+  "required_facts": [
+    [
+      "notice-board"
+    ],
+    [
+      "website"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-right-of-citizens-to-time-bound-delivery-of-public-servi__handle-12982",
+      "key": "section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 347,
+    "number_ambiguity": 6826,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 783,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#783"
+  }
+}

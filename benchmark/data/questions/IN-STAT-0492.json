@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0492",
+  "question": "Before whom does an injured worker file a claim for workplace accident compensation?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "employee-s-workmen-compensation-act-1923__handle-11221",
+          "key": "section:22",
+          "citation": "EMPLOYEE'S(Workmen) COMPENSATION ACT,1923, s. 22",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "22"
+            }
+          ],
+          "char_start": 61631,
+          "char_end": 63286,
+          "page_start": 15,
+          "page_end": 15,
+          "text_sha256": "84f1d126b7ab47972461d4898257f7493e20e216d8d0ad843971580d41b10144",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Before the Commissioner.",
+  "required_facts": [
+    [
+      "Commissioner"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "employee-s-workmen-compensation-act-1923__handle-11221",
+      "key": "section:22"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1655,
+    "number_ambiguity": 3781,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 751,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#751"
+  }
+}

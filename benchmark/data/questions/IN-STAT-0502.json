@@ -1,0 +1,75 @@
+{
+  "question_id": "IN-STAT-0502",
+  "question": "In Maharashtra, can the housing authority spend money it borrowed for giving loans on something else?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Maharashtra",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "maharashtra-housing-and-area-development-act-1976__handle-16704",
+          "key": "part:V/chapter:X/section:163",
+          "citation": "Maharashtra Housing and Area Development Act, 1976., s. 163",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "V"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "X"
+            },
+            {
+              "unit_type": "section",
+              "number": "163"
+            }
+          ],
+          "char_start": 264118,
+          "char_end": 267014,
+          "page_start": 72,
+          "page_end": 72,
+          "text_sha256": "fc46f8656835582f26d23f60afd664555aa4dfbefc7df08311c521e08cca3ae0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Not without the previous sanction of the State Government.",
+  "required_facts": [
+    [
+      "previous sanction of the State Government"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "maharashtra-housing-and-area-development-act-1976__handle-16704",
+      "key": "part:V/chapter:X/section:163"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2896,
+    "number_ambiguity": 207,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 770,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#770"
+  }
+}
