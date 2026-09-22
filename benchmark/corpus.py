@@ -119,6 +119,10 @@ def build_corpus(data_dir: Path, out_dir: Path, *, workers: int = 1,
             if progress and i % 1000 == 0:
                 print(f"  {i}/{len(jobs)} documents, {time.time() - started:.0f}s", flush=True)
 
+    if any(r["status"] == "built" for r in results):
+        # Duplicate findings describe the corpus as it was; a rebuild invalidates them.
+        for name in (config.DUPLICATES_FILENAME, config.PROVISION_EQUIVALENTS_FILENAME):
+            (out_dir / name).unlink(missing_ok=True)
     report = finalise(out_dir, results)
     if progress:
         print(f"  finished in {time.time() - started:.0f}s", flush=True)
@@ -205,6 +209,9 @@ def _published_files(out_dir: Path) -> list[Path]:
         if d.exists():
             files.extend(p for p in d.iterdir() if p.is_file() and not p.name.endswith(".tmp"))
     files.append(out_dir / config.DOCUMENTS_FILENAME)
+    for name in (config.DUPLICATES_FILENAME, config.PROVISION_EQUIVALENTS_FILENAME):
+        if (out_dir / name).exists():
+            files.append(out_dir / name)
     return sorted(files, key=lambda p: p.relative_to(out_dir).as_posix())
 
 
@@ -284,6 +291,9 @@ def main(argv: Optional[list[str]] = None) -> int:
     build.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2) // 2))
     build.add_argument("--only-from", type=Path, help="File with one document_id per line.")
     build.add_argument("--force", action="store_true", help="Rebuild documents already built.")
+    dup = sub.add_parser("duplicates", help="Find copies of the same instrument and identical provisions.")
+    dup.add_argument("--review-sample", type=Path, metavar="CSV",
+                     help="Also write a stratified sample of edges for human review to this CSV.")
     sub.add_parser("verify", help="Re-check the published corpus files.")
     args = parser.parse_args(argv)
     out = args.out or args.data_dir / config.CORPUS_SUBDIR
@@ -300,6 +310,14 @@ def main(argv: Optional[list[str]] = None) -> int:
         if report["failures"]:
             print(f"{len(report['failures'])} eligible document(s) failed and were not written.")
             return 1
+        return 0
+
+    if args.command == "duplicates":
+        from .duplicates import write_duplicates, write_review_sample
+        print(json.dumps(write_duplicates(out), indent=2))
+        if args.review_sample:
+            rows = write_review_sample(out, args.review_sample)
+            print(f"wrote {rows} edges for review to {args.review_sample}")
         return 0
 
     result = verify_corpus(out)

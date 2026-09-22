@@ -14,6 +14,7 @@ real contract rather than a convenient copy of it.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import zlib
 from pathlib import Path
@@ -59,6 +60,7 @@ def write_processed(
     year: Optional[int] = 1999,
     omit_page_fields: Iterable[str] = (),
     schema_version: int = processing_config.PROCESSING_SCHEMA_VERSION,
+    pdf_sha256: Optional[str] = None,
 ) -> Path:
     """Write ``document.json`` and ``pages.json`` for one fake processed document.
 
@@ -96,7 +98,7 @@ def write_processed(
                 "document_type": document_type,
                 "title": title,
                 "pdf_relpath": f"raw/indiacode/{category}/{document_id}/{document_id}.pdf",
-                "sha256": "0" * 64,
+                "sha256": pdf_sha256 or hashlib.sha256(document_id.encode()).hexdigest(),
                 "bytes": 1234,
                 "source_url": f"https://www.indiacode.nic.in/handle/123456789/{document_id}",
                 "handle": f"123456789/{zlib.crc32(document_id.encode()) % 100000}",
@@ -188,3 +190,22 @@ In these rules the Act means the Sample Act, 1999.
 A fee of ten rupees shall be paid with every application.
 4. Appeals
 An appeal lies to the Collector within thirty days."""
+
+
+def make_act(title: str, sections: int = 20, *, changed: Iterable[int] = (),
+             per_page: int = 10) -> list[PageText]:
+    """A synthetic Act in house style, with every section distinct.
+
+    Sections listed in *changed* get a different body, so two calls differing
+    only in *changed* model two versions of one Act: their similarity is set
+    exactly by how many sections differ.
+    """
+    changed = set(changed)
+    lines = [title.upper()]
+    for n in range(1, sections + 1):
+        body = (f"The authority shall revise matter {n} within {n + 90} days of receipt."
+                if n in changed else
+                f"The authority shall consider matter {n} within {n + 10} days of receipt.")
+        lines.append(f"{n}. Subject number {n}.—{body}")
+    pages = [lines[i:i + per_page] for i in range(0, len(lines), per_page)]
+    return [make_page(i + 1, "\n".join(chunk)) for i, chunk in enumerate(pages)]

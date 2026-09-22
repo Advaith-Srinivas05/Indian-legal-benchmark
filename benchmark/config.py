@@ -31,6 +31,8 @@ STRUCTURE_DIRNAME = "structure"
 DOCUMENTS_FILENAME = "documents.jsonl"
 CHECKSUMS_FILENAME = "CHECKSUMS.txt"
 BUILD_REPORT_FILENAME = "build_report.json"
+DUPLICATES_FILENAME = "duplicates.json"
+PROVISION_EQUIVALENTS_FILENAME = "provision_equivalents.jsonl"
 
 #: Bumped whenever the shape of anything under ``corpus/`` changes. Gold
 #: evidence records name the corpus version they were computed against.
