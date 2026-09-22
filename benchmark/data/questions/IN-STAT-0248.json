@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0248",
+  "question": "What must a person's agreement look like before a company may use their information under India's 2023 privacy statute?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "digital-personal-data-protection-act-2023__handle-22037",
+          "key": "chapter:II/section:6",
+          "citation": "Digital Personal Data Protection Act, 2023., s. 6",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 12807,
+          "char_end": 17630,
+          "page_start": 8,
+          "page_end": 9,
+          "text_sha256": "e3a238adfa51842ffc5634d77bdb505aeba3fbeb4607c21f198f6a512bfb46f7",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It must be free, specific, informed, unconditional and unambiguous, given by clear affirmative action, and limited to the data necessary for the specified purpose.",
+  "required_facts": [
+    [
+      "free, specific, informed"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "digital-personal-data-protection-act-2023__handle-22037",
+      "key": "chapter:II/section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 4823,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 204,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#204"
+  }
+}

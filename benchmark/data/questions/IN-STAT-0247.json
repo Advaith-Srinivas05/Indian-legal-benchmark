@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0247",
+  "question": "Can a judge hold off auctioning a debtor's land so the debtor can find the sum by other means?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "code-of-civil-procedure-1908__handle-12813",
+          "key": "appendix:C/section:83",
+          "citation": "code of civil procedure 1908, s. 83",
+          "unit_path": [
+            {
+              "unit_type": "appendix",
+              "number": "C"
+            },
+            {
+              "unit_type": "section",
+              "number": "83"
+            }
+          ],
+          "char_start": 436292,
+          "char_end": 437685,
+          "page_start": 138,
+          "page_end": 138,
+          "text_sha256": "d099528d986045453a597d462035f742106f12917f5b272ed437c4c1c05df95d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes, if the judgment-debtor satisfies the Court the amount may be raised by mortgage, lease or private sale of the property or other land, the Court may postpone the sale.",
+  "required_facts": [
+    [
+      "mortgage or lease or private sale"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "code-of-civil-procedure-1908__handle-12813",
+      "key": "appendix:C/section:83"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1393,
+    "number_ambiguity": 609,
+    "title_collisions": 4,
+    "cluster_size": 3,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 203,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#203"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "question_id": "IN-STAT-0235",
+  "question": "How is an order of the tribunal deciding complaints about railway freight rates enforced?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "railways-act-1989__handle-1908",
+          "key": "chapter:VII/section:46",
+          "citation": "Railways Act, 1989, s. 46",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VII"
+            },
+            {
+              "unit_type": "section",
+              "number": "46"
+            }
+          ],
+          "char_start": 80034,
+          "char_end": 80292,
+          "page_start": 29,
+          "page_end": 29,
+          "text_sha256": "f1c1815666d809e3741aa8eb50e0bcb198567b2c6f1180601530c56bdb1c0245",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "railways-act-1989__handle-15416",
+          "key": "chapter:VI/section:46",
+          "citation": "RAILWAYS ACT, 1989, s. 46",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "46"
+            }
+          ],
+          "char_start": 76058,
+          "char_end": 76316,
+          "page_start": 26,
+          "page_end": 26,
+          "text_sha256": "f1c1815666d809e3741aa8eb50e0bcb198567b2c6f1180601530c56bdb1c0245",
+          "evidence_confidence": "high",
+          "source": "cross_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Tribunal may transmit it to a civil court of local jurisdiction, which executes it as if it were its own decree.",
+  "required_facts": [
+    [
+      "civil court"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "railways-act-1989__handle-1908",
+      "key": "chapter:VII/section:46"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 258,
+    "number_ambiguity": 1571,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 1,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 150,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#150",
+    "alternatives_decided": [
+      {
+        "document_id": "railways-act-1989__handle-15416",
+        "key": "chapter:VI/section:46",
+        "source": "cross_instrument_equivalent",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

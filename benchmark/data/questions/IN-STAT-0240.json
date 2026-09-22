@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0240",
+  "question": "What penalty applies for breaching the 2025 law guaranteeing rural jobs and livelihoods?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "viksit-bharatguarantee-for-rozgar-and-ajeevika-mission-grami__handle-22478",
+          "key": "chapter:VII/section:27",
+          "citation": "Viksit Bharat—Guarantee for Rozgar And Ajeevika Mission (Gramin): VB—G Ram G (विकसित भारत—जी राम जी)Act, 2025, s. 27",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VII"
+            },
+            {
+              "unit_type": "section",
+              "number": "27"
+            }
+          ],
+          "char_start": 41294,
+          "char_end": 41451,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "456704e8f98f93b769d8fc619210aff63059d87a67a28bcb996f7d433b0be6e7",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A penalty which may extend to ten thousand rupees.",
+  "required_facts": [
+    [
+      "ten thousand rupees"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "viksit-bharatguarantee-for-rozgar-and-ajeevika-mission-grami__handle-22478",
+      "key": "chapter:VII/section:27"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 157,
+    "number_ambiguity": 3095,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 166,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#166"
+  }
+}

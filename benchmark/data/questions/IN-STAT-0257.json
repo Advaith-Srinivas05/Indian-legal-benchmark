@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0257",
+  "question": "Can the Centre apply a state's laws to the former Portuguese enclave administered from Silvassa?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "dadra-and-nagar-haveli-act-1961__handle-1640",
+          "key": "section:10",
+          "citation": "Dadra and Nagar Haveli Act, 1961, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 5762,
+          "char_end": 6058,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "2fe602ca09aa4a6af34c3a6ec092887f14b07d2b1cf8ea9f18a7f9aec07af2fb",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. By notification it may extend any enactment in force in a State, with restrictions or modifications as it thinks fit.",
+  "required_facts": [
+    [
+      "extend"
+    ],
+    [
+      "restrictions or modifications"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "dadra-and-nagar-haveli-act-1961__handle-1640",
+      "key": "section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 296,
+    "number_ambiguity": 6559,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 222,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#222"
+  }
+}

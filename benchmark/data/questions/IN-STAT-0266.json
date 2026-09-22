@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0266",
+  "question": "Under section 7 of the Births, Deaths and Marriages Registration Act, 1886, what must each Registrar General keep?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "births-deaths-and-marriages-registration-act-1886__handle-2309",
+          "key": "chapter:II/section:7",
+          "citation": "Births, Deaths and Marriages Registration Act, 1886, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 5778,
+          "char_end": 6202,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "70a3b2c414d6f09a6b7321471854f3ad322d9ffbcfab5e233e1661d43433d61d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Indexes of all certified copies of registers sent to his office, in the prescribed form.",
+  "required_facts": [
+    [
+      "indexes"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "births-deaths-and-marriages-registration-act-1886__handle-2309",
+      "key": "chapter:II/section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 424,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 195,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#195"
+  }
+}

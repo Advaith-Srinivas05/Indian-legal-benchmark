@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0229",
+  "question": "When the Union territory governed from Shimla was upgraded to statehood, did its officials keep their jobs?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "state-of-himachal-pradesh-act-1970__handle-1464",
+          "key": "part:VII/section:43",
+          "citation": "State of Himachal Pradesh Act, 1970, s. 43",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "VII"
+            },
+            {
+              "unit_type": "section",
+              "number": "43"
+            }
+          ],
+          "char_start": 44427,
+          "char_end": 45168,
+          "page_start": 16,
+          "page_end": 17,
+          "text_sha256": "f25d594308e73d21f896a35358c687fec5e89735809c3fc7ed028f0b6c8fdc46",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. Every person holding a post in the Union territory administration continued to hold the same post in the new State and is deemed duly appointed to it.",
+  "required_facts": [
+    [
+      "continue to hold the same post"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "state-of-himachal-pradesh-act-1970__handle-1464",
+      "key": "part:VII/section:43"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 741,
+    "number_ambiguity": 1696,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 129,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#129"
+  }
+}

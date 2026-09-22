@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0239",
+  "question": "What body must each state set up to oversee assisted reproduction clinics and commercial-free surrogacy?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "surrogacy-regulation-act-2021__handle-17046",
+          "key": "chapter:V/section:26",
+          "citation": "Surrogacy (Regulation) Act, 2021, s. 26",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "26"
+            }
+          ],
+          "char_start": 34567,
+          "char_end": 35525,
+          "page_start": 15,
+          "page_end": 15,
+          "text_sha256": "c3452f60a11560794db303c8bc00f013931b7b86cac37569df3dad1113f8daf3",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A State Assisted Reproductive Technology and Surrogacy Board (or a Union territory board).",
+  "required_facts": [
+    [
+      "State Assisted Reproductive Technology and Surrogacy Board"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "surrogacy-regulation-act-2021__handle-17046",
+      "key": "chapter:V/section:26"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 958,
+    "number_ambiguity": 3259,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 163,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#163"
+  }
+}

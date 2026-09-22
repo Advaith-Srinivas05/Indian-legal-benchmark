@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0267",
+  "question": "Under section 7 of the Delhi University Act, 1922, under whose control is recognised teaching conducted?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "delhi-university-act-1922__handle-2374",
+          "key": "section:7",
+          "citation": "Delhi University Act, 1922, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 11448,
+          "char_end": 14079,
+          "page_start": 6,
+          "page_end": 7,
+          "text_sha256": "c0ae90487e7884259f078b26dbed3c736d77c067d07fe2edba2cc70251140323",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Academic Council, by teachers of the University.",
+  "required_facts": [
+    [
+      "Academic Council"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "delhi-university-act-1922__handle-2374",
+      "key": "section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2631,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 209,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#209"
+  }
+}

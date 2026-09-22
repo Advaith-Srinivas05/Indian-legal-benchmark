@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0269",
+  "question": "Who are the officers of a Central Sanskrit University under section 9 of the Central Sanskrit Universities Act, 2020?",
+  "category": "provision_lookup",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "central-sanskrit-universities-act-2020__handle-14004",
+          "key": "schedule:First/section:9",
+          "citation": "Central Sanskrit Universities Act, 2020, s. 9",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": "First"
+            },
+            {
+              "unit_type": "section",
+              "number": "9"
+            }
+          ],
+          "char_start": 24138,
+          "char_end": 24519,
+          "page_start": 9,
+          "page_end": 10,
+          "text_sha256": "1d570b7de5ab7db7b6118e94e1fbb9cbad8439c982c5698ae016645908b7071e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Chancellor, Vice-Chancellor, Deans of School of Studies, Registrar, Finance Officer, Controller of Examinations, Librarian and others declared by the Statutes.",
+  "required_facts": [
+    [
+      "Controller of Examinations"
+    ],
+    [
+      "Librarian"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "central-sanskrit-universities-act-2020__handle-14004",
+      "key": "schedule:First/section:9"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 381,
+    "number_ambiguity": 6389,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 214,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#214"
+  }
+}

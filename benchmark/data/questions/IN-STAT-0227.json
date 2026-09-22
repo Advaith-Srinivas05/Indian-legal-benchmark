@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0227",
+  "question": "Into which states were the pockets of land India gained under its late-1950s border agreements merged?",
+  "category": "situational",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "acquired-territories-merger-act-1960__handle-1498",
+          "key": "section:3",
+          "citation": "Acquired Territories (Merger) Act, 1960, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 3048,
+          "char_end": 3642,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "74db0685a1965eb44e7d7fab752515f201fdb0b4df1114bb31fe3d310212b239",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Assam, Punjab and West Bengal, respectively for the territories in Parts I, II and III of the First Schedule.",
+  "required_facts": [
+    [
+      "Assam"
+    ],
+    [
+      "Punjab"
+    ],
+    [
+      "West Bengal"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "acquired-territories-merger-act-1960__handle-1498",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 594,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 120,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#120"
+  }
+}

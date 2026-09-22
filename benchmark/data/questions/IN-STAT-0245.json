@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0245",
+  "question": "Whom does a securities depository act through, and how is that relationship set up?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "depositories-act-1996__handle-1955",
+          "key": "chapter:III/section:4",
+          "citation": "Depositories Act, 1996, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 7768,
+          "char_end": 8011,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "1683ff1016fec74998c7ae699297f54aad282e4d329ba0c2bca3e526faf9792a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Through participants as its agents, under an agreement in the form specified by the bye-laws.",
+  "required_facts": [
+    [
+      "participants"
+    ],
+    [
+      "agreement"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "depositories-act-1996__handle-1955",
+      "key": "chapter:III/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 243,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 199,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#199"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0268",
+  "question": "Under section 13 of the Indian Naval Armament Act, 1923, which courts may try offences and on whose complaint?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "indian-naval-armament-act-1923__handle-2377",
+          "key": "section:13",
+          "citation": "Indian Naval Armament Act, 1923, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 11791,
+          "char_end": 12166,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "d8e4284b86eb17e004902d01cdaba1f5f033c7db80a717a667acffcea08ec9a4",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No court below a Presidency Magistrate or first-class Magistrate, and only on complaint by or under authority from the Central Government.",
+  "required_facts": [
+    [
+      "Central Government"
+    ],
+    [
+      "Magistrate of the first class"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-naval-armament-act-1923__handle-2377",
+      "key": "section:13"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 375,
+    "number_ambiguity": 5702,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 210,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#210"
+  }
+}

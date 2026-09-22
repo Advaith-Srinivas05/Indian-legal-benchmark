@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0238",
+  "question": "When a registered society or trust commits an offence under India's anti-terror law, who besides the organisation is treated as guilty?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "unlawful-activities-prevention-act-1967__handle-1470",
+          "key": "chapter:III/section:22B",
+          "citation": "Unlawful Activities (Prevention) Act, 1967, s. 22B",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "22B"
+            }
+          ],
+          "char_start": 38569,
+          "char_end": 40507,
+          "page_start": 13,
+          "page_end": 14,
+          "text_sha256": "dd1069b8ef9fbdbd4cfde4ff478ad1fd141be7ebf9412c0054063dedf4b8466a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Every person in charge of and responsible to it for its business at the time, including the promoter of the society or settlor of the trust.",
+  "required_facts": [
+    [
+      "promoter of society or settlor of the trust"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "unlawful-activities-prevention-act-1967__handle-1470",
+      "key": "chapter:III/section:22B"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1938,
+    "number_ambiguity": 48,
+    "title_collisions": 4,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 158,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#158"
+  }
+}

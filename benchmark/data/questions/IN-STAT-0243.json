@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0243",
+  "question": "Can a tenant grant someone a right of way over the rented land that lasts after the tenancy ends?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "indian-easements-act-1882__handle-2349",
+          "key": "chapter:II/section:11",
+          "citation": "Indian Easements Act, 1882, s. 11",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "11"
+            }
+          ],
+          "char_start": 16069,
+          "char_end": 16326,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "2795d7b46efbc94dd44c66c1a066c450ebe2e588a7f978b26f469c813624ab25",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. A lessee cannot impose an easement to take effect after the expiration of his own interest or in derogation of the lessor's right.",
+  "required_facts": [
+    [
+      "expiration of his own interest"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-easements-act-1882__handle-2349",
+      "key": "chapter:II/section:11"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 257,
+    "number_ambiguity": 6050,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 193,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#193"
+  }
+}

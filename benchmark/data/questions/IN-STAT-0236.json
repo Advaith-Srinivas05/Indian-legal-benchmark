@@ -1,0 +1,88 @@
+{
+  "question_id": "IN-STAT-0236",
+  "question": "Can a court confiscate the cart or animal used to carry stolen railway goods?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "railway-property-unlawful-possession-act-1966__handle-1688",
+          "key": "section:13",
+          "citation": "Railway Property (Unlawful Possession) Act, 1966, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 9341,
+          "char_end": 9797,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "88ef968b078a13bf6584124fc9ba6fc747588455f7fc624f50d735b84195b155",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "railway-property-unlawful-possession-act-1966__handle-15334",
+          "key": "section:13",
+          "citation": "RAILWAY PROPERTY (UNLAWFUL POSSESSION) ACT, 1966, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 9341,
+          "char_end": 9797,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "88ef968b078a13bf6584124fc9ba6fc747588455f7fc624f50d735b84195b155",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. The court may order forfeiture of the property and of the receptacles, animals, vehicles or other conveyances used to carry it.",
+  "required_facts": [
+    [
+      "forfeiture"
+    ],
+    [
+      "vehicles"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "railway-property-unlawful-possession-act-1966__handle-1688",
+      "key": "section:13"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 456,
+    "number_ambiguity": 5702,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 152,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#152"
+  }
+}

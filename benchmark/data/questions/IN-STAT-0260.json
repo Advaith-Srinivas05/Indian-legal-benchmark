@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0260",
+  "question": "Under section 21 of the State of Arunachal Pradesh Act, 1986, which law governs custody of the common High Court's Seal?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "state-of-arunachal-pradesh-act-1986__handle-1878",
+          "key": "part:IV/section:21",
+          "citation": "State of Arunachal Pradesh Act, 1986, s. 21",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "21"
+            }
+          ],
+          "char_start": 16853,
+          "char_end": 17187,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "ecc901cb638fe4da40b09a9ad31d5d946dffdf283e62a594fa5019f2e7945e96",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The law in force before the appointed day for custody of the Seal of the High Court of Assam, Nagaland, Meghalaya, Manipur, Tripura and Mizoram, with necessary modifications.",
+  "required_facts": [
+    [
+      "Seal"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "state-of-arunachal-pradesh-act-1986__handle-1878",
+      "key": "part:IV/section:21"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 334,
+    "number_ambiguity": 3993,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 123,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#123"
+  }
+}

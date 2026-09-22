@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0234",
+  "question": "Are the degrees awarded by the national institute for footwear design recognised as equal to university degrees?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "footwear-design-and-development-institute-act-2017__handle-2255",
+          "key": "chapter:III/section:33",
+          "citation": "Footwear Design and Development Institute Act, 2017, s. 33",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "33"
+            }
+          ],
+          "char_start": 31933,
+          "char_end": 32333,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "e1cce796ba04fc2a291dbe5bcb11ca3120966656cb7b4b8d4f1eb0e3131047c2",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. Its degrees, diplomas and certificates are equivalent to corresponding qualifications granted by any University or Institute established under any other law.",
+  "required_facts": [
+    [
+      "equivalent"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "footwear-design-and-development-institute-act-2017__handle-2255",
+      "key": "chapter:III/section:33"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 400,
+    "number_ambiguity": 2499,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 149,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#149"
+  }
+}

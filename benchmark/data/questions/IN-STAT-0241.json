@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0241",
+  "question": "Can a border guard join a labour union or a party-affiliated group?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "border-security-force-act-1968__handle-1561",
+          "key": "chapter:II/section:13",
+          "citation": "Border Security Force Act, 1968, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 15777,
+          "char_end": 17185,
+          "page_start": 7,
+          "page_end": 8,
+          "text_sha256": "53f5498e3080b8d436b5e09778dcce58ea45f9d49eec68ab2fba7f039202e8f3",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Not without the previous sanction in writing of the Central Government or the prescribed authority.",
+  "required_facts": [
+    [
+      "previous sanction"
+    ],
+    [
+      "political association"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "border-security-force-act-1968__handle-1561",
+      "key": "chapter:II/section:13"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1408,
+    "number_ambiguity": 5702,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 180,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#180"
+  }
+}

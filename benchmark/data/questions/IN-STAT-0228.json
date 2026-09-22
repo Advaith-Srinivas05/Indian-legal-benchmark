@@ -1,0 +1,78 @@
+{
+  "question_id": "IN-STAT-0228",
+  "question": "Who is eligible to stand for a state legislature seat set aside for Dalit communities?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "representation-of-the-people-act-1951__handle-2096",
+          "key": "part:II/chapter:II/section:5",
+          "citation": "Representation of the People Act, 1951, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 23500,
+          "char_end": 26670,
+          "page_start": 14,
+          "page_end": 15,
+          "text_sha256": "5e11f2cdc588fdb031ce7c725152414ccd5147627ef9a4bbe779ad91911adb24",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A member of one of those castes of that State and an elector for any Assembly constituency in the State.",
+  "required_facts": [
+    [
+      "member of any of those castes"
+    ],
+    [
+      "elector for any Assembly constituency"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "representation-of-the-people-act-1951__handle-2096",
+      "key": "part:II/chapter:II/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3170,
+    "number_ambiguity": 7842,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 128,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#128"
+  }
+}

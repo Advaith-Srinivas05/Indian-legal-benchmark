@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0258",
+  "question": "Can anyone refine or blend petroleum freely in India?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "petroleum-act-1934__handle-2401",
+          "key": "chapter:I/section:5",
+          "citation": "Petroleum Act, 1934, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 6632,
+          "char_end": 7288,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "8fa6594bd2d4c5ae7704dc4a595678d47c3a73b09c6384df1b90bb3ce3352072",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. Petroleum may be produced, refined or blended only in accordance with rules made by the Central Government.",
+  "required_facts": [
+    [
+      "save in accordance with the rules"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "petroleum-act-1934__handle-2401",
+      "key": "chapter:I/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 656,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 225,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#225"
+  }
+}

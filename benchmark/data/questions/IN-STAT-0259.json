@@ -1,0 +1,93 @@
+{
+  "question_id": "IN-STAT-0259",
+  "question": "Under section 80 of the Manipur Panchayati Raj Act, 1994, whose sanction does a Zilla Parishad need to make regulations?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "manipur-panchayati-raj-act-1994__handle-1899",
+          "key": "chapter:V/section:80",
+          "citation": "Manipur Panchayati Raj Act, 1994, s. 80",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "80"
+            }
+          ],
+          "char_start": 93793,
+          "char_end": 94286,
+          "page_start": 33,
+          "page_end": 33,
+          "text_sha256": "e02895a5debe4698119b0573a848e8dc13e69e6f5a663b63814270a8caa9a096",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "manipur-panchayati-raj-act-1994__handle-13439",
+          "key": "chapter:V/section:80",
+          "citation": "Manipur Panchayati Raj Act, 1994, s. 80",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "80"
+            }
+          ],
+          "char_start": 93464,
+          "char_end": 93957,
+          "page_start": 31,
+          "page_end": 31,
+          "text_sha256": "e02895a5debe4698119b0573a848e8dc13e69e6f5a663b63814270a8caa9a096",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The previous sanction of the Government, with previous publication.",
+  "required_facts": [
+    [
+      "previous sanction of the Government"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "manipur-panchayati-raj-act-1994__handle-1899",
+      "key": "chapter:V/section:80"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 493,
+    "number_ambiguity": 627,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 117,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#117"
+  }
+}

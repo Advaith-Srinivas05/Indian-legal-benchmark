@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0251",
+  "question": "Can someone owed money by a co-operative society get its books inspected?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "co-operative-societies-act-1912__handle-19226",
+          "key": "section:36",
+          "citation": "Co-operative Societies Act, 1912, s. 36",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "36"
+            }
+          ],
+          "char_start": 24977,
+          "char_end": 25655,
+          "page_start": 9,
+          "page_end": 9,
+          "text_sha256": "9f037d8cce7d9f6f0ff14e34eddd0f8765e94e77ebce86eab391ffcec7354a3e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. On a creditor's application the Registrar inspects or directs inspection of the society's books, if the debt is due and payment has been demanded without satisfaction.",
+  "required_facts": [
+    [
+      "Registrar"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "co-operative-societies-act-1912__handle-19226",
+      "key": "section:36"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 678,
+    "number_ambiguity": 2216,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 212,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#212"
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "question_id": "IN-STAT-0250",
+  "question": "When a state ministry breaks the law on compulsory land takeover and resettlement, who carries the blame?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-2121",
+          "key": "chapter:XII/section:87",
+          "citation": "Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013, s. 87",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "87"
+            }
+          ],
+          "char_start": 129713,
+          "char_end": 132613,
+          "page_start": 40,
+          "page_end": 41,
+          "text_sha256": "8848173f3c89bd3b874b0df9449698fbfeb79a95a2424c1bb91f209b20df0db6",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-19895",
+          "key": "chapter:XII/section:87",
+          "citation": "Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013, s. 87",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "87"
+            }
+          ],
+          "char_start": 129713,
+          "char_end": 132613,
+          "page_start": 40,
+          "page_end": 41,
+          "text_sha256": "8848173f3c89bd3b874b0df9449698fbfeb79a95a2424c1bb91f209b20df0db6",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-21345",
+          "key": "chapter:XII/section:87",
+          "citation": "Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (Haryana Amendment) Act, 2017, s. 87",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "87"
+            }
+          ],
+          "char_start": 135835,
+          "char_end": 138735,
+          "page_start": 43,
+          "page_end": 44,
+          "text_sha256": "8848173f3c89bd3b874b0df9449698fbfeb79a95a2424c1bb91f209b20df0db6",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "right-to-fair-compansation-and-transparency-in-land-aquisiti__handle-15991",
+          "key": "chapter:XII/section:87",
+          "citation": "Right to fair Compansation and Transparency in Land Aquisition, Rehabilitation and Resettlement Act, 2013, s. 87",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "87"
+            }
+          ],
+          "char_start": 115039,
+          "char_end": 116053,
+          "page_start": 34,
+          "page_end": 34,
+          "text_sha256": "725e4fae7367d0652f078065af68a9060534bc0b08f3dad395d3aefbe96d56a4",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-13035",
+          "key": "chapter:XII/section:87",
+          "citation": "Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013, s. 87",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "87"
+            }
+          ],
+          "char_start": 115039,
+          "char_end": 116053,
+          "page_start": 34,
+          "page_end": 34,
+          "text_sha256": "725e4fae7367d0652f078065af68a9060534bc0b08f3dad395d3aefbe96d56a4",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-15940",
+          "key": "chapter:XII/section:87",
+          "citation": "RIGHT TO FAIR COMPENSATION AND TRANSPARENCY IN LAND ACQUISITION, REHABILITATION AND RESETTLEMENT ACT, 2013, s. 87",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "87"
+            }
+          ],
+          "char_start": 128161,
+          "char_end": 130473,
+          "page_start": 39,
+          "page_end": 39,
+          "text_sha256": "7976ec67307fbb061ecf36068d41e13a647c8372a04aca8d67f9fd3e0a928fee",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-19016",
+          "key": "chapter:XII/section:87",
+          "citation": "right to fair compensation and transparency in land acquisition rehabilitation and resettlement act 2013, s. 87",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "87"
+            }
+          ],
+          "char_start": 115039,
+          "char_end": 116053,
+          "page_start": 34,
+          "page_end": 34,
+          "text_sha256": "725e4fae7367d0652f078065af68a9060534bc0b08f3dad395d3aefbe96d56a4",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-9177",
+          "key": "chapter:XII/section:87",
+          "citation": "RIGHT TO FAIR COMPENSATION AND TRANSPARENCY IN LAND ACQUISITION, REHABILITATION AND RESETTLEMENT ACT, 2013, s. 87",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "87"
+            }
+          ],
+          "char_start": 115039,
+          "char_end": 116053,
+          "page_start": 34,
+          "page_end": 34,
+          "text_sha256": "725e4fae7367d0652f078065af68a9060534bc0b08f3dad395d3aefbe96d56a4",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "the-right-to-fair-compensation-and-transparency-in-land-acqu__handle-6448",
+          "key": "chapter:XII/section:87",
+          "citation": "THE RIGHT TO FAIR COMPENSATION AND TRANSPARENCY  IN LAND ACQUISITION, REHABILITATION AND RESETTLEMENT ACT, 2013, s. 87",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "87"
+            }
+          ],
+          "char_start": 115039,
+          "char_end": 116053,
+          "page_start": 34,
+          "page_end": 34,
+          "text_sha256": "725e4fae7367d0652f078065af68a9060534bc0b08f3dad395d3aefbe96d56a4",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The head of the department, unless he proves the offence was committed without his knowledge or that he exercised due diligence.",
+  "required_facts": [
+    [
+      "head of the department"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-2121",
+      "key": "chapter:XII/section:87"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2900,
+    "number_ambiguity": 549,
+    "title_collisions": 7,
+    "cluster_size": 9,
+    "equivalents": 2,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 207,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#207",
+    "alternatives_decided": [
+      {
+        "document_id": "right-to-fair-compansation-and-transparency-in-land-aquisiti__handle-15991",
+        "key": "chapter:XII/section:87",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-13035",
+        "key": "chapter:XII/section:87",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-15940",
+        "key": "chapter:XII/section:87",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-19016",
+        "key": "chapter:XII/section:87",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__handle-9177",
+        "key": "chapter:XII/section:87",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "the-right-to-fair-compensation-and-transparency-in-land-acqu__handle-6448",
+        "key": "chapter:XII/section:87",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

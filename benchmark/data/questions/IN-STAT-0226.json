@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0226",
+  "question": "How frequently must the national body regulating engineering and management colleges convene, and who chairs in its head's absence?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "all-india-council-for-technical-education-act-1987__handle-1880",
+          "key": "chapter:II/section:5",
+          "citation": "All India Council for Technical Education Act, 1987, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 8999,
+          "char_end": 9913,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "d4427280388502d865e5a3b237a02a3e5a99ae12b713b303b9a324941972a727",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "At least once every year, following procedure set by regulations; the Chairman presides, or in his absence the Vice-Chairman.",
+  "required_facts": [
+    [
+      "once every year"
+    ],
+    [
+      "Vice-Chairman"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "all-india-council-for-technical-education-act-1987__handle-1880",
+      "key": "chapter:II/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 914,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 119,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#119"
+  }
+}

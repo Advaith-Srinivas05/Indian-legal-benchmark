@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0244",
+  "question": "Which tongues are recognised for state business in the Union territory whose summer capital is Srinagar?",
+  "category": "situational",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "jammu-and-kashmir-official-languages-act-2020__handle-15512",
+          "key": "section:3",
+          "citation": "Jammu and Kashmir Official Languages Act, 2020., s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 1341,
+          "char_end": 2038,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "5c6af5b74af6d507ae6e61cc2385723593e167ce8c5d45bd6a36bce53c28bbd5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Kashmiri, Dogri, Urdu, Hindi and English, with English allowed to continue for purposes it was used for before.",
+  "required_facts": [
+    [
+      "Kashmiri"
+    ],
+    [
+      "Dogri"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "jammu-and-kashmir-official-languages-act-2020__handle-15512",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 697,
+    "number_ambiguity": 9183,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 197,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#197"
+  }
+}

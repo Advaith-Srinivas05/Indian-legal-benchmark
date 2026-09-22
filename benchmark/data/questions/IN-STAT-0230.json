@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0230",
+  "question": "If an agent acting under a power of attorney pays out in good faith without knowing the principal has died, is the agent liable?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "powers-of-attorney-act-1882__handle-2360",
+          "key": "section:3",
+          "citation": "Powers-of Attorney Act, 1882, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 1619,
+          "char_end": 2516,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "02944e8c41f1c233796e9c57b27b6d8bc4e126e5cb930afa1d68936f0f32bc57",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. A payment or act done in good faith under the power is not a liability merely because the donor had died, become of unsound mind or insolvent, or revoked it, if the person did not know.",
+  "required_facts": [
+    [
+      "good faith"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "powers-of-attorney-act-1882__handle-2360",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 897,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 131,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#131"
+  }
+}

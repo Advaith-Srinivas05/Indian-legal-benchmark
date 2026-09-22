@@ -1,0 +1,75 @@
+{
+  "question_id": "IN-STAT-0249",
+  "question": "Under India's 2023 evidence law, must courts take notice of the country's international treaties without formal proof?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bharatiya-sakshya-adhiniyam-2023__handle-20063",
+          "key": "part:III/chapter:III/section:52",
+          "citation": "Bharatiya Sakshya Adhiniyam, 2023, s. 52",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "52"
+            }
+          ],
+          "char_start": 72110,
+          "char_end": 74317,
+          "page_start": 26,
+          "page_end": 27,
+          "text_sha256": "589c41ac89a87cd463f10187faee926562fdc6d062c9fe89fad690030e66bbf0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. Courts take judicial notice of international treaties, agreements or conventions with other countries, along with all laws in force in India.",
+  "required_facts": [
+    [
+      "international treaty"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bharatiya-sakshya-adhiniyam-2023__handle-20063",
+      "key": "part:III/chapter:III/section:52"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2207,
+    "number_ambiguity": 1306,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 206,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#206"
+  }
+}

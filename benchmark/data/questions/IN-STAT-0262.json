@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0262",
+  "question": "Under section 20 of the Khuda Bakhsh Oriental Public Library Act, 1969, what must the Board submit each year?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "khuda-bakhsh-oriental-public-library-act-1969__handle-1731",
+          "key": "chapter:IV/section:20",
+          "citation": "Khuda Bakhsh Oriental Public Library Act, 1969, s. 20",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "20"
+            }
+          ],
+          "char_start": 14999,
+          "char_end": 16077,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "1f26aca659bd2f646543907dd1d742f1259c39b4629af1b8e8b43ef7c2139d31",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A budget for the next financial year showing estimated receipts, expenditure and the sums required from the Central Government.",
+  "required_facts": [
+    [
+      "budget"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "khuda-bakhsh-oriental-public-library-act-1969__handle-1731",
+      "key": "chapter:IV/section:20"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1078,
+    "number_ambiguity": 4221,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 140,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#140"
+  }
+}

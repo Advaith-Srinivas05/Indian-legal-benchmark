@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0263",
+  "question": "Which provisions does section 6 of the Muslim Personal Law (Shariat) Application Act, 1937 repeal?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "muslim-personal-law-shariat-application-act-1937__handle-2303",
+          "key": "section:6",
+          "citation": "Muslim Personal Law (Shariat) Application Act, 1937, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 4613,
+          "char_end": 5193,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "845acb3b87b444e474f52765fa85b3b086de8f32af13a719c4a1e794d8ad417f",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Listed provisions, including section 26 of Bombay Regulation IV of 1827, section 16 of the Madras Civil Courts Act, 1873 and section 3 of the Oudh Laws Act, 1876, so far as inconsistent with the Act.",
+  "required_facts": [
+    [
+      "Oudh Laws Act"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "muslim-personal-law-shariat-application-act-1937__handle-2303",
+      "key": "section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 580,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 142,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#142"
+  }
+}

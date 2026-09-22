@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0261",
+  "question": "What money is credited to the fund of a National Institute of Design under section 23 of the National Institutes of Design Act, 2014?",
+  "category": "provision_lookup",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "national-institutes-of-design-act-2014__handle-2132",
+          "key": "chapter:II/section:23",
+          "citation": "National Institutes of Design Act, 2014, s. 23",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "23"
+            }
+          ],
+          "char_start": 25730,
+          "char_end": 26499,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "99f5afcfd47d1e03654d69430952605af039d66a95c6facb147b350fa5dee877",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Moneys from the Central Government, fees and charges, grants, gifts, donations and bequests, and money from any other source.",
+  "required_facts": [
+    [
+      "fees"
+    ],
+    [
+      "donations"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "national-institutes-of-design-act-2014__handle-2132",
+      "key": "chapter:II/section:23"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 769,
+    "number_ambiguity": 3685,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 127,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#127"
+  }
+}

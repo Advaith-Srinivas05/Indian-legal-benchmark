@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0264",
+  "question": "Under section 103 of the Coast Guard Act, 1978, to whom is a warrant sent when an order varies a sentence served in a civil prison?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "coast-guard-act-1978__handle-1734",
+          "key": "chapter:IX/section:103",
+          "citation": "Coast Guard Act, 1978, s. 103",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IX"
+            },
+            {
+              "unit_type": "section",
+              "number": "103"
+            }
+          ],
+          "char_start": 83047,
+          "char_end": 83486,
+          "page_start": 25,
+          "page_end": 25,
+          "text_sha256": "b84e8e9fd5485625123abba75b9717f61f487414b942a7f4a849de7d7e85c98c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "To the officer in charge of the prison in which the person is confined.",
+  "required_facts": [
+    [
+      "officer in charge of the prison"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "coast-guard-act-1978__handle-1734",
+      "key": "chapter:IX/section:103"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 439,
+    "number_ambiguity": 443,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 179,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#179"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0253",
+  "question": "What overall role does India's designated agency play under the global treaty outlawing poison-gas arms?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "chemical-weapons-convention-act-2000__handle-1916",
+          "key": "chapter:II/section:7",
+          "citation": "Chemical Weapons Convention Act, 2000, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 11928,
+          "char_end": 16851,
+          "page_start": 5,
+          "page_end": 6,
+          "text_sha256": "45a247b0eca38aff8de019ff31083928719ce4934e52c1e63ec8cb6f288b76de",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "To fulfil India's obligations under the Convention and act as the national focal point for liaison with the Organisation and other States Parties.",
+  "required_facts": [
+    [
+      "national focal point"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "chemical-weapons-convention-act-2000__handle-1916",
+      "key": "chapter:II/section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 4923,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 216,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#216"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0237",
+  "question": "After the 1956 redrawing of state boundaries, who presided over a new state's legislature until it first met?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "states-reorganisation-act-1956__handle-1680",
+          "key": "part:IV/section:31",
+          "citation": "States Reorganisation Act, 1956, s. 31",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "31"
+            }
+          ],
+          "char_start": 39408,
+          "char_end": 40345,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "149d1cbc12b3904fd0b5d932897036e632974ec1065492c7e71748fd30df61ec",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Speaker and Deputy Speaker of the corresponding State's Assembly, if members of the new Assembly, acted as its Speaker and Deputy Speaker.",
+  "required_facts": [
+    [
+      "Speaker and Deputy Speaker"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "states-reorganisation-act-1956__handle-1680",
+      "key": "part:IV/section:31"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 937,
+    "number_ambiguity": 2660,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 153,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#153"
+  }
+}

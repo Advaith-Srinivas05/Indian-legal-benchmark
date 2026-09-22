@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0252",
+  "question": "A labourer hired through a middleman gets hurt doing the main firm's usual trade. Who has to pay him?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "code-on-social-security-2020__handle-16823",
+          "key": "schedule:Sixth/section:85",
+          "citation": "Code on Social Security, 2020, s. 85",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": "Sixth"
+            },
+            {
+              "unit_type": "section",
+              "number": "85"
+            }
+          ],
+          "char_start": 216797,
+          "char_end": 218564,
+          "page_start": 61,
+          "page_end": 61,
+          "text_sha256": "86db754f9a37a8bbdc0a4b30e5dcc1c0bfc6f2ff43f5351bd8f4dabbf37818da",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The principal employer is liable to pay the compensation it would have owed had the employee been employed directly, with a right to be indemnified by the contractor.",
+  "required_facts": [
+    [
+      "contractor"
+    ],
+    [
+      "compensation"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "code-on-social-security-2020__handle-16823",
+      "key": "schedule:Sixth/section:85"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1767,
+    "number_ambiguity": 580,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 215,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#215"
+  }
+}

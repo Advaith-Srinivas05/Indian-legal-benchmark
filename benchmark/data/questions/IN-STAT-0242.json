@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0242",
+  "question": "What is the punishment for sabotaging air navigation equipment in a way that endangers aircraft in flight?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "suppression-of-unlawful-acts-against-safety-of-civil-aviatio__handle-1795",
+          "key": "chapter:II/section:4",
+          "citation": "Suppression of Unlawful Acts against Safety of Civil Aviation Act, 1982, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 5802,
+          "char_end": 6363,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "990753236c1dfc4a832c33bdbd918e579d234b383955aad568236584e8f7ec79",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Imprisonment for life, and fine.",
+  "required_facts": [
+    [
+      "imprisonment for life"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "suppression-of-unlawful-acts-against-safety-of-civil-aviatio__handle-1795",
+      "key": "chapter:II/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 561,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 192,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#192"
+  }
+}
