@@ -29,6 +29,10 @@ def env(tmp_path):
     docs = {
         "licensing-act__handle-1": ([make_page(1, LICENSING)], LICENSING_TITLE, "central_acts", "central_act"),
         "licensing-act-copy__handle-2": ([make_page(1, LICENSING)], LICENSING_TITLE, "state_acts", "state_act"),
+        "licensing-act-2004__handle-5": ([make_page(1, LICENSING.replace("of its receipt.", "of its receipt, recording its reasons in writing."))],
+                                        LICENSING_TITLE, "state_acts", "state_act"),
+        "licensing-act-2010__handle-6": ([make_page(1, LICENSING.replace("thirty days", "sixty days"))],
+                                        LICENSING_TITLE, "state_acts", "state_act"),
         "bihar-markets__handle-3": (make_act("The Bihar Markets Act, 2003", long=True, topic="markets"),
                                     "The Bihar Markets Act, 2003", "state_acts", "state_act"),
         "assam-markets__handle-4": (make_act("The Assam Markets Act, 2003", long=True, topic="markets"),
@@ -50,8 +54,10 @@ def env(tmp_path):
 
 
 def draft(env, did, key, category):
-    return authoring.new_draft(env["corpus"], env["sample"], env["index"][(did, key)], category,
-                               directory=env["qdir"])
+    q = authoring.new_draft(env["corpus"], env["sample"], env["index"][(did, key)], category,
+                            directory=env["qdir"])
+    q["provenance"]["drafting_method"] = "human"
+    return q
 
 
 def written(env) -> dict:
@@ -80,7 +86,10 @@ def test_a_draft_resolves_its_evidence_and_adds_same_instrument_copies(env):
     assert [(l["document_id"], l["source"]) for l in locs] == [
         ("licensing-act__handle-1", "sampled"), ("licensing-act-copy__handle-2", "same_instrument_equivalent")]
     assert locs[0]["citation"] == "The Licensing Authority Act, 2001, s. 3"
-    assert q["proposed_alternatives"] == []
+    # The amended versions of the Act are proposed, not added: their section 3 differs.
+    assert {(l["document_id"], l["source"]) for l in q["proposed_alternatives"]} == {
+        ("licensing-act-2004__handle-5", "same_instrument_version"),
+        ("licensing-act-2010__handle-6", "same_instrument_version")}
 
 
 def test_another_states_identical_section_is_proposed_not_added(env):
@@ -224,6 +233,7 @@ def test_two_questions_on_one_sampled_provision_are_refused(env):
 def test_verified_without_a_full_checklist_is_refused(env):
     q = written(env)
     q["provenance"].update(status="verified", verified_by="A. Reviewer", verified_at="2026-09-23",
+                           verification_method="official_pdf",
                            verification={item: True for item in CHECKLIST[:-1]})
     assert has(problems(env, q), "checklist incomplete")[0]
 
@@ -233,6 +243,7 @@ def test_proposed_alternatives_must_be_decided_before_verifying(env):
     q.update(question="How quickly must officials take up a market matter after it arrives?",
              gold_answer="Within fifteen days of receipt.", required_facts=[["15 days"]])
     q["provenance"].update(status="verified", verified_by="A. Reviewer", verified_at="2026-09-23",
+                           verification_method="official_pdf",
                            verification={item: True for item in CHECKLIST})
     assert has(problems(env, q), "proposed_alternatives must be decided")[0]
 
@@ -241,6 +252,7 @@ def test_exported_verdicts_are_applied_only_when_complete(env, tmp_path):
     good, partial, reject = written(env), written(env), written(env)
     partial["question_id"], reject["question_id"] = "IN-STAT-0002", "IN-STAT-0003"
     for q in (good, partial, reject):
+        q["proposed_alternatives"] = []          # decided: the amended versions are left out
         authoring.save_question(q, env["qdir"])
     full = {item: True for item in CHECKLIST}
     verdicts = tmp_path / "verdicts.json"
@@ -273,3 +285,88 @@ def test_the_review_page_links_the_official_pdf_and_escapes_text(env, tmp_path):
     assert "#page=1" in text and "open official PDF page" in text
     assert "<script>alert(1)" not in text and "&lt;script&gt;" in text
     assert "thirty days of its receipt" in text
+
+
+# --- Batches -------------------------------------------------------------------------
+
+
+def batch(env, tmp_path, items, name="batch.json"):
+    import shutil
+    from benchmark import config
+    target = config.SAMPLES_DIR
+    spec = tmp_path / name
+    spec.write_text(json.dumps({"sample": env["sample"].name, "questions": items}), encoding="utf-8")
+    return spec
+
+
+@pytest.fixture
+def samples_dir(env, monkeypatch):
+    from benchmark import config
+    monkeypatch.setattr(config, "SAMPLES_DIR", env["sample"].parent)
+    return env["sample"].parent
+
+
+def test_a_batch_keeps_a_version_that_states_every_fact_and_drops_one_that_does_not(env, tmp_path, samples_dir):
+    spec = batch(env, tmp_path, [{
+        "index": env["index"][("licensing-act__handle-1", "section:3")], "category": "situational",
+        "question": "How long does an official deciding permits have to respond once someone applies?",
+        "gold_answer": "Within thirty days of receiving the application.",
+        "required_facts": [["thirty days"]], "answer_type": "numeric"}])
+    result = authoring.apply_batch(env["corpus"], spec, drafting_method="language_model", directory=env["qdir"])
+    [(qid, found)] = result.items()
+    assert found == []
+    q = authoring.load_questions(env["qdir"])[0]
+    docs = {l["document_id"] for l in q["gold_evidence"][0]["locations"]}
+    assert "licensing-act-2004__handle-5" in docs and "licensing-act-2010__handle-6" not in docs
+    reasons = {d["document_id"]: d["reason"] for d in q["provenance"]["alternatives_decided"]}
+    assert reasons["licensing-act-2010__handle-6"] == "does not state every required fact"
+    assert q["provenance"]["drafting_method"] == "language_model"
+
+
+def test_re_applying_a_batch_updates_rather_than_duplicates(env, tmp_path, samples_dir):
+    item = {"index": env["index"][("licensing-act__handle-1", "section:3")], "category": "situational",
+            "question": "How long does an official deciding permits have to respond once someone applies?",
+            "gold_answer": "Within thirty days.", "required_facts": [["thirty days"]]}
+    authoring.apply_batch(env["corpus"], batch(env, tmp_path, [item]), drafting_method="human", directory=env["qdir"])
+    item["gold_answer"] = "Within thirty days of receipt."
+    authoring.apply_batch(env["corpus"], batch(env, tmp_path, [item]), drafting_method="human", directory=env["qdir"])
+    stored = authoring.load_questions(env["qdir"])
+    assert len(stored) == 1 and stored[0]["gold_answer"] == "Within thirty days of receipt."
+
+
+def test_a_jurisdictional_batch_never_accepts_another_states_copy(env, tmp_path, samples_dir):
+    spec = batch(env, tmp_path, [{
+        "index": env["index"][("bihar-markets__handle-3", "section:5")], "category": "jurisdictional",
+        "question": "In Bihar, how quickly must officials take up a market matter after it arrives?",
+        "gold_answer": "Within fifteen days of receipt.", "required_facts": [["15 days"]],
+        "jurisdiction_hint": "Bihar"}])
+    authoring.apply_batch(env["corpus"], spec, drafting_method="human", directory=env["qdir"])
+    q = authoring.load_questions(env["qdir"])[0]
+    assert {l["document_id"] for l in q["gold_evidence"][0]["locations"]} == {"bihar-markets__handle-3"}
+
+
+def test_an_unanswerable_batch_item_needs_no_sample_row(env, tmp_path, samples_dir):
+    spec = batch(env, tmp_path, [{"ref": "absent-renewal-fee", "category": "unanswerable",
+                                  "question": "What fee does a licensing authority charge to renew a permit in Goa?",
+                                  "gold_answer": "The corpus does not say."}])
+    result = authoring.apply_batch(env["corpus"], spec, drafting_method="human", directory=env["qdir"])
+    assert list(result.values()) == [[]]
+
+
+def test_a_model_verification_records_its_method(env, tmp_path, samples_dir):
+    q = written(env)
+    q["proposed_alternatives"] = []
+    authoring.save_question(q, env["qdir"])
+    verdicts = tmp_path / "verdicts.json"
+    verdicts.write_text(json.dumps({"verifier": "language-model", "method": "text_review", "verdicts": {
+        q["question_id"]: {"decision": "verified", "checklist": {i: True for i in CHECKLIST}}}}), encoding="utf-8")
+    authoring.apply_verdicts(verdicts, env["qdir"])
+    stored = authoring.load_questions(env["qdir"])[0]
+    assert stored["provenance"]["verification_method"] == "text_review"
+    assert problems(env, stored) == []
+
+
+def test_an_undeclared_drafting_method_is_refused(env):
+    q = written(env)
+    q["provenance"]["drafting_method"] = None
+    assert has(problems(env, q), "drafting_method")[0]

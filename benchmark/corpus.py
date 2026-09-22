@@ -309,6 +309,9 @@ def main(argv: Optional[list[str]] = None) -> int:
     new.add_argument("--sample", type=Path, required=True)
     new.add_argument("--index", type=int, required=True)
     new.add_argument("--category", required=True)
+    bat = asub.add_parser("batch", help="Create or update questions from a batch file.")
+    bat.add_argument("file", type=Path)
+    bat.add_argument("--drafting-method", required=True, help="human | language_model")
     asub.add_parser("check", help="Validate every question.")
     rev = asub.add_parser("review", help="Build the verification page.")
     rev.add_argument("--page", type=Path, default=None,
@@ -368,6 +371,14 @@ def main(argv: Optional[list[str]] = None) -> int:
             q = authoring.new_draft(out, args.sample, args.index, args.category)
             print(f"wrote {authoring.save_question(q)}")
             return 0
+        if args.author_command == "batch":
+            result = authoring.apply_batch(out, args.file, drafting_method=args.drafting_method)
+            bad = {k: v for k, v in result.items() if v}
+            print(f"{len(result)} question(s) written; {len(bad)} with problems")
+            for qid, problems in bad.items():
+                for p in problems:
+                    print(f"  {qid}: {p}")
+            return 1 if bad else 0
         if args.author_command == "check":
             report = authoring.check(out)
             print(json.dumps({k: v for k, v in report.items() if k != "problems"}, indent=2))

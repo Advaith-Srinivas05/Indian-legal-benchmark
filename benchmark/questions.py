@@ -35,11 +35,20 @@ CATEGORIES = ("provision_lookup", "situational", "definitional", "numeric_thresh
 ANSWER_TYPES = ("extractive", "abstractive", "boolean", "numeric", "list")
 STATUSES = ("draft", "verified", "rejected")
 REQUIREMENTS = ("required", "sufficient")
-LOCATION_SOURCES = ("sampled", "same_instrument_equivalent", "cross_instrument_equivalent",
-                    "successor_or_predecessor", "referenced", "author_added")
-#: What a verifier confirms, one tick each, against the official PDF page.
+LOCATION_SOURCES = ("sampled", "same_instrument_equivalent", "same_instrument_version",
+                    "cross_instrument_equivalent", "successor_or_predecessor", "referenced",
+                    "author_added")
+#: What a verifier confirms, one tick each.
 CHECKLIST = ("span_matches_source", "text_undamaged", "answer_follows",
              "facts_present", "question_fair", "alternatives_checked")
+#: How a question was drafted, stated as fact so the published set can say so.
+DRAFTING_METHODS = ("human", "language_model")
+#: What a verification was checked against. ``official_pdf``: a person opened the
+#: official India Code page (the review page's links). ``pdf_page_image``: the
+#: stored PDF page was rendered and inspected. ``text_review``: the extracted
+#: text was reviewed — sufficient for born-digital gold, whose text *is* the
+#: PDF's own text layer, but weaker, and recorded as such.
+VERIFICATION_METHODS = ("official_pdf", "pdf_page_image", "text_review")
 #: Categories whose question must not name the Act or the provision.
 PARAPHRASE_CATEGORIES = frozenset({"situational", "definitional", "numeric_threshold",
                                    "cross_reference", "jurisdictional"})
@@ -65,6 +74,7 @@ class Corpus:
         self._structure: dict[str, dict] = {}
         self._text: dict[str, str] = {}
         self._conflicted: Optional[set[str]] = None
+        self._mates: dict[str, list[str]] = {}
 
     def meta(self, did: str) -> Optional[dict]:
         if did not in self._meta:
@@ -89,11 +99,25 @@ class Corpus:
                 self._text[did] = handle.read()
         return self._text[did]
 
+    def _duplicates(self) -> None:
+        dup = json.loads((self.dir / config.DUPLICATES_FILENAME).read_text(encoding="utf-8"))
+        self._conflicted = {d for e in dup["title_conflicts"] for d in (e["a"], e["b"])}
+        self._mates = {}
+        for c in dup["clusters"]:
+            docs = [d["document_id"] for d in c["documents"]]
+            for d in docs:
+                self._mates[d] = [x for x in docs if x != d]
+
     def conflicted(self) -> set[str]:
         if self._conflicted is None:
-            dup = json.loads((self.dir / config.DUPLICATES_FILENAME).read_text(encoding="utf-8"))
-            self._conflicted = {d for e in dup["title_conflicts"] for d in (e["a"], e["b"])}
+            self._duplicates()
         return self._conflicted
+
+    def cluster_mates(self, did: str) -> list[str]:
+        """Other documents that are copies of the same instrument."""
+        if self._conflicted is None:
+            self._duplicates()
+        return self._mates.get(did, [])
 
 
 def citation(meta: dict, provision: dict) -> str:
@@ -299,10 +323,14 @@ def _check_paraphrase(q: dict, corpus: Corpus, locations: list[dict], texts: dic
 
 def _check_verified(q: dict, add) -> None:
     prov = q["provenance"]
+    if prov.get("drafting_method") not in DRAFTING_METHODS:
+        add(f"provenance.drafting_method must be one of {DRAFTING_METHODS}")
     if prov.get("status") != "verified":
         return
     if not prov.get("verified_by") or not prov.get("verified_at"):
         add("a verified question records verified_by and verified_at")
+    if prov.get("verification_method") not in VERIFICATION_METHODS:
+        add(f"provenance.verification_method must be one of {VERIFICATION_METHODS}")
     checklist = prov.get("verification") or {}
     missing = [item for item in CHECKLIST if checklist.get(item) is not True]
     if missing:

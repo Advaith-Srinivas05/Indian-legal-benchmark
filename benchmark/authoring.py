@@ -25,7 +25,9 @@ from pathlib import Path
 from typing import Optional
 
 from . import config
-from .questions import CHECKLIST, CATEGORIES, Corpus, evidence_text, location, validate_set
+from .questions import (CHECKLIST, CATEGORIES, DRAFTING_METHODS, VERIFICATION_METHODS, Corpus,
+                        evidence_text, location, validate_set)
+from .terms import appears_in
 
 QUESTIONS_DIR = config.SAMPLES_DIR.parent / "questions"
 
@@ -79,6 +81,18 @@ def new_draft(corpus_dir: Path, sample_path: Path, index: int, category: str, *,
         loc = location(corpus, *other, "same_instrument_equivalent" if same_instrument
                        else "cross_instrument_equivalent")
         (locations if same_instrument else proposed).append(loc)
+    # Other copies of the instrument whose same-numbered section differs in
+    # wording — often a state-amended version. For a question that does not turn
+    # on the amendment it answers equally, so it is proposed; `apply_batch`
+    # keeps it only if it states every required fact.
+    anchor = corpus.provision(did, key)
+    present = {(l["document_id"], l["key"]) for l in locations + proposed}
+    for mate in corpus.cluster_mates(did):
+        same = [p for p in corpus.provisions(mate)
+                if p["unit_type"] == anchor["unit_type"] and p["number"] == anchor["number"]
+                and not p["key_ambiguous"]]
+        if len(same) == 1 and (mate, same[0]["key"]) not in present:
+            proposed.append(location(corpus, mate, same[0]["key"], "same_instrument_version"))
 
     groups = [{"group_id": "g1", "requirement": "sufficient", "locations": locations}]
     must_cite = [{"document_id": did, "key": key}]
@@ -109,12 +123,96 @@ def new_draft(corpus_dir: Path, sample_path: Path, index: int, category: str, *,
             "sample": Path(sample_path).name,
             "sample_index": index,
             "tags": row["tags"],
-            "author": None,
+            "drafting_method": None,
             "verified_by": None,
             "verified_at": None,
+            "verification_method": None,
             "verification": {},
         },
     }
+
+
+def _states_every_fact(text: str, facts: list[list[str]]) -> bool:
+    return all(any(appears_in(v, text) for v in group) for group in facts)
+
+
+def apply_batch(corpus_dir: Path, spec_path: Path, *, drafting_method: str,
+                directory: Path = QUESTIONS_DIR) -> dict[str, list[str]]:
+    """Create or update questions from a batch file. Returns problems by question_id.
+
+    The batch names a sample and lists questions; each item carries a ``ref``
+    unique within the set (default ``<sample>#<index>``), so re-applying a batch
+    updates its questions instead of duplicating them. ``alternatives`` decides
+    the proposed locations: ``"auto"`` (the default) keeps each one that states
+    every required fact — except another instrument's copy when the question is
+    jurisdictional — and ``"none"`` drops them all. Every decision is recorded.
+    """
+    if drafting_method not in DRAFTING_METHODS:
+        raise ValueError(f"drafting_method must be one of {DRAFTING_METHODS}")
+    spec = json.loads(Path(spec_path).read_text(encoding="utf-8"))
+    corpus = Corpus(corpus_dir)
+    sample_path = config.SAMPLES_DIR / spec["sample"] if spec.get("sample") else None
+    existing = {q["provenance"].get("ref"): q for q in load_questions(directory)}
+    touched: list[str] = []
+    for item in spec["questions"]:
+        category = item["category"]
+        ref = item.get("ref") or f"{spec.get('sample')}#{item.get('index')}"
+        q = existing.get(ref)
+        if q is None:
+            if category == "unanswerable":
+                q = {"question_id": next_id(directory), "category": "unanswerable", "answer_type": "abstractive",
+                     "jurisdiction_hint": None, "gold_evidence": [], "proposed_alternatives": [],
+                     "must_cite": [], "unanswerable": True, "difficulty": {},
+                     "provenance": {"status": "draft", "sample": None, "sample_index": None, "tags": [],
+                                    "verified_by": None, "verified_at": None,
+                                    "verification_method": None, "verification": {}}}
+            else:
+                q = new_draft(corpus_dir, sample_path, item["index"], category, directory=directory)
+                if category == "cross_reference" and item.get("reference"):
+                    ref_key = item["reference"]
+                    q["gold_evidence"][1]["locations"] = [location(corpus, q["must_cite"][0]["document_id"],
+                                                                   ref_key, "referenced")]
+                    q["must_cite"][1]["key"] = ref_key
+        q["provenance"]["ref"] = ref
+        q["provenance"]["drafting_method"] = drafting_method
+        q["provenance"].setdefault("status", "draft")
+        for field in ("question", "gold_answer", "answer_type"):
+            if field in item:
+                q[field] = item[field]
+        q["required_facts"] = item.get("required_facts", [] if category == "unanswerable" else q.get("required_facts", []))
+        if "jurisdiction_hint" in item:
+            q["jurisdiction_hint"] = item["jurisdiction_hint"]
+        if item.get("reject"):
+            q["provenance"].update(status="rejected", rejection_reason=item["reject"])
+
+        decisions = []
+        for loc in q.get("proposed_alternatives", []):
+            text = evidence_text(corpus, loc)
+            if item.get("alternatives", "auto") == "none":
+                keep, why = False, "batch says none"
+            elif loc["source"] == "cross_instrument_equivalent" and category == "jurisdictional":
+                keep, why = False, "another state's law is the wrong answer to a jurisdictional question"
+            elif not _states_every_fact(text, q["required_facts"]):
+                keep, why = False, "does not state every required fact"
+            else:
+                keep, why = True, "states every required fact"
+            decisions.append({"document_id": loc["document_id"], "key": loc["key"],
+                              "source": loc["source"], "included": keep, "reason": why})
+            if keep:
+                q["gold_evidence"][0]["locations"].append(loc)
+        if decisions:
+            q["provenance"]["alternatives_decided"] = decisions
+        q["proposed_alternatives"] = []
+        for extra in item.get("extra_locations", []):
+            group = next(g for g in q["gold_evidence"] if g["group_id"] == extra.get("group", "g1"))
+            if not any((l["document_id"], l["key"]) == (extra["document_id"], extra["key"]) for l in group["locations"]):
+                group["locations"].append(location(corpus, extra["document_id"], extra["key"], extra["source"]))
+        save_question(q, directory)
+        existing[ref] = q
+        touched.append(q["question_id"])
+
+    problems = validate_set(load_questions(directory), corpus)
+    return {qid: problems.get(qid, []) for qid in touched}
 
 
 def check(corpus_dir: Path, directory: Path = QUESTIONS_DIR) -> dict:
@@ -205,12 +303,19 @@ def apply_verdicts(verdicts_path: Path, directory: Path = QUESTIONS_DIR) -> dict
         if v["decision"] == "rejected" and not (v.get("reason") or "").strip():
             applied["skipped"] += 1
             continue
+        method = v.get("method") or payload.get("method") or "official_pdf"
+        if method not in VERIFICATION_METHODS:
+            applied["skipped"] += 1
+            continue
         q["provenance"].update({
             "status": v["decision"],
             "verified_by": verifier,
             "verified_at": v.get("date") or date.today().isoformat(),
+            "verification_method": method,
             "verification": checklist,
         })
+        if v.get("note"):
+            q["provenance"]["verification_note"] = v["note"]
         if v["decision"] == "rejected":
             q["provenance"]["rejection_reason"] = v["reason"].strip()
         save_question(q, directory)
