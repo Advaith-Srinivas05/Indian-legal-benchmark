@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0031",
+  "question": "Can the heir of a trader who has died use Goa's 2023 one-time scheme to clear old tax dues?",
+  "category": "definitional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-recovery-of-arrears-of-tax-interest-penalty-other-dues-t__handle-22130",
+          "key": "section:2",
+          "citation": "Goa (Recovery of Arrears of Tax, Interest, Penalty, Other Dues through Settlement) Act, 2023, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1625,
+          "char_end": 4783,
+          "page_start": 1,
+          "page_end": 2,
+          "text_sha256": "c2651f7c166a3866f9123818745d668af6e14d775d578116bff2d268d79d63ba",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. An applicant includes a dealer, hotelier or proprietor, or his legal heir, successor, assignee or nominee.",
+  "required_facts": [
+    [
+      "legal heir"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-recovery-of-arrears-of-tax-interest-penalty-other-dues-t__handle-22130",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3158,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 711,
+    "tags": [
+      "definitional",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#711"
+  }
+}

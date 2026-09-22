@@ -1,0 +1,164 @@
+{
+  "question_id": "IN-STAT-0058",
+  "question": "Up to what age does a child get free meals under the food security entitlement, and where do the youngest children receive them?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "national-food-security-act-2013__handle-2113",
+          "key": "chapter:II/section:5",
+          "citation": "National Food Security Act, 2013, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 11347,
+          "char_end": 12531,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "a4d922ec9dfe45433863e7675652e43d61a1636292fc82b1930f58c00dd176df",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "national-food-security-act-2013__handle-10235",
+          "key": "chapter:II/section:5",
+          "citation": "NATIONAL FOOD SECURITY ACT, 2013, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 11347,
+          "char_end": 12531,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "a4d922ec9dfe45433863e7675652e43d61a1636292fc82b1930f58c00dd176df",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "national-food-security-act-2013__handle-11233",
+          "key": "chapter:II/section:5",
+          "citation": "NATIONAL FOOD SECURITY ACT, 2013, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 11347,
+          "char_end": 12531,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "a4d922ec9dfe45433863e7675652e43d61a1636292fc82b1930f58c00dd176df",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "national-food-security-act-2013__handle-4893",
+          "key": "chapter:II/section:5",
+          "citation": "National Food Security Act, 2013, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 11347,
+          "char_end": 12531,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "a4d922ec9dfe45433863e7675652e43d61a1636292fc82b1930f58c00dd176df",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "national-food-security-act-2013__handle-5761",
+          "key": "chapter:II/section:5",
+          "citation": "National Food Security Act, 2013, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 11347,
+          "char_end": 12531,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "a4d922ec9dfe45433863e7675652e43d61a1636292fc82b1930f58c00dd176df",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Every child up to fourteen years is entitled; children from six months to six years get an age-appropriate meal free through the local anganwadi.",
+  "required_facts": [
+    [
+      "fourteen years"
+    ],
+    [
+      "anganwadi"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "national-food-security-act-2013__handle-2113",
+      "key": "chapter:II/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1184,
+    "number_ambiguity": 7842,
+    "title_collisions": 10,
+    "cluster_size": 5,
+    "equivalents": 4,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 85,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#85"
+  }
+}

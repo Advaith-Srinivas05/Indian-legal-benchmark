@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0035",
+  "question": "In Kerala's law preserving parks and open spaces, how much building cover can land have and still count as an open space?",
+  "category": "definitional",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "kerala-parks-play-fields-and-open-spaces-preservation-and-re__handle-20273",
+          "key": "section:2",
+          "citation": "Kerala Parks, Play-fields and Open Spaces (Preservation and Regulation) Act 1968, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1773,
+          "char_end": 4205,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "c7353354a3b3fa0b1acd74645d996edc719d9ba5071bd65b38965d3bd801b35d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Not more than one-twentieth part of it may be covered with buildings.",
+  "required_facts": [
+    [
+      "one- twentieth part",
+      "one-twentieth part"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "kerala-parks-play-fields-and-open-spaces-preservation-and-re__handle-20273",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2432,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 773,
+    "tags": [
+      "definitional",
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#773"
+  }
+}

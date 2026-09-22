@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0055",
+  "question": "What is the longest period for which a person can be ordered to stay out of the capital by an externment direction?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "delhi-police-act-1978__handle-1742",
+          "key": "chapter:XII/section:49",
+          "citation": "Delhi Police Act, 1978, s. 49",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "49"
+            }
+          ],
+          "char_start": 74476,
+          "char_end": 74782,
+          "page_start": 25,
+          "page_end": 25,
+          "text_sha256": "aa46cfa062f2024b9da9f3382b3d64e13241943adecfda3f49046e7097c8af9c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Such a direction can in no case exceed two years from the date it was made.",
+  "required_facts": [
+    [
+      "two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "delhi-police-act-1978__handle-1742",
+      "key": "chapter:XII/section:49"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 306,
+    "number_ambiguity": 1387,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 56,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#56"
+  }
+}

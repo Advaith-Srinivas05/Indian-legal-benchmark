@@ -1,0 +1,98 @@
+{
+  "question_id": "IN-STAT-0013",
+  "question": "What distinguishes the inner wrapping that touches food from the outer layer around it, in India's food-container standards?",
+  "category": "definitional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "food-safety-and-standards-packaging-regulation-2018__regulation-600c367ad9",
+          "key": "part:III/section:2",
+          "citation": "Food Safety and Standards (Packaging) Regulation, 2018, reg. 2",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 7119,
+          "char_end": 8839,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "047be851592b0df9298a0dbef5515bfbb53fc8811a48a0dd69eae6ea34565421",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "the-food-safety-and-standards-packaging-regulations-2018__regulation-a07b644e3f",
+          "key": "part:III/section:2",
+          "citation": "The Food Safety and Standards (Packaging) Regulations, 2018, reg. 2",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 7119,
+          "char_end": 8839,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "047be851592b0df9298a0dbef5515bfbb53fc8811a48a0dd69eae6ea34565421",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Primary food packaging is in direct contact with the food; secondary food packaging encloses the primary packaging and does not come into direct contact with the food.",
+  "required_facts": [
+    [
+      "direct contact"
+    ],
+    [
+      "encloses the primary food packaging"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "food-safety-and-standards-packaging-regulation-2018__regulation-600c367ad9",
+      "key": "part:III/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1720,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 339,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#339"
+  }
+}

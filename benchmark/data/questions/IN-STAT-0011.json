@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0011",
+  "question": "Are biochemic cures part of the homoeopathic discipline as the national regulator defines it?",
+  "category": "definitional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "national-commission-for-homoeopathy-act-2020__handle-15621",
+          "key": "chapter:I/section:2",
+          "citation": "National Commission for Homoeopathy Act, 2020., s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 5366,
+          "char_end": 8041,
+          "page_start": 4,
+          "page_end": 5,
+          "text_sha256": "d501bf4ea87a0f69c24d74a83d317081f3d01bf47a54ae9f1867194419a65603",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. Homoeopathy includes the use of biochemic remedies, supplemented by modern advances the Commission declares.",
+  "required_facts": [
+    [
+      "biochemic remedies"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "national-commission-for-homoeopathy-act-2020__handle-15621",
+      "key": "chapter:I/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2675,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 273,
+    "tags": [
+      "definitional",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#273"
+  }
+}

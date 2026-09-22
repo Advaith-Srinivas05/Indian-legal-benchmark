@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0086",
+  "question": "For how long must a telecom company preserve logs about its critical infrastructure?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "telecommunications-critical-telecommunication-infrastructure__rule-bb228b4e86",
+          "key": "section:7",
+          "citation": "Telecommunications (Critical  Telecommunication Infrastructure) Rules, 2024, r. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 7055,
+          "char_end": 11143,
+          "page_start": 8,
+          "page_end": 9,
+          "text_sha256": "fb2717289ad2d94b599660a6419e2d12c556abe354c50e4a6e25d5bfd73d4e62",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "For a minimum period of two years, or any other period the Central Government determines.",
+  "required_facts": [
+    [
+      "two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "telecommunications-critical-telecommunication-infrastructure__rule-bb228b4e86",
+      "key": "section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 4088,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 404,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#404"
+  }
+}

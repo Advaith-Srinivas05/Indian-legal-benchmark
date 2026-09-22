@@ -1,0 +1,76 @@
+{
+  "question_id": "IN-STAT-0018",
+  "question": "Which official decides challenges to decisions made under the 2026 framework for internet gaming?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-promotion-and-regulation-of-online-gaming-rules-2026__rule-6c7106789e",
+          "key": "part:I/section:2",
+          "citation": "The Promotion and Regulation of Online Gaming Rules, 2026, r. 2",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 718,
+          "char_end": 3204,
+          "page_start": 13,
+          "page_end": 13,
+          "text_sha256": "1d6fd6e95e127a6786c2da49f3628fe5961731efbe77e78ca52aeb180d3719a0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Appellate Authority is the Secretary to the Government of India in the Ministry of Electronics and Information Technology.",
+  "required_facts": [
+    [
+      "Secretary to the Government of India"
+    ],
+    [
+      "Ministry of Electronics and Information Technology"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-promotion-and-regulation-of-online-gaming-rules-2026__rule-6c7106789e",
+      "key": "part:I/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2486,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 441,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#441"
+  }
+}

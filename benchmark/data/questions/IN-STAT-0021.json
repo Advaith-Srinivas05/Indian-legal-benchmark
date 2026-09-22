@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0021",
+  "question": "Who sanctions a Goa legislator's advance for buying a new car?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-grant-of-advance-to-member-of-the-legislative-assembly-f__rule-36242d539b",
+          "key": "section:2",
+          "citation": "Goa (Grant of advance to Member of the Legislative Assembly for purchase of new motor car) Rules, 2005., r. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 636,
+          "char_end": 1195,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "6d211512ab8536eae4ddc93e02ed34e2b268c64c02f70c1742474a7387c17bbb",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Sanctioning Authority is the Secretary to the Goa Legislative Assembly.",
+  "required_facts": [
+    [
+      "Secretary to the Goa Legislative Assembly"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-grant-of-advance-to-member-of-the-legislative-assembly-f__rule-36242d539b",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 559,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 463,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#463"
+  }
+}

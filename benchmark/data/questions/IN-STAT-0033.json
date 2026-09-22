@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0033",
+  "question": "In Karnataka, who administers the qualifying exam used to hand out places in regulated professional degrees?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "karnataka-professional-educational-institutions-regulation-o__handle-7169",
+          "key": "section:2",
+          "citation": "KARNATAKA PROFESSIONAL EDUCATIONAL INSTITUTIONS (REGULATION OF ADMISSION AND FIXATION OF FEE) (SPECIAL PROVISIONS) ACT, 2012, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 4088,
+          "char_end": 5691,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "97bca9670c6f0fec34367474ea1f8b7a89d7482ef7351267626eb6eddec7a090",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Karnataka Examination Authority of the State Government, called the Common Entrance Test Cell.",
+  "required_facts": [
+    [
+      "Karnataka Examination Authority"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "karnataka-professional-educational-institutions-regulation-o__handle-7169",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1603,
+    "number_ambiguity": 10555,
+    "title_collisions": 5,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 731,
+    "tags": [
+      "definitional",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#731"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "question_id": "IN-STAT-0081",
+  "question": "How quickly must a broadcaster supply channel signals once a distributor asks in writing?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "telecommunication-broadcasting-and-cable-services-interconne__regulation-5351dcd1a9",
+          "key": "part:III/chapter:II/section:3",
+          "citation": "Telecommunication (Broadcasting and Cable) Services Interconnection (Addressable Systems) Regulations, 2017., reg. 3",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 12896,
+          "char_end": 15732,
+          "page_start": 7,
+          "page_end": 8,
+          "text_sha256": "a51545e975adfac76954400b35673b3b51eb33a37d9f1a0453a7c362ff2a34ab",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Within sixty days of the written request, or within thirty days of signing the interconnection agreement.",
+  "required_facts": [
+    [
+      "sixty days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "telecommunication-broadcasting-and-cable-services-interconne__regulation-5351dcd1a9",
+      "key": "part:III/chapter:II/section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2836,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 362,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#362"
+  }
+}

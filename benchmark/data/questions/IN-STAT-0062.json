@@ -1,0 +1,220 @@
+{
+  "question_id": "IN-STAT-0062",
+  "question": "How much prior notice must a private citizen give before filing a pollution complaint in court under the environment law?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "environment-protection-act-1986__handle-1876",
+          "key": "chapter:IV/section:19",
+          "citation": "Environment (Protection) Act, 1986, s. 19",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "19"
+            }
+          ],
+          "char_start": 31005,
+          "char_end": 31550,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "bdbb1bdef5477f7ab32d5dea215620ca71c72af8e4ebd12c2ed4696ea5cbd6ab",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "environment-protection-act-1986__handle-15368",
+          "key": "chapter:IV/section:19",
+          "citation": "ENVIRONMENT (PROTECTION) ACT, 1986, s. 19",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "19"
+            }
+          ],
+          "char_start": 23014,
+          "char_end": 23480,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "bd4d31699df568303f87a89a01dc650834366d49535f02ff4175625d37f3cc3e",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "environment-protection-act-1986__handle-19004",
+          "key": "chapter:IV/section:19",
+          "citation": "Environment (Protection) Act, 1986, s. 19",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "19"
+            }
+          ],
+          "char_start": 22875,
+          "char_end": 23341,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "bd4d31699df568303f87a89a01dc650834366d49535f02ff4175625d37f3cc3e",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "environment-protection-act-1986__handle-5334",
+          "key": "chapter:IV/section:19",
+          "citation": "Environment (Protection) Act, 1986, s. 19",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "19"
+            }
+          ],
+          "char_start": 22875,
+          "char_end": 23341,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "bd4d31699df568303f87a89a01dc650834366d49535f02ff4175625d37f3cc3e",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "environment-protection-act-1986__handle-6196",
+          "key": "chapter:IV/section:19",
+          "citation": "Environment Protection Act ,1986, s. 19",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "19"
+            }
+          ],
+          "char_start": 22875,
+          "char_end": 23341,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "bd4d31699df568303f87a89a01dc650834366d49535f02ff4175625d37f3cc3e",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "environment-protection-act-1986__handle-9465",
+          "key": "chapter:IV/section:19",
+          "citation": "ENVIRONMENT (PROTECTION) ACT, 1986, s. 19",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "19"
+            }
+          ],
+          "char_start": 22875,
+          "char_end": 23341,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "bd4d31699df568303f87a89a01dc650834366d49535f02ff4175625d37f3cc3e",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Notice of not less than sixty days of the alleged offence and of the intention to complain, to the Central Government or its authorised authority.",
+  "required_facts": [
+    [
+      "sixty days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "environment-protection-act-1986__handle-1876",
+      "key": "chapter:IV/section:19"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 545,
+    "number_ambiguity": 4382,
+    "title_collisions": 15,
+    "cluster_size": 6,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 114,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#114",
+    "alternatives_decided": [
+      {
+        "document_id": "environment-protection-act-1986__handle-15368",
+        "key": "chapter:IV/section:19",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "environment-protection-act-1986__handle-19004",
+        "key": "chapter:IV/section:19",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "environment-protection-act-1986__handle-5334",
+        "key": "chapter:IV/section:19",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "environment-protection-act-1986__handle-6196",
+        "key": "chapter:IV/section:19",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "environment-protection-act-1986__handle-9465",
+        "key": "chapter:IV/section:19",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0045",
+  "question": "In Himachal Pradesh's law against ticketless bus travel, does a courtesy pass count as a 'ticket'?",
+  "category": "definitional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "himachal-pradesh-prevention-of-ticketless-travel-in-road-tra__handle-5679",
+          "key": "section:2",
+          "citation": "Himachal Pradesh Prevention of Ticketless Travel in Road Transport Service Act, 1976, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1838,
+          "char_end": 2851,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "3ba401d12ea26cc794babf9be99af5e01d127bb2552fe5e8c5c56fdfa0272e8a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. A ticket includes a duty, privilege or courtesy pass issued under the authority of the State Transport Undertaking.",
+  "required_facts": [
+    [
+      "courtesy pass"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "himachal-pradesh-prevention-of-ticketless-travel-in-road-tra__handle-5679",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1013,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 997,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#997"
+  }
+}

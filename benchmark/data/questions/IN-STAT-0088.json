@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0088",
+  "question": "How long does the official handling complaints about an online document vault have to fix them?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "information-technology-preservation-and-retention-of-informa__rule-aa73d685ac",
+          "key": "part:II/section:12",
+          "citation": "Information Technology (Preservation and Retention of Information by Intermediaries Providing Digital Locker Facilities) Rules, 2016, r. 12",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 10036,
+          "char_end": 10741,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "48eedd3f83deb473c99db06161e971a111f647456b96a060d9b430ff86362d13",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Within one month from receiving the complaint.",
+  "required_facts": [
+    [
+      "one month"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "information-technology-preservation-and-retention-of-informa__rule-aa73d685ac",
+      "key": "part:II/section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 705,
+    "number_ambiguity": 5903,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 413,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#413"
+  }
+}

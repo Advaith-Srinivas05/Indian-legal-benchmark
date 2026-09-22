@@ -1,0 +1,136 @@
+{
+  "question_id": "IN-STAT-0052",
+  "question": "If someone is forced to pay a bribe, how quickly must they report it to escape liability, and what is the maximum sentence for offering a bribe?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "prevention-of-corruption-act-1988__handle-15302",
+          "key": "chapter:III/section:8",
+          "citation": "PREVENTION OF CORRUPTION ACT, 1988, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 16867,
+          "char_end": 18706,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "d1b6f07f2a317012a229ca0d5649cdbb09d71a5a5ab1b4e86e2a7e75a90c37ef",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "prevention-of-corruption-act-1988__handle-1558",
+          "key": "chapter:III/section:8",
+          "citation": "Prevention of Corruption Act, 1988, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 17555,
+          "char_end": 19393,
+          "page_start": 9,
+          "page_end": 9,
+          "text_sha256": "51f38fe3fcd024d62f0702b5ba700c586892228eccca804ee9361df6d79e782a",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "prevention-of-corruption-act-1988__handle-9317",
+          "key": "chapter:III/section:8",
+          "citation": "PREVENTION OF CORRUPTION ACT, 1988, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 16868,
+          "char_end": 18706,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "51f38fe3fcd024d62f0702b5ba700c586892228eccca804ee9361df6d79e782a",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A person compelled to give the undue advantage must report to the law enforcement authority within seven days; otherwise giving a bribe is punishable with up to seven years, or fine, or both.",
+  "required_facts": [
+    [
+      "seven days"
+    ],
+    [
+      "seven years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prevention-of-corruption-act-1988__handle-15302",
+      "key": "chapter:III/section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1839,
+    "number_ambiguity": 6826,
+    "title_collisions": 4,
+    "cluster_size": 3,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 36,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#36",
+    "alternatives_decided": [
+      {
+        "document_id": "prevention-of-corruption-act-1988__handle-1558",
+        "key": "chapter:III/section:8",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "prevention-of-corruption-act-1988__handle-9317",
+        "key": "chapter:III/section:8",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

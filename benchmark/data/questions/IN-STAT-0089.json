@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0089",
+  "question": "In Karnataka, how long do a school's managers have to challenge an order of the education department?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-karnataka-educational-institutions-appellate-authority-r__rule-26b5bac6d5",
+          "key": "section:3",
+          "citation": "The Karnataka Educational Institutions (Appellate Authority) Rules 1998., r. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 1681,
+          "char_end": 5663,
+          "page_start": 2,
+          "page_end": 4,
+          "text_sha256": "4d9235d36a47b0b38909bee99a063171ecf72e2eee1afcfea35d850523a03dff",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Thirty days from the date of the order appealed against.",
+  "required_facts": [
+    [
+      "thirty days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-karnataka-educational-institutions-appellate-authority-r__rule-26b5bac6d5",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3982,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 414,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#414"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0034",
+  "question": "Do statues of the deity and offerings given on temple grounds belong to the trust property of the two Jammu and Kashmir Devi shrines?",
+  "category": "definitional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "jammu-and-kashmir-shri-mata-sukhrala-devi-ji-shrine-and-shri__handle-16507",
+          "key": "section:3",
+          "citation": "JAMMU AND KASHMIR SHRI MATA SUKHRALA DEVI JI SHRINE AND SHRI MATA BALA SUNDARI SHRINE ACT, 2013, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 2203,
+          "char_end": 3741,
+          "page_start": 4,
+          "page_end": 5,
+          "text_sha256": "7581f1a949c5a5b42b15f5ee2207c819ee9139cd2d0d31161da4be5a770c9359",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. The endowment includes idols installed in the Shrines, their premises and gifts of properties made within the precincts, along with attached lands and buildings.",
+  "required_facts": [
+    [
+      "idols"
+    ],
+    [
+      "precincts"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "jammu-and-kashmir-shri-mata-sukhrala-devi-ji-shrine-and-shri__handle-16507",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1538,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 733,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#733"
+  }
+}

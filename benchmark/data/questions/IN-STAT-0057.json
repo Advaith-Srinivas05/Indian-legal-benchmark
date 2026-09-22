@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0057",
+  "question": "What is the minimum prison term for wilfully trying to dodge the tax on high spending in hotels?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "expenditure-tax-act-1987__handle-1892",
+          "key": "section:25",
+          "citation": "Expenditure-tax Act, 1987, s. 25",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "25"
+            }
+          ],
+          "char_start": 32005,
+          "char_end": 33379,
+          "page_start": 10,
+          "page_end": 11,
+          "text_sha256": "d171d823e9e46b0fefaf73a325c43a77ec630b68f71dbf384a7140b370a6d626",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Rigorous imprisonment of not less than three months and up to seven years, with fine.",
+  "required_facts": [
+    [
+      "three months"
+    ],
+    [
+      "seven years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "expenditure-tax-act-1987__handle-1892",
+      "key": "section:25"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1374,
+    "number_ambiguity": 3399,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 76,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#76"
+  }
+}

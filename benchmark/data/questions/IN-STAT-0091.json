@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0091",
+  "question": "How much advance notice must members of the committee searching for Odisha's Lokayukta get before it meets?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "rules-regarding-rules-of-odisha-lokayukta-2018__rule-9acc97d63a",
+          "key": "section:7",
+          "citation": "Rules regarding Rules of Odisha Lokayukta 2018, r. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 3131,
+          "char_end": 3457,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "08b1292e12a91c1b473fd7f2fb0a77d31c31dd290a00a7b0ba02c6f6f9929822",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The notice must reach the chairperson and members at least three days in advance.",
+  "required_facts": [
+    [
+      "three days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "rules-regarding-rules-of-odisha-lokayukta-2018__rule-9acc97d63a",
+      "key": "section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 326,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 430,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#430"
+  }
+}

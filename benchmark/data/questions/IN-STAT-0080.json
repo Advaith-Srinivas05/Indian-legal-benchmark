@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0080",
+  "question": "How often do people running the power network in real time need refresher and simulator training?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "central-electricity-authority-grid-standards-regulations-201__regulation-734a2dc703",
+          "key": "section:33",
+          "citation": "Central Electricity Authority (Grid Standards) Regulations, 2010, reg. 33",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "33"
+            }
+          ],
+          "char_start": 29202,
+          "char_end": 29940,
+          "page_start": 18,
+          "page_end": 18,
+          "text_sha256": "02d53f22e4c9497f75eba3f66dbba51413356966c648c1bf8244931cde449e8a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Every grid operator must undergo real-time digital simulator training and a refresher course at least once in two years.",
+  "required_facts": [
+    [
+      "once in two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "central-electricity-authority-grid-standards-regulations-201__regulation-734a2dc703",
+      "key": "section:33"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 738,
+    "number_ambiguity": 2499,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 357,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#357"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "question_id": "IN-STAT-0039",
+  "question": "In the 1961 statute extending further laws across the region now forming Chhattisgarh, which earlier Act supplies the meaning of words it leaves undefined?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "chhattisgarh-second-extension-of-laws-act-1961-no-40-of-1961__handle-21257",
+          "key": "section:2",
+          "citation": "CHHATTISGARH SECOND EXTENSION OF LAWS ACT, 1961 No. 40 of 1961. Dt. 08.12.1961, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 976,
+          "char_end": 1376,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "32dc9a7e0f3d7b68ef27a64a40a876c6e736c2e1c5837ac47fddbda043522808",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "madhya-pradesh-second-extension-of-laws-act-1961__handle-17004",
+          "key": "section:2",
+          "citation": "Madhya Pradesh Second Extension of Laws Act 1961, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 974,
+          "char_end": 1374,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "32dc9a7e0f3d7b68ef27a64a40a876c6e736c2e1c5837ac47fddbda043522808",
+          "evidence_confidence": "high",
+          "source": "cross_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Madhya Pradesh Extension of Laws Act, 1958.",
+  "required_facts": [
+    [
+      "Madhya Pradesh Extension of Laws Act, 1958"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "chhattisgarh-second-extension-of-laws-act-1961-no-40-of-1961__handle-21257",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 400,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 1,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 868,
+    "tags": [
+      "definitional",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#868",
+    "alternatives_decided": [
+      {
+        "document_id": "madhya-pradesh-second-extension-of-laws-act-1961__handle-17004",
+        "key": "section:2",
+        "source": "cross_instrument_equivalent",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

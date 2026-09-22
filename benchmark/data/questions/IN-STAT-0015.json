@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0015",
+  "question": "When labelling LED lamps for energy efficiency, what groups lamps into a single 'family of models'?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bureau-of-energy-efficiency-particulars-and-manner-of-their__regulation-2e88d0de5a",
+          "key": "part:III/section:2",
+          "citation": "Bureau of Energy Efficiency (Particulars and Manner of their Display on Labels of Self-ballasted LED Lamps) Regulations, 2017, reg. 2",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 10051,
+          "char_end": 11858,
+          "page_start": 22,
+          "page_end": 22,
+          "text_sha256": "449c44b9e5a02c478997330eeae09df3c263d9fc7183859ce18fe8009aa33ddd",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A family of models is a group of models for which all the performance parameters are the same.",
+  "required_facts": [
+    [
+      "performance parameters are same"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bureau-of-energy-efficiency-particulars-and-manner-of-their__regulation-2e88d0de5a",
+      "key": "part:III/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1807,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 358,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#358"
+  }
+}

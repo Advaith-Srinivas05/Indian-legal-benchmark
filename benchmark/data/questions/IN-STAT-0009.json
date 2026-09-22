@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0009",
+  "question": "For the territorial counterpart of GST, is something taxed at a rate of nothing treated as exempt, and which official acts as the Government?",
+  "category": "definitional",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "union-territory-goods-and-services-tax-act-2017__handle-2252",
+          "key": "chapter:I/section:2",
+          "citation": "Union Territory Goods and Services Tax Act, 2017, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 3519,
+          "char_end": 5571,
+          "page_start": 5,
+          "page_end": 6,
+          "text_sha256": "0cc15452319bc8736db07f6b2c7fb9bc26f093ed46970f7e022067ca4a39fe17",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "union-territory-goods-and-services-tax-act-2017__handle-19017",
+          "key": "chapter:I/section:2",
+          "citation": "union territory goods and services tax act, 2017, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 2650,
+          "char_end": 4931,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "fd592caea8f88537576bf2d30cb79da410c436340ddbec06653d53e55eb4db7a",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. An exempt supply includes a supply attracting a nil rate of tax, and 'Government' means the Administrator or an authority or officer authorised to act as Administrator.",
+  "required_facts": [
+    [
+      "nil rate of tax"
+    ],
+    [
+      "Administrator"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "union-territory-goods-and-services-tax-act-2017__handle-2252",
+      "key": "chapter:I/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2052,
+    "number_ambiguity": 10555,
+    "title_collisions": 3,
+    "cluster_size": 2,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 240,
+    "tags": [
+      "definitional",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#240",
+    "alternatives_decided": [
+      {
+        "document_id": "union-territory-goods-and-services-tax-act-2017__handle-19017",
+        "key": "chapter:I/section:2",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

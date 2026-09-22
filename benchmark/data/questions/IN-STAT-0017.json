@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0017",
+  "question": "In Goa's scheme for collecting a levy on fluid milk, which institutions qualify as a 'Government treasury' for payment?",
+  "category": "definitional",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-goa-cess-on-fluid-milk-control-rules-2001__rule-0cd51a9d07",
+          "key": "section:2",
+          "citation": "The Goa Cess on Fluid Milk (Control) Rules, 2001, r. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1167,
+          "char_end": 2051,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "909814bfb09b16185dde4f7b62dd2a0c66fddf13fcc67e1279e76b616d4b8122",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Any taluka treasury or sub-treasury in Goa, the Reserve Bank of India, or a branch of the State Bank of India or its subsidiary in the area where the dealer does business.",
+  "required_facts": [
+    [
+      "Reserve Bank of India"
+    ],
+    [
+      "State bank of India"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-goa-cess-on-fluid-milk-control-rules-2001__rule-0cd51a9d07",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 884,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 419,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#419"
+  }
+}

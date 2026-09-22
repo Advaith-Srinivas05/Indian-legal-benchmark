@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0074",
+  "question": "For ship-hull cover, how much of the past year's premium must an insurer set aside for policies still running?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "insurance-regulatory-and-development-authority-preparation-o__regulation-e42af8f76c",
+          "key": "part:I/section:2A",
+          "citation": "Insurance Regulatory and Development Authority (Preparation of Financial Statements and Auditor's Report of Insurance Companies) Regulations, 2002, reg. 2A",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2A"
+            }
+          ],
+          "char_start": 44389,
+          "char_end": 45146,
+          "page_start": 31,
+          "page_end": 31,
+          "text_sha256": "8de7d2f8f19620aeab6ae91e971701f037810ce22f661b40c46313ae388951c0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "100 percent of the net written premium of the preceding twelve months for marine hull business.",
+  "required_facts": [
+    [
+      "100 percent"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "insurance-regulatory-and-development-authority-preparation-o__regulation-e42af8f76c",
+      "key": "part:I/section:2A"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 757,
+    "number_ambiguity": 32,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 318,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#318"
+  }
+}

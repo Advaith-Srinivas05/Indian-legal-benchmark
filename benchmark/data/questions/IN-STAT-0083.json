@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0083",
+  "question": "What minimum experience must staff of a partner institution have to become adjunct faculty of the Faridabad biotechnology centre?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "regional-centre-for-biotechnology-recognition-of-institution__regulation-870455e86c",
+          "key": "part:III/section:6",
+          "citation": "Regional Centre for Biotechnology (Recognition of Institution of Higher Learning within India and Conduct of the Academic Programme ) Regulations, 2017, reg. 6",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 4009,
+          "char_end": 5783,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "c62d4459e8f3d4f833413fdd6e59f463b4f548221f2c1a579ed5ecc77b3d89f7",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A PhD or MD with a minimum of three years' research or teaching experience, or both.",
+  "required_facts": [
+    [
+      "three years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "regional-centre-for-biotechnology-recognition-of-institution__regulation-870455e86c",
+      "key": "part:III/section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1774,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 374,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#374"
+  }
+}

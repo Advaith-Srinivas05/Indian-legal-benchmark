@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0072",
+  "question": "How long is the term of the director who represents LIC's shareholders?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-life-insurance-corporation-of-india-shareholders-directo__regulation-f96b3180a1",
+          "key": "section:4",
+          "citation": "The Life Insurance Corporation of India (shareholders’ director) Regulations, 2023, reg. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 4643,
+          "char_end": 5422,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "336e9595a968da5601ec4e3c33afd61c7399a6a50810777089a9fb2393b29547",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Four years, with eligibility for one more four-year term subject to re-election.",
+  "required_facts": [
+    [
+      "four years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-life-insurance-corporation-of-india-shareholders-directo__regulation-f96b3180a1",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 779,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 308,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#308"
+  }
+}

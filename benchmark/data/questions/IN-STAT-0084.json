@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0084",
+  "question": "What share of their provident fund can State Bank staff on pre-retirement leave withdraw?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "state-bank-of-india-employees-provident-fund-regulations-201__regulation-bce4e6f7f7",
+          "key": "part:III/section:31",
+          "citation": "State Bank of India Employees Provident Fund Regulations - 2015, reg. 31",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "31"
+            }
+          ],
+          "char_start": 41201,
+          "char_end": 41543,
+          "page_start": 24,
+          "page_end": 24,
+          "text_sha256": "0605139be9f142d71fd94294f15f89083f43afdf6b222a26b264861375fb3ee4",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Up to 90 per cent of the balance at their credit, refundable if they do not in fact retire.",
+  "required_facts": [
+    [
+      "90 per cent"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "state-bank-of-india-employees-provident-fund-regulations-201__regulation-bce4e6f7f7",
+      "key": "part:III/section:31"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 342,
+    "number_ambiguity": 2660,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 393,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#393"
+  }
+}

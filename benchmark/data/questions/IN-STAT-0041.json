@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0041",
+  "question": "For Tamil Nadu's 1991 law putting a special officer in charge of its Wakf Board, which Wakf Act is meant?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "tamil-nadu-wakf-board-appointment-of-special-officer-act-199__handle-21801",
+          "key": "section:2",
+          "citation": "Tamil Nadu Wakf  Board (Appointment of Special Officer) Act, 1991, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 2086,
+          "char_end": 2644,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "975dc9626fd5f37c7db0f2e77853f68e55b4b34c142f12604bbb83e1aa459c4a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Wakf Act, 1954.",
+  "required_facts": [
+    [
+      "Wakf Act, 1954"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "tamil-nadu-wakf-board-appointment-of-special-officer-act-199__handle-21801",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 558,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 944,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#944"
+  }
+}

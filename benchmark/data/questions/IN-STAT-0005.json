@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0005",
+  "question": "In which city did the Hindi literary body taken over by Parliament have its headquarters as a registered society?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "hindi-sahitya-sammelan-act-1962__handle-1416",
+          "key": "section:3",
+          "citation": "Hindi Sahitya Sammelan Act, 1962, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 1948,
+          "char_end": 2427,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "27a2f4ba73fd0953f0cdd6748c87bc4772bbaf816c77e9dba30f1ac61a1a2ae4",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Society, the Hindi Sahitya Sammelan registered under the Societies Registration Act, 1860, has its head office at Allahabad.",
+  "required_facts": [
+    [
+      "Allahabad"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "hindi-sahitya-sammelan-act-1962__handle-1416",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 479,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 136,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#136"
+  }
+}

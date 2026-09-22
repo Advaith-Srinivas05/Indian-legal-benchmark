@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0026",
+  "question": "In Uttar Pradesh's rules for acquiring and disposing of land for housing, which body is 'the Board'?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "up-avas-evam-vikas-parishad-acquisition-and-disposal-of-land__rule-7ca2ec8ec4",
+          "key": "section:2",
+          "citation": "UP Avas evam Vikas Parishad (Acquisition and Disposal of Land) Rules, 1969, r. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 455,
+          "char_end": 734,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "c88d462fceb3986fd23c32dac77a6604dbb3c83d71c1eed11d18b5c60afb119e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Uttar Pradesh Avas Evam Vikas Parishad constituted under section 3 of the Adhiniyam.",
+  "required_facts": [
+    [
+      "Avas Evam Vikas Parishad"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "up-avas-evam-vikas-parishad-acquisition-and-disposal-of-land__rule-7ca2ec8ec4",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 279,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 533,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#533"
+  }
+}

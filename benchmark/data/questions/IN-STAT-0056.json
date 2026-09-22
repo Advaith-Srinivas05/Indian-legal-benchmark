@@ -1,0 +1,117 @@
+{
+  "question_id": "IN-STAT-0056",
+  "question": "What is the penalty for barging uninvited into the room where a state telegraph station sends its signals?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "indian-telegraph-act-1885__handle-22396",
+          "key": "part:IV/section:23",
+          "citation": "Indian Telegraph Act, 1885, s. 23",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "23"
+            }
+          ],
+          "char_start": 37402,
+          "char_end": 38065,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "1d037de4d3d31881d6b38337b31fbc8660c08147194aa75b380b2e8c29ab72b9",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "indian-telegraph-act-1885-central-act-13-of-1885__handle-13115",
+          "key": "part:IV/section:23",
+          "citation": "Indian Telegraph Act, 1885 (Central Act 13 of 1885), s. 23",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "23"
+            }
+          ],
+          "char_start": 37402,
+          "char_end": 38065,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "1d037de4d3d31881d6b38337b31fbc8660c08147194aa75b380b2e8c29ab72b9",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "indian-telegraph-act-1885__handle-15409",
+          "key": "part:IV/section:23",
+          "citation": "INDIAN TELEGRAPH ACT, 1885, s. 23",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "23"
+            }
+          ],
+          "char_start": 37402,
+          "char_end": 38065,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "1d037de4d3d31881d6b38337b31fbc8660c08147194aa75b380b2e8c29ab72b9",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A fine of up to five hundred rupees.",
+  "required_facts": [
+    [
+      "five hundred rupees"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-telegraph-act-1885__handle-22396",
+      "key": "part:IV/section:23"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 663,
+    "number_ambiguity": 3685,
+    "title_collisions": 3,
+    "cluster_size": 3,
+    "equivalents": 2,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 71,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#71"
+  }
+}

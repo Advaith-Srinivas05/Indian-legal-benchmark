@@ -1,0 +1,97 @@
+{
+  "question_id": "IN-STAT-0090",
+  "question": "After being expelled from a cooperative, how long must a member wait before joining any registered society again?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bihar-cooperative-societies-rules-1959__rule-c6d6141b79",
+          "key": "section:11",
+          "citation": "Bihar Cooperative Societies Rules, 1959, r. 11",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "11"
+            }
+          ],
+          "char_start": 15855,
+          "char_end": 16491,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "56c1c351faa95eef3b832282121fa078ed88c84c47d91edb30e0ce6f1b992be1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "bihar-cooperative-society-rule-1959__rule-8da4e84a34",
+          "key": "section:11",
+          "citation": "Bihar Cooperative Society Rule ,1959, r. 11",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "11"
+            }
+          ],
+          "char_start": 15663,
+          "char_end": 16298,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "2546ac37788651a87a3e7b65b346d91b635c63386c13e926a2789adf8e070cc2",
+          "evidence_confidence": "high",
+          "source": "cross_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Two years from the expulsion, unless the Registrar sanctions earlier admission in special circumstances.",
+  "required_facts": [
+    [
+      "two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bihar-cooperative-societies-rules-1959__rule-c6d6141b79",
+      "key": "section:11"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 636,
+    "number_ambiguity": 6050,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 1,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 429,
+    "tags": [
+      "numeric",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#429",
+    "alternatives_decided": [
+      {
+        "document_id": "bihar-cooperative-society-rule-1959__rule-8da4e84a34",
+        "key": "section:11",
+        "source": "cross_instrument_equivalent",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

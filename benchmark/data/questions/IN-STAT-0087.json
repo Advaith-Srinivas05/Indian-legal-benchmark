@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0087",
+  "question": "When a person killed in a caste atrocity leaves a minor heir in Karnataka, by when must the heir reach adulthood to claim a compassionate government job, and apply?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-karnataka-state-civil-services-appointment-of-the-family__rule-f8cef29f10",
+          "key": "section:4",
+          "citation": "The Karnataka State Civil Services (Appointment of the Family Members of Persons belonging to Scheduled Castes or Scheduled Tribes who die in Atrocities on Scheduled Castes or Scheduled Tribes  on Compassionate Grounds) (Special) (Amendment) Rules, 2022), r. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 7351,
+          "char_end": 7917,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "603457f4d80e495db63eeb363bf69835795419c3effb78090ef8177326292ac3",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The minor must turn eighteen within three years of the death and apply within two years after that.",
+  "required_facts": [
+    [
+      "three years"
+    ],
+    [
+      "two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-karnataka-state-civil-services-appointment-of-the-family__rule-f8cef29f10",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 566,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 412,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#412"
+  }
+}

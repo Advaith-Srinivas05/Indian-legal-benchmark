@@ -1,0 +1,75 @@
+{
+  "question_id": "IN-STAT-0069",
+  "question": "How often must a suspended sentence of a border police member be reconsidered?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "indo-tibetan-border-police-force-act-1992__handle-1935",
+          "key": "chapter:X/section:149",
+          "citation": "Indo-Tibetan Border Police Force Act, 1992, s. 149",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "X"
+            },
+            {
+              "unit_type": "section",
+              "number": "149"
+            }
+          ],
+          "char_start": 122363,
+          "char_end": 122979,
+          "page_start": 37,
+          "page_end": 37,
+          "text_sha256": "e7c071eb4e90e1e2cd9df34ee96e930d9e04a8cd6f45fdd72efcf063c63efb29",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "At intervals of not more than four months.",
+  "required_facts": [
+    [
+      "four months"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indo-tibetan-border-police-force-act-1992__handle-1935",
+      "key": "chapter:X/section:149"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 616,
+    "number_ambiguity": 240,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 181,
+    "tags": [
+      "numeric",
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#181"
+  }
+}

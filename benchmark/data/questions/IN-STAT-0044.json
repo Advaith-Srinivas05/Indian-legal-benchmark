@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0044",
+  "question": "For the body planning Kota's growth, is raising cattle for milk or running a plant nursery an agricultural use?",
+  "category": "definitional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "kota-development-authority-act-2023__handle-19661",
+          "key": "section:2",
+          "citation": "Kota Development Authority Act,2023, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 6605,
+          "char_end": 11428,
+          "page_start": 76,
+          "page_end": 78,
+          "text_sha256": "738edeac5e4219032486c51c1bb9be13f89611623601ac67937ff7d48fa45c42",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. Agriculture includes dairy farming and the use of land as a nursery, among other uses.",
+  "required_facts": [
+    [
+      "dairy farming"
+    ],
+    [
+      "nursery"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "kota-development-authority-act-2023__handle-19661",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 4823,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 979,
+    "tags": [
+      "definitional",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#979"
+  }
+}

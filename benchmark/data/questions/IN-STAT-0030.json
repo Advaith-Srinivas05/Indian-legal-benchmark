@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0030",
+  "question": "When Kerala's recruitment commission handles hiring for certain co-operatives, what is meant by the managing 'committee' of such a body?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "kerala-public-service-commission-additional-functions-as-res__handle-21674",
+          "key": "section:2",
+          "citation": "KERALA PUBLIC SERVICE COMMISSION (ADDITIONAL FUNCTIONS AS RESPECTS CERTAIN SOCIETIES) ACT, 1996, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 780,
+          "char_end": 1569,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "12a646b3d5ed195e4f48966504f8b919ad6d0dae7f972734c899084c70ed5973",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The governing body of the society, by whatever name called, entrusted with managing its affairs.",
+  "required_facts": [
+    [
+      "governing body"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "kerala-public-service-commission-additional-functions-as-res__handle-21674",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 789,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 622,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#622"
+  }
+}

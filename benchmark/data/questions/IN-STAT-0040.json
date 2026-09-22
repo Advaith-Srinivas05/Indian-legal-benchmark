@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0040",
+  "question": "Under which statute was the university constituted whose Senate and Syndicate a 1988 Kerala law dissolved?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "gandhiji-university-dissolution-of-the-senate-and-the-syndic__handle-22207",
+          "key": "section:2",
+          "citation": "GANDHIJI UNIVERSITY (DISSOLUTION OF THE SENATE AND THE SYNDICATE) ACT, 1988, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1466,
+          "char_end": 1786,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "ee3403230cbe4ea1007923b8269283638cccac310448123ee227e8df9642721c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Gandhiji University Act, 1985.",
+  "required_facts": [
+    [
+      "Gandhiji University Act, 1985"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "gandhiji-university-dissolution-of-the-senate-and-the-syndic__handle-22207",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 320,
+    "number_ambiguity": 10555,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 910,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#910"
+  }
+}

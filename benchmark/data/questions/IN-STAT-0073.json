@@ -1,0 +1,95 @@
+{
+  "question_id": "IN-STAT-0073",
+  "question": "Once the Puducherry postgraduate medical institute has decided a subject, how long before it can be raised again?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "jawaharlal-institute-of-post-graduate-medical-education-and__regulation-12b783d035",
+          "key": "appendix:_/section:10",
+          "citation": "Jawaharlal Institute of Post Graduate Medical Education and Research Puducherry Act, 2008, reg. 10",
+          "unit_path": [
+            {
+              "unit_type": "appendix",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 44256,
+          "char_end": 44893,
+          "page_start": 17,
+          "page_end": 18,
+          "text_sha256": "20257b899e505d295428468add3d11018c36b8b9a09e991ec9202a11422b0d46",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "the-jawaharlal-institute-of-post-graduate-medical-education__rule-b5b6d8b439",
+          "key": "appendix:_/section:10",
+          "citation": "The Jawaharlal Institute of Post Graduate Medical Education and Research, Puducherry Rules, 2008, r. 10",
+          "unit_path": [
+            {
+              "unit_type": "appendix",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 44256,
+          "char_end": 44893,
+          "page_start": 17,
+          "page_end": 18,
+          "text_sha256": "20257b899e505d295428468add3d11018c36b8b9a09e991ec9202a11422b0d46",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Not until after one year, unless the President or Government certifies it needs further consideration.",
+  "required_facts": [
+    [
+      "one year"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "jawaharlal-institute-of-post-graduate-medical-education-and__regulation-12b783d035",
+      "key": "appendix:_/section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 637,
+    "number_ambiguity": 6559,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 312,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#312"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0025",
+  "question": "In Tamil Nadu's rules on safety officers, does the title cover a chief of that cadre, and whose recognition makes a degree valid?",
+  "category": "definitional",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-tamil-nadu-safety-officers-duties-qualification-conditio__rule-85ebd78961",
+          "key": "section:2",
+          "citation": "The Tamil Nadu Safety Officers (Duties, Qualification & Conditions of Service) Rules,2005, r. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 883,
+          "char_end": 1402,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "0ef18101692b66d7e1df624d3cd3e131c5236581267167b934d1b0c3da7a8f23",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. 'Safety Officer' includes a Chief Safety Officer, and a degree is one awarded by a University recognised by the University Grants Commission.",
+  "required_facts": [
+    [
+      "Chief Safety Officer"
+    ],
+    [
+      "University Grants Commission"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-tamil-nadu-safety-officers-duties-qualification-conditio__rule-85ebd78961",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 519,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 525,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#525"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "question_id": "IN-STAT-0002",
+  "question": "When someone is held to prevent hoarding of essential supplies, which government is the relevant one if a state officer made the detention order?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "prevention-of-blackmarketing-and-maintenance-of-supplies-of__handle-1781",
+          "key": "section:2",
+          "citation": "Prevention of Blackmarketing and Maintenance of Supplies of Essential Commodities Act, 1980, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1651,
+          "char_end": 2252,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "b1cd7134642fe8b0481af0a8fc6634632616722fc21aa1e7c7584ea0cd27c5c1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "prevention-of-black-marketing-and-maintenance-of-supplies-of__handle-15394",
+          "key": "section:2",
+          "citation": "PREVENTION OF BLACK MARKETING AND MAINTENANCE OF SUPPLIES OF ESSENTIAL COMMODITIES ACT, 1980, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1651,
+          "char_end": 2252,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "b1cd7134642fe8b0481af0a8fc6634632616722fc21aa1e7c7584ea0cd27c5c1",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "prevention-of-blackmarketing-act-1980__handle-5744",
+          "key": "section:2",
+          "citation": "Prevention of Blackmarketing Act, 1980, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1684,
+          "char_end": 2285,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "b1cd7134642fe8b0481af0a8fc6634632616722fc21aa1e7c7584ea0cd27c5c1",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "prevention-of-blackmarketing-and-maintenance-of-supplies-of__handle-19348",
+          "key": "section:2",
+          "citation": "PREVENTION OF BLACKMARKETING AND MAINTENANCE OF SUPPLIES OF ESSENTIAL COMMODITIES ACT, 1980, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1684,
+          "char_end": 2285,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "b1cd7134642fe8b0481af0a8fc6634632616722fc21aa1e7c7584ea0cd27c5c1",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The State Government: for a detention order made by a State Government or its officer, or a person detained under such an order, the 'appropriate Government' is the State Government.",
+  "required_facts": [
+    [
+      "State Government"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prevention-of-blackmarketing-and-maintenance-of-supplies-of__handle-1781",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 601,
+    "number_ambiguity": 10555,
+    "title_collisions": 2,
+    "cluster_size": 4,
+    "equivalents": 3,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 10,
+    "tags": [
+      "definitional",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#10"
+  }
+}

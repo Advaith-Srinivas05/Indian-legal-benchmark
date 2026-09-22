@@ -1,0 +1,140 @@
+{
+  "question_id": "IN-STAT-0067",
+  "question": "How long does a woman or the respondent have to appeal a magistrate's order in a domestic violence case?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "protection-of-women-from-domestic-violence-act-2005__handle-2021",
+          "key": "chapter:IV/section:29",
+          "citation": "Protection of Women from Domestic Violence Act, 2005, s. 29",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "29"
+            }
+          ],
+          "char_start": 31702,
+          "char_end": 31934,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "cfbad284591440be7bbc281897ba07cc799509383bfa4eaba0acaff0d49e5be0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "domestic-voilence-act__handle-14741",
+          "key": "chapter:IV/section:29",
+          "citation": "Domestic Voilence act, s. 29",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "29"
+            }
+          ],
+          "char_start": 31672,
+          "char_end": 31904,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "cfbad284591440be7bbc281897ba07cc799509383bfa4eaba0acaff0d49e5be0",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "protection-of-women-from-domestic-violence-act-2005__handle-15436",
+          "key": "chapter:IV/section:29",
+          "citation": "PROTECTION OF WOMEN FROM DOMESTIC VIOLENCE ACT, 2005, s. 29",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "29"
+            }
+          ],
+          "char_start": 31639,
+          "char_end": 31871,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "cfbad284591440be7bbc281897ba07cc799509383bfa4eaba0acaff0d49e5be0",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "protection-of-women-from-domestic-violence__handle-5560",
+          "key": "chapter:IV/section:29",
+          "citation": "Protection of Women from Domestic Violence, s. 29",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "29"
+            }
+          ],
+          "char_start": 31672,
+          "char_end": 31904,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "cfbad284591440be7bbc281897ba07cc799509383bfa4eaba0acaff0d49e5be0",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Thirty days from the date the order is served, whichever service is later, with the appeal lying to the Court of Session.",
+  "required_facts": [
+    [
+      "thirty days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "protection-of-women-from-domestic-violence-act-2005__handle-2021",
+      "key": "chapter:IV/section:29"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 232,
+    "number_ambiguity": 2896,
+    "title_collisions": 8,
+    "cluster_size": 4,
+    "equivalents": 3,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 155,
+    "tags": [
+      "numeric",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#155"
+  }
+}

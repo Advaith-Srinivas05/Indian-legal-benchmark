@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0022",
+  "question": "For Uttar Pradesh's cooperative land-development banks, what minimum rank must an officer hold to be authorised to conduct sales?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-uttar-pradesh-sahkari-gram-vikas-bank-rules-1971__rule-079ff4b74b",
+          "key": "chapter:I/section:2",
+          "citation": "The Uttar Pradesh Sahkari Gram Vikas Bank Rules 1971, r. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 300,
+          "char_end": 1908,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "aec80a508e36d2674af7c2e69d22243919158e3d46518e03b6e4f12576371505",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Not below the rank of a Group II Inspector, authorised by the managing committee.",
+  "required_facts": [
+    [
+      "Group II Inspector"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-uttar-pradesh-sahkari-gram-vikas-bank-rules-1971__rule-079ff4b74b",
+      "key": "chapter:I/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1608,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 491,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#491"
+  }
+}

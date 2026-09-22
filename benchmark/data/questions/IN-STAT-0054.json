@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0054",
+  "question": "In Delhi, how long must a land lease be for flats in a multi-storey building on it to fall under the flat-owners' statute?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "delhi-apartment-ownership-act-1986__handle-1805",
+          "key": "chapter:I/section:2",
+          "citation": "Delhi Apartment Ownership Act, 1986, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 3057,
+          "char_end": 4108,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "28e0c2f18995767d2d80bce924245a5fd203efee2487ff866789ad9d8cc61b2c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The lease must be for a period of thirty years or more.",
+  "required_facts": [
+    [
+      "thirty years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "delhi-apartment-ownership-act-1986__handle-1805",
+      "key": "chapter:I/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1051,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 54,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#54"
+  }
+}

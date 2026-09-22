@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0049",
+  "question": "What fine can a passenger face for bringing offensive material onto a metro train?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "metro-railways-operation-and-maintenance-act-2002__handle-2008",
+          "key": "chapter:XI/section:60",
+          "citation": "Metro Railways (Operation and Maintenance) Act, 2002, s. 60",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "60"
+            }
+          ],
+          "char_start": 46597,
+          "char_end": 47215,
+          "page_start": 18,
+          "page_end": 18,
+          "text_sha256": "79f75482b1a94a3543d50bd0ed26e33f7bcfb2ac80e7cfbcf61a27938840bb22",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A penalty of up to two thousand and five hundred rupees, plus liability for any loss, injury or damage the material causes.",
+  "required_facts": [
+    [
+      "two thousand and five hundred rupees"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "metro-railways-operation-and-maintenance-act-2002__handle-2008",
+      "key": "chapter:XI/section:60"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 618,
+    "number_ambiguity": 1011,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 24,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#24"
+  }
+}

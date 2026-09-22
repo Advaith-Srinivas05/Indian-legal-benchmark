@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0082",
+  "question": "What is the longest ban a customs chief can impose on a clearing agent for neglecting duties at a port?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "customs-brokers-licensing-regulations-2018__regulation-daa33e367f",
+          "key": "section:15",
+          "citation": "Customs Brokers Licensing Regulations, 2018., reg. 15",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "15"
+            }
+          ],
+          "char_start": 33451,
+          "char_end": 34292,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "80ddc4150fcdcb9311173ac870309b650c02be87c45550c55240d11d704523ef",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The prohibition may not exceed one month from the date it is imposed.",
+  "required_facts": [
+    [
+      "one month"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "customs-brokers-licensing-regulations-2018__regulation-daa33e367f",
+      "key": "section:15"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 841,
+    "number_ambiguity": 5227,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 372,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#372"
+  }
+}

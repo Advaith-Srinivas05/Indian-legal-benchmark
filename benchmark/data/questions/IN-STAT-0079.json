@@ -1,0 +1,98 @@
+{
+  "question_id": "IN-STAT-0079",
+  "question": "How early must a food-safety auditing agency apply to renew its recognition, and what is the fee?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "food-safety-and-standards-food-safety-auditing-regulation-20__regulation-25656a2ae4",
+          "key": "part:III/section:6",
+          "citation": "Food Safety and Standards (Food Safety Auditing) Regulation, 2018, reg. 6",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 9463,
+          "char_end": 10357,
+          "page_start": 13,
+          "page_end": 13,
+          "text_sha256": "3d423b385151fbd72e1cd137b47da27b3ef43d3a0c3e653e387c775cae13327c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "the-food-safety-and-standards-food-safety-and-auditing-regul__regulation-e0135d6db4",
+          "key": "part:III/section:6",
+          "citation": "The Food Safety and Standards (Food Safety and Auditing) Regulations, 2018, reg. 6",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 9463,
+          "char_end": 10357,
+          "page_start": 13,
+          "page_end": 13,
+          "text_sha256": "3d423b385151fbd72e1cd137b47da27b3ef43d3a0c3e653e387c775cae13327c",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Not later than sixty days before expiry, with a renewal fee of rupees five thousand.",
+  "required_facts": [
+    [
+      "sixty days"
+    ],
+    [
+      "five thousands"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "food-safety-and-standards-food-safety-auditing-regulation-20__regulation-25656a2ae4",
+      "key": "part:III/section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 894,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 349,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#349"
+  }
+}

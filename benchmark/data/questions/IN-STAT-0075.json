@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0075",
+  "question": "In Himachal Pradesh, how long does a consumer have to appeal an electricity-theft assessment, and how much must be deposited first?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-himachal-pradesh-electricity-regulatory-commission-proce__regulation-fd313cc45c",
+          "key": "section:3",
+          "citation": "The Himachal  Pradesh Electricity Regulatory Commission (Procedure for filing Appeal before the  Appellate Authority) Regulations, 2005, reg. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 2284,
+          "char_end": 3280,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "bdf7e41a49c8fcde8aab199b14ae86ffd8de0bb13a36cece42e2b1b82204e63a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Within 30 days of the order, after depositing half of the assessed amount with the licensee.",
+  "required_facts": [
+    [
+      "30 days"
+    ],
+    [
+      "half"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-himachal-pradesh-electricity-regulatory-commission-proce__regulation-fd313cc45c",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 996,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 327,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#327"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "question_id": "IN-STAT-0001",
+  "question": "For the law on controlling infectious diseases in animals, do bees and poultry count as animals, and which other species are listed alongside cattle?",
+  "category": "definitional",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "prevention-and-control-of-infectious-and-contagious-diseases__handle-21045",
+          "key": "chapter:I/section:2",
+          "citation": "Prevention and Control of Infectious and Contagious Diseases in Animals Act, 2009, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 5479,
+          "char_end": 8001,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "d3f26f6eb051654a375022ba2cb5c430116dadbabc2f5b839a124a82d464ce0e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "prevention-and-control-of-infectious-and-contagious-diseases__handle-18662",
+          "key": "chapter:I/section:2",
+          "citation": "prevention and control of infectious and contagious diseases in animals act, 2009, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 5477,
+          "char_end": 8119,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "38cbd2b6efb0eb80183188fc3e7ad661e1425a70b9a84a341a768aa346fd41ed",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "prevention-and-control-of-infectious-and-contagious-diseases__handle-2101",
+          "key": "chapter:I/section:2",
+          "citation": "Prevention and Control of Infectious and Contagious Diseases in Animals Act, 2009, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 6373,
+          "char_end": 10700,
+          "page_start": 5,
+          "page_end": 7,
+          "text_sha256": "93eb81ac42cc3f478c1671a839b7635d65e71cdc09474d96a9e0afd51acdd66b",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "prevention-and-control-of-infectious-and-contagious-diseases__handle-4228",
+          "key": "chapter:I/section:2",
+          "citation": "PREVENTION AND CONTROL OF INFECTIOUS AND CONTAGIOUS DISEASES IN ANIMALS ACT, 2009, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 5477,
+          "char_end": 5891,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "89b5ab37c03776f5238d7519e7055f62f2aa43efe6331d365c15807bb7069d2e",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. 'Animal' covers cattle, buffalo, sheep, goat, yak and mithun; dog, cat, pig, horse, camel, ass, mule, poultry and bees; and any other animal or bird the Central Government notifies.",
+  "required_facts": [
+    [
+      "poultry"
+    ],
+    [
+      "bees"
+    ],
+    [
+      "mithun"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prevention-and-control-of-infectious-and-contagious-diseases__handle-21045",
+      "key": "chapter:I/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2522,
+    "number_ambiguity": 10555,
+    "title_collisions": 8,
+    "cluster_size": 4,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 0,
+    "tags": [
+      "definitional",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#0",
+    "alternatives_decided": [
+      {
+        "document_id": "prevention-and-control-of-infectious-and-contagious-diseases__handle-18662",
+        "key": "chapter:I/section:2",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "prevention-and-control-of-infectious-and-contagious-diseases__handle-2101",
+        "key": "chapter:I/section:2",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "prevention-and-control-of-infectious-and-contagious-diseases__handle-4228",
+        "key": "chapter:I/section:2",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

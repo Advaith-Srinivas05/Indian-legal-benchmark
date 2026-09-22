@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0047",
+  "question": "If an airman commits an offence and then leaves the service, how soon after leaving must his trial begin?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "air-force-act-1950__handle-1819",
+          "key": "chapter:X/section:122",
+          "citation": "Air Force Act, 1950, s. 122",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "X"
+            },
+            {
+              "unit_type": "section",
+              "number": "122"
+            }
+          ],
+          "char_start": 99981,
+          "char_end": 101376,
+          "page_start": 39,
+          "page_end": 39,
+          "text_sha256": "04d1a43ecda38a283cdd3eb4eec2fc36def717cc537ea24bc80f83551ae1eecd",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Within six months after he ceased to be subject to the Act, except for desertion, fraudulent enrolment and certain listed offences.",
+  "required_facts": [
+    [
+      "six months"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "air-force-act-1950__handle-1819",
+      "key": "chapter:X/section:122"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1395,
+    "number_ambiguity": 294,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 19,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#19"
+  }
+}

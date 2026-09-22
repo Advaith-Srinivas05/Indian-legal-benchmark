@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0071",
+  "question": "After two back-to-back terms on the pension regulator's advisory committee, how long must a member wait before being renominated?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "pension-fund-regulatory-and-development-authority-pension-ad__regulation-6f67e3ae19",
+          "key": "part:III/section:5",
+          "citation": "Pension Fund Regulatory and Development Authority (Pension Advisory Committee Meetings) Regulations, 2015, reg. 5",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 7095,
+          "char_end": 7781,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "019b5f9c16d9a5aa64f4950ba0fd8e52a0f0f3d2c9d05254fe613901e28e7fad",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Two years from the date they ceased to be a member.",
+  "required_facts": [
+    [
+      "two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "pension-fund-regulatory-and-development-authority-pension-ad__regulation-6f67e3ae19",
+      "key": "part:III/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 686,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 306,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#306"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "question_id": "IN-STAT-0010",
+  "question": "Which family members of someone harmed by caste-based atrocities are treated as depending on them?",
+  "category": "definitional",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "scheduled-castes-and-the-scheduled-tribes-prevention-of-atro__handle-15338",
+          "key": "chapter:I/section:2",
+          "citation": "SCHEDULED CASTES AND THE SCHEDULED TRIBES (PREVENTION OF ATROCITIES) ACT, 1989, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 2627,
+          "char_end": 6547,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "819c42abb47f45968ee271ac58348f21a8b5cd2f98e9fd450b0663f31fea5ce1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "scheduled-castes-and-the-scheduled-tribes-prevention-of-atro__handle-17492",
+          "key": "chapter:I/section:2",
+          "citation": "Scheduled Castes and the Scheduled Tribes (Prevention of Atrocities) Act, 1989, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 2627,
+          "char_end": 6547,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "819c42abb47f45968ee271ac58348f21a8b5cd2f98e9fd450b0663f31fea5ce1",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "scheduled-castes-and-the-scheduled-tribes-prevention-of-atro__handle-1920",
+          "key": "chapter:I/section:2",
+          "citation": "Scheduled Castes and the Scheduled Tribes (Prevention of Atrocities) Act, 1989, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 3574,
+          "char_end": 7518,
+          "page_start": 5,
+          "page_end": 6,
+          "text_sha256": "85d6e4cc29b4d849c58b0039ccb301e0194e5435e6dcaf6d37eb07c30c8ea883",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "scheduled-castes-and-the-scheduled-tribes-prevention-of-atro__handle-8860",
+          "key": "chapter:I/section:2",
+          "citation": "SCHEDULED CASTES AND THE SCHEDULED TRIBES (PREVENTION OF ATROCITIES) ACT, 1989, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 2667,
+          "char_end": 6587,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "fb30de3cb71c7ccb1ed922a733d23f905f784385142d34959926b4dd68041699",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The victim's spouse, children, parents, brother and sister who are wholly or mainly dependent on the victim for support and maintenance.",
+  "required_facts": [
+    [
+      "spouse"
+    ],
+    [
+      "brother and sister"
+    ],
+    [
+      "wholly or mainly"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "scheduled-castes-and-the-scheduled-tribes-prevention-of-atro__handle-15338",
+      "key": "chapter:I/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3920,
+    "number_ambiguity": 10555,
+    "title_collisions": 6,
+    "cluster_size": 4,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 247,
+    "tags": [
+      "definitional",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#247",
+    "alternatives_decided": [
+      {
+        "document_id": "scheduled-castes-and-the-scheduled-tribes-prevention-of-atro__handle-1920",
+        "key": "chapter:I/section:2",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "scheduled-castes-and-the-scheduled-tribes-prevention-of-atro__handle-8860",
+        "key": "chapter:I/section:2",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

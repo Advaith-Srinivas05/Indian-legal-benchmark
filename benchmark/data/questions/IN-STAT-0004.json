@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0004",
+  "question": "Up to what age is a Hindu child treated as a minor when deciding questions of guardianship?",
+  "category": "definitional",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "hindu-minority-and-guardianship-act-1956__handle-1649",
+          "key": "section:4",
+          "citation": "Hindu Minority and Guardianship Act, 1956, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 3365,
+          "char_end": 3942,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "524b71013273bc8f456f7c7fefa79e78592ad2d0387d87c3abda8306f07c8ba0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A minor is a person who has not completed the age of eighteen years.",
+  "required_facts": [
+    [
+      "eighteen years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "hindu-minority-and-guardianship-act-1956__handle-1649",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 577,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 106,
+    "tags": [
+      "definitional",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#106"
+  }
+}

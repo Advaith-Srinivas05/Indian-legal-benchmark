@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0070",
+  "question": "At the central university set up in 1974 in the Deccan, what terms did its first vice-chancellor and first registrar serve?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "university-of-hyderabad-act-1974__handle-1615",
+          "key": "section:41",
+          "citation": "University of Hyderabad Act, 1974, s. 41",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "41"
+            }
+          ],
+          "char_start": 33836,
+          "char_end": 35285,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "073488676f4a739f072a0005cc00e10fe4ae9f4e55956ad5e47469d225076c30",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The first Chancellor and Vice-Chancellor held office for five years; the first Registrar and Finance Officer for three years.",
+  "required_facts": [
+    [
+      "five years"
+    ],
+    [
+      "three years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "university-of-hyderabad-act-1974__handle-1615",
+      "key": "section:41"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1449,
+    "number_ambiguity": 1817,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 289,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#289"
+  }
+}

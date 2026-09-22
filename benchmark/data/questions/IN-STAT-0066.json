@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0066",
+  "question": "If a court asks whether a serving soldier's case should be postponed and gets no certificate, how long does it wait before proceeding?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "indian-soldiers-litigation-act-1925__handle-2381",
+          "key": "section:8",
+          "citation": "Indian Soldiers (Litigation) Act, 1925, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 7214,
+          "char_end": 7756,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "8606b2979314f8080120bb108e0924bb114c2d93d79236d26fd4c6d8bab74972",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Two months where the soldier lives in the court's district, and three months otherwise, from the date of the notice.",
+  "required_facts": [
+    [
+      "two months"
+    ],
+    [
+      "three months"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-soldiers-litigation-act-1925__handle-2381",
+      "key": "section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 542,
+    "number_ambiguity": 6826,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 141,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#141"
+  }
+}

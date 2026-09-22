@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0085",
+  "question": "How long did existing private warehouses have to meet the new requirements after the 2016 regulations started?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "private-warehouse-licensing-regulations-2016-notification-no__regulation-a66bf3883a",
+          "key": "section:9",
+          "citation": "Private Warehouse Licensing Regulations, 2016. Notification No. 71 /2016- Customs (N.T.) dated 14th May, 2016, reg. 9",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "9"
+            }
+          ],
+          "char_start": 6107,
+          "char_end": 6584,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "db40158f181537bc01a67842cba2896f181694bb83e8560f64ef5f40a6eeccef",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Three months from the commencement of the regulations.",
+  "required_facts": [
+    [
+      "three months"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "private-warehouse-licensing-regulations-2016-notification-no__regulation-a66bf3883a",
+      "key": "section:9"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 477,
+    "number_ambiguity": 6389,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 394,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#394"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0053",
+  "question": "When Mizoram became a state, how long could All India Service officers remain on deputation there?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "state-of-mizoram-act-1986__handle-1869",
+          "key": "part:VII/section:32",
+          "citation": "State of Mizoram Act, 1986, s. 32",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "VII"
+            },
+            {
+              "unit_type": "section",
+              "number": "32"
+            }
+          ],
+          "char_start": 23959,
+          "char_end": 24836,
+          "page_start": 9,
+          "page_end": 9,
+          "text_sha256": "502cdf31a5a786f4e2741f03a4773ec7927ebc2db011df93f201d6f721103117",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The deemed deputation could in no case extend beyond three years from the appointed day.",
+  "required_facts": [
+    [
+      "three years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "state-of-mizoram-act-1986__handle-1869",
+      "key": "part:VII/section:32"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 877,
+    "number_ambiguity": 2639,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 38,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#38"
+  }
+}

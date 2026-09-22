@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0032",
+  "question": "In Rajasthan's law against cheating in public exams, does using a wireless gadget count as unfair means, and how far does an exam centre extend?",
+  "category": "definitional",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "rajasthan-public-examination-prevention-of-unfairmeans-act-1__handle-18813",
+          "key": "section:2",
+          "citation": "rajasthan public examination (prevention of unfairmeans) act, 1992, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 696,
+          "char_end": 1444,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "182248bc940e3243c8cb00d1fc8c49edef989622a1fbeaa4977a07d9b3b7632d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. Unfair means include using any unauthorised telephonic, wireless, electronic or other gadget, and an examination centre includes the entire premises attached to the place fixed for the examination.",
+  "required_facts": [
+    [
+      "wireless"
+    ],
+    [
+      "entire premises"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "rajasthan-public-examination-prevention-of-unfairmeans-act-1__handle-18813",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 748,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 720,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#720"
+  }
+}

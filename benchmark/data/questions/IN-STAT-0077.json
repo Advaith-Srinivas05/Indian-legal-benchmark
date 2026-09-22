@@ -1,0 +1,77 @@
+{
+  "question_id": "IN-STAT-0077",
+  "question": "How long must a TV distributor keep records of subscribers' requests to change their channels?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "telecommunication-broadcasting-and-cable-services-standards__regulation-fd0563d3bf",
+          "key": "part:III/chapter:III/section:5",
+          "citation": "Telecommunication (Broadcasting and Cable) Services Standards of Quality of Service and Consumer Protection (Addressable Systems) Regulations, 2017., reg. 5",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 17942,
+          "char_end": 18710,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "9f1388c887132c0c1673e84794b10fc135dc4eab515a3bdeb1255bc94b2f5b10",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "For a minimum period of three months from receipt of the request, longer if there is a complaint or dispute.",
+  "required_facts": [
+    [
+      "three months"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "telecommunication-broadcasting-and-cable-services-standards__regulation-fd0563d3bf",
+      "key": "part:III/chapter:III/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 768,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 340,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#340"
+  }
+}

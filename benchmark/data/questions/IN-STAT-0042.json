@@ -1,0 +1,75 @@
+{
+  "question_id": "IN-STAT-0042",
+  "question": "Under Goa's irrigation law, how much daily water use makes someone a 'bulk user'?",
+  "category": "definitional",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-irrigation-act-1973__handle-22186",
+          "key": "part:I/section:2",
+          "citation": "Goa Irrigation Act, 1973, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1246,
+          "char_end": 6166,
+          "page_start": 1,
+          "page_end": 3,
+          "text_sha256": "cb0649170963fb9cf0ac844806a91723bd6b4d2585cb0a3dfb3d3a410471be34",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Consumption of water exceeding 3000 cubic meters per day.",
+  "required_facts": [
+    [
+      "3000 cubic meters per day"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-irrigation-act-1973__handle-22186",
+      "key": "part:I/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 4920,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 957,
+    "tags": [
+      "definitional",
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#957"
+  }
+}

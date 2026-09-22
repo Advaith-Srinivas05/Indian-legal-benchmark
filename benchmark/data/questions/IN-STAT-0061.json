@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0061",
+  "question": "Within how long must an existing bank join a credit bureau once the credit-information law begins?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "credit-information-companies-regulation-act-2005__handle-2057",
+          "key": "chapter:V/section:15",
+          "citation": "Credit Information Companies (Regulation) Act, 2005., s. 15",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "15"
+            }
+          ],
+          "char_start": 30206,
+          "char_end": 32770,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "1a1ab1c18bd37d740423aed89d4878085f8526954a2ac001e4c769d99af0f033",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Before the expiry of three months from commencement, or any extended period the Reserve Bank allows.",
+  "required_facts": [
+    [
+      "three months"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "credit-information-companies-regulation-act-2005__handle-2057",
+      "key": "chapter:V/section:15"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2564,
+    "number_ambiguity": 5227,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 109,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#109"
+  }
+}

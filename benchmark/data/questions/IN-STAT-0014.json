@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0014",
+  "question": "Does a staged show streamed live on television fall within what the broadcast-advertising limits treat as programming?",
+  "category": "definitional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "standards-of-quality-of-service-duration-of-advertisements-i__regulation-a5e5d49e09",
+          "key": "chapter:I/section:2",
+          "citation": "Standards of Quality of Service (Duration of Advertisements in Television Channels) Regulations, 2012 (15 of 2012), reg. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1483,
+          "char_end": 3780,
+          "page_start": 2,
+          "page_end": 4,
+          "text_sha256": "b0faebab70f7782f3a4fc33ec224930986cead515a96cb16f745421bc031228a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. A programme means any television broadcast and includes any audio, visual or audio-visual live performance or presentation.",
+  "required_facts": [
+    [
+      "live performance"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "standards-of-quality-of-service-duration-of-advertisements-i__regulation-a5e5d49e09",
+      "key": "chapter:I/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2297,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 342,
+    "tags": [
+      "definitional",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#342"
+  }
+}

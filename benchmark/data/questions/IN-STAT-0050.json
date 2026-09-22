@@ -1,0 +1,117 @@
+{
+  "question_id": "IN-STAT-0050",
+  "question": "How long can someone be jailed for coaxing a married woman to leave her husband for an illicit relationship?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bharatiya-nyaya-sanhita-2023__handle-20062",
+          "key": "chapter:V/section:84",
+          "citation": "Bharatiya Nyaya Sanhita, 2023, s. 84",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "84"
+            }
+          ],
+          "char_start": 119261,
+          "char_end": 119718,
+          "page_start": 42,
+          "page_end": 42,
+          "text_sha256": "e4915fa71b09aa31fe7194e647b09b0a46f5e70bc432f16a9a235a61905e1456",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "indian-penal-code__handle-15289",
+          "key": "chapter:XX/section:498",
+          "citation": "INDIAN PENAL CODE, s. 498",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XX"
+            },
+            {
+              "unit_type": "section",
+              "number": "498"
+            }
+          ],
+          "char_start": 404108,
+          "char_end": 404707,
+          "page_start": 108,
+          "page_end": 108,
+          "text_sha256": "11020bdc3f0f9c641d43730e3741c1896d0c47ffe1f4b461dc4218c9b558f3b0",
+          "evidence_confidence": "high",
+          "source": "successor_or_predecessor"
+        },
+        {
+          "document_id": "indian-penal-code__handle-15290",
+          "key": "chapter:XX/section:498",
+          "citation": "INDIAN PENAL CODE, s. 498",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XX"
+            },
+            {
+              "unit_type": "section",
+              "number": "498"
+            }
+          ],
+          "char_start": 415368,
+          "char_end": 415966,
+          "page_start": 114,
+          "page_end": 114,
+          "text_sha256": "c0595d839596c32136b4710503d3e37b3d54a5a071f82df0aa79358ea1c987c0",
+          "evidence_confidence": "high",
+          "source": "successor_or_predecessor"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Imprisonment of either description for up to two years, or fine, or both.",
+  "required_facts": [
+    [
+      "two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bharatiya-nyaya-sanhita-2023__handle-20062",
+      "key": "chapter:V/section:84"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 457,
+    "number_ambiguity": 549,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 28,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#28"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0023",
+  "question": "In Karnataka's civil service rules, what does being appointed 'on probation' mean?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-karnataka-civil-services-probation-rules-1977__rule-4cca899bc5",
+          "key": "section:2",
+          "citation": "The Karnataka Civil Services (Probation) Rules, 1977., r. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 483,
+          "char_end": 671,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "4e3c280c2cd707c5dbd982790a2f9c5c6411bed8a64a65187d0cf549485a9326",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It means appointed on trial.",
+  "required_facts": [
+    [
+      "appointed on trial"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-karnataka-civil-services-probation-rules-1977__rule-4cca899bc5",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 188,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 503,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#503"
+  }
+}

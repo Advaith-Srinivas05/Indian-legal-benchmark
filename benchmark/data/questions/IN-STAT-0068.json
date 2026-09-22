@@ -1,0 +1,187 @@
+{
+  "question_id": "IN-STAT-0068",
+  "question": "What is the punishment for performing phooka on a cow to increase its milk?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "prevention-of-cruelty-to-animals-act-1960__handle-11237",
+          "key": "chapter:III/section:12",
+          "citation": "PREVENTION OF CRUELTY TO ANIMALS ACT, 1960, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 22669,
+          "char_end": 23297,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "ed4e54d85555b1b6c0fdde5e58f3254dfae12be889bab9f5ccd4f3b7a5dcddd5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "prevention-of-cruelty-to-animals-act-1960__handle-21046",
+          "key": "chapter:III/section:12",
+          "citation": "Prevention of Cruelty to Animals Act, 1960, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 22669,
+          "char_end": 23297,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "ed4e54d85555b1b6c0fdde5e58f3254dfae12be889bab9f5ccd4f3b7a5dcddd5",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "prevention-of-cruelty-to-animals-act-1960__handle-15397",
+          "key": "chapter:III/section:12",
+          "citation": "PREVENTION OF CRUELTY TO ANIMALS ACT, 1960, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 27495,
+          "char_end": 28123,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "e0405993187892ab4c353e3147f227b9f2627215eb62b2f1282bbc898b22d15d",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "prevention-of-cruelty-to-animals-act-1960__handle-1547",
+          "key": "chapter:III/section:12",
+          "citation": "Prevention of Cruelty to Animals Act, 1960, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 27495,
+          "char_end": 28123,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "e0405993187892ab4c353e3147f227b9f2627215eb62b2f1282bbc898b22d15d",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "prevention-of-cruelty-to-animals-act-1960__handle-16993",
+          "key": "chapter:III/section:12",
+          "citation": "PREVENTION OF CRUELTY TO ANIMALS ACT, 1960, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 27495,
+          "char_end": 28123,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "e0405993187892ab4c353e3147f227b9f2627215eb62b2f1282bbc898b22d15d",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A fine of up to one thousand rupees, or imprisonment of up to two years, or both, and the animal is forfeited to the Government.",
+  "required_facts": [
+    [
+      "one thousand rupees"
+    ],
+    [
+      "two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prevention-of-cruelty-to-animals-act-1960__handle-11237",
+      "key": "chapter:III/section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 628,
+    "number_ambiguity": 5903,
+    "title_collisions": 9,
+    "cluster_size": 5,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 156,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#156",
+    "alternatives_decided": [
+      {
+        "document_id": "prevention-of-cruelty-to-animals-act-1960__handle-15397",
+        "key": "chapter:III/section:12",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "prevention-of-cruelty-to-animals-act-1960__handle-1547",
+        "key": "chapter:III/section:12",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "prevention-of-cruelty-to-animals-act-1960__handle-16993",
+        "key": "chapter:III/section:12",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

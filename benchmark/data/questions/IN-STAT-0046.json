@@ -1,0 +1,137 @@
+{
+  "question_id": "IN-STAT-0046",
+  "question": "What is the maximum punishment for lying to the authority that licenses digital-signature issuers in order to get a licence?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "information-technology-act-2000__handle-1999",
+          "key": "chapter:XI/section:71",
+          "citation": "Information Technology Act, 2000, s. 71",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "71"
+            }
+          ],
+          "char_start": 90625,
+          "char_end": 91011,
+          "page_start": 28,
+          "page_end": 28,
+          "text_sha256": "46d145e42cba264155a1fba884f8f1434adef81f0759d45f8ee61e4d4081e9bf",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "information-technology-act-2000-central-act-21-of-2000__handle-13116",
+          "key": "chapter:XI/section:71",
+          "citation": "Information Technology Act, 2000 (Central Act 21 of 2000), s. 71",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "71"
+            }
+          ],
+          "char_start": 91692,
+          "char_end": 92078,
+          "page_start": 28,
+          "page_end": 28,
+          "text_sha256": "0e11fea45b9b35d86038e19fa7a5e788db8eacb51f93b43220c2d1e7e5636c67",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "information-technology-act-2000__handle-15411",
+          "key": "chapter:XI/section:71",
+          "citation": "INFORMATION TECHNOLOGY ACT, 2000, s. 71",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "71"
+            }
+          ],
+          "char_start": 91692,
+          "char_end": 92078,
+          "page_start": 28,
+          "page_end": 28,
+          "text_sha256": "0e11fea45b9b35d86038e19fa7a5e788db8eacb51f93b43220c2d1e7e5636c67",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Imprisonment for up to two years, or a fine of up to one lakh rupees, or both.",
+  "required_facts": [
+    [
+      "two years"
+    ],
+    [
+      "one lakh rupees"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "information-technology-act-2000__handle-1999",
+      "key": "chapter:XI/section:71"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 386,
+    "number_ambiguity": 718,
+    "title_collisions": 6,
+    "cluster_size": 3,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 14,
+    "tags": [
+      "numeric",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#14",
+    "alternatives_decided": [
+      {
+        "document_id": "information-technology-act-2000-central-act-21-of-2000__handle-13116",
+        "key": "chapter:XI/section:71",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "information-technology-act-2000__handle-15411",
+        "key": "chapter:XI/section:71",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

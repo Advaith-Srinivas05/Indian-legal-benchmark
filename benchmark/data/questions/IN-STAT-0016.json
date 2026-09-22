@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0016",
+  "question": "For the Bureau of Indian Standards' rules on its Director General's powers, are daily-wage workers counted as employees?",
+  "category": "definitional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "powers-and-duties-of-director-general-regulations-2018__regulation-5988d4efc3",
+          "key": "part:III/section:2",
+          "citation": "Powers and Duties of Director General Regulations 2018, reg. 2",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 2222,
+          "char_end": 2858,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "5d256d8e81646f3627bfb2a929c5e531f6dc6797ddbce912340f02bb98f2b641",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. 'Employee' covers officers and employees in the Bureau's whole-time service but not a person employed on daily wages.",
+  "required_facts": [
+    [
+      "daily wages"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "powers-and-duties-of-director-general-regulations-2018__regulation-5988d4efc3",
+      "key": "part:III/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 636,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 363,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#363"
+  }
+}

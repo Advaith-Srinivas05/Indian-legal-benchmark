@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0065",
+  "question": "Once someone buys land planted with cardamom, how quickly must they get it registered?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "spices-board-act-1986__handle-1872",
+          "key": "chapter:III/section:8",
+          "citation": "Spices Board Act, 1986, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 12735,
+          "char_end": 13421,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "971a84227ed8df323e31bc4acf3ab3f46ee9c0d0cb2dc6a01221b1e55cd588da",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Before the expiration of one month from first becoming owner, unless the State Government extends the time.",
+  "required_facts": [
+    [
+      "one month"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "spices-board-act-1986__handle-1872",
+      "key": "chapter:III/section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 686,
+    "number_ambiguity": 6826,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 132,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#132"
+  }
+}

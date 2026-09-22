@@ -1,0 +1,75 @@
+{
+  "question_id": "IN-STAT-0019",
+  "question": "Who counts as an 'investor' for the fund that protects investors under company law?",
+  "category": "definitional",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-investor-education-and-protection-fund-authority-appoint__rule-f6e43bad13",
+          "key": "section:2",
+          "citation": "The Investor Education and Protection Fund Authority (Appointment of Chairperson and Members, holding meetings and provision for offices and officers) Rules. 2016., r. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 910,
+          "char_end": 2339,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "ec151196984786218c09c2717e74f6dc28bc58bc747ff244ddcf7b7a9cd9a747",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A person who has committed money in shares, debentures, bonds or deposits under a scheme or plan of a company registered under the Companies Act, 2013.",
+  "required_facts": [
+    [
+      "shares"
+    ],
+    [
+      "debentures"
+    ],
+    [
+      "deposits"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-investor-education-and-protection-fund-authority-appoint__rule-f6e43bad13",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1429,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 447,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#447"
+  }
+}

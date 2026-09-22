@@ -1,0 +1,90 @@
+{
+  "question_id": "IN-STAT-0012",
+  "question": "If an importer's ledgers live only on a floppy, do auditors checking them on site treat that as part of their accounts?",
+  "category": "definitional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "on-site-post-clearance-audit-at-the-premises-of-importers-an__regulation-beeea7869d",
+          "key": "section:2",
+          "citation": "On-site Post Clearance Audit at the Premises of Importers and Exporters Regulations, 2011, reg. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 703,
+          "char_end": 1953,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "0ac271c1332be30ce01149ad1351f99322ba7561f5098f05fe17270eecdfbefe",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "on-site-post-clearance-audit-at-the-premises-of-importers-an__regulation-fa03f594fd",
+          "key": "section:2",
+          "citation": "On-site Post Clearance Audit at the Premises of Importers and Exporters Regulations, 2011, reg. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 703,
+          "char_end": 1953,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "0ac271c1332be30ce01149ad1351f99322ba7561f5098f05fe17270eecdfbefe",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. Books of account include data stored on a floppy, disc, tape or any other electro-magnetic data storage device.",
+  "required_facts": [
+    [
+      "floppy"
+    ],
+    [
+      "electro-magnetic data storage"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "on-site-post-clearance-audit-at-the-premises-of-importers-an__regulation-beeea7869d",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1250,
+    "number_ambiguity": 10555,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 336,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#336"
+  }
+}

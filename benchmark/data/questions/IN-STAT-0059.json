@@ -1,0 +1,87 @@
+{
+  "question_id": "IN-STAT-0059",
+  "question": "After the Bombay High Court's jurisdiction was extended to Goa, how long did the Centre have to adapt existing laws by order?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "high-court-at-bombay-extension-of-jurisdiction-to-goa-daman__handle-1783",
+          "key": "section:14",
+          "citation": "High Court at Bombay (Extension of Jurisdiction to Goa, Daman and Diu) Act, 1981, s. 14",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "14"
+            }
+          ],
+          "char_start": 8190,
+          "char_end": 8795,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "06e6d0f7c20153aefc6ff08642a77c7b1a3806fe55f52804518453b773e657bf",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "high-court-at-bombay-extension-of-jurisdiction-to-goa-daman__handle-10102",
+          "key": "section:14",
+          "citation": "HIGH COURT AT BOMBAY (EXTENSION OF JURISDICTION TO GOA, DAMAN AND DIU) ACT, 1981, s. 14",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "14"
+            }
+          ],
+          "char_start": 8190,
+          "char_end": 8795,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "06e6d0f7c20153aefc6ff08642a77c7b1a3806fe55f52804518453b773e657bf",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Two years from the appointed day.",
+  "required_facts": [
+    [
+      "two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "high-court-at-bombay-extension-of-jurisdiction-to-goa-daman__handle-1783",
+      "key": "section:14"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 605,
+    "number_ambiguity": 5435,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 93,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#93"
+  }
+}

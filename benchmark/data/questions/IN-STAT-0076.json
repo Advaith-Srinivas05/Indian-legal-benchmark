@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0076",
+  "question": "How long does an insurance broker have to respond once the regulator shares findings from an inspection?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "insurance-regulatory-and-development-authority-of-india-insu__regulation-01535071e6",
+          "key": "schedule:II/section:3",
+          "citation": "Insurance Regulatory and Development Authority of India (Insurance Brokers) Regulations, 2018, reg. 3",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 194932,
+          "char_end": 196104,
+          "page_start": 94,
+          "page_end": 94,
+          "text_sha256": "8cfc4634e89b4521bb54c07bc3715c64c24a6bc5e3a0656b8058fe4fe34f28a7",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Within 21 days from receiving the communication.",
+  "required_facts": [
+    [
+      "21 days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "insurance-regulatory-and-development-authority-of-india-insu__regulation-01535071e6",
+      "key": "schedule:II/section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1172,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 332,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#332"
+  }
+}

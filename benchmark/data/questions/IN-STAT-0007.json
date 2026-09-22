@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0007",
+  "question": "For the upper house created by statute for Tamil Nadu in 2010, where do you look for the meaning of words the statute itself leaves undefined?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "tamil-nadu-legislative-council-act-2010__handle-2015",
+          "key": "section:2",
+          "citation": "Tamil Nadu Legislative Council Act, 2010, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 727,
+          "char_end": 973,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "29a0a335b431b515c0d46854e2d2119696a9a37339112ebcc289897bd5b34956",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Words and expressions not defined there but defined in the Representation of the People Act, 1950 have the same meaning as in that Act.",
+  "required_facts": [
+    [
+      "Representation of the People Act, 1950"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "tamil-nadu-legislative-council-act-2010__handle-2015",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 246,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 198,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#198"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0078",
+  "question": "How far can a power purchaser in Himachal stray from its planned intake in a slot while the network runs at normal cycles?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-himachal-pradesh-electricity-regulatory-commission-devia__regulation-a0c01ffbba",
+          "key": "section:8",
+          "citation": "The Himachal  Pradesh Electricity Regulatory Commission (Deviation Settlement Mechanism and Related  Matters) Regulations, 2018, reg. 8",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 36479,
+          "char_end": 37909,
+          "page_start": 13,
+          "page_end": 13,
+          "text_sha256": "731531c60ee0147f9493c315b363e211a2d1469b88b643eec5b94135797a2f3a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Over-drawal or under-drawal may not exceed 12% of its scheduled drawal while grid frequency is 49.85 Hz and above but below 50.05 Hz.",
+  "required_facts": [
+    [
+      "12%"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-himachal-pradesh-electricity-regulatory-commission-devia__regulation-a0c01ffbba",
+      "key": "section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1430,
+    "number_ambiguity": 6826,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 343,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#343"
+  }
+}
