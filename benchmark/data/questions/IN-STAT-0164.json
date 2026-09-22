@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0164",
+  "question": "In Goa, may corneas be harvested from someone who has died when their passing may need a formal investigation?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Goa",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-authority-for-use-of-eyes-for-therapeutic-purposes-act-1__handle-22141",
+          "key": "section:4",
+          "citation": "Goa (Authority for Use of Eyes for Therapeutic Purposes) Act, 1980, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 3782,
+          "char_end": 6939,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "8bbeec3940ab13e35bb562c6ae891c57fc2eafd6870f35ea170b233a827acb61",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. No facilities or authority may be given for removing the eyes if there is reason to believe an inquest may be required.",
+  "required_facts": [
+    [
+      "inquest"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-authority-for-use-of-eyes-for-therapeutic-purposes-act-1__handle-22141",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3157,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 34,
+    "tags": [
+      "numeric",
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#34"
+  }
+}

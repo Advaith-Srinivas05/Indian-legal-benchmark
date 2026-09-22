@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0167",
+  "question": "In Goa, what fine can a veterinary inspector face for needlessly entering premises or seizing livestock?",
+  "category": "jurisdictional",
+  "answer_type": "numeric",
+  "jurisdiction_hint": "Goa",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-diseases-of-animals-act-1974__handle-21654",
+          "key": "part:II/section:30",
+          "citation": "Goa Diseases of Animals Act, 1974, s. 30",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "30"
+            }
+          ],
+          "char_start": 25474,
+          "char_end": 25996,
+          "page_start": 9,
+          "page_end": 9,
+          "text_sha256": "99ed0ab0bc5405d11b7b12c3b3f04932561474ccab9f96dd32a8ab1a12f187af",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A fine which may extend to five thousand rupees.",
+  "required_facts": [
+    [
+      "five thousand rupees"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-diseases-of-animals-act-1974__handle-21654",
+      "key": "part:II/section:30"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 522,
+    "number_ambiguity": 2821,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 45,
+    "tags": [
+      "numeric",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#45"
+  }
+}

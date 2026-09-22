@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0168",
+  "question": "In Goa, can an advocate speak for someone in a dispute heard by the taluka revenue officer?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Goa",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-mamlatdars-court-act-1966__handle-21645",
+          "key": "section:28",
+          "citation": "Goa Mamlatdars Court Act,1966., s. 28",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "28"
+            }
+          ],
+          "char_start": 33524,
+          "char_end": 34725,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "a8a41366574aba90160bf0b4f860461f1425a5e1cbc10ba1654020d1e89b49b6",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Ordinarily no pleader may appear, but the Mamlatdar may, in the interests of justice and for reasons recorded in writing, allow representation by a pleader at the party's own cost.",
+  "required_facts": [
+    [
+      "no pleader"
+    ],
+    [
+      "reasons to be recorded"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-mamlatdars-court-act-1966__handle-21645",
+      "key": "section:28"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1201,
+    "number_ambiguity": 2988,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 53,
+    "tags": [
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#53"
+  }
+}

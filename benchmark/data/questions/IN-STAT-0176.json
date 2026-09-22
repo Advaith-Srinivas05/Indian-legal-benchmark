@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0176",
+  "question": "In Ladakh, who receives the reward payable by law when a police officer makes an arrest?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Ladakh",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "police-act-1983__handle-16057",
+          "key": "section:39",
+          "citation": "Police Act, 1983, s. 39",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "39"
+            }
+          ],
+          "char_start": 31164,
+          "char_end": 31471,
+          "page_start": 16,
+          "page_end": 16,
+          "text_sha256": "6efed143a97b8861583e29e92f2ef6d1c850c0f702737335d5f0b7564b28357a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The reward for an arrest made by a police officer is paid to that officer; rewards for information laid by a police officer go to the State under the head 'Police'.",
+  "required_facts": [
+    [
+      "paid to such officer"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "police-act-1983__handle-16057",
+      "key": "section:39"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 307,
+    "number_ambiguity": 1941,
+    "title_collisions": 7,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 81,
+    "tags": [
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#81"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0174",
+  "question": "In Goa, which revenue official can throw out squatters from road land without a court case?",
+  "category": "jurisdictional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": "Goa",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-highways-act-1974__handle-22114",
+          "key": "chapter:IX/section:65",
+          "citation": "Goa Highways Act, 1974, s. 65",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IX"
+            },
+            {
+              "unit_type": "section",
+              "number": "65"
+            }
+          ],
+          "char_start": 67244,
+          "char_end": 68623,
+          "page_start": 22,
+          "page_end": 23,
+          "text_sha256": "2fe85a7feb6258cc90ec24c92b14a67dd44711257a868740bec3f535cc751723",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Collector, after serving a notice requiring the occupier to vacate.",
+  "required_facts": [
+    [
+      "Collector"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-highways-act-1974__handle-22114",
+      "key": "chapter:IX/section:65"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1379,
+    "number_ambiguity": 853,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 76,
+    "tags": [
+      "numeric",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#76"
+  }
+}

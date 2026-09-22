@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0169",
+  "question": "In Madhya Pradesh, what must a municipal council do to protect the public while it repairs a street?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Madhya Pradesh",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "madhya-pradesh-municipalities-act-1961__handle-3583",
+          "key": "chapter:IX/section:225",
+          "citation": "Madhya Pradesh Municipalities Act, 1961, s. 225",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IX"
+            },
+            {
+              "unit_type": "section",
+              "number": "225"
+            }
+          ],
+          "char_start": 288448,
+          "char_end": 289340,
+          "page_start": 88,
+          "page_end": 89,
+          "text_sha256": "90d7ba3d85f3eb589929ad490961b907fbdfec357d28ab25ba593bed3240a7b5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It must take proper precautions against accidents, shore up adjoining buildings, and put up bars, chains or posts to stop vehicles passing.",
+  "required_facts": [
+    [
+      "proper precaution"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "madhya-pradesh-municipalities-act-1961__handle-3583",
+      "key": "chapter:IX/section:225"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 892,
+    "number_ambiguity": 94,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 54,
+    "tags": [
+      "numeric",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#54"
+  }
+}

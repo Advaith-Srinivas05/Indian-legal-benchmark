@@ -1,0 +1,88 @@
+{
+  "question_id": "IN-STAT-0175",
+  "question": "In Chhattisgarh's labour relations law, which tribunals and officers can compel people to give evidence as a civil court would?",
+  "category": "jurisdictional",
+  "answer_type": "list",
+  "jurisdiction_hint": "Chhattisgarh",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "chhattisgarh-industrial-act-1960__handle-12745",
+          "key": "section:73",
+          "citation": "CHHATTISGARH INDUSTRIAL ACT 1960, s. 73",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "73"
+            }
+          ],
+          "char_start": 74178,
+          "char_end": 77407,
+          "page_start": 23,
+          "page_end": 24,
+          "text_sha256": "e7fc21ebfbd811f8176759eb838309ecd161e1c8e428ffec1e18aad759c974d9",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Registrar, the Labour Court, the Industrial Court, a Board and a Court of Enquiry.",
+  "required_facts": [
+    [
+      "Labour Court"
+    ],
+    [
+      "Industrial Court"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "chhattisgarh-industrial-act-1960__handle-12745",
+      "key": "section:73"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3229,
+    "number_ambiguity": 688,
+    "title_collisions": 1,
+    "cluster_size": 2,
+    "equivalents": 2,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 77,
+    "tags": [
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#77",
+    "alternatives_decided": [
+      {
+        "document_id": "chhattisgarh-industrial-relations-act-1960__handle-12747",
+        "key": "section:73",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "another state's law is the wrong answer to a jurisdictional question"
+      },
+      {
+        "document_id": "madhya-pradesh-industrial-relations-act-1960__handle-3601",
+        "key": "section:73",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "another state's law is the wrong answer to a jurisdictional question"
+      }
+    ]
+  }
+}

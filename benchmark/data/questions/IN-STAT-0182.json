@@ -1,0 +1,89 @@
+{
+  "question_id": "IN-STAT-0182",
+  "question": "In Madhya Pradesh, can a city council's property-tax assessment be disputed through any channel other than its own statute?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Madhya Pradesh",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "madhya-pradesh-municipal-corporation-act-1956__handle-3582",
+          "key": "part:III/section:189",
+          "citation": "MADHYA PRADESH MUNICIPAL CORPORATION ACT, 1956, s. 189",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "189"
+            }
+          ],
+          "char_start": 239065,
+          "char_end": 239649,
+          "page_start": 84,
+          "page_end": 84,
+          "text_sha256": "3ef256540f2a549e57ab10519f750c96a128f00ca2a968e4971b014d8e185485",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. No objection to a valuation or assessment, and no question of liability to tax, may be raised in any other manner or before any other authority than as provided in the Act.",
+  "required_facts": [
+    [
+      "any other authority"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "madhya-pradesh-municipal-corporation-act-1956__handle-3582",
+      "key": "part:III/section:189"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 584,
+    "number_ambiguity": 140,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 2,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 96,
+    "tags": [
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#96",
+    "alternatives_decided": [
+      {
+        "document_id": "chhattisgarh-municipal-corporation-act-1956__handle-12767",
+        "key": "part:III/section:189",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "another state's law is the wrong answer to a jurisdictional question"
+      },
+      {
+        "document_id": "chhattisgrah-municipal-coproration-act-1956__handle-21249",
+        "key": "part:III/section:189",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "another state's law is the wrong answer to a jurisdictional question"
+      }
+    ]
+  }
+}

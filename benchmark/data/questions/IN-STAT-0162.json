@@ -1,0 +1,77 @@
+{
+  "question_id": "IN-STAT-0162",
+  "question": "Under Uttar Pradesh's GST rules, when are costs a supplier pays on a client's behalf left out of the taxable value?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Uttar Pradesh",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "upgst-rules-2017-as-amended-upto-63rd-amendment-dated-27-02__rule-a130ffc259",
+          "key": "chapter:III/section:33",
+          "citation": "UPGST RULES 2017 AS AMENDED UPTO 63rd Amendment dated 27.02.2024, r. 33",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "33"
+            }
+          ],
+          "char_start": 116334,
+          "char_end": 120601,
+          "page_start": 60,
+          "page_end": 62,
+          "text_sha256": "485615881975cf3fd3a6bbb7705dfe8bd1ca2271e97b62621f18bc819f5ad892",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Expenditure incurred as a pure agent of the recipient is excluded from the value of supply if all the listed conditions are met, such as the supplier acting as the recipient's pure agent when paying the third party on authorisation.",
+  "required_facts": [
+    [
+      "pure agent"
+    ],
+    [
+      "excluded from the value of supply"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "upgst-rules-2017-as-amended-upto-63rd-amendment-dated-27-02__rule-a130ffc259",
+      "key": "chapter:III/section:33"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 4267,
+    "number_ambiguity": 2499,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 14,
+    "tags": [
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#14"
+  }
+}

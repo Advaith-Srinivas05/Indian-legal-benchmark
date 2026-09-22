@@ -1,0 +1,82 @@
+{
+  "question_id": "IN-STAT-0173",
+  "question": "In Goa, what must a shop or establishment keep its premises free from?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Goa",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-shops-and-establishments-act-1973__handle-22134",
+          "key": "chapter:V/section:20",
+          "citation": "Goa Shops and Establishments Act, 1973, s. 20",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "20"
+            }
+          ],
+          "char_start": 23865,
+          "char_end": 24091,
+          "page_start": 9,
+          "page_end": 9,
+          "text_sha256": "13d0afe6da8c4dff4d28915c71a663629d089d5570138c9afa62aaa71340d4fb",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The premises must be kept clean and free from effluvia arising from any drain or privy or other nuisance, and cleaned as prescribed.",
+  "required_facts": [
+    [
+      "effluvia"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-shops-and-establishments-act-1973__handle-22134",
+      "key": "chapter:V/section:20"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 226,
+    "number_ambiguity": 4221,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 1,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 70,
+    "tags": [
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#70",
+    "alternatives_decided": [
+      {
+        "document_id": "goa-daman-and-diu-shops-and-establishments-act-1973__handle-6812",
+        "key": "chapter:V/section:20",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "another state's law is the wrong answer to a jurisdictional question"
+      }
+    ]
+  }
+}

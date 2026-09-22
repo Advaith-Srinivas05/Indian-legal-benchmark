@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0161",
+  "question": "In Bihar, can goods seized for unpaid GST be auctioned on a Sunday?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Bihar",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bihar-goods-and-services-tax-rules-2017-updated-till-year-20__rule-237a40abd8",
+          "key": "chapter:XVI/section:149",
+          "citation": "Bihar Goods and Services Tax Rules 2017 updated till year 2024, r. 149",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XVI"
+            },
+            {
+              "unit_type": "section",
+              "number": "149"
+            }
+          ],
+          "char_start": 439761,
+          "char_end": 440184,
+          "page_start": 219,
+          "page_end": 220,
+          "text_sha256": "a63729c85cf907cee99cb5f331692b5267ff839657e8cad6be32f6277d88adea",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. No such sale may take place on a Sunday, a general holiday recognised by the Government, or a day notified as a holiday for that area.",
+  "required_facts": [
+    [
+      "Sunday"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bihar-goods-and-services-tax-rules-2017-updated-till-year-20__rule-237a40abd8",
+      "key": "chapter:XVI/section:149"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 423,
+    "number_ambiguity": 240,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 13,
+    "tags": [
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#13"
+  }
+}

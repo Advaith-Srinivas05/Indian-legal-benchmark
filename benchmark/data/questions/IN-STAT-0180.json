@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0180",
+  "question": "In Dadra and Nagar Haveli and Daman and Diu, who calls repeat criminals to appear when their official list is compiled?",
+  "category": "jurisdictional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": "Dadra and Nagar Haveli and Daman and Diu",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-daman-and-diu-habitual-offenders-act-1976__handle-10070",
+          "key": "chapter:II/section:4",
+          "citation": "Goa, Daman and Diu Habitual Offenders Act, 1976, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 6729,
+          "char_end": 7636,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "a9ed500c0b6541ec8e347682879c5fc32134dba7078c1a4b4ec13ad0240b63df",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The District Magistrate, or an officer authorised by him, by notice in the prescribed form.",
+  "required_facts": [
+    [
+      "District Magistrate"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-daman-and-diu-habitual-offenders-act-1976__handle-10070",
+      "key": "chapter:II/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 907,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 93,
+    "tags": [
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#93"
+  }
+}

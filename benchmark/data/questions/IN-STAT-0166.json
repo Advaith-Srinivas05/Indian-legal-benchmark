@@ -1,0 +1,76 @@
+{
+  "question_id": "IN-STAT-0166",
+  "question": "In Dadra and Nagar Haveli and Daman and Diu, what may be done to animals held at a quarantine station set up on a notified route?",
+  "category": "jurisdictional",
+  "answer_type": "list",
+  "jurisdiction_hint": "Dadra and Nagar Haveli and Daman and Diu",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-daman-and-diu-diseases-of-animals-act-1974__handle-6805",
+          "key": "part:II/section:7",
+          "citation": "Goa, Daman and Diu Diseases of Animals Act, 1974, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 10532,
+          "char_end": 11743,
+          "page_start": 6,
+          "page_end": 7,
+          "text_sha256": "7d74fdb3dde601c35983578c81e92376f560313c85ba4e42a28f5e08c82e7929",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "They may be vaccinated against a scheduled disease if the officer in charge thinks it necessary, and marked in the prescribed manner.",
+  "required_facts": [
+    [
+      "vaccinated"
+    ],
+    [
+      "marked"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-daman-and-diu-diseases-of-animals-act-1974__handle-6805",
+      "key": "part:II/section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1211,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 42,
+    "tags": [
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#42"
+  }
+}

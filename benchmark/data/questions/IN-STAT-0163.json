@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0163",
+  "question": "Which official heads the body that runs road traffic in the Rajasthan desert city of Bikaner?",
+  "category": "jurisdictional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": "Rajasthan",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bikaner-development-authority-act-2025__handle-21612",
+          "key": "section:13",
+          "citation": "Bikaner Development Authority Act, 2025, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 24802,
+          "char_end": 27617,
+          "page_start": 10,
+          "page_end": 11,
+          "text_sha256": "bdb26a1ab3622ad5396133d3a81807e9801113280d4eb5376e085065ff575117",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Bikaner Development Commissioner chairs the Bikaner Traffic Control Board.",
+  "required_facts": [
+    [
+      "Bikaner Development Commissioner"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bikaner-development-authority-act-2025__handle-21612",
+      "key": "section:13"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2815,
+    "number_ambiguity": 5702,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 18,
+    "tags": [
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#18"
+  }
+}

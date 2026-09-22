@@ -1,0 +1,96 @@
+{
+  "question_id": "IN-STAT-0165",
+  "question": "In Ladakh, how long does someone administering a dead person's estate have to lodge a full list of its assets and debts?",
+  "category": "jurisdictional",
+  "answer_type": "numeric",
+  "jurisdiction_hint": "Ladakh",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "probate-and-administration-act-1977__handle-16058",
+          "key": "chapter:VII/section:98",
+          "citation": "Probate and Administration Act, 1977, s. 98",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VII"
+            },
+            {
+              "unit_type": "section",
+              "number": "98"
+            }
+          ],
+          "char_start": 64751,
+          "char_end": 66082,
+          "page_start": 31,
+          "page_end": 32,
+          "text_sha256": "eec9c8f8f51a7818f60ef4d16897c15e36fb71d95d3d36ceef54644126f53c50",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "probate-and-administration-act-1977__handle-16318",
+          "key": "chapter:VII/section:98",
+          "citation": "Probate and Administration Act, 1977, s. 98",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VII"
+            },
+            {
+              "unit_type": "section",
+              "number": "98"
+            }
+          ],
+          "char_start": 64751,
+          "char_end": 66082,
+          "page_start": 31,
+          "page_end": 32,
+          "text_sha256": "eec9c8f8f51a7818f60ef4d16897c15e36fb71d95d3d36ceef54644126f53c50",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Within six months from the grant of probate or letters of administration, or any further time the Court allows.",
+  "required_facts": [
+    [
+      "six months"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "probate-and-administration-act-1977__handle-16058",
+      "key": "chapter:VII/section:98"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1331,
+    "number_ambiguity": 457,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 40,
+    "tags": [
+      "numeric",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#40"
+  }
+}

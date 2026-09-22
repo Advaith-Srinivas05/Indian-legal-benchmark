@@ -1,0 +1,85 @@
+{
+  "question_id": "IN-STAT-0177",
+  "question": "In Dadra and Nagar Haveli and Daman and Diu, who must report a damaged highway boundary mark, and to whom?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Dadra and Nagar Haveli and Daman and Diu",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-daman-and-diu-highways-act-1974__handle-10071",
+          "key": "chapter:IX/section:63",
+          "citation": "Goa, Daman and Diu Highways Act, 1974, s. 63",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IX"
+            },
+            {
+              "unit_type": "section",
+              "number": "63"
+            }
+          ],
+          "char_start": 69330,
+          "char_end": 69889,
+          "page_start": 27,
+          "page_end": 27,
+          "text_sha256": "2db5d11428a7b9eaa44a9ec632daf088ce9c8543edb06c3f7d53d0d98f95b6af",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Every village headman, accountant, watchman or other village official must forthwith inform the nearest police station or the nearest Highway Authority.",
+  "required_facts": [
+    [
+      "nearest police station"
+    ],
+    [
+      "village"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-daman-and-diu-highways-act-1974__handle-10071",
+      "key": "chapter:IX/section:63"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 559,
+    "number_ambiguity": 866,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 1,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 86,
+    "tags": [
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#86",
+    "alternatives_decided": [
+      {
+        "document_id": "goa-highways-act-1974__handle-22114",
+        "key": "chapter:IX/section:63",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "another state's law is the wrong answer to a jurisdictional question"
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "question_id": "IN-STAT-0181",
+  "question": "In Goa, what fine applies to ignoring a fire-safety precaution the government has notified?",
+  "category": "jurisdictional",
+  "answer_type": "numeric",
+  "jurisdiction_hint": "Goa",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-daman-and-diu-fire-force-act-1986__handle-11615",
+          "key": "chapter:IV/section:21",
+          "citation": "Goa, Daman and Diu Fire Force Act, 1986, s. 21",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "21"
+            }
+          ],
+          "char_start": 16151,
+          "char_end": 16467,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "f1efdcac022ba1b1f57e9896072feeebc34efe33664590fbff76cadfd9e2d2f1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "goa-daman-and-diu-fire-force-act-1986__handle-6807",
+          "key": "chapter:IV/section:21",
+          "citation": "Goa, Daman and Diu Fire Force Act, 1986, s. 21",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "21"
+            }
+          ],
+          "char_start": 18056,
+          "char_end": 18383,
+          "page_start": 9,
+          "page_end": 10,
+          "text_sha256": "ea38e4fb36198b77f44f5332145e6d539ad863c18769b868608368db826141da",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A fine which may extend to one thousand rupees.",
+  "required_facts": [
+    [
+      "one thousand rupees"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-daman-and-diu-fire-force-act-1986__handle-11615",
+      "key": "chapter:IV/section:21"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 316,
+    "number_ambiguity": 3993,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 94,
+    "tags": [
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#94",
+    "alternatives_decided": [
+      {
+        "document_id": "goa-daman-and-diu-fire-force-act-1986__handle-6807",
+        "key": "chapter:IV/section:21",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

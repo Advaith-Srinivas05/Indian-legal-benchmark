@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0172",
+  "question": "In Bihar, is it a crime under the state's indirect-tax law to issue a bill for a sale that never happened?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Bihar",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bihar-goods-and-services-tax-act-2017__handle-5007",
+          "key": "chapter:XIX/section:132",
+          "citation": "BIHAR GOODS AND SERVICES TAX ACT, 2017, s. 132",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XIX"
+            },
+            {
+              "unit_type": "section",
+              "number": "132"
+            }
+          ],
+          "char_start": 356694,
+          "char_end": 361471,
+          "page_start": 159,
+          "page_end": 161,
+          "text_sha256": "1e76c3672b74ba5fc3b0ca55f8d3abc82ba66eb370a38b102cb3b54ae290e17c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. Issuing an invoice or bill without supply of goods or services, in violation of the Act or rules, is among the offences punishable.",
+  "required_facts": [
+    [
+      "without supply of goods"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bihar-goods-and-services-tax-act-2017__handle-5007",
+      "key": "chapter:XIX/section:132"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 4777,
+    "number_ambiguity": 278,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260923-n100-has_parallel_law.json",
+    "sample_index": 68,
+    "tags": [
+      "numeric",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260923-n100-has_parallel_law.json#68"
+  }
+}
