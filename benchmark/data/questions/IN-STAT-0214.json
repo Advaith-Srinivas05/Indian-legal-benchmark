@@ -1,0 +1,140 @@
+{
+  "question_id": "IN-STAT-0214",
+  "question": "Under section 5 of the Child and Adolescent Labour (Prohibition and Regulation) Act, 1986, what does the Technical Advisory Committee advise on, and how many other members can it have?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "child-and-adolescent-labour-prohibition-and-regulation-act-1__handle-1848",
+          "key": "part:II/section:5",
+          "citation": "Child and Adolescent Labour (Prohibition and Regulation) Act, 1986, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 6577,
+          "char_end": 7835,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "270979e86d93ced00d803cdc27a810c073198943a25e30f0ae07e60e01b7aabe",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "child-and-adolescent-labour-prohibition-and-regulation-act-1__handle-12795",
+          "key": "part:II/section:5",
+          "citation": "CHILD AND ADOLESCENT LABOUR (PROHIBITION AND REGULATION) ACT, 1986, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 6343,
+          "char_end": 7601,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "ea52e6e4ef4e0b66477a4514513a62d121f859797f6914eb5abca6b61b3fd6a5",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "child-and-adolescent-labour-prohibition-and-regulation-act-1__handle-19582",
+          "key": "part:II/section:5",
+          "citation": "CHILD AND ADOLESCENT LABOUR (PROHIBITION AND REGULATION) ACT, 1986, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 6343,
+          "char_end": 7601,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "ea52e6e4ef4e0b66477a4514513a62d121f859797f6914eb5abca6b61b3fd6a5",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "child-and-adolescent-prohibition-and-regulation-act-1986__handle-20344",
+          "key": "part:II/section:5",
+          "citation": "CHILD AND ADOLESCENT (PROHIBITION AND REGULATION) ACT, 1986, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 6577,
+          "char_end": 7835,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "270979e86d93ced00d803cdc27a810c073198943a25e30f0ae07e60e01b7aabe",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It advises the Central Government on adding occupations and processes to the Schedule; it has a Chairman and not more than ten other members.",
+  "required_facts": [
+    [
+      "addition of occupations"
+    ],
+    [
+      "ten"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "child-and-adolescent-labour-prohibition-and-regulation-act-1__handle-1848",
+      "key": "part:II/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1258,
+    "number_ambiguity": 7842,
+    "title_collisions": 4,
+    "cluster_size": 4,
+    "equivalents": 3,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 40,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#40"
+  }
+}

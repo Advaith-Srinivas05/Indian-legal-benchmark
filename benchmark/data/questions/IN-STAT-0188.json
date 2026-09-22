@@ -1,0 +1,88 @@
+{
+  "question_id": "IN-STAT-0188",
+  "question": "What must the officer running a police station record in the station's daily register?",
+  "category": "situational",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "police-act-1861__handle-2264",
+          "key": "section:44",
+          "citation": "Police Act, 1861, s. 44",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "44"
+            }
+          ],
+          "char_start": 44625,
+          "char_end": 45234,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "4c2a2bbaa7758bee92b7a49b9c0db0bb59efa3d23b4d9b3ff89da2475ac1a763",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "police-act-1861__handle-20556",
+          "key": "section:44",
+          "citation": "Police Act, 1861, s. 44",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "44"
+            }
+          ],
+          "char_start": 44625,
+          "char_end": 45234,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "4c2a2bbaa7758bee92b7a49b9c0db0bb59efa3d23b4d9b3ff89da2475ac1a763",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "All complaints and charges, the names of persons arrested and of complainants, the offences charged, weapons or property taken from them, and the names of witnesses examined.",
+  "required_facts": [
+    [
+      "general diary"
+    ],
+    [
+      "names of all persons arrested"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "police-act-1861__handle-2264",
+      "key": "section:44"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 609,
+    "number_ambiguity": 1649,
+    "title_collisions": 7,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 22,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#22"
+  }
+}

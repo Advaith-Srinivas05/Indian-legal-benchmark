@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0198",
+  "question": "Can a person accused of seizing an aircraft easily get bail?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "anti-hijacking-act-2016__handle-2149",
+          "key": "chapter:III/section:12",
+          "citation": "Anti-Hijacking Act, 2016., s. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 15439,
+          "char_end": 16453,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "94527cf66dd72a97e3f383a0b3c3d94371c2a5c733241607c5d103e9d122bbc3",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. Bail requires that the Public Prosecutor has had an opportunity to oppose it and, if opposed, the Designated Court is satisfied there are reasonable grounds for believing the accused is not guilty.",
+  "required_facts": [
+    [
+      "Public Prosecutor"
+    ],
+    [
+      "reasonable grounds"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "anti-hijacking-act-2016__handle-2149",
+      "key": "chapter:III/section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1014,
+    "number_ambiguity": 5903,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 63,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#63"
+  }
+}

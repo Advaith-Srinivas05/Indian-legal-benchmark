@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0195",
+  "question": "Can the Centre wind up the national body promoting seafood exports, and what must it do first?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "marine-products-export-development-authority-act-1972__handle-1665",
+          "key": "chapter:II/section:10",
+          "citation": "Marine Products Export Development Authority Act, 1972, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 13028,
+          "char_end": 14248,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "7e364afda9ff003c2c5cda41759585c5fca24f5d85fcb09294966fc41f31abc7",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes, by notification with reasons it may direct the Authority's dissolution, but it must first give the Authority a reasonable opportunity to make representations and consider them.",
+  "required_facts": [
+    [
+      "reasonable opportunity"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "marine-products-export-development-authority-act-1972__handle-1665",
+      "key": "chapter:II/section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1220,
+    "number_ambiguity": 6559,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 48,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#48"
+  }
+}

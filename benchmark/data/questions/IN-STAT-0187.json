@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0187",
+  "question": "Under the old Bombay civil court system, where must a lawsuit to which the Government is a party be filed?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bombay-civil-courts-act-1869__handle-2291",
+          "key": "part:VI/section:32",
+          "citation": "Bombay Civil Courts Act, 1869, s. 32",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "32"
+            }
+          ],
+          "char_start": 16803,
+          "char_end": 21030,
+          "page_start": 6,
+          "page_end": 7,
+          "text_sha256": "93b542cf1ff66fffbfc452dd23f8196f11427680e862d8aa1bb042eed336f1ac",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Subordinate Judges and Small Cause Courts may not register it; the plaintiff is referred to the District Judge, in whose court alone the suit is instituted.",
+  "required_facts": [
+    [
+      "District Judge"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bombay-civil-courts-act-1869__handle-2291",
+      "key": "part:VI/section:32"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 4227,
+    "number_ambiguity": 2639,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 20,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#20"
+  }
+}

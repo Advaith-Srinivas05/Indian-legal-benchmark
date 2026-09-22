@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0203",
+  "question": "When the central bank was nationalised, who ran it until its new board was set up?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "reserve-bank-transfer-to-public-ownership-act-1948__handle-1408",
+          "key": "section:5",
+          "citation": "Reserve Bank (Transfer to Public Ownership) Act, 1948, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 3560,
+          "char_end": 4013,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "50a6697e2157aa5b84b7175def823a0fc7cdf094ecf2527047a807ba5a7844c5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Governor of the Bank, or a Deputy Governor he nominated, subject to Central Government conditions, could exercise all the Bank's powers.",
+  "required_facts": [
+    [
+      "Governor of the Bank"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "reserve-bank-transfer-to-public-ownership-act-1948__handle-1408",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 453,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 90,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#90"
+  }
+}

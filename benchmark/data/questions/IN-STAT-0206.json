@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0206",
+  "question": "Who must maintain pilots to guide ships safely on the Hooghly?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "calcutta-port-pilotage-act-1948__handle-1852",
+          "key": "section:3",
+          "citation": "Calcutta Port (Pilotage) Act, 1948, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 1797,
+          "char_end": 2146,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "eb29c44b96328dac3adc4ad23946b0659258019c3a11941fe000395353c2912b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Commissioners of the port must maintain a sufficient number of pilots for safe navigation in the Hooghly area.",
+  "required_facts": [
+    [
+      "Commissioners"
+    ],
+    [
+      "Hooghly"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "calcutta-port-pilotage-act-1948__handle-1852",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 349,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 104,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#104"
+  }
+}

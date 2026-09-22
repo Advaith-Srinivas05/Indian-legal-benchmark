@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0221",
+  "question": "Under section 30 of the Tribhuvan Sahkari University Act, 2025, what must every School have, and how many committees may it have?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "tribhuvan-sahkari-university-act-2025__handle-21049",
+          "key": "chapter:IV/section:30",
+          "citation": "\"Tribhuvan\" Sahkari University Act, 2025, s. 30",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "30"
+            }
+          ],
+          "char_start": 41289,
+          "char_end": 41926,
+          "page_start": 16,
+          "page_end": 16,
+          "text_sha256": "5b42700d948d646aabf259db49195f3eee577231f220dfe472c7450b6ce151d1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A Board of Co-operative Studies, with not more than five committees including three expert committees for degree, diploma and certificate streams.",
+  "required_facts": [
+    [
+      "Board of Co-operative Studies"
+    ],
+    [
+      "five"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "tribhuvan-sahkari-university-act-2025__handle-21049",
+      "key": "chapter:IV/section:30"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 637,
+    "number_ambiguity": 2821,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 80,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#80"
+  }
+}

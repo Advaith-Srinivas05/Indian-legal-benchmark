@@ -1,0 +1,75 @@
+{
+  "question_id": "IN-STAT-0200",
+  "question": "In nineteenth-century Awadh, where did a village watchman have to bring a person he had arrested?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "oudh-laws-act-1876__handle-19217",
+          "key": "part:III/chapter:IV/section:35",
+          "citation": "Oudh Laws Act, 1876, s. 35",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "35"
+            }
+          ],
+          "char_start": 23418,
+          "char_end": 23669,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "2e97d88fe649765b37950e7032ca8e30bc9b97a1ce6df61b0de817299fc5a942",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "As soon as possible to the police-station within whose jurisdiction his village or beat is situated.",
+  "required_facts": [
+    [
+      "police-station"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "oudh-laws-act-1876__handle-19217",
+      "key": "part:III/chapter:IV/section:35"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 251,
+    "number_ambiguity": 2321,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 82,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#82"
+  }
+}

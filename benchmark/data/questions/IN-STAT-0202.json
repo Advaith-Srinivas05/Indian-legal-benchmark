@@ -1,0 +1,93 @@
+{
+  "question_id": "IN-STAT-0202",
+  "question": "What happened to the obligations of workers trapped in debt bondage when that system was abolished?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bonded-labour-system-abolition-act-1976__handle-1491",
+          "key": "chapter:II/section:4",
+          "citation": "Bonded Labour System (Abolition) Act, 1976, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 7260,
+          "char_end": 7734,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "931105a408e129a267839578c0c2f7e887d4a7a21ae60c455eaf25579fea307d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "bonded-labour-system-abolition-act-1976__handle-20368",
+          "key": "chapter:II/section:4",
+          "citation": "BONDED LABOUR SYSTEM (ABOLITION) ACT, 1976, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 7260,
+          "char_end": 7734,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "931105a408e129a267839578c0c2f7e887d4a7a21ae60c455eaf25579fea307d",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The system stood abolished and every bonded labourer stood freed and discharged from any obligation to render bonded labour; no one may make advances under it or compel such labour.",
+  "required_facts": [
+    [
+      "freed and discharged"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bonded-labour-system-abolition-act-1976__handle-1491",
+      "key": "chapter:II/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 474,
+    "number_ambiguity": 8272,
+    "title_collisions": 6,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 89,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#89"
+  }
+}

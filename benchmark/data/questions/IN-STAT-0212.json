@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0212",
+  "question": "What does section 6 of the Sports Broadcasting Signals (Mandatory Sharing with Prasar Bharati) Act, 2007 validate?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "sports-broadcasting-signals-mandatory-sharing-with-prasarbha__handle-2076",
+          "key": "chapter:IV/section:6",
+          "citation": "Sports Broadcasting Signals (Mandatory Sharing with PrasarBharati) Act, 2007, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 10152,
+          "char_end": 11256,
+          "page_start": 4,
+          "page_end": 5,
+          "text_sha256": "0bd2ef48471324c413b189b102b7a8594805b74ff820f5dfa458262f17c37332",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The 2005 Downlinking and Uplinking Guidelines on mandatory sharing of sports broadcasting signals, deemed valid as if issued under the Act, notwithstanding any court order.",
+  "required_facts": [
+    [
+      "deemed to be valid"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "sports-broadcasting-signals-mandatory-sharing-with-prasarbha__handle-2076",
+      "key": "chapter:IV/section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1104,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 31,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#31"
+  }
+}

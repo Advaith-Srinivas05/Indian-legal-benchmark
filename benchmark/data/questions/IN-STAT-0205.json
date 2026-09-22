@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0205",
+  "question": "When Union territories moved to direct elections to the Lok Sabha, how was a territory's seat filled if it fell vacant before the old House was dissolved?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "union-territories-direct-election-to-the-house-of-the-people__handle-1571",
+          "key": "section:6",
+          "citation": "Union Territories (Direct Election to the House of the People) Act, 1965, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 1998,
+          "char_end": 2476,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "74312dbf8e7f0373df31a4b745cd16a46da9e5f98774965c01a81a992a37bb5b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "By a person nominated by the President, who represented the territory until the dissolution.",
+  "required_facts": [
+    [
+      "nominated by the President"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "union-territories-direct-election-to-the-house-of-the-people__handle-1571",
+      "key": "section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 478,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 101,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#101"
+  }
+}

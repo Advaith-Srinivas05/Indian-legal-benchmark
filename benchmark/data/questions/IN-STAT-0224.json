@@ -1,0 +1,93 @@
+{
+  "question_id": "IN-STAT-0224",
+  "question": "In an infringement suit by the registered proprietor of a collective mark under section 67 of the Trade Marks Act, 1999, whose losses must the court consider?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "trade-marks-act-1999__handle-1993",
+          "key": "chapter:VIII/section:67",
+          "citation": "Trade Marks Act, 1999, s. 67",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "67"
+            }
+          ],
+          "char_start": 111243,
+          "char_end": 111689,
+          "page_start": 34,
+          "page_end": 34,
+          "text_sha256": "fbc581029da9c5ee13e4e976173d8e93679d0c812661e1fb427f43a0f5923c0a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "trade-marks-act-1999__handle-15427",
+          "key": "chapter:VIII/section:67",
+          "citation": "TRADE MARKS ACT, 1999, s. 67",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "67"
+            }
+          ],
+          "char_start": 111456,
+          "char_end": 111902,
+          "page_start": 32,
+          "page_end": 32,
+          "text_sha256": "fbc581029da9c5ee13e4e976173d8e93679d0c812661e1fb427f43a0f5923c0a",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Losses suffered or likely to be suffered by authorised users, and the court may direct how far the proprietor holds any money remedy on their behalf.",
+  "required_facts": [
+    [
+      "authorised users"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "trade-marks-act-1999__handle-1993",
+      "key": "chapter:VIII/section:67"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 446,
+    "number_ambiguity": 834,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 98,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#98"
+  }
+}

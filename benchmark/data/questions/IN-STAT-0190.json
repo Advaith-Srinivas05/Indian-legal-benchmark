@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0190",
+  "question": "Who must issue guidelines on giving couples HIV information before they marry?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "human-immunodeficiency-virus-and-acquired-immune-deficiency__handle-2254",
+          "key": "chapter:XI/section:30",
+          "citation": "Human Immunodeficiency Virus and Acquired Immune Deficiency Syndrome (Prevention and Control) Act, 2017, s. 30",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "30"
+            }
+          ],
+          "char_start": 38072,
+          "char_end": 38323,
+          "page_start": 13,
+          "page_end": 13,
+          "text_sha256": "b20040bc7d6dfc50ce15430d52bef3abd6175d206828e2ad20ef657bdd227552",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Central Government must specify guidelines for HIV-related information, education and communication before marriage and ensure their wide dissemination.",
+  "required_facts": [
+    [
+      "Central Government"
+    ],
+    [
+      "before marriage"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "human-immunodeficiency-virus-and-acquired-immune-deficiency__handle-2254",
+      "key": "chapter:XI/section:30"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 251,
+    "number_ambiguity": 2821,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 25,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#25"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "question_id": "IN-STAT-0223",
+  "question": "Under section 28 of the Commissions for Protection of Child Rights Act, 2005, how is a State Commission funded?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "commissions-for-protection-of-child-rights-act-2005__handle-2056",
+          "key": "chapter:VI/section:28",
+          "citation": "Commissions for Protection of Child Rights Act, 2005, s. 28",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "28"
+            }
+          ],
+          "char_start": 25357,
+          "char_end": 25880,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "ef2e28681075050c83a9f7d569cdc339928c44915dacd0bcec46f7a588e5435d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "commissions-for-protection-of-child-rights-act-2005__handle-5616",
+          "key": "chapter:VI/section:28",
+          "citation": "COMMISSIONS FOR PROTECTION OF CHILD RIGHTS ACT, 2005, s. 28",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "28"
+            }
+          ],
+          "char_start": 25246,
+          "char_end": 25769,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "ef2e28681075050c83a9f7d569cdc339928c44915dacd0bcec46f7a588e5435d",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "commissions-for-protection-of-child-rights-act-2005__handle-8861",
+          "key": "chapter:VI/section:28",
+          "citation": "COMMISSIONS FOR PROTECTION OF CHILD RIGHTS ACT, 2005, s. 28",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "28"
+            }
+          ],
+          "char_start": 25246,
+          "char_end": 25769,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "ef2e28681075050c83a9f7d569cdc339928c44915dacd0bcec46f7a588e5435d",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "commissions-for-protection-of-child-rights-act-2005__handle-9314",
+          "key": "chapter:VI/section:28",
+          "citation": "COMMISSIONS FOR PROTECTION OF CHILD RIGHTS ACT, 2005, s. 28",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "28"
+            }
+          ],
+          "char_start": 25246,
+          "char_end": 25769,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "ef2e28681075050c83a9f7d569cdc339928c44915dacd0bcec46f7a588e5435d",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The State Government pays it grants after due appropriation by the Legislature, which it may spend on its functions.",
+  "required_facts": [
+    [
+      "grants"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "commissions-for-protection-of-child-rights-act-2005__handle-2056",
+      "key": "chapter:VI/section:28"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 523,
+    "number_ambiguity": 2988,
+    "title_collisions": 6,
+    "cluster_size": 4,
+    "equivalents": 3,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 94,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#94"
+  }
+}

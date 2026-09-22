@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0189",
+  "question": "After a court approves a debtor's arrangement with creditors outside the presidency towns, when can it declare the debtor bankrupt again?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "provincial-insolvency-act-1920__handle-19723",
+          "key": "schedule:_/section:40",
+          "citation": "Provincial Insolvency Act, 1920, s. 40",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "40"
+            }
+          ],
+          "char_start": 40770,
+          "char_end": 41550,
+          "page_start": 14,
+          "page_end": 14,
+          "text_sha256": "8676ff6ae9db8bbba3e3da15f769063d7f36adab633f2910111d79a75ecf9148",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "If an instalment under the composition or scheme is defaulted, if it cannot proceed without injustice or undue delay, or if approval was obtained by fraud, the Court may re-adjudge the debtor insolvent and annul it.",
+  "required_facts": [
+    [
+      "re-adjudge"
+    ],
+    [
+      "fraud"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "provincial-insolvency-act-1920__handle-19723",
+      "key": "schedule:_/section:40"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 780,
+    "number_ambiguity": 1883,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 23,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#23"
+  }
+}

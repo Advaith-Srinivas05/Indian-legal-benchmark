@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0196",
+  "question": "Do the ordinary time limits for legal proceedings apply to appeals before the tribunal hearing stock-exchange disputes?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "securities-contracts-regulation-act-1956__handle-1644",
+          "key": "schedule:_/section:22D",
+          "citation": "Securities Contracts (Regulation) Act, 1956, s. 22D",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "22D"
+            }
+          ],
+          "char_start": 63531,
+          "char_end": 63690,
+          "page_start": 22,
+          "page_end": 22,
+          "text_sha256": "866b861bb375bf2ca432e5f0e1037dae6a2490a3f9e242d79a90f25f1e11be6c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. The Limitation Act, 1963 applies, as far as may be, to appeals to a Securities Appellate Tribunal.",
+  "required_facts": [
+    [
+      "Limitation Act, 1963"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "securities-contracts-regulation-act-1956__handle-1644",
+      "key": "schedule:_/section:22D"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 159,
+    "number_ambiguity": 30,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 55,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#55"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0217",
+  "question": "Under section 32 of the National Institutes of Technology, Science Education and Research Act, 2007, what is the Council's general duty?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "national-institutes-of-technology-science-education-and-rese__handle-2083",
+          "key": "chapter:III/section:32",
+          "citation": "National Institutes of Technology, Science Education and Research Act, 2007, s. 32",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "32"
+            }
+          ],
+          "char_start": 34479,
+          "char_end": 35518,
+          "page_start": 13,
+          "page_end": 13,
+          "text_sha256": "fb7fc23c104b27fe4e1d0d6da91ed642af70bcd822c24a52191f37162c300731",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "To co-ordinate the activities of all the Institutes, including advising on courses, degrees, admission standards and policy on cadres.",
+  "required_facts": [
+    [
+      "co-ordinate the activities of all the Institutes"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "national-institutes-of-technology-science-education-and-rese__handle-2083",
+      "key": "chapter:III/section:32"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1039,
+    "number_ambiguity": 2639,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 58,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#58"
+  }
+}

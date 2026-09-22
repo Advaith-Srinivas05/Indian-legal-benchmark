@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0192",
+  "question": "When an official leaves a census form at a house or a factory, who must fill it in?",
+  "category": "situational",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "census-act-1948__handle-1519",
+          "key": "section:10",
+          "citation": "Census Act, 1948, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 16542,
+          "char_end": 17762,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "ddc1e6a0e852cef17d8bf1b9b23581a93801b080d244eb174a3c118f8862d4b7",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The occupiers of the house, or the manager or officer of the commercial or industrial establishment.",
+  "required_facts": [
+    [
+      "occupiers"
+    ],
+    [
+      "manager"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "census-act-1948__handle-1519",
+      "key": "section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1220,
+    "number_ambiguity": 6559,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 32,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#32"
+  }
+}

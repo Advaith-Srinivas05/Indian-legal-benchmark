@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0211",
+  "question": "Under section 10 of the Oudh Estates Act, 1869, who is to be considered a Taluqdar or Grantee?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "oudh-estates-act-1869__handle-19149",
+          "key": "section:10",
+          "citation": "Oudh Estates Act, 1869, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 11535,
+          "char_end": 12008,
+          "page_start": 5,
+          "page_end": 6,
+          "text_sha256": "705ebc3c4c4651ac357fdfba0a01022fe912108222b5ab9ad7f9c579762ecc27",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Only persons named in the original or supplementary lists, of which courts take judicial notice as conclusive evidence.",
+  "required_facts": [
+    [
+      "persons named"
+    ],
+    [
+      "conclusive evidence"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "oudh-estates-act-1869__handle-19149",
+      "key": "section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 473,
+    "number_ambiguity": 6559,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 16,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#16"
+  }
+}

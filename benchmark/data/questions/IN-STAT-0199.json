@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0199",
+  "question": "What can the presidency-town court for petty claims do if one of its process-servers squeezes money out of people?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "presidency-small-cause-courts-act-1882__handle-2371",
+          "key": "chapter:XI/section:80",
+          "citation": "Presidency Small Cause Courts Act, 1882, s. 80",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "80"
+            }
+          ],
+          "char_start": 70409,
+          "char_end": 70926,
+          "page_start": 26,
+          "page_end": 26,
+          "text_sha256": "2c8d01138427baa4a00276f6fdc70120bbce38e4b29c866edd2cafd2a4e5bc2d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Court may inquire into the charge and order repayment of the money extorted or levied, with damages and costs.",
+  "required_facts": [
+    [
+      "extortion"
+    ],
+    [
+      "repayment"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "presidency-small-cause-courts-act-1882__handle-2371",
+      "key": "chapter:XI/section:80"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 517,
+    "number_ambiguity": 627,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 79,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#79"
+  }
+}

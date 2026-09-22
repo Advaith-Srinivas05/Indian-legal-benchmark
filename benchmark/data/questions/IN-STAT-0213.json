@@ -1,0 +1,115 @@
+{
+  "question_id": "IN-STAT-0213",
+  "question": "Does section 2 of the Drugs and Cosmetics Act, 1940 displace the Dangerous Drugs Act, 1930?",
+  "category": "provision_lookup",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "drugs-and-cosmetics-act-1940__handle-2409",
+          "key": "chapter:I/section:2",
+          "citation": "Drugs and Cosmetics Act, 1940, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 6463,
+          "char_end": 6675,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "20e339fc4982743febfc89c6aff70aefda0e7fbaa32bc59f4458c0a0a8f26901",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "drugs-and-cosmetics-act-1940__handle-15278",
+          "key": "chapter:I/section:2",
+          "citation": "DRUGS AND COSMETICS ACT, 1940, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 6535,
+          "char_end": 6747,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "20e339fc4982743febfc89c6aff70aefda0e7fbaa32bc59f4458c0a0a8f26901",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "drugs-and-cosmetics-act-1940__handle-18562",
+          "key": "chapter:I/section:2",
+          "citation": "drugs and cosmetics act, 1940, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 6455,
+          "char_end": 6667,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "20e339fc4982743febfc89c6aff70aefda0e7fbaa32bc59f4458c0a0a8f26901",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. Its provisions are in addition to, and not in derogation of, the Dangerous Drugs Act, 1930 and other laws.",
+  "required_facts": [
+    [
+      "in addition to"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "drugs-and-cosmetics-act-1940__handle-2409",
+      "key": "chapter:I/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 212,
+    "number_ambiguity": 10555,
+    "title_collisions": 5,
+    "cluster_size": 3,
+    "equivalents": 2,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 33,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#33"
+  }
+}

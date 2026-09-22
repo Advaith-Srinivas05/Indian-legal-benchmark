@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0185",
+  "question": "If there is a dispute over whether someone was properly elected to a body of Tagore's university at Santiniketan, who settles it?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "visva-bharati-act-1951__handle-1652",
+          "key": "schedule:_/section:42",
+          "citation": "Visva-Bharati Act, 1951, s. 42",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "42"
+            }
+          ],
+          "char_start": 57241,
+          "char_end": 57573,
+          "page_start": 18,
+          "page_end": 18,
+          "text_sha256": "6174c1cc04fb9454363c6880727cc74e3b5b3f42213cdb04975d6c0d77d4b63b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The matter is referred to the Paridarsaka (Visitor), whose decision is final.",
+  "required_facts": [
+    [
+      "Paridarsaka"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "visva-bharati-act-1951__handle-1652",
+      "key": "schedule:_/section:42"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 332,
+    "number_ambiguity": 1765,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 12,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#12"
+  }
+}

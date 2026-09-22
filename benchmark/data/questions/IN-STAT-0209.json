@@ -1,0 +1,93 @@
+{
+  "question_id": "IN-STAT-0209",
+  "question": "Under section 71B of the Punjab Municipal Corporation Law (Extension to Chandigarh) Act, 1994, who appoints municipal officers and employees?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "punjab-municipal-corporation-law-extension-to-chandigarh-act__handle-1926",
+          "key": "part:II/section:71B",
+          "citation": "Punjab Municipal Corporation Law (Extension to Chandigarh) Act, 1994, s. 71B",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "71B"
+            }
+          ],
+          "char_start": 27683,
+          "char_end": 28174,
+          "page_start": 14,
+          "page_end": 14,
+          "text_sha256": "f45f6b96e3f56952cc3613a5390589c7de5e3205b01c6aeac9d42bd9c2c97c04",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "punjab-municipal-corporation-law-extension-to-chandigarh-act__handle-10540",
+          "key": "part:II/section:71B",
+          "citation": "PUNJAB MUNICIPAL CORPORATION LAW (EXTENSION TO CHANDIGARH) ACT, 1994, s. 71B",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "71B"
+            }
+          ],
+          "char_start": 26958,
+          "char_end": 27449,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "f45f6b96e3f56952cc3613a5390589c7de5e3205b01c6aeac9d42bd9c2c97c04",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Commissioner, subject to section 71, with the claims of Scheduled Castes and backward classes taken into consideration.",
+  "required_facts": [
+    [
+      "Commissioner"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "punjab-municipal-corporation-law-extension-to-chandigarh-act__handle-1926",
+      "key": "part:II/section:71B"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 491,
+    "number_ambiguity": 5,
+    "title_collisions": 3,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 6,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#6"
+  }
+}

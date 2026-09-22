@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0218",
+  "question": "Under section 24 of the Official Trustees Act, 1913, how does a claimant recover money transferred to the Government?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "official-trusteers-act-1913__handle-2352",
+          "key": "part:VI/section:24",
+          "citation": "Official Trusteers Act, 1913, s. 24",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "24"
+            }
+          ],
+          "char_start": 18700,
+          "char_end": 19620,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "e781c7e076b310e7fbc81d716f85f0c875b49b1cfa5dfa538883f20c03d81300",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "If the claim is established to the satisfaction of the prescribed authority, the Government pays the amount; otherwise the claimant may take other proceedings.",
+  "required_facts": [
+    [
+      "prescribed authority"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "official-trusteers-act-1913__handle-2352",
+      "key": "part:VI/section:24"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 920,
+    "number_ambiguity": 3431,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 60,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#60"
+  }
+}

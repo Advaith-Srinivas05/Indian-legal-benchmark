@@ -1,0 +1,96 @@
+{
+  "question_id": "IN-STAT-0204",
+  "question": "Which groups must India's unique identity authority take special steps to enrol?",
+  "category": "situational",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "aadhaar-targeted-delivery-of-financial-and-other-subsidies-b__handle-2160",
+          "key": "chapter:II/section:5",
+          "citation": "Aadhaar (Targeted Delivery of Financial and Other Subsidies, Benefits and Services) Act, 2016., s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 15660,
+          "char_end": 16072,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "d0ade974072391f503d960d627104c1f37eac549d9914367ae1c74b04565f5d3",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "aadhaar-targeted-delivery-of-financial-and-other-subsidies-b__handle-21418",
+          "key": "chapter:II/section:5",
+          "citation": "Aadhaar (Targeted Delivery of Financial and Other Subsidies, Benefits and Services) Act, 2016., s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 15656,
+          "char_end": 16068,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "d0ade974072391f503d960d627104c1f37eac549d9914367ae1c74b04565f5d3",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Women, children, senior citizens, persons with disability, unskilled and unorganised workers, nomadic tribes and people without a permanent dwelling, among others specified.",
+  "required_facts": [
+    [
+      "senior citizens"
+    ],
+    [
+      "nomadic tribes"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "aadhaar-targeted-delivery-of-financial-and-other-subsidies-b__handle-2160",
+      "key": "chapter:II/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 412,
+    "number_ambiguity": 7842,
+    "title_collisions": 3,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 99,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#99"
+  }
+}

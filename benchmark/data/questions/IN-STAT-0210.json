@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0210",
+  "question": "Under section 21 of the Faridabad Development Corporation Act, 1956, who decides the Corporation's provision for depreciation and reserve funds?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "faridabad-development-corporation-act-1956__handle-1729",
+          "key": "chapter:III/section:21",
+          "citation": "Faridabad Development Corporation Act, 1956, s. 21",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "21"
+            }
+          ],
+          "char_start": 13094,
+          "char_end": 13570,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "665520522109986f9ac6280bfc668af60875bfa5baba00824214b259e400e1d2",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Central Government directs the provision for depreciation and reserve and other funds, and their management.",
+  "required_facts": [
+    [
+      "Central Government"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "faridabad-development-corporation-act-1956__handle-1729",
+      "key": "chapter:III/section:21"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 476,
+    "number_ambiguity": 3993,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 9,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#9"
+  }
+}

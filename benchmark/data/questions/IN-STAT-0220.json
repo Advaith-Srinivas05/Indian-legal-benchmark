@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0220",
+  "question": "Who became members of the Institute of Actuaries under section 3 of the Actuaries Act, 2006?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "actuaries-act-2006__handle-2069",
+          "key": "chapter:II/section:3",
+          "citation": "Actuaries Act, 2006, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 7052,
+          "char_end": 7957,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "58a586364ae09eb1ab03a51c7bc0459ba7775a9710e0a5de31e06e1b82732095",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "All persons on the register of the Actuarial Society at commencement, and all later entered on the register, so long as their names remain on it.",
+  "required_facts": [
+    [
+      "Actuarial Society"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "actuaries-act-2006__handle-2069",
+      "key": "chapter:II/section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 905,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 78,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#78"
+  }
+}

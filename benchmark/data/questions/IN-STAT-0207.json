@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0207",
+  "question": "Who makes up a bench of the body that hears service complaints of soldiers, sailors and airmen?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "armed-forces-tribunal-act-2007__handle-2077",
+          "key": "chapter:II/section:5",
+          "citation": "Armed Forces Tribunal Act, 2007, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 7133,
+          "char_end": 8619,
+          "page_start": 4,
+          "page_end": 5,
+          "text_sha256": "979c4cb01393ff38ab16b6737dd007ff0549a012fe9c4a1a34b9a617ba41041f",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A bench consists of one Judicial Member and one Administrative Member.",
+  "required_facts": [
+    [
+      "one Judicial Member and one Administrative Member"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "armed-forces-tribunal-act-2007__handle-2077",
+      "key": "chapter:II/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1486,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 113,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#113"
+  }
+}

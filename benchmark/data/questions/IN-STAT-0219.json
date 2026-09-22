@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0219",
+  "question": "Where are the enactments in the third schedule in force, under section 5 of the Laws Local Extent Act, 1874?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "laws-local-extent-act-1874__handle-19146",
+          "key": "section:5",
+          "citation": "Laws Local Extent Act, 1874, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 2137,
+          "char_end": 2434,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "40721378011cea6216f7f0b50d93288c854d536ada46046541e8f04586b51cb6",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Throughout the territories under the government of the Governor of Bombay in Council, except the Scheduled Districts.",
+  "required_facts": [
+    [
+      "Governor of Bombay in Council"
+    ],
+    [
+      "Scheduled Districts"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "laws-local-extent-act-1874__handle-19146",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 297,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 66,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#66"
+  }
+}

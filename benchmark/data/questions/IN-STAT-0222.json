@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0222",
+  "question": "Under section 39 of the Architects Act, 1972, on whose complaint may a court take cognizance of an offence?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "architects-act-1972__handle-1690",
+          "key": "chapter:IV/section:39",
+          "citation": "Architects Act, 1972, s. 39",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "39"
+            }
+          ],
+          "char_start": 35948,
+          "char_end": 36299,
+          "page_start": 14,
+          "page_end": 14,
+          "text_sha256": "e817fb39e512a36fcbbf07d5d9c41c1f068097097a24e38e71937a68ce68e083",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Only upon a complaint made by order of the Council or a person it authorises; only a Presidency Magistrate or first-class Magistrate may try it.",
+  "required_facts": [
+    [
+      "complaint made by order of the Council"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "architects-act-1972__handle-1690",
+      "key": "chapter:IV/section:39"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 351,
+    "number_ambiguity": 1941,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 83,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#83"
+  }
+}

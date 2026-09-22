@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0186",
+  "question": "Are staff hired by the trustees of Kolkata's marble monument to the late Queen treated as public servants, and does that cover a contractor's workers?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "victoria-memorial-act-1903__handle-2336",
+          "key": "section:4",
+          "citation": "Victoria Memorial Act, 1903, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 4701,
+          "char_end": 5012,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "38b52a980d01091228a9ba531ee8a8760fdb30c9e93e24b1361bffae6217a9cc",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Officers and servants employed by the Trustees are deemed public servants under the Indian Penal Code, but not persons in the service of a contractor employed by the Trustees.",
+  "required_facts": [
+    [
+      "public servants"
+    ],
+    [
+      "contractor"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "victoria-memorial-act-1903__handle-2336",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 311,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 15,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#15"
+  }
+}

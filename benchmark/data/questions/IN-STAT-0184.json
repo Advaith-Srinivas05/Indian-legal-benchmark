@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0184",
+  "question": "If soldiers exercising special powers in a disturbed area detain someone, what must they do with that person?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "armed-forces-special-powers-act-1958__handle-1527",
+          "key": "section:5",
+          "citation": "Armed Forces (Special Powers) Act, 1958, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 3959,
+          "char_end": 4243,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "a884094974a776685bfe7d3954435d76140a936e9c8cd592b887fc617710f82a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Hand the person over to the officer in charge of the nearest police station with the least possible delay, with a report of the circumstances of the arrest.",
+  "required_facts": [
+    [
+      "nearest police station"
+    ],
+    [
+      "least possible delay"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "armed-forces-special-powers-act-1958__handle-1527",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 284,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 4,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#4"
+  }
+}

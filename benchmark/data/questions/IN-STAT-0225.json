@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0225",
+  "question": "When did the Reciprocity Act, 1943 come into force under section 1?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "reciprocity-act-1943__handle-2413",
+          "key": "section:1",
+          "citation": "Reciprocity Act, 1943, s. 1",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "1"
+            }
+          ],
+          "char_start": 1365,
+          "char_end": 1572,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "6c50851afde4582944471c89b16df300180d91909065e83f1ae23e4e2f780e72",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "On the 1st day of September, 1943.",
+  "required_facts": [
+    [
+      "1st day of September, 1943"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "reciprocity-act-1943__handle-2413",
+      "key": "section:1"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 207,
+    "number_ambiguity": 10253,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 105,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#105"
+  }
+}
