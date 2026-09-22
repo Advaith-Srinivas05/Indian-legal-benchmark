@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0398",
+  "question": "In Tamil Nadu, in which languages must the sign at an authorised cremation or burial ground be written?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Tamil Nadu",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-tamil-nadu-panchayats-provision-of-burial-and-burning-gr__rule-220dec3933",
+          "key": "section:6",
+          "citation": "The Tamil Nadu Panchayats (Provision of Burial and Burning Grounds) Rules, 1999, r. 6",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 2853,
+          "char_end": 3379,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "2d8fe92e078aedfd0c23ded85d0a43306e99fe0ae955ec64cd9784c06dddb357",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "In Tamil and in English, displayed conspicuously at or near the entrance.",
+  "required_facts": [
+    [
+      "Tamil and in English"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-tamil-nadu-panchayats-provision-of-burial-and-burning-gr__rule-220dec3933",
+      "key": "section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 526,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 565,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#565"
+  }
+}

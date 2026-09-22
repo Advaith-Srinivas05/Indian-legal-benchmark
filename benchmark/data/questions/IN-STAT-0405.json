@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0405",
+  "question": "Will a military-area civic board pay a creditor's claim that is already out of time?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-cantonment-board-account-rules-2020__rule-6cfe5c2489",
+          "key": "chapter:X/section:85",
+          "citation": "The Cantonment Board Account Rules, 2020, r. 85",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "X"
+            },
+            {
+              "unit_type": "section",
+              "number": "85"
+            }
+          ],
+          "char_start": 92644,
+          "char_end": 92961,
+          "page_start": 172,
+          "page_end": 172,
+          "text_sha256": "5e51d37dd63ebc5256f1c1a0f1f91504558a8cad6b8a82a22eb7958b8ee47e36",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Ordinarily such claims are refused, and none is paid without the sanction of the Board, which considers each case on its merits.",
+  "required_facts": [
+    [
+      "sanction of the Board"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-cantonment-board-account-rules-2020__rule-6cfe5c2489",
+      "key": "chapter:X/section:85"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 317,
+    "number_ambiguity": 580,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 477,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#477"
+  }
+}

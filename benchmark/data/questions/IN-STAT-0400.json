@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0400",
+  "question": "In Karnataka, how often must heads of departments review the progress of cases involving the state?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-karnataka-conduct-of-government-litigation-rules-2025__rule-3b6ea02682",
+          "key": "section:12",
+          "citation": "The Karnataka Conduct of Government Litigation Rules, 2025, r. 12",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 13978,
+          "char_end": 14466,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "25c48a6b2830ba24a5af7c83ba152203dd52ad7d81f9a719eebaf2e61fd854e9",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Once in a month, through a review meeting, supported by a cell that keeps watch over State Government litigation.",
+  "required_facts": [
+    [
+      "once in a month"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-karnataka-conduct-of-government-litigation-rules-2025__rule-3b6ea02682",
+      "key": "section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 488,
+    "number_ambiguity": 5903,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 570,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#570"
+  }
+}

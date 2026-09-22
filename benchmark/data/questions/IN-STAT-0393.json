@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0393",
+  "question": "In Punjab, how must an employer running a public utility announce that it will shut workers out?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Punjab",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-industrial-disputes-punjab-rules-1958__rule-2e257745d0",
+          "key": "part:VIII/section:71",
+          "citation": "THE INDUSTRIAL DISPUTES (PUNJAB) RULES, 1958, r. 71",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "71"
+            }
+          ],
+          "char_start": 56761,
+          "char_end": 57046,
+          "page_start": 22,
+          "page_end": 22,
+          "text_sha256": "a80e2f17baa6003fdbed931be2a4cec78621ff56916fdfdc0d991f7a9fe37687",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "By a notice of lock-out in Form M, displayed conspicuously on a notice board at the main entrance and in the manager's office.",
+  "required_facts": [
+    [
+      "Form M"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-industrial-disputes-punjab-rules-1958__rule-2e257745d0",
+      "key": "part:VIII/section:71"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 285,
+    "number_ambiguity": 718,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 504,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#504"
+  }
+}

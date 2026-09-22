@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0389",
+  "question": "In Karnataka's big cities, what must the municipal commissioner do before turning down a shop's request to sell cigarettes?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-karnataka-municipal-corporations-regulation-and-inspecti__rule-571d839fd6",
+          "key": "section:5",
+          "citation": "The Karnataka Municipal Corporations (Regulation and Inspection of Places used for sale of Cigarettes and other Tobacco  Products )Rules, 2020., r. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 3179,
+          "char_end": 3634,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "9274f48a1eda288b9135fc7c3e8922ad677a8c6a04118234cbceb9325da2c7c3",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Hear the applicant, and then grant or reject the licence giving reasons in writing.",
+  "required_facts": [
+    [
+      "hear the applicant"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-karnataka-municipal-corporations-regulation-and-inspecti__rule-571d839fd6",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 455,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 457,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#457"
+  }
+}

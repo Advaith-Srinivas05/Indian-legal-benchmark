@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0397",
+  "question": "In Punjab, how many bus and lorry crew must report at a depot daily before it needs its own dispensary?",
+  "category": "jurisdictional",
+  "answer_type": "numeric",
+  "jurisdiction_hint": "Punjab",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-punjab-motor-transport-workers-8-15-8-26-rules-1963__rule-143c845974",
+          "key": "chapter:IV/section:25",
+          "citation": "THE PUNJAB MOTOR TRANSPORT WORKERS (8.15 – 8.26) RULES, 1963, r. 25",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "25"
+            }
+          ],
+          "char_start": 22641,
+          "char_end": 23829,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "fdcfce95c1853b42eb564983d63f4ff2c37724b5daede981df4bbb2a2049c989",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "250 motor transport workers or more ordinarily calling on duty every day.",
+  "required_facts": [
+    [
+      "250"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-punjab-motor-transport-workers-8-15-8-26-rules-1963__rule-143c845974",
+      "key": "chapter:IV/section:25"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1188,
+    "number_ambiguity": 3399,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 542,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#542"
+  }
+}

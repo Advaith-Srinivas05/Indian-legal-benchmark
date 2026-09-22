@@ -1,0 +1,92 @@
+{
+  "question_id": "IN-STAT-0404",
+  "question": "What check is made before someone joins the body that recommends how tax revenue is shared between the Centre and states?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-finance-commission-miscellaneous-provisions-act-1951__rule-a6627aa4df",
+          "key": "section:4",
+          "citation": "the Finance Commission (Miscellaneous Provisions) Act, 1951., r. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 1701,
+          "char_end": 2413,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "99af6abda0bef604e2407fd32cb6b5681cf35c9c325042c5af6c9ece51318c0f",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "finance-commission-miscellaneous-provisions-act-1951__handle-1941",
+          "key": "schedule:_/section:4",
+          "citation": "Finance Commission (Miscellaneous Provisions) Act, 1951, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 2470,
+          "char_end": 3182,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "99af6abda0bef604e2407fd32cb6b5681cf35c9c325042c5af6c9ece51318c0f",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The President must be satisfied the person has no financial or other interest likely to prejudice his functions, and keeps checking this for every member.",
+  "required_facts": [
+    [
+      "President"
+    ],
+    [
+      "financial or other interest"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-finance-commission-miscellaneous-provisions-act-1951__rule-a6627aa4df",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 712,
+    "number_ambiguity": 8272,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 465,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#465"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0406",
+  "question": "On which form are the first board members of a newly incorporated firm and their consent filed?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "chapter-ii-the-companies-incorporation-rules-2014__rule-fb8d156aeb",
+          "key": "part:II/section:17",
+          "citation": "Chapter II - The Companies (Incorporation) Rules, 2014, r. 17",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "17"
+            }
+          ],
+          "char_start": 65368,
+          "char_end": 65781,
+          "page_start": 114,
+          "page_end": 114,
+          "text_sha256": "4a2de64d8231307ba00ec1eb5e2e89dcd75b496b09b35033bf4195a34f5b12e2",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Form No. DIR.12, with the prescribed fee.",
+  "required_facts": [
+    [
+      "DIR.12"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "chapter-ii-the-companies-incorporation-rules-2014__rule-fb8d156aeb",
+      "key": "part:II/section:17"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 413,
+    "number_ambiguity": 4728,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 479,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#479"
+  }
+}

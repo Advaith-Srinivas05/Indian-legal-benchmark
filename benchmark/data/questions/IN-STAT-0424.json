@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0424",
+  "question": "Under rule 8 of the Tamil Nadu State Human Rights Commission Service Rules, 2005, who is the appointing authority?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "state-human-rights-commission-service-rules-2005__rule-e28ebf9837",
+          "key": "section:8",
+          "citation": "State Human Rights Commission Service Rules, 2005, r. 8",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 7463,
+          "char_end": 7770,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "0a5c3af5a803f14e316e28af2eae8ae4a3f097a8081ede09c8e1fcd1eb45e7e4",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Chairperson for Divisions I and II, and the Secretary for Division III, with selection made by the Chairperson.",
+  "required_facts": [
+    [
+      "Chairperson"
+    ],
+    [
+      "Secretary"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "state-human-rights-commission-service-rules-2005__rule-e28ebf9837",
+      "key": "section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 307,
+    "number_ambiguity": 6826,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 501,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#501"
+  }
+}

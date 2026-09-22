@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0410",
+  "question": "When a small-savings provident account holder dies, can the nominee keep the account going?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "public-provident-fund-scheme-2019__rule-fdc625f50b",
+          "key": "section:14",
+          "citation": "Public Provident Fund Scheme 2019, r. 14",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "14"
+            }
+          ],
+          "char_start": 15304,
+          "char_end": 15746,
+          "page_start": 15,
+          "page_end": 15,
+          "text_sha256": "56e9bda83bdd985e81063670568960b8245b8e4a1d135f1dbc6034339b9b611b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. The account is closed; the balance earns interest until the end of the month before payment to the nominee or legal heir.",
+  "required_facts": [
+    [
+      "closed"
+    ],
+    [
+      "nominee"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "public-provident-fund-scheme-2019__rule-fdc625f50b",
+      "key": "section:14"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 442,
+    "number_ambiguity": 5435,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 531,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#531"
+  }
+}

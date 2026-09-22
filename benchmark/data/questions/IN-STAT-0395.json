@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0395",
+  "question": "In Tamil Nadu, which roadside or tank-side greenery may a village council fell and auction off?",
+  "category": "jurisdictional",
+  "answer_type": "list",
+  "jurisdiction_hint": "Tamil Nadu",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-tamil-nadu-panchayats-determination-of-claim-to-trees-gr__rule-8f5a684e99",
+          "key": "section:7",
+          "citation": "The Tamil Nadu Panchayats (Determination of Claim to Trees Growing on Public Roads or Other Property Vesting in or Belonging to Village Panchayats) Rules, 2001, r. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 3981,
+          "char_end": 5377,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "eef8cba50b3ae44c02399b11a9b1f7573d7c2ad1aa7d974c928de48eebc1f502",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Wind-fallen and withered trees; live roadside trees dangerous to traffic, life or health or obstructing works; and live trees on bunds of drinking-water tanks whose leaves fall into the tanks.",
+  "required_facts": [
+    [
+      "wind-fallen"
+    ],
+    [
+      "tanks"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-tamil-nadu-panchayats-determination-of-claim-to-trees-gr__rule-8f5a684e99",
+      "key": "section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1396,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 507,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#507"
+  }
+}

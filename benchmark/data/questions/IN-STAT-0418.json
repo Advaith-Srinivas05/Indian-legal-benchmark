@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0418",
+  "question": "Under rule 7 of the Rajasthan Land Revenue (Allotment of Tank-Bed Lands for Cultivation) Rules, 1961, who makes allotments?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-rajasthan-land-revenue-allotment-of-tank-bed-lands-for-c__rule-ff1dd0b8af",
+          "key": "section:7",
+          "citation": "The Rajasthan Land Revenue (Allotment of Tank-Bed Lands for Cultivation)  Rules, 1961, r. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 8991,
+          "char_end": 9368,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "9f73f8013ec24db847772e35400d470088caccf8254af8903dc1dbb3df1e8900",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Sub-Divisional Officer, in consultation with the Tehsil Advisory Committee.",
+  "required_facts": [
+    [
+      "Sub-Divisional Officer"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-rajasthan-land-revenue-allotment-of-tank-bed-lands-for-c__rule-ff1dd0b8af",
+      "key": "section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 377,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 518,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#518"
+  }
+}

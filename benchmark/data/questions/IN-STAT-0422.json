@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0422",
+  "question": "Under rule 7 of the Tamil Nadu Industrial Disputes Rules, 1958, whom must the employer consult?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "tamil-nadu-industrial-disputes-rules-1958__rule-3e2e454cb3",
+          "key": "section:7",
+          "citation": "Tamil Nadu Industrial Disputes Rules,1958, r. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 3335,
+          "char_end": 3559,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "4ed5cbcccd52bb79be9c888616bfb9d85d642cc314fcf301edce26c325dc1d78",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The registered trade union or unions of which the workmen are members, on the matters in rules 4 and 6.",
+  "required_facts": [
+    [
+      "registered trade union"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "tamil-nadu-industrial-disputes-rules-1958__rule-3e2e454cb3",
+      "key": "section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 224,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 556,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#556"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0391",
+  "question": "In Karnataka, can someone on the state payroll join or campaign for a party contesting elections?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-karnataka-state-civil-services-conduct-rules-2021__rule-6293d25054",
+          "key": "section:5",
+          "citation": "The Karnataka State Civil Services (Conduct) Rules, 2021., r. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 12724,
+          "char_end": 14817,
+          "page_start": 7,
+          "page_end": 8,
+          "text_sha256": "833d9340e445f60e8382608573decbe3d296381db05f7100b1fefad3779594a8",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. He may not be a member of or associated with any political party or organisation taking part in politics, nor assist any political movement.",
+  "required_facts": [
+    [
+      "political party"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-karnataka-state-civil-services-conduct-rules-2021__rule-6293d25054",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2093,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 495,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#495"
+  }
+}

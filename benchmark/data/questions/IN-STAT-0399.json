@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0399",
+  "question": "In Rajasthan's civic elections, can someone already inside the polling station when time runs out still vote?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Rajasthan",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-rajasthan-municipalities-election-rules-1994__rule-dcabc90f79",
+          "key": "section:41",
+          "citation": "The Rajasthan Municipalities (Election) Rules, 1994, r. 41",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "41"
+            }
+          ],
+          "char_start": 39448,
+          "char_end": 39937,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "097d07124efbf9d0d40bb139f64efee010dc056ddbe54024241510278d5a858c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. All voters present before the station is closed are allowed to cast their votes; the presiding officer's decision on who was present is final.",
+  "required_facts": [
+    [
+      "allowed to cast their votes"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-rajasthan-municipalities-election-rules-1994__rule-dcabc90f79",
+      "key": "section:41"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 489,
+    "number_ambiguity": 1817,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 567,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#567"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0392",
+  "question": "In Rajasthan jails, when can an inmate's mail be held back?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Rajasthan",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-rajasthan-prisons-rules-2022__rule-6da4790958",
+          "key": "chapter:XXII/section:547",
+          "citation": "THE RAJASTHAN PRISONS RULES, 2022, r. 547",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XXII"
+            },
+            {
+              "unit_type": "section",
+              "number": "547"
+            }
+          ],
+          "char_start": 391897,
+          "char_end": 393142,
+          "page_start": 123,
+          "page_end": 123,
+          "text_sha256": "b7cca75ead805d905d1bcbce14cac34ed50f213d5616e1672d881c9f122eef89",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "When the prisoner corresponds with undesirable persons or the correspondence is detrimental to rehabilitation; such letters are withheld and the prisoner informed without disclosing the contents.",
+  "required_facts": [
+    [
+      "withheld"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-rajasthan-prisons-rules-2022__rule-6da4790958",
+      "key": "chapter:XXII/section:547"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1245,
+    "number_ambiguity": 6,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 502,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#502"
+  }
+}

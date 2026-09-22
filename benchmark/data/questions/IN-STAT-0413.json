@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0413",
+  "question": "What images appear on the Agmark label of a packet of hydrogenated vegetable oil?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "vanaspati-grading-and-marking-rules-1990__rule-760cf87a10",
+          "key": "schedule:I/section:5",
+          "citation": "Vanaspati Grading and Marking Rules, 1990, r. 5",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 1429,
+          "char_end": 3336,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "15eefe5120abf2e3a5fc8b15f2241d8b5977f933f4fe5100c9b9f24b9c24d9b3",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "An outline map of India with the word Agmark and the figure of the rising sun with the words 'produce of India'.",
+  "required_facts": [
+    [
+      "rising sun"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "vanaspati-grading-and-marking-rules-1990__rule-760cf87a10",
+      "key": "schedule:I/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1907,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 557,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#557"
+  }
+}

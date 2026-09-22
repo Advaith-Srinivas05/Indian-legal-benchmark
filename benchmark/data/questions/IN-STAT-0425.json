@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0425",
+  "question": "Under rule 27 of the Rajasthan Local Fund Audit Rules, 1955, to whom does the Examiner send the audit report?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-rajasthan-local-fund-audit-rules-1955__rule-a604302a3a",
+          "key": "section:27",
+          "citation": "The Rajasthan Local Fund Audit Rules, 1955, r. 27",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "27"
+            }
+          ],
+          "char_start": 18135,
+          "char_end": 18353,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "6c535fc0402ad26b16f15c6401491bace2228da8905d9cdf083eaea0e8b2c9c6",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "To the Chairman or other Executive Head of the Local Authority, with copies to authorities the Government directs.",
+  "required_facts": [
+    [
+      "Chairman"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-rajasthan-local-fund-audit-rules-1955__rule-a604302a3a",
+      "key": "section:27"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 218,
+    "number_ambiguity": 3095,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 526,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#526"
+  }
+}

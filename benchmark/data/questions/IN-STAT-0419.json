@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0419",
+  "question": "Under rule 11 of the Rajasthan Municipalities (Conduct of Business of Committees) Rules, 1974, which rules govern a committee's business?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "rajasthan-municipalities-conduct-of-business-of-committees-r__rule-56aeeb9ecc",
+          "key": "section:11",
+          "citation": "Rajasthan Municipalities (Conduct of Business of Committees) Rules, 1974, r. 11",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "11"
+            }
+          ],
+          "char_start": 5792,
+          "char_end": 6133,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "2c0aa63738238d04391b75738566f67d8fc439edc5d9cbd217c8ad3c9e81d49f",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Rajasthan Municipalities (Conduct of Business) Rules, 1974, applied mutatis mutandis so far as applicable.",
+  "required_facts": [
+    [
+      "mutatis"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "rajasthan-municipalities-conduct-of-business-of-committees-r__rule-56aeeb9ecc",
+      "key": "section:11"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 341,
+    "number_ambiguity": 6050,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 534,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#534"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0423",
+  "question": "Which central rules do the Tamil Nadu Control of Industrial Major Accident Hazards Rules, 1994 supplement?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-tamil-nadu-control-of-industrial-major-accident-hazards__rule-9bd7f2f3ad",
+          "key": "section:1",
+          "citation": "The Tamil Nadu Control of Industrial Major Accident Hazards Rules,1994, r. 1",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "1"
+            }
+          ],
+          "char_start": 1121,
+          "char_end": 1429,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "df0e0033732c5869000840080b8e9b201a285cb00d6088f601dcbdd4498be3c8",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The rules already notified under Chapter IV-A of the Factories Act, 1948.",
+  "required_facts": [
+    [
+      "Chapter IV-A"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-tamil-nadu-control-of-industrial-major-accident-hazards__rule-9bd7f2f3ad",
+      "key": "section:1"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 308,
+    "number_ambiguity": 10253,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 573,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#573"
+  }
+}

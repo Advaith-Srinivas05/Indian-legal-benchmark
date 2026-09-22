@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0415",
+  "question": "Under rule 7 of the Karnataka State Commission for Women Rules, 2002, what powers does the Secretary have?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-karnataka-state-commission-for-women-rules-2002__rule-2ff120476b",
+          "key": "section:7",
+          "citation": "The Karnataka State Commission for Women Rules, 2002., r. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 2790,
+          "char_end": 2991,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "99e45fe679fe51392dc641088e7aebce1b40a3b779c58cc77c92db93d7335f6c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The same administrative and financial powers as are delegated to a minor Head of the Department.",
+  "required_facts": [
+    [
+      "minor Head of the Department"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-karnataka-state-commission-for-women-rules-2002__rule-2ff120476b",
+      "key": "section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 201,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 461,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#461"
+  }
+}

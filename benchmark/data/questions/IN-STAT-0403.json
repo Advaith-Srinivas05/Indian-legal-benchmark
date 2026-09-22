@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0403",
+  "question": "In Tamil Nadu, on what grounds can the biodiversity board refuse someone collecting plants or animals for research or trade?",
+  "category": "jurisdictional",
+  "answer_type": "list",
+  "jurisdiction_hint": "Tamil Nadu",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "tamil-nadu-biological-diversity-rules-2017__rule-08f786bf91",
+          "key": "section:17",
+          "citation": "tamil nadu biological diversity rules 2017, r. 17",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "17"
+            }
+          ],
+          "char_start": 19173,
+          "char_end": 20431,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "2484452c95853f47186c1010c5951e08652b7b96f020a28287f3fab7b7b11c8d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Among others, where the request concerns threatened taxa, endemic and rare species, or may harm local livelihoods or culture.",
+  "required_facts": [
+    [
+      "threatened"
+    ],
+    [
+      "endemic"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "tamil-nadu-biological-diversity-rules-2017__rule-08f786bf91",
+      "key": "section:17"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1258,
+    "number_ambiguity": 4728,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 469,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#469"
+  }
+}

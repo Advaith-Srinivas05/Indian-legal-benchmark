@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0420",
+  "question": "To whom do the Tribunal (Conditions of Service) Rules, 2021 apply under rule 1?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "tribunal-conditions-of-service-rules-2021__rule-eb37d2c666",
+          "key": "chapter:I/section:1",
+          "citation": "Tribunal(Conditions of Service) Rules, 2021, r. 1",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "1"
+            }
+          ],
+          "char_start": 563,
+          "char_end": 989,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "622c5c12384768d4eb52f1b6dedf006112dd503a79f805567ad4dd1e9d30a8a5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "To the Chairperson and Members of the Tribunals specified in column (2) of the First Schedule of the Tribunal Reforms Act, 2021.",
+  "required_facts": [
+    [
+      "Tribunal Reforms Act"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "tribunal-conditions-of-service-rules-2021__rule-eb37d2c666",
+      "key": "chapter:I/section:1"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 426,
+    "number_ambiguity": 10253,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 550,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#550"
+  }
+}

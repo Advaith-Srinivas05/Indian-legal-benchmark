@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0407",
+  "question": "What certificate does the registrar issue to a firm allowed to sit inactive?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "chapter-xxix-the-companies-miscellaneous-rules-2014-and-comp__rule-c72725ef9d",
+          "key": "part:II/section:4",
+          "citation": "Chapter XXIX - The Companies (Miscellaneous) Rules, 2014 and Companies (Adjudication of Penalties) Rules, 2014., r. 4",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 30871,
+          "char_end": 31087,
+          "page_start": 14,
+          "page_end": 14,
+          "text_sha256": "fca9502500799bc034deb2bd244ffef4dae2cc5f1f70b8d767157bbd26a8c641",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A certificate in Form MSC-2, after considering the application in Form MSC-1.",
+  "required_facts": [
+    [
+      "MSC-2"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "chapter-xxix-the-companies-miscellaneous-rules-2014-and-comp__rule-c72725ef9d",
+      "key": "part:II/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 216,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 483,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#483"
+  }
+}

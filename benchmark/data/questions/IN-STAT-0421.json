@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0421",
+  "question": "Under rule 10 of the Rajasthan Rules for Grants-in-Aid to the Local Bodies for Capital Works, whose countersignature is needed to draw the grant?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "rules-for-grants-in-aid-to-the-local-bodies-for-capital-work__rule-971db04fd8",
+          "key": "section:10",
+          "citation": "Rules for Grants-in-Aid to the Local Bodies for Capital Works, r. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 4746,
+          "char_end": 5206,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "293b8df598bc0528c238959b1e761938583079ed57729dedc0b73e7c08ffbbcf",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Executive Engineer, Public Works Department (B & R).",
+  "required_facts": [
+    [
+      "Executive Engineer"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "rules-for-grants-in-aid-to-the-local-bodies-for-capital-work__rule-971db04fd8",
+      "key": "section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 460,
+    "number_ambiguity": 6559,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 552,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#552"
+  }
+}

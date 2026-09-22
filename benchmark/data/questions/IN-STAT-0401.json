@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0401",
+  "question": "In Maharashtra, what mileage can a Minister claim for driving by private car to take up office?",
+  "category": "jurisdictional",
+  "answer_type": "numeric",
+  "jurisdiction_hint": "Maharashtra",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "maharashtra-ministers-allowances-rules-1977__rule-f1c61db4fc",
+          "key": "section:5",
+          "citation": "MAHARASHTRA MINISTERS' ALLOWANCES RULES, 1977, r. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 8670,
+          "char_end": 9868,
+          "page_start": 6,
+          "page_end": 7,
+          "text_sha256": "1ed920131ef38c7d34bfea296af0dd580359cf6239011ce9a39f17f50d79a6b1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "55 paise per kilometre plus a lump payment of Rs. 150, with extra mileage if family members accompany him.",
+  "required_facts": [
+    [
+      "55 paise"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "maharashtra-ministers-allowances-rules-1977__rule-f1c61db4fc",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1198,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 494,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#494"
+  }
+}

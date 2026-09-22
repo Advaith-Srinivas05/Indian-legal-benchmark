@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0409",
+  "question": "Where must a packer certified to sell Agmark gur get its product tested?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "jaggery-grading-and-marking-rules-2008-2012__rule-85c1f14e31",
+          "key": "section:8",
+          "citation": "Jaggery Grading and Marking Rules, 2008, 2012, r. 8",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 5882,
+          "char_end": 6988,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "0637e09976a1d2841049a0d3922b1af475be48142413bbe5379a6ce64fe14483",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "In its own laboratory, or with access to State Grading Laboratories or private commercial laboratories with a qualified chemist approved by the Agricultural Marketing Adviser.",
+  "required_facts": [
+    [
+      "laboratory"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "jaggery-grading-and-marking-rules-2008-2012__rule-85c1f14e31",
+      "key": "section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1106,
+    "number_ambiguity": 6826,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 524,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#524"
+  }
+}

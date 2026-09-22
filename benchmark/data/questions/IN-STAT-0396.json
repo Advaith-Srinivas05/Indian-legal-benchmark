@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0396",
+  "question": "In Bihar, how much is deducted when stamp duty paid online but never used is refunded?",
+  "category": "jurisdictional",
+  "answer_type": "numeric",
+  "jurisdiction_hint": "Bihar",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-bihar-stamp-refund-of-amount-of-non-judicial-stamp-duty__rule-24f713716e",
+          "key": "section:04",
+          "citation": "The Bihar Stamp Refund of Amount of Non judicial stamp Duty Deposited by e challan Rules 2018, r. 04",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "04"
+            }
+          ],
+          "char_start": 8051,
+          "char_end": 13121,
+          "page_start": 4,
+          "page_end": 6,
+          "text_sha256": "3aa9673556a1292108f7ca374ebd757aaf120fd1f6189b27a695e85e332ce1c5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "10% of the deposited amount, subject to a minimum of Rs. 200 and a maximum of Rs. 5000.",
+  "required_facts": [
+    [
+      "10%"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-bihar-stamp-refund-of-amount-of-non-judicial-stamp-duty__rule-24f713716e",
+      "key": "section:04"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 5070,
+    "number_ambiguity": 7,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 535,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#535"
+  }
+}

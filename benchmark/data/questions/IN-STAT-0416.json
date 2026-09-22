@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0416",
+  "question": "Under rule 5 of the CWC Appeal Rules 2005, what happens to an appeal found in order on scrutiny?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "cwc-appeal-rules-2005__rule-f633d5cc48",
+          "key": "section:5",
+          "citation": "CWC Appeal Rules 2005, r. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 2458,
+          "char_end": 2826,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "a46a9d8e7394d8d71937b245b2da8e8db8d7cc9ca3e523efd5a20dfeb14a41f1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It is registered and given a serial number, after the authorised officer endorses its presentation date.",
+  "required_facts": [
+    [
+      "registered"
+    ],
+    [
+      "serial number"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "cwc-appeal-rules-2005__rule-f633d5cc48",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 368,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 490,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#490"
+  }
+}

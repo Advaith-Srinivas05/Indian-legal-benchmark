@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0394",
+  "question": "In Rajasthan, when may villagers not cut or lop trees in protected forests without written permission?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Rajasthan",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "rajasthan-protected-forest-exercise-of-concessions-rules-196__rule-2fb06e8c60",
+          "key": "section:3",
+          "citation": "Rajasthan Protected Forest (Exercise of Concessions) Rules, 1960, r. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 1318,
+          "char_end": 1863,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "8415ac106512061605e149208214cafdaf0a1e65422468a60a255930d198b0fe",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "From 1st May to 31st October, except that dead, dry, fallen fuel wood may be carried in headloads for domestic needs.",
+  "required_facts": [
+    [
+      "1st May"
+    ],
+    [
+      "31st October"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "rajasthan-protected-forest-exercise-of-concessions-rules-196__rule-2fb06e8c60",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 545,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 506,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#506"
+  }
+}
