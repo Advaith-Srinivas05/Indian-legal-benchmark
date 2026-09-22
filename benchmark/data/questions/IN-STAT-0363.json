@@ -1,0 +1,26 @@
+{
+  "question_id": "IN-STAT-0363",
+  "category": "unanswerable",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [],
+  "proposed_alternatives": [],
+  "must_cite": [],
+  "unanswerable": true,
+  "difficulty": {},
+  "provenance": {
+    "status": "draft",
+    "sample": null,
+    "sample_index": null,
+    "tags": [],
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "unanswerable#missing-25",
+    "drafting_method": "language_model"
+  },
+  "question": "What does section 240 of the Indian Contract Act, 1872 say about smart contracts executed on a blockchain?",
+  "gold_answer": "The corpus does not answer this. Indian Contract Act, 1872 has no section 240; its highest-numbered section is 238, so the provision asked about does not exist.",
+  "required_facts": []
+}

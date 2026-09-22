@@ -1,0 +1,26 @@
+{
+  "question_id": "IN-STAT-0353",
+  "category": "unanswerable",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [],
+  "proposed_alternatives": [],
+  "must_cite": [],
+  "unanswerable": true,
+  "difficulty": {},
+  "provenance": {
+    "status": "draft",
+    "sample": null,
+    "sample_index": null,
+    "tags": [],
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "unanswerable#missing-15",
+    "drafting_method": "language_model"
+  },
+  "question": "What does section 150 of the Negotiable Instruments Act, 1881 provide about failed UPI payments?",
+  "gold_answer": "The corpus does not answer this. Negotiable Instruments Act, 1881 has no section 150; its highest-numbered section is 147, so the provision asked about does not exist.",
+  "required_facts": []
+}

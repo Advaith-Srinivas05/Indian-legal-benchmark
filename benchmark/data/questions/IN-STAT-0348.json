@@ -1,0 +1,26 @@
+{
+  "question_id": "IN-STAT-0348",
+  "category": "unanswerable",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [],
+  "proposed_alternatives": [],
+  "must_cite": [],
+  "unanswerable": true,
+  "difficulty": {},
+  "provenance": {
+    "status": "draft",
+    "sample": null,
+    "sample_index": null,
+    "tags": [],
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "unanswerable#missing-10",
+    "drafting_method": "language_model"
+  },
+  "question": "Under section 45 of the Specific Relief Act, 1963, when may a court order specific performance of a software licence?",
+  "gold_answer": "The corpus does not answer this. Specific Relief Act, 1963 has no section 45; its highest-numbered section is 42, so the provision asked about does not exist.",
+  "required_facts": []
+}

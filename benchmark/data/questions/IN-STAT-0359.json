@@ -1,0 +1,26 @@
+{
+  "question_id": "IN-STAT-0359",
+  "category": "unanswerable",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [],
+  "proposed_alternatives": [],
+  "must_cite": [],
+  "unanswerable": true,
+  "difficulty": {},
+  "provenance": {
+    "status": "draft",
+    "sample": null,
+    "sample_index": null,
+    "tags": [],
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "unanswerable#missing-21",
+    "drafting_method": "language_model"
+  },
+  "question": "What does section 100 of the Protection of Plant Varieties and Farmers Rights Act, 2001 say about patenting genetically modified seeds?",
+  "gold_answer": "The corpus does not answer this. Protection of Plant Varieties and Farmers Rights Act, 2001 has no section 100; its highest-numbered section is 97, so the provision asked about does not exist.",
+  "required_facts": []
+}

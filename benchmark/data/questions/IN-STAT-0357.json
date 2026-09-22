@@ -1,0 +1,26 @@
+{
+  "question_id": "IN-STAT-0357",
+  "category": "unanswerable",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [],
+  "proposed_alternatives": [],
+  "must_cite": [],
+  "unanswerable": true,
+  "difficulty": {},
+  "provenance": {
+    "status": "draft",
+    "sample": null,
+    "sample_index": null,
+    "tags": [],
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "unanswerable#missing-19",
+    "drafting_method": "language_model"
+  },
+  "question": "What does section 110 of the Consumer Protection Act, 2019 say about paid endorsements by social media influencers?",
+  "gold_answer": "The corpus does not answer this. Consumer Protection Act, 2019 has no section 110; its highest-numbered section is 107, so the provision asked about does not exist.",
+  "required_facts": []
+}

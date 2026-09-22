@@ -1,0 +1,26 @@
+{
+  "question_id": "IN-STAT-0380",
+  "category": "unanswerable",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [],
+  "proposed_alternatives": [],
+  "must_cite": [],
+  "unanswerable": true,
+  "difficulty": {},
+  "provenance": {
+    "status": "draft",
+    "sample": null,
+    "sample_index": null,
+    "tags": [],
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "unanswerable#outside-17",
+    "drafting_method": "language_model"
+  },
+  "question": "How is the crime of aggression defined in the Rome Statute of the International Criminal Court?",
+  "gold_answer": "The corpus does not answer this: it contains Indian statutory law only, and international criminal law is not part of it.",
+  "required_facts": []
+}

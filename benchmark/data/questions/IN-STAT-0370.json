@@ -1,0 +1,26 @@
+{
+  "question_id": "IN-STAT-0370",
+  "category": "unanswerable",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [],
+  "proposed_alternatives": [],
+  "must_cite": [],
+  "unanswerable": true,
+  "difficulty": {},
+  "provenance": {
+    "status": "draft",
+    "sample": null,
+    "sample_index": null,
+    "tags": [],
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "unanswerable#outside-7",
+    "drafting_method": "language_model"
+  },
+  "question": "From what age may children hold social media accounts under Australia's online safety legislation?",
+  "gold_answer": "The corpus does not answer this: it contains Indian statutory law only, and Australian law is not part of it.",
+  "required_facts": []
+}

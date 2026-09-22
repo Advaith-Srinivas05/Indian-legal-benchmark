@@ -1,0 +1,26 @@
+{
+  "question_id": "IN-STAT-0366",
+  "category": "unanswerable",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [],
+  "proposed_alternatives": [],
+  "must_cite": [],
+  "unanswerable": true,
+  "difficulty": {},
+  "provenance": {
+    "status": "draft",
+    "sample": null,
+    "sample_index": null,
+    "tags": [],
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "unanswerable#outside-3",
+    "drafting_method": "language_model"
+  },
+  "question": "What is the maximum financial penalty under Singapore's Personal Data Protection Act 2012?",
+  "gold_answer": "The corpus does not answer this: it contains Indian statutory law only, and Singapore law is not part of it.",
+  "required_facts": []
+}

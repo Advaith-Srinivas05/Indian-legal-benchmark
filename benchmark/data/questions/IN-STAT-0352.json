@@ -1,0 +1,26 @@
+{
+  "question_id": "IN-STAT-0352",
+  "category": "unanswerable",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [],
+  "proposed_alternatives": [],
+  "must_cite": [],
+  "unanswerable": true,
+  "difficulty": {},
+  "provenance": {
+    "status": "draft",
+    "sample": null,
+    "sample_index": null,
+    "tags": [],
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "unanswerable#missing-14",
+    "drafting_method": "language_model"
+  },
+  "question": "Under section 70 of the Sale of Goods Act, 1930, what rules govern sales on online auction platforms?",
+  "gold_answer": "The corpus does not answer this. Sale of Goods Act, 1930 has no section 70; its highest-numbered section is 66, so the provision asked about does not exist.",
+  "required_facts": []
+}
