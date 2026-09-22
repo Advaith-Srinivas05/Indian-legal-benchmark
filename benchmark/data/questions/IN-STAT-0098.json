@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0098",
+  "question": "If the government takes control of someone's uranium mining and they cannot agree on compensation, how is the amount fixed?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "atomic-energy-act-1962__handle-1413",
+          "key": "section:5",
+          "citation": "Atomic Energy Act, 1962, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 8958,
+          "char_end": 11389,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "aabebf6fe451fd18f3d231066887269fef74533e24f77e4392f9f142ad669a7d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "atomic-energy-act-1962__handle-1413",
+          "key": "section:21",
+          "citation": "Atomic Energy Act, 1962, s. 21",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "21"
+            }
+          ],
+          "char_start": 39143,
+          "char_end": 41408,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "7e902adf94f519afc6ef73c0d0f2ef58265f07a2cfc62dc025125ef470c834cc",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Where no agreement is reached, the Central Government appoints as arbitrator a person with expert knowledge of the right affected, who determines the compensation.",
+  "required_facts": [
+    [
+      "uranium"
+    ],
+    [
+      "arbitrator"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "atomic-energy-act-1962__handle-1413",
+      "key": "section:5"
+    },
+    {
+      "document_id": "atomic-energy-act-1962__handle-1413",
+      "key": "section:21"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2431,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 35,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#35"
+  }
+}

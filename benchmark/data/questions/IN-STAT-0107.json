@@ -1,0 +1,118 @@
+{
+  "question_id": "IN-STAT-0107",
+  "question": "On what grounds can the authority managing a national highway shut it to traffic for a while?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "control-of-national-highways-land-and-traffic-act-2002__handle-2028",
+          "key": "chapter:V/section:33",
+          "citation": "Control of National Highways (Land and Traffic) Act, 2002, s. 33",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "33"
+            }
+          ],
+          "char_start": 33170,
+          "char_end": 33525,
+          "page_start": 13,
+          "page_end": 13,
+          "text_sha256": "46702718387ede985f1e14bb2a9e39a52773db0ef087f37f704b9e5484daaf48",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "control-of-national-highways-land-and-traffic-act-2002__handle-2028",
+          "key": "chapter:V/section:31",
+          "citation": "Control of National Highways (Land and Traffic) Act, 2002, s. 31",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "31"
+            }
+          ],
+          "char_start": 31845,
+          "char_end": 32643,
+          "page_start": 12,
+          "page_end": 13,
+          "text_sha256": "e328c61cca67ab314ff1fbca32419818a75b5f01f408ca22fad061dda27ff6ec",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It may temporarily close or restrict traffic when exercising its powers over a highway that has become congested or unsafe (or to protect weak road surfaces and bridges from heavy vehicles).",
+  "required_facts": [
+    [
+      "temporarily close"
+    ],
+    [
+      "congested or unsafe"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "control-of-national-highways-land-and-traffic-act-2002__handle-2028",
+      "key": "chapter:V/section:33"
+    },
+    {
+      "document_id": "control-of-national-highways-land-and-traffic-act-2002__handle-2028",
+      "key": "chapter:V/section:31"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 355,
+    "number_ambiguity": 2499,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 1,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 103,
+    "tags": [
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#103",
+    "alternatives_decided": [
+      {
+        "document_id": "control-of-national-highways-act-2002__handle-11800",
+        "key": "chapter:V/section:33",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "does not state every required fact"
+      }
+    ]
+  }
+}

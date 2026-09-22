@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0112",
+  "question": "When can a company that bought a trade receivable demand payment from the buyer who owes it, and when does paying the original seller stop discharging the debt?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "factoring-regulation-act-2011__handle-2116",
+          "key": "chapter:IV/section:12",
+          "citation": "Factoring Regulation Act, 2011, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 17006,
+          "char_end": 17579,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "b6510912fbd198adde898ece83f113a54a228d4550d40dbb51c406f105356544",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "factoring-regulation-act-2011__handle-2116",
+          "key": "chapter:III/section:8",
+          "citation": "Factoring Regulation Act, 2011, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 14826,
+          "char_end": 15183,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "bdcc6503e66a92b9cabc3c79dd64b5e5524055950b23832b8ca22bea4b1a3e22",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Only after notice of the assignment is given to the debtor with the assignor's express authority; once served, the debtor gets a valid discharge only by paying the assignee.",
+  "required_facts": [
+    [
+      "notice of such assignment"
+    ],
+    [
+      "valid discharge"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "factoring-regulation-act-2011__handle-2116",
+      "key": "chapter:IV/section:12"
+    },
+    {
+      "document_id": "factoring-regulation-act-2011__handle-2116",
+      "key": "chapter:III/section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 573,
+    "number_ambiguity": 5903,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 121,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#121"
+  }
+}

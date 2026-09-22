@@ -1,0 +1,152 @@
+{
+  "question_id": "IN-STAT-0113",
+  "question": "Who can investigate a state-run bus corporation's affairs, and what can the state do if the findings justify it?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "road-transport-corporations-act-1950__handle-1541",
+          "key": "chapter:V/section:37",
+          "citation": "Road Transport Corporations Act, 1950, s. 37",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "37"
+            }
+          ],
+          "char_start": 41753,
+          "char_end": 43593,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "743271229269d5fb846a46862035c359a20ba33135c6f2a698c6f375eeb98f5e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "road-transport-corporation-act-1950__handle-13047",
+          "key": "chapter:V/section:37",
+          "citation": "Road Transport Corporation Act, 1950, s. 37",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "37"
+            }
+          ],
+          "char_start": 40590,
+          "char_end": 42430,
+          "page_start": 15,
+          "page_end": 15,
+          "text_sha256": "743271229269d5fb846a46862035c359a20ba33135c6f2a698c6f375eeb98f5e",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "road-transport-corporations-act-1950__handle-21361",
+          "key": "chapter:V/section:37",
+          "citation": "Road Transport Corporations Act, 1950, s. 37",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "37"
+            }
+          ],
+          "char_start": 40629,
+          "char_end": 42469,
+          "page_start": 15,
+          "page_end": 15,
+          "text_sha256": "743271229269d5fb846a46862035c359a20ba33135c6f2a698c6f375eeb98f5e",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "road-transport-corporations-act-1950__handle-1541",
+          "key": "chapter:V/section:36",
+          "citation": "Road Transport Corporations Act, 1950, s. 36",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "36"
+            }
+          ],
+          "char_start": 41021,
+          "char_end": 41752,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "64a4a5e1429b3e8bf52ab672bd922e7bf859bca24579615296610d9e02c330d9",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The State Government may appoint any person to inquire into its activities and report; if satisfied in the public interest, it may authorise a person to take over and administer part of the undertaking.",
+  "required_facts": [
+    [
+      "make inquiries"
+    ],
+    [
+      "take over"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "road-transport-corporations-act-1950__handle-1541",
+      "key": "chapter:V/section:37"
+    },
+    {
+      "document_id": "road-transport-corporations-act-1950__handle-1541",
+      "key": "chapter:V/section:36"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1840,
+    "number_ambiguity": 2113,
+    "title_collisions": 2,
+    "cluster_size": 3,
+    "equivalents": 2,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 138,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#138"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "question_id": "IN-STAT-0121",
+  "question": "How is a border force member punished for abetting an offence that is then committed, where no specific penalty exists, and which offences involving the enemy carry death?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "sashastra-seema-bal-act-2007__handle-2039",
+          "key": "chapter:III/section:46",
+          "citation": "Sashastra Seema Bal Act, 2007, s. 46",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "46"
+            }
+          ],
+          "char_start": 45838,
+          "char_end": 46319,
+          "page_start": 15,
+          "page_end": 15,
+          "text_sha256": "a7efeb5e4173c7588d877ca3fd1090f272cef1c5f59a2f7bfdd18a8248c26cdb",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "sashastra-seema-bal-act-2007__handle-2039",
+          "key": "chapter:III/section:16",
+          "citation": "Sashastra Seema Bal Act, 2007, s. 16",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "16"
+            }
+          ],
+          "char_start": 19719,
+          "char_end": 21734,
+          "page_start": 8,
+          "page_end": 9,
+          "text_sha256": "28db2e804083380097f853009f75f653b011a66b7b4ecbd89c7a0d1505d62f3f",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "He is liable to the punishment provided for the offence abetted or a lesser one; offences punishable with death include shamefully abandoning a post committed to one's charge.",
+  "required_facts": [
+    [
+      "punishment provided for that offence"
+    ],
+    [
+      "shamefully abandons"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "sashastra-seema-bal-act-2007__handle-2039",
+      "key": "chapter:III/section:46"
+    },
+    {
+      "document_id": "sashastra-seema-bal-act-2007__handle-2039",
+      "key": "chapter:III/section:16"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 481,
+    "number_ambiguity": 1571,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 178,
+    "tags": [
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#178"
+  }
+}

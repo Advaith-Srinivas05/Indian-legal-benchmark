@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0103",
+  "question": "How often and where must the governing board of the Chennai dance and arts foundation meet, and who lays down its rules on quorum?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "kalakshetra-foundation-act-1993__handle-1969",
+          "key": "chapter:V/section:32",
+          "citation": "Kalakshetra Foundation Act, 1993, s. 32",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "32"
+            }
+          ],
+          "char_start": 28284,
+          "char_end": 29651,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "f4835b720ce07b04f7bdc7565c8ab6298969297edaa2ada49a3dbe7c4a0041de",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "kalakshetra-foundation-act-1993__handle-1969",
+          "key": "chapter:III/section:13",
+          "citation": "Kalakshetra Foundation Act, 1993, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 14983,
+          "char_end": 15948,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "35ff5ebccf31d54b87a357b1f60f75b3cbc6d6755f7ebb6b74d4448ca3e6aad9",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "At least twice a year at Madras; the procedure for its business, including quorum, is specified by regulations the Foundation makes.",
+  "required_facts": [
+    [
+      "twice in a year"
+    ],
+    [
+      "quorum"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "kalakshetra-foundation-act-1993__handle-1969",
+      "key": "chapter:V/section:32"
+    },
+    {
+      "document_id": "kalakshetra-foundation-act-1993__handle-1969",
+      "key": "chapter:III/section:13"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1367,
+    "number_ambiguity": 2639,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 84,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#84"
+  }
+}

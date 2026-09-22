@@ -1,0 +1,109 @@
+{
+  "question_id": "IN-STAT-0134",
+  "question": "How long do members of the Jamnagar body for traditional-medicine education serve, and does Gujarat's health secretary sit on it?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "institute-of-teaching-and-research-in-ayurveda-act-2020__handle-15647",
+          "key": "chapter:II/section:7",
+          "citation": "Institute of Teaching and Research in Ayurveda Act, 2020, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 9992,
+          "char_end": 11376,
+          "page_start": 5,
+          "page_end": 6,
+          "text_sha256": "ed5f08da954e259e9a3ee4948ea8edc870b5b09140926123b3bba8631a1e4091",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "institute-of-teaching-and-research-in-ayurveda-act-2020__handle-15647",
+          "key": "chapter:II/section:6",
+          "citation": "Institute of Teaching and Research in Ayurveda Act, 2020, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 8453,
+          "char_end": 9991,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "9a5177a48441848a15e3c2e1c3d8b1cf8dda944a89cebd32314b0ee55f01476f",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Members serve five years from nomination or election; the Secretary, Department of Health, Government of Gujarat is an ex officio member.",
+  "required_facts": [
+    [
+      "five years"
+    ],
+    [
+      "Government of Gujarat"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "institute-of-teaching-and-research-in-ayurveda-act-2020__handle-15647",
+      "key": "chapter:II/section:7"
+    },
+    {
+      "document_id": "institute-of-teaching-and-research-in-ayurveda-act-2020__handle-15647",
+      "key": "chapter:II/section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1384,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 272,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#272"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "question_id": "IN-STAT-0129",
+  "question": "Who pays when a petroleum pipeline laid under someone's land causes them loss, and what happens if the money is not deposited on time?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "petroleum-and-minerals-pipelines-acquisition-of-right-of-use__handle-1424",
+          "key": "schedule:_/section:11",
+          "citation": "Petroleum and Minerals Pipelines (Acquisition of Right of User in Land) Act, 1962, s. 11",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "11"
+            }
+          ],
+          "char_start": 18020,
+          "char_end": 19618,
+          "page_start": 8,
+          "page_end": 9,
+          "text_sha256": "2d714331812064db110ce1e266670a4c4ea0c6ecf1d8f9f35ecd2573e7b8aae6",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "petroleum-and-minerals-pipelines-acquisition-of-right-of-use__handle-1424",
+          "key": "schedule:_/section:10",
+          "citation": "Petroleum and Minerals Pipelines (Acquisition of Right of User in Land) Act, 1962, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 15215,
+          "char_end": 18019,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "1dfe14e139a4d20635bd1f901daeb1f1b52a40fe3d00e2e3cce1337fbb533a1d",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Central Government, State Government or corporation is liable to pay compensation, determined first by the competent authority; if not deposited in time it must pay interest on it.",
+  "required_facts": [
+    [
+      "liable to pay compensation"
+    ],
+    [
+      "interest"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "petroleum-and-minerals-pipelines-acquisition-of-right-of-use__handle-1424",
+      "key": "schedule:_/section:11"
+    },
+    {
+      "document_id": "petroleum-and-minerals-pipelines-acquisition-of-right-of-use__handle-1424",
+      "key": "schedule:_/section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1598,
+    "number_ambiguity": 6050,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 232,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#232"
+  }
+}

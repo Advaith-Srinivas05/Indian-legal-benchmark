@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0093",
+  "question": "What must India's statistics institute provide to a government panel reviewing it, and what may that panel examine?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "indian-statistical-institute-act-1959__handle-1425",
+          "key": "section:10",
+          "citation": "Indian Statistical Institute Act, 1959, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 8176,
+          "char_end": 8406,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "91f548ec5b0492bf65ad2db37a57e0d208821260f14715200d31339cf0680eec",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "indian-statistical-institute-act-1959__handle-1425",
+          "key": "section:9",
+          "citation": "Indian Statistical Institute Act, 1959, s. 9",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "9"
+            }
+          ],
+          "char_start": 6400,
+          "char_end": 8175,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "65933fd9638eba9bff0b5e0d075a14fdf4d51e33aee810406e3fc60ea73fa5b5",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Institute must afford all necessary facilities to the committee; the committee may review its work and progress, inspect its buildings, equipment and other assets, and evaluate its work.",
+  "required_facts": [
+    [
+      "necessary facilities"
+    ],
+    [
+      "buildings, equipment"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-statistical-institute-act-1959__handle-1425",
+      "key": "section:10"
+    },
+    {
+      "document_id": "indian-statistical-institute-act-1959__handle-1425",
+      "key": "section:9"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 230,
+    "number_ambiguity": 6559,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 5,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#5"
+  }
+}

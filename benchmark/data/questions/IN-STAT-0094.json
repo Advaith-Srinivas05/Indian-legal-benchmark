@@ -1,0 +1,109 @@
+{
+  "question_id": "IN-STAT-0094",
+  "question": "When can the Centre cancel a licence for a new factory, and who may set up such an undertaking without a licence at all?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "industries-development-and-regulation-act-1951__handle-2118",
+          "key": "chapter:III/section:12",
+          "citation": "Industries (Development and Regulation)  Act, 1951, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 27386,
+          "char_end": 30760,
+          "page_start": 12,
+          "page_end": 13,
+          "text_sha256": "cd2c195f8a7c927c323ae53d29c0f8838fa805ca965b48f1bf1bd0988193f91d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "industries-development-and-regulation-act-1951__handle-2118",
+          "key": "chapter:III/section:11",
+          "citation": "Industries (Development and Regulation)  Act, 1951, s. 11",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "11"
+            }
+          ],
+          "char_start": 22459,
+          "char_end": 27385,
+          "page_start": 10,
+          "page_end": 12,
+          "text_sha256": "92763370ed05359bbf67a7480910711bdf686558d7d8468616b124b6f8ba8613",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It may revoke the licence if the holder, without reasonable cause, fails to establish or take effective steps to establish the undertaking in time. Only the Central Government may establish a new industrial undertaking other than under a licence.",
+  "required_facts": [
+    [
+      "revoke the licence"
+    ],
+    [
+      "except under and in accordance with a licence"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "industries-development-and-regulation-act-1951__handle-2118",
+      "key": "chapter:III/section:12"
+    },
+    {
+      "document_id": "industries-development-and-regulation-act-1951__handle-2118",
+      "key": "chapter:III/section:11"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3374,
+    "number_ambiguity": 5903,
+    "title_collisions": 4,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 8,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#8"
+  }
+}

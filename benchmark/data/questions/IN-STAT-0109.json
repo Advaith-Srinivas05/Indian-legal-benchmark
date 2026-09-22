@@ -1,0 +1,122 @@
+{
+  "question_id": "IN-STAT-0109",
+  "question": "Can a state make general rules about poisons, and who decides whether a poison may be imported only under licence?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "poisons-act-1919__handle-2363",
+          "key": "section:8",
+          "citation": "Poisons Act, 1919, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 5465,
+          "char_end": 6936,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "0e0b14877c7ac9563c87d1d1e36ed050a4a5c157c4d1ad05c2c6f1c280e39d0e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "poisons-act-1919__handle-8398",
+          "key": "section:8",
+          "citation": "POISONS ACT, 1919, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 5501,
+          "char_end": 6972,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "0e0b14877c7ac9563c87d1d1e36ed050a4a5c157c4d1ad05c2c6f1c280e39d0e",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "poisons-act-1919__handle-2363",
+          "key": "section:3",
+          "citation": "Poisons Act, 1919, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 2368,
+          "char_end": 2769,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "cbcc5bd0084172646ea42cd5c48dc9994dff414a5e70113ca4963f17819e2a2d",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The State Government may make rules to carry out the Act except as to the import power; the Central Government may by notification prohibit importing a specified poison except under licence.",
+  "required_facts": [
+    [
+      "State Government"
+    ],
+    [
+      "Central Government"
+    ],
+    [
+      "licence"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "poisons-act-1919__handle-2363",
+      "key": "section:8"
+    },
+    {
+      "document_id": "poisons-act-1919__handle-2363",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1471,
+    "number_ambiguity": 6826,
+    "title_collisions": 4,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 108,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#108"
+  }
+}

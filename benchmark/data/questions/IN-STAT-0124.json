@@ -1,0 +1,112 @@
+{
+  "question_id": "IN-STAT-0124",
+  "question": "How much did the Centre pay when it took over the women's medical college and hospital in Delhi, within what time, and what vested in it?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "lady-hardinge-medical-college-and-hospital-acquisition-and-m__handle-1623",
+          "key": "chapter:II/section:4",
+          "citation": "Lady Hardinge Medical College and Hospital (Acquisition and Miscellaneous Provisions) Act, 1977, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 7312,
+          "char_end": 8380,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "e3facbbecf86befb7587028b129c0a7cea1903fc7cdea2425d4cf0c1ed43b548",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "lady-hardinge-medical-college-and-hospital-acquisition-and-m__handle-1623",
+          "key": "chapter:II/section:3",
+          "citation": "Lady Hardinge Medical College and Hospital (Acquisition and Miscellaneous Provisions) Act, 1977, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 4343,
+          "char_end": 7311,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "b92786af3b5aa51277762165863ad493ef86f3492dc737fc883ffc32da5f618e",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Rupees one lakh in cash to the Treasurer, within three months of the appointed day; the college and hospital with its lands, buildings, equipment and other assets vested in the Central Government.",
+  "required_facts": [
+    [
+      "one lakh"
+    ],
+    [
+      "three months"
+    ],
+    [
+      "all lands"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "lady-hardinge-medical-college-and-hospital-acquisition-and-m__handle-1623",
+      "key": "chapter:II/section:4"
+    },
+    {
+      "document_id": "lady-hardinge-medical-college-and-hospital-acquisition-and-m__handle-1623",
+      "key": "chapter:II/section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1068,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 184,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#184"
+  }
+}

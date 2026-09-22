@@ -1,0 +1,130 @@
+{
+  "question_id": "IN-STAT-0122",
+  "question": "If one of a Christian couple is a minor and they live in Calcutta, Madras or Bombay, how can they marry sooner than the usual fourteen days, and what must happen before the registrar issues a certificate?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "indian-christian-marriage-act-1872__handle-2186",
+          "key": "part:V/section:43",
+          "citation": "Indian Christian Marriage Act, 1872, s. 43",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "43"
+            }
+          ],
+          "char_start": 32510,
+          "char_end": 33510,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "89ebba82d4f79080088e9acd051e45891c3c3d6fd089891b34961a925a028b64",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "indian-christian-marriage-act__handle-22106",
+          "key": "part:V/section:43",
+          "citation": "INDIAN CHRISTIAN MARRIAGE ACT, s. 43",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "43"
+            }
+          ],
+          "char_start": 32510,
+          "char_end": 33510,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "89ebba82d4f79080088e9acd051e45891c3c3d6fd089891b34961a925a028b64",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "indian-christian-marriage-act-1872__handle-2186",
+          "key": "part:V/section:41",
+          "citation": "Indian Christian Marriage Act, 1872, s. 41",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "41"
+            }
+          ],
+          "char_start": 30748,
+          "char_end": 31632,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "4dd240c19de2009f495be9b9500da5e47a477715bfa8bb282e67ca7aece990e9",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "They may petition a Judge of the High Court for an order directing the Marriage Registrar to issue the certificate early; ordinarily the certificate issues after the required oath and at least four days after the notice.",
+  "required_facts": [
+    [
+      "Judge of the High Court"
+    ],
+    [
+      "four days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-christian-marriage-act-1872__handle-2186",
+      "key": "part:V/section:43"
+    },
+    {
+      "document_id": "indian-christian-marriage-act-1872__handle-2186",
+      "key": "part:V/section:41"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1000,
+    "number_ambiguity": 1696,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 182,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#182"
+  }
+}

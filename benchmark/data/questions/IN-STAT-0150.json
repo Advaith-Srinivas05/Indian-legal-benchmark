@@ -1,0 +1,109 @@
+{
+  "question_id": "IN-STAT-0150",
+  "question": "Under Goa's law easing rural borrowers' burdens, when is a small farmer's loan treated as fully repaid, and how is the borrower's capacity to pay worked out?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "goa-debt-relief-act-1980__handle-22145",
+          "key": "chapter:V/section:19",
+          "citation": "Goa Debt Relief Act, 1980, s. 19",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "19"
+            }
+          ],
+          "char_start": 24120,
+          "char_end": 25759,
+          "page_start": 10,
+          "page_end": 11,
+          "text_sha256": "aa91410b86259138cc76ed823c873f499bd0b77db4720e43b29820c3998edaf4",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "goa-debt-relief-act-1980__handle-22145",
+          "key": "chapter:V/section:18",
+          "citation": "Goa Debt Relief Act, 1980, s. 18",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "18"
+            }
+          ],
+          "char_start": 23517,
+          "char_end": 24119,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "9c0035f6016dbe7f81b15ad1b498b95f0ff2e84e65804fb235c09d19b45fef31",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "When the creditor has received twice or more the principal, the debt is deemed discharged; paying capacity is seven times twenty per cent of the annual income or produce, or twice the principal, whichever is lower.",
+  "required_facts": [
+    [
+      "twice"
+    ],
+    [
+      "twenty per cent"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-debt-relief-act-1980__handle-22145",
+      "key": "chapter:V/section:19"
+    },
+    {
+      "document_id": "goa-debt-relief-act-1980__handle-22145",
+      "key": "chapter:V/section:18"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1639,
+    "number_ambiguity": 4382,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 600,
+    "tags": [
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#600"
+  }
+}

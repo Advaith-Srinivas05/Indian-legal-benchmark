@@ -1,0 +1,109 @@
+{
+  "question_id": "IN-STAT-0158",
+  "question": "In the eastern Maharashtra region, what is the ceiling on how much farmland a cultivating lessee may acquire from the owner?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "maharashtra-tenancy-and-agricultural-lands-vidarbha-region-a__handle-20997",
+          "key": "chapter:III/section:41",
+          "citation": "Maharashtra Tenancy and Agricultural Lands (Vidarbha Region) Act., s. 41",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "41"
+            }
+          ],
+          "char_start": 82430,
+          "char_end": 84679,
+          "page_start": 27,
+          "page_end": 28,
+          "text_sha256": "156c8b319db32b47589e419df39fb525cd2b35030688389728462cfdfaa3b06d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "maharashtra-tenancy-and-agricultural-lands-vidarbha-region-a__handle-20997",
+          "key": "chapter:III/section:42",
+          "citation": "Maharashtra Tenancy and Agricultural Lands (Vidarbha Region) Act., s. 42",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "42"
+            }
+          ],
+          "char_start": 84680,
+          "char_end": 85397,
+          "page_start": 28,
+          "page_end": 28,
+          "text_sha256": "86c769031732d2816b3f4130c5e9aa48d049d608c68340d34b515bb8a9ace3b4",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A tenant may buy land held and personally cultivated, limited to three family holdings (including any land already held as tenure-holder).",
+  "required_facts": [
+    [
+      "three family holdings"
+    ],
+    [
+      "cultivated by him personally"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "maharashtra-tenancy-and-agricultural-lands-vidarbha-region-a__handle-20997",
+      "key": "chapter:III/section:41"
+    },
+    {
+      "document_id": "maharashtra-tenancy-and-agricultural-lands-vidarbha-region-a__handle-20997",
+      "key": "chapter:III/section:42"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2249,
+    "number_ambiguity": 1817,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 653,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#653"
+  }
+}

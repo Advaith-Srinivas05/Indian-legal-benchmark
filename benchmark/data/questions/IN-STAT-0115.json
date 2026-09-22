@@ -1,0 +1,174 @@
+{
+  "question_id": "IN-STAT-0115",
+  "question": "What must the Centre publish each year about the national fund against drug abuse, and what money goes into that fund?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "narcotic-drugs-and-psychotropic-substances-act-1985__handle-1791",
+          "key": "chapter:II/section:7B",
+          "citation": "Narcotic Drugs and Psychotropic Substances Act, 1985, s. 7B",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7B"
+            }
+          ],
+          "char_start": 29069,
+          "char_end": 29401,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "b1ed4ec7d75838b52a96f17e288f7b08562b9ad05617013f8a964456bf868529",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "narcotic-drugs-and-psychotropic-substances-act-1985__handle-13673",
+          "key": "chapter:II/section:7B",
+          "citation": "Narcotic Drugs and Psychotropic Substances Act, 1985, s. 7B",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7B"
+            }
+          ],
+          "char_start": 29037,
+          "char_end": 29369,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "b1ed4ec7d75838b52a96f17e288f7b08562b9ad05617013f8a964456bf868529",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "narcotic-drugs-and-psychotropic-substances-act-1985__handle-15315",
+          "key": "chapter:II/section:7B",
+          "citation": "NARCOTIC DRUGS AND PSYCHOTROPIC SUBSTANCES, ACT, 1985, s. 7B",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7B"
+            }
+          ],
+          "char_start": 29037,
+          "char_end": 29369,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "b1ed4ec7d75838b52a96f17e288f7b08562b9ad05617013f8a964456bf868529",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "narcotic-drugs-and-psychotropic-substances-act-1985__handle-18974",
+          "key": "chapter:II/section:7B",
+          "citation": "narcotic drugs and psychotropic substances act, 1985, s. 7B",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7B"
+            }
+          ],
+          "char_start": 29069,
+          "char_end": 29401,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "b1ed4ec7d75838b52a96f17e288f7b08562b9ad05617013f8a964456bf868529",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "narcotic-drugs-and-psychotropic-substances-act-1985__handle-1791",
+          "key": "chapter:II/section:7A",
+          "citation": "Narcotic Drugs and Psychotropic Substances Act, 1985, s. 7A",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7A"
+            }
+          ],
+          "char_start": 27408,
+          "char_end": 29068,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "8596420357459ecf24a58afb2c192ab08cb35b0bddf3e1287e8d84b5de84abbe",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A report of the activities financed from the Fund with a statement of accounts; the Fund receives appropriated amounts, sale proceeds of forfeited property, grants and investment income.",
+  "required_facts": [
+    [
+      "statement of accounts"
+    ],
+    [
+      "sale proceeds of any property forfeited"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "narcotic-drugs-and-psychotropic-substances-act-1985__handle-1791",
+      "key": "chapter:II/section:7B"
+    },
+    {
+      "document_id": "narcotic-drugs-and-psychotropic-substances-act-1985__handle-1791",
+      "key": "chapter:II/section:7A"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 332,
+    "number_ambiguity": 56,
+    "title_collisions": 6,
+    "cluster_size": 4,
+    "equivalents": 3,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 148,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#148"
+  }
+}

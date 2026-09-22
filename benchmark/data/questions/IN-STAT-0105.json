@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0105",
+  "question": "Where can a person accused of the crime of apartheid be tried in India, and what is the heaviest punishment?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "anti-apartheid-united-nations-convention-act-1981__handle-1827",
+          "key": "section:5",
+          "citation": "Anti-Apartheid (United Nations Convention) Act, 1981, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 3513,
+          "char_end": 3791,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "f1d9099a0aac6b33229c4081fe84cffaea749c986c68c46011fc371ea14ea052",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "anti-apartheid-united-nations-convention-act-1981__handle-1827",
+          "key": "section:3",
+          "citation": "Anti-Apartheid (United Nations Convention) Act, 1981, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 2024,
+          "char_end": 2614,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "7687295c39097f15a8ef3ba4483f168cff235317060175612ddb7fe21f9b07e5",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "In any place where the person may be found, or wherever the Central Government directs; the punishment can be death, imprisonment for life or up to ten years, with fine.",
+  "required_facts": [
+    [
+      "any place in which he may be found"
+    ],
+    [
+      "death"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "anti-apartheid-united-nations-convention-act-1981__handle-1827",
+      "key": "section:5"
+    },
+    {
+      "document_id": "anti-apartheid-united-nations-convention-act-1981__handle-1827",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 278,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 96,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#96"
+  }
+}

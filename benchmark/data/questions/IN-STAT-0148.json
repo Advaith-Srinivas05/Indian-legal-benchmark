@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0148",
+  "question": "Who is barred from joining the committee that manages the Shirdi temple trust, and how is a mid-term vacancy filled?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "shree-sai-baba-sansthan-trust-shirdi-appointment-of-members__rule-53d8bafd57",
+          "key": "section:5",
+          "citation": "Shree Sai Baba Sansthan Trust (Shirdi) (Appointment of Members of Management Committee and Forms of Declarations) Rules, 2013., r. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 4319,
+          "char_end": 5239,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "edc025f5013f8b5afa01c0655020cb727c5fbd366b7fb1d59e26cb4b7ede72fd",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "shree-sai-baba-sansthan-trust-shirdi-appointment-of-members__rule-53d8bafd57",
+          "key": "section:8",
+          "citation": "Shree Sai Baba Sansthan Trust (Shirdi) (Appointment of Members of Management Committee and Forms of Declarations) Rules, 2013., r. 8",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 6668,
+          "char_end": 7248,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "d7da5ed38262606ed4f002df473ddd8ba479636b7ee24664046d59419f2cf5bb",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Minors, persons of unsound mind, undischarged insolvents and those with interests in its property transactions or supply contracts, among others; the State Government fills a casual vacancy for the remainder of the term.",
+  "required_facts": [
+    [
+      "undischarged insolvent"
+    ],
+    [
+      "remainder of the term"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "shree-sai-baba-sansthan-trust-shirdi-appointment-of-members__rule-53d8bafd57",
+      "key": "section:5"
+    },
+    {
+      "document_id": "shree-sai-baba-sansthan-trust-shirdi-appointment-of-members__rule-53d8bafd57",
+      "key": "section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 920,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 568,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#568"
+  }
+}

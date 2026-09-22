@@ -1,0 +1,135 @@
+{
+  "question_id": "IN-STAT-0123",
+  "question": "Must the government set up an advisory body when it frames a scheme regulating dock work, and how is its membership balanced?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "dock-workers-regulation-of-employment-act-1948__handle-1708",
+          "key": "schedule:_/section:5",
+          "citation": "Dock Workers (Regulation of Employment) Act, 1948, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 8448,
+          "char_end": 10592,
+          "page_start": 6,
+          "page_end": 7,
+          "text_sha256": "93127d9b6886bbf198d17d3e6634b49d7d452179b63c5bf62629e7cff71092c2",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "dock-workers-regulation-of-employment-act-1948__handle-15129",
+          "key": "section:5",
+          "citation": "DOCK WORKERS (REGULATION OF EMPLOYMENT) ACT, 1948, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 6049,
+          "char_end": 8075,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "330c23dc9069eafcf161398acb2118bc1867ebcaa366f76400259654d7f11f51",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "dock-workers-regulation-of-employment-act-1948__handle-1708",
+          "key": "schedule:_/section:4",
+          "citation": "Dock Workers (Regulation of Employment) Act, 1948, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 7584,
+          "char_end": 8447,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "4c39ca1b8d1aa1a0f690bb62252534f60dd6dd12819f6aedf9eab0ba0bb31fd0",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes, if it makes a scheme for a port it must constitute an Advisory Committee, with equal numbers representing the Government, the dock workers and the employers of dock workers.",
+  "required_facts": [
+    [
+      "Advisory Committee"
+    ],
+    [
+      "equal number of members"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "dock-workers-regulation-of-employment-act-1948__handle-1708",
+      "key": "schedule:_/section:5"
+    },
+    {
+      "document_id": "dock-workers-regulation-of-employment-act-1948__handle-1708",
+      "key": "schedule:_/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2144,
+    "number_ambiguity": 7842,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 183,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#183",
+    "alternatives_decided": [
+      {
+        "document_id": "dock-workers-regulation-of-employment-act-1948__handle-15129",
+        "key": "section:5",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

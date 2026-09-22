@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0116",
+  "question": "What civil-court powers does a court deciding naval and aircraft prizes have, and how long do parties have to appeal its decree?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "naval-and-aircraft-prize-act-1971__handle-1606",
+          "key": "schedule:_/section:7",
+          "citation": "Naval and Aircraft Prize Act, 1971, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 8617,
+          "char_end": 9576,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "8671f174d1e604779492f40d98ae0fce376d8759a88fc1efa192f69887650b0c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "naval-and-aircraft-prize-act-1971__handle-1606",
+          "key": "schedule:_/section:6",
+          "citation": "Naval and Aircraft Prize Act, 1971, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 8225,
+          "char_end": 8616,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "d78501c62c7a052a03aae889032e04cb4c399714430f06663183be46d5aa86c4",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It has civil court powers such as summoning and enforcing attendance, discovery of documents and receiving evidence on affidavit; an appeal lies to the Central Government within ninety days.",
+  "required_facts": [
+    [
+      "summoning and enforcing the attendance"
+    ],
+    [
+      "ninety days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "naval-and-aircraft-prize-act-1971__handle-1606",
+      "key": "schedule:_/section:7"
+    },
+    {
+      "document_id": "naval-and-aircraft-prize-act-1971__handle-1606",
+      "key": "schedule:_/section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 959,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 160,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#160"
+  }
+}

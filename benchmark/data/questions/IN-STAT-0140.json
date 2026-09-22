@@ -1,0 +1,101 @@
+{
+  "question_id": "IN-STAT-0140",
+  "question": "Can the holder of the Jejeebhoy baronetcy sell the family's Bombay mansion, and whose consent is needed?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "sir-jamsetjee-jejeebhoy-baronetcy-act-1915__handle-2355",
+          "key": "section:10",
+          "citation": "Sir Jamsetjee Jejeebhoy Baronetcy Act, 1915, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 26729,
+          "char_end": 29769,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "fa351dd25e39d7338b42c9dd0727d1d787ce63f0bf46ead4d3cc64ffda5a699d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "sir-jamsetjee-jejeebhoy-baronetcy-act-1915__handle-2355",
+          "key": "section:8",
+          "citation": "Sir Jamsetjee Jejeebhoy Baronetcy Act, 1915, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 24142,
+          "char_end": 25320,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "18382940e198bedc4fcd547596b556bb6b2dd688ff47873a0205605275a0623f",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes, the Baronet may sell Mazagon Castle with the written consent and approval of the Corporation, as with his power to buy land and erect a mansion.",
+  "required_facts": [
+    [
+      "Mazagon Castle"
+    ],
+    [
+      "approval of the Corporation"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "sir-jamsetjee-jejeebhoy-baronetcy-act-1915__handle-2355",
+      "key": "section:10"
+    },
+    {
+      "document_id": "sir-jamsetjee-jejeebhoy-baronetcy-act-1915__handle-2355",
+      "key": "section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3040,
+    "number_ambiguity": 6559,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 293,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#293"
+  }
+}

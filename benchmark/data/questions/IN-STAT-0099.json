@@ -1,0 +1,111 @@
+{
+  "question_id": "IN-STAT-0099",
+  "question": "Which areas did Bihar cede to its eastern neighbour in 1956, and how was the constitutional description of the two states altered?",
+  "category": "cross_reference",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "bihar-and-west-bengal-transfer-of-territories-act-1956__handle-1636",
+          "key": "part:II/section:4",
+          "citation": "Bihar and West Bengal (Transfer of Territories) Act, 1956, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 7105,
+          "char_end": 8589,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "cd4c8f64ccf49852b65b96ae85067759193d9462bdde3090c6b4430dd0639677",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "bihar-and-west-bengal-transfer-of-territories-act-1956__handle-1636",
+          "key": "part:II/section:3",
+          "citation": "Bihar and West Bengal (Transfer of Territories) Act, 1956, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 4991,
+          "char_end": 7104,
+          "page_start": 4,
+          "page_end": 5,
+          "text_sha256": "7138fb6487e0011c353527986de9e6f1f742a5c43c8786f3594e225b487c4b09",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The eastern portion of Kishanganj sub-division of Purnea (with part of Gopalpur thana) and Purulia sub-division of Manbhum (excluding certain thanas) were added to West Bengal, and the First Schedule to the Constitution was amended to redescribe the territories of Bihar and West Bengal.",
+  "required_facts": [
+    [
+      "Purulia"
+    ],
+    [
+      "Kishanganj"
+    ],
+    [
+      "First Schedule"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bihar-and-west-bengal-transfer-of-territories-act-1956__handle-1636",
+      "key": "part:II/section:4"
+    },
+    {
+      "document_id": "bihar-and-west-bengal-transfer-of-territories-act-1956__handle-1636",
+      "key": "part:II/section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1484,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 44,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#44"
+  }
+}

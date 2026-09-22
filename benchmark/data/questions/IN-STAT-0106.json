@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0106",
+  "question": "From what date is the integrated GST law treated as extended to Jammu and Kashmir, and what exclusion was removed from it?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "integrated-goods-and-services-tax-extension-to-jammu-and-kas__handle-2247",
+          "key": "section:2",
+          "citation": "Integrated Goods and Services Tax (Extension to Jammu and Kashmir) Act, 2017, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 841,
+          "char_end": 1388,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "752d270cc2baea44e98c618cf023669ac2d0467dde58c25e79c9f89306d806f1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "integrated-goods-and-services-tax-extension-to-jammu-and-kas__handle-2247",
+          "key": "section:1",
+          "citation": "Integrated Goods and Services Tax (Extension to Jammu and Kashmir) Act, 2017, s. 1",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "1"
+            }
+          ],
+          "char_start": 619,
+          "char_end": 840,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "2769ec38a9757db54d00bc6b30cf70cf5d529578bfcb027385c38778c6509b02",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The extension is deemed in force from 8 July 2017, and the words excluding the State of Jammu and Kashmir were omitted from the principal Act.",
+  "required_facts": [
+    [
+      "8th day of July, 2017"
+    ],
+    [
+      "except the State of Jammu and Kashmir"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "integrated-goods-and-services-tax-extension-to-jammu-and-kas__handle-2247",
+      "key": "section:2"
+    },
+    {
+      "document_id": "integrated-goods-and-services-tax-extension-to-jammu-and-kas__handle-2247",
+      "key": "section:1"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 547,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 102,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#102"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0100",
+  "question": "What does it take to carry a wealth-tax dispute beyond the state's top judges to the country's highest bench?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "wealth-tax-act-1957__handle-3123",
+          "key": "chapter:VI/section:29",
+          "citation": "Wealth-tax Act, 1957, s. 29",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "29"
+            }
+          ],
+          "char_start": 193559,
+          "char_end": 194740,
+          "page_start": 70,
+          "page_end": 70,
+          "text_sha256": "aaad9e4ace603f0ae52ac4d07febbaa1830e58ed0a927cd48482028d9e82eeb2",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "An appeal lies to the Supreme Court from the High Court's judgment on the case if the High Court certifies it as a fit case for appeal.",
+  "required_facts": [
+    [
+      "certifies"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "wealth-tax-act-1957__handle-3123",
+      "key": "chapter:VI/section:29"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1181,
+    "number_ambiguity": 2896,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 53,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#53"
+  }
+}

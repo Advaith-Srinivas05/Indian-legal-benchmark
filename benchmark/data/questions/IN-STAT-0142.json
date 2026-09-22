@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0142",
+  "question": "When a landholder in the old central Indian provinces dies leaving an heir who may be unfit to manage the estate, what can the guardian authority do, and who counts as unfit?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "central-provinces-court-of-wards-act-1899__handle-19232",
+          "key": "section:7",
+          "citation": "Central Provinces Court of Wards Act, 1899, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 6040,
+          "char_end": 7208,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "8051cf1858b573213e3de993c36e7fd04ba4cf6281f689b31ea58349646fdb76",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "central-provinces-court-of-wards-act-1899__handle-19232",
+          "key": "section:5",
+          "citation": "Central Provinces Court of Wards Act, 1899, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 4646,
+          "char_end": 5400,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "8967fbb4f7900d943dcdd62c19a96c3f799ec14759b23d46b675a826923e3b30",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It may take steps for temporary custody and protection of the inherited property; disqualified persons include minors, persons adjudged of unsound mind and those declared incapable of managing property.",
+  "required_facts": [
+    [
+      "temporary custody"
+    ],
+    [
+      "minors"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "central-provinces-court-of-wards-act-1899__handle-19232",
+      "key": "section:7"
+    },
+    {
+      "document_id": "central-provinces-court-of-wards-act-1899__handle-19232",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1168,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 298,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#298"
+  }
+}

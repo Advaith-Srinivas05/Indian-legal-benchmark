@@ -1,0 +1,101 @@
+{
+  "question_id": "IN-STAT-0132",
+  "question": "When the forces hold gunnery practice at sea off a notified area, who assesses claims for damage, and what losses can be compensated?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "seaward-artillery-practice-act-1949__handle-2437",
+          "key": "section:6",
+          "citation": "Seaward Artillery Practice Act, 1949, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 4987,
+          "char_end": 6708,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "9eb05e67533f0cbee8718a908306965007e592b3f143063d52797a5cd6da098a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "seaward-artillery-practice-act-1949__handle-2437",
+          "key": "section:5",
+          "citation": "Seaward Artillery Practice Act, 1949, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 4596,
+          "char_end": 4986,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "7f79cd85b4cf09cf91fc822cbe1b87c15a21fdd42e63a29e1e14a79c138478e2",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The district Collector deputes Revenue Officers who investigate and determine the compensation; it covers damage to person or property or interference with rights, including reasonable protective expenses.",
+  "required_facts": [
+    [
+      "Revenue Officers"
+    ],
+    [
+      "compensation shall be payable"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "seaward-artillery-practice-act-1949__handle-2437",
+      "key": "section:6"
+    },
+    {
+      "document_id": "seaward-artillery-practice-act-1949__handle-2437",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1721,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 259,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#259"
+  }
+}

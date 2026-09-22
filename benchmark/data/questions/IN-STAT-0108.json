@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0108",
+  "question": "Does India's ban on unauthorised use of the Red Cross emblem apply on an Indian ship at sea, and whose approval is needed to use it?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "geneva-conventions-act-1960__handle-1559",
+          "key": "chapter:IV/section:16",
+          "citation": "Geneva Conventions Act, 1960, s. 16",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "16"
+            }
+          ],
+          "char_start": 18523,
+          "char_end": 18773,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "5aea9706f1422960c69237f5c06c5ae763b69382c6752d39298c8eed106e39fc",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "geneva-conventions-act-1960__handle-1559",
+          "key": "chapter:IV/section:12",
+          "citation": "Geneva Conventions Act, 1960, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 14515,
+          "char_end": 15808,
+          "page_start": 5,
+          "page_end": 6,
+          "text_sha256": "9ce37d921e9866c3196ab4cced162ab80f6dfe31404ae8322b94e926f1ed6ee4",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes, the prohibition extends to use in or outside India on any Indian ship or aircraft; use requires the approval of the Central Government.",
+  "required_facts": [
+    [
+      "Indian ship or aircraft"
+    ],
+    [
+      "approval of the Central Government"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "geneva-conventions-act-1960__handle-1559",
+      "key": "chapter:IV/section:16"
+    },
+    {
+      "document_id": "geneva-conventions-act-1960__handle-1559",
+      "key": "chapter:IV/section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 250,
+    "number_ambiguity": 5029,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 107,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#107"
+  }
+}

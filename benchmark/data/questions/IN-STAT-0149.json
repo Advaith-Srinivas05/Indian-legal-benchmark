@@ -1,0 +1,101 @@
+{
+  "question_id": "IN-STAT-0149",
+  "question": "When buying farmland in Goa, what must the buyer undertake, and what proof of being a farmer is accepted?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "in-exercise-of-the-powers-conferred-by-section-12-of-the-goa__rule-1fc7c53f63",
+          "key": "section:5",
+          "citation": "In exercise of the powers conferred by section 12 of the Goa Restrictions on Transfer of Agricultural Land Act, 2023 (Goa Act 18 of 2023), the Government of Goa hereby makes the following rules, r. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 3404,
+          "char_end": 3854,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "bebfc15d22ee22870fba3ea90cdb560fe783c0d6c012fb217a45d36c499506a8",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "in-exercise-of-the-powers-conferred-by-section-12-of-the-goa__rule-1fc7c53f63",
+          "key": "section:3",
+          "citation": "In exercise of the powers conferred by section 12 of the Goa Restrictions on Transfer of Agricultural Land Act, 2023 (Goa Act 18 of 2023), the Government of Goa hereby makes the following rules, r. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 1895,
+          "char_end": 2797,
+          "page_start": 1,
+          "page_end": 2,
+          "text_sha256": "7bbe109cc716ae8305264fb41504cd0a31fe81548be1d9aab645f3930838411d",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "An affidavit to take up agriculture within three years of acquisition and continue it; proof such as a Krishi Card or a Mamlatdar's certificate that the buyer is an agriculturist.",
+  "required_facts": [
+    [
+      "three years"
+    ],
+    [
+      "Krishi Card"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "in-exercise-of-the-powers-conferred-by-section-12-of-the-goa__rule-1fc7c53f63",
+      "key": "section:5"
+    },
+    {
+      "document_id": "in-exercise-of-the-powers-conferred-by-section-12-of-the-goa__rule-1fc7c53f63",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 450,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 592,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#592"
+  }
+}

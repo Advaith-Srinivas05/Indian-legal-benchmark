@@ -1,0 +1,112 @@
+{
+  "question_id": "IN-STAT-0156",
+  "question": "After inams in Sandur were abolished, where could a person appeal a Deputy Commissioner's decision and within what time, and what do new occupants owe the state?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "karnataka-sandur-area-inams-abolition-act-1976__handle-7811",
+          "key": "chapter:VI/section:29",
+          "citation": "KARNATAKA (SANDUR AREA) INAMS ABOLITION ACT, 1976, s. 29",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "29"
+            }
+          ],
+          "char_start": 38859,
+          "char_end": 39934,
+          "page_start": 20,
+          "page_end": 20,
+          "text_sha256": "837f75c3def2d5cbdb26877121eb6d94568b4f06ca2b087d099a33ca26d5b09b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "karnataka-sandur-area-inams-abolition-act-1976__handle-7811",
+          "key": "chapter:II/section:8",
+          "citation": "KARNATAKA (SANDUR AREA) INAMS ABOLITION ACT, 1976, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 22672,
+          "char_end": 23539,
+          "page_start": 12,
+          "page_end": 13,
+          "text_sha256": "35f0fcefe1992bdc5e3ee81c4b986469f9a3528cfb171e8917c127bda9e1af35",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "To the Karnataka Appellate Tribunal within ninety days (six months for the State Government); new occupants are liable to pay land revenue to the State Government.",
+  "required_facts": [
+    [
+      "ninety days"
+    ],
+    [
+      "Karnataka Appellate Tribunal"
+    ],
+    [
+      "land revenue"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "karnataka-sandur-area-inams-abolition-act-1976__handle-7811",
+      "key": "chapter:VI/section:29"
+    },
+    {
+      "document_id": "karnataka-sandur-area-inams-abolition-act-1976__handle-7811",
+      "key": "chapter:II/section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1075,
+    "number_ambiguity": 2896,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 627,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#627"
+  }
+}

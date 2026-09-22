@@ -1,0 +1,76 @@
+{
+  "question_id": "IN-STAT-0101",
+  "question": "What must the commission tackling air pollution around Delhi submit to the Centre every year, and where does it go next?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "commission-for-air-quality-management-in-national-capital-re__handle-16898",
+          "key": "chapter:III/section:13",
+          "citation": "Commission for Air Quality Management in National Capital Region and Adjoining Areas Act, 2021, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 28652,
+          "char_end": 29108,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "f3e226e9ad21787b95987bcc998fbb0a61e2239b0f7c6031cdbb34322de8dfd5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "An annual report of the steps taken, proposals made and measures undertaken; the Central Government lays it before each House of Parliament.",
+  "required_facts": [
+    [
+      "annual report"
+    ],
+    [
+      "each House of Parliament"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "commission-for-air-quality-management-in-national-capital-re__handle-16898",
+      "key": "chapter:III/section:13"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 456,
+    "number_ambiguity": 5702,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 72,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#72"
+  }
+}

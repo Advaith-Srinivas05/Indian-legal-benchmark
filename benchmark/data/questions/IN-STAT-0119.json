@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0119",
+  "question": "Who must turn down a brand name that falsely suggests goods come from a famous region, and which office holder heads the registry of such regional names?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "geographical-indications-of-goods-registration-and-protectio__handle-1981",
+          "key": "chapter:V/section:25",
+          "citation": "Geographical Indications of Goods (Registration and Protection) Act, 1999, s. 25",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "25"
+            }
+          ],
+          "char_start": 38975,
+          "char_end": 40013,
+          "page_start": 14,
+          "page_end": 14,
+          "text_sha256": "2b78326913a94b55a54030f4bf25fbc700f8496329d9d5e02b00153cce5b3d30",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "geographical-indications-of-goods-registration-and-protectio__handle-1981",
+          "key": "chapter:II/section:3",
+          "citation": "Geographical Indications of Goods (Registration and Protection) Act, 1999, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 10896,
+          "char_end": 11422,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "5ea9de1eb0eda2dd1e4f38d5880271f486dcdd276d8661f2b27896d44a08772c",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Registrar of Trade Marks must refuse or invalidate it; the Controller-General of Patents, Designs and Trade Marks is the Registrar of Geographical Indications.",
+  "required_facts": [
+    [
+      "Registrar of Trade Marks"
+    ],
+    [
+      "Controller-General of Patents, Designs and Trade Marks"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "geographical-indications-of-goods-registration-and-protectio__handle-1981",
+      "key": "chapter:V/section:25"
+    },
+    {
+      "document_id": "geographical-indications-of-goods-registration-and-protectio__handle-1981",
+      "key": "chapter:II/section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1038,
+    "number_ambiguity": 3399,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 169,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#169"
+  }
+}

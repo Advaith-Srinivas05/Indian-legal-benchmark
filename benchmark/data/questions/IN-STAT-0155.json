@@ -1,0 +1,129 @@
+{
+  "question_id": "IN-STAT-0155",
+  "question": "If someone disputes the payment for urgent canal repair labour called out by the canal officer in Daman, where do they appeal and within what time?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "goa-daman-and-diu-irrigation-act-1973-and-rules-1975__handle-11669",
+          "key": "part:VII/section:57",
+          "citation": "Goa, Daman and Diu Irrigation Act, 1973 and Rules, 1975, s. 57",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "VII"
+            },
+            {
+              "unit_type": "section",
+              "number": "57"
+            }
+          ],
+          "char_start": 47865,
+          "char_end": 48123,
+          "page_start": 19,
+          "page_end": 19,
+          "text_sha256": "032f5eb83f972cf0003ceade7e7c3279aeb3bb617f46856b55063841cc2a0cb5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "goa-daman-and-diu-irrigation-act-1973-and-rules-1975__handle-11669",
+          "key": "part:VII/section:54",
+          "citation": "Goa, Daman and Diu Irrigation Act, 1973 and Rules, 1975, s. 54",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "VII"
+            },
+            {
+              "unit_type": "section",
+              "number": "54"
+            }
+          ],
+          "char_start": 45989,
+          "char_end": 47489,
+          "page_start": 18,
+          "page_end": 19,
+          "text_sha256": "9c66dba7509466f66faf44c5cfdb6411b18368b1d7c80153bf190ecb56ea4957",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "To the Collector within thirty days from the tender of payment, whose decision is final; the labour is called out by the Canal-Officer when urgent works are needed to prevent public injury.",
+  "required_facts": [
+    [
+      "Collector"
+    ],
+    [
+      "thirty days"
+    ],
+    [
+      "Canal-Officer"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-daman-and-diu-irrigation-act-1973-and-rules-1975__handle-11669",
+      "key": "part:VII/section:57"
+    },
+    {
+      "document_id": "goa-daman-and-diu-irrigation-act-1973-and-rules-1975__handle-11669",
+      "key": "part:VII/section:54"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 258,
+    "number_ambiguity": 1073,
+    "title_collisions": 1,
+    "cluster_size": 2,
+    "equivalents": 2,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 625,
+    "tags": [
+      "numeric",
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#625",
+    "alternatives_decided": [
+      {
+        "document_id": "goa-daman-and-diu-irrigation-act-1973__handle-10073",
+        "key": "part:VII/section:57",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "does not state every required fact"
+      },
+      {
+        "document_id": "goa-irrigation-act-1973__handle-22186",
+        "key": "part:VII/section:57",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "does not state every required fact"
+      }
+    ]
+  }
+}

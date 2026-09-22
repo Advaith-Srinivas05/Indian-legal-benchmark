@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0146",
+  "question": "What must a notification appointing an official to collect statistics state, and who keeps the register of such officials?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "collection-of-statistics-rules-2011__rule-e32b6b2e37",
+          "key": "section:7",
+          "citation": "Collection of Statistics Rules, 2011, r. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 9283,
+          "char_end": 10234,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "975b0f5f82909e75ba35d4e696ae9a5951bc7ed33c848302c08c80f408b95db7",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "collection-of-statistics-rules-2011__rule-e32b6b2e37",
+          "key": "section:4",
+          "citation": "Collection of Statistics Rules, 2011, r. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 2039,
+          "char_end": 4642,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "74881a28d2c9c31e2dbe94e834bf734228d49d660677da3f15c53e0ccc9ea3da",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The name, designation and address of the officer for each geographical unit and details of any engaged agency; the nodal officer maintains the register of statistics officers.",
+  "required_facts": [
+    [
+      "name, designation and address"
+    ],
+    [
+      "register of statistics officers"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "collection-of-statistics-rules-2011__rule-e32b6b2e37",
+      "key": "section:7"
+    },
+    {
+      "document_id": "collection-of-statistics-rules-2011__rule-e32b6b2e37",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 951,
+    "number_ambiguity": 7124,
+    "title_collisions": 5,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 496,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#496"
+  }
+}

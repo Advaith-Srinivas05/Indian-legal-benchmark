@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0102",
+  "question": "When the petroleum and gas regulator investigates a complaint, whom does it appoint, and which complaints must it leave to consumer forums?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "petroleum-and-natural-gas-regulatory-board-act-2006__handle-2012",
+          "key": "chapter:V/section:26",
+          "citation": "Petroleum and Natural Gas Regulatory Board Act, 2006, s. 26",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "26"
+            }
+          ],
+          "char_start": 48131,
+          "char_end": 49372,
+          "page_start": 18,
+          "page_end": 18,
+          "text_sha256": "4124c8a7a2f65e31f8329a0c56197864183f46f209c4011871585dcf46297391",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "petroleum-and-natural-gas-regulatory-board-act-2006__handle-2012",
+          "key": "chapter:V/section:25",
+          "citation": "Petroleum and Natural Gas Regulatory Board Act, 2006, s. 25",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "25"
+            }
+          ],
+          "char_start": 46014,
+          "char_end": 48130,
+          "page_start": 18,
+          "page_end": 18,
+          "text_sha256": "2836f5fb39c048c27f5b8e4e24c088f2ea5db9ba75a328c0cecc26b6be8a48cb",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It appoints one of its officers as an Investigating Officer (or may ask a government investigating agency); complaints of individual consumers maintainable before a consumer disputes redressal forum are not taken up by the Board.",
+  "required_facts": [
+    [
+      "Investigating Officer"
+    ],
+    [
+      "consumer disputes redressal forum"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "petroleum-and-natural-gas-regulatory-board-act-2006__handle-2012",
+      "key": "chapter:V/section:26"
+    },
+    {
+      "document_id": "petroleum-and-natural-gas-regulatory-board-act-2006__handle-2012",
+      "key": "chapter:V/section:25"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1241,
+    "number_ambiguity": 3259,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 81,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#81"
+  }
+}

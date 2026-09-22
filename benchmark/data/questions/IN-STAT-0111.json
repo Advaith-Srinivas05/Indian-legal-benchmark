@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0111",
+  "question": "How often must the national council for training disability professionals meet, and how are its procedural rules made?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "rehabilitation-council-of-india-act-1992__handle-1977",
+          "key": "chapter:III/section:29",
+          "citation": "Rehabilitation Council of India Act, 1992, s. 29",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "29"
+            }
+          ],
+          "char_start": 28958,
+          "char_end": 30903,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "fafa37a7af0599a64f619598b8a8141635eb4652acb155d4223c913d35709062",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "rehabilitation-council-of-india-act-1992__handle-1977",
+          "key": "chapter:II/section:4",
+          "citation": "Rehabilitation Council of India Act, 1992, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 8332,
+          "char_end": 9540,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "374d87f3e516a7c6b3f22041981f2ca5482cb4c2413c4e4c4b168440676d5e6e",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It must meet at least once in each year; its rules of procedure may be provided by regulations the Council makes with the previous sanction of the Central Government.",
+  "required_facts": [
+    [
+      "at least once in each year"
+    ],
+    [
+      "previous sanction of the Central Government"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "rehabilitation-council-of-india-act-1992__handle-1977",
+      "key": "chapter:III/section:29"
+    },
+    {
+      "document_id": "rehabilitation-council-of-india-act-1992__handle-1977",
+      "key": "chapter:II/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1945,
+    "number_ambiguity": 2896,
+    "title_collisions": 3,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 118,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#118"
+  }
+}

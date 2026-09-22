@@ -1,0 +1,269 @@
+{
+  "question_id": "IN-STAT-0097",
+  "question": "When a company breaks a government order controlling the supply of essential goods, who besides the company can be held guilty?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "essential-commodities-act-1955__handle-10233",
+          "key": "section:10",
+          "citation": "ESSENTIAL COMMODITIES ACT, 1955, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 34963,
+          "char_end": 37641,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "5020b409731d71337f57d9d5cd21038774c287471580aa4fda5d4871453d9345",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "essential-commodities-act-1955__handle-13592",
+          "key": "section:10",
+          "citation": "Essential Commodities Act, 1955, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 34349,
+          "char_end": 37027,
+          "page_start": 10,
+          "page_end": 11,
+          "text_sha256": "5020b409731d71337f57d9d5cd21038774c287471580aa4fda5d4871453d9345",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "essential-commodities-act-1955__handle-15369",
+          "key": "section:10",
+          "citation": "ESSENTIAL COMMODITIES ACT, 1955, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 34963,
+          "char_end": 37641,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "5020b409731d71337f57d9d5cd21038774c287471580aa4fda5d4871453d9345",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "essential-commodities-act-1955__handle-15869",
+          "key": "section:10",
+          "citation": "Essential Commodities Act, 1955, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 47672,
+          "char_end": 50350,
+          "page_start": 15,
+          "page_end": 16,
+          "text_sha256": "5020b409731d71337f57d9d5cd21038774c287471580aa4fda5d4871453d9345",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "essential-commodities-act-1955__handle-17058",
+          "key": "section:10",
+          "citation": "Essential commodities act 1955, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 47672,
+          "char_end": 50350,
+          "page_start": 15,
+          "page_end": 16,
+          "text_sha256": "5020b409731d71337f57d9d5cd21038774c287471580aa4fda5d4871453d9345",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "essential-commodities-act-1955__handle-4891",
+          "key": "section:10",
+          "citation": "Essential Commodities Act, 1955, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 34963,
+          "char_end": 37641,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "5020b409731d71337f57d9d5cd21038774c287471580aa4fda5d4871453d9345",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "essential-commodities-act-1955__handle-5754",
+          "key": "section:10",
+          "citation": "Essential Commodities Act, 1955, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 34963,
+          "char_end": 37641,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "5020b409731d71337f57d9d5cd21038774c287471580aa4fda5d4871453d9345",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "essential-commodities-act-1955__handle-7053",
+          "key": "section:10",
+          "citation": "Essential Commodities Act, 1955, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 34963,
+          "char_end": 37641,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "5020b409731d71337f57d9d5cd21038774c287471580aa4fda5d4871453d9345",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "essential-commodities-act__handle-6929",
+          "key": "section:10",
+          "citation": "ESSENTIAL COMMODITIES ACT, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 34349,
+          "char_end": 37027,
+          "page_start": 10,
+          "page_end": 11,
+          "text_sha256": "5020b409731d71337f57d9d5cd21038774c287471580aa4fda5d4871453d9345",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "essential-commodities-act-1955__handle-1579",
+          "key": "schedule:_/section:10",
+          "citation": "Essential Commodities Act, 1955, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 59697,
+          "char_end": 62727,
+          "page_start": 21,
+          "page_end": 21,
+          "text_sha256": "6a32bf1e1d0c46cc6287a780b1fe2e4c4e816ce44a12f0344ea70db4d11898b9",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "essential-commodities-act-1955__handle-19283",
+          "key": "section:10",
+          "citation": "Essential Commodities Act, 1955, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 86983,
+          "char_end": 91571,
+          "page_start": 15,
+          "page_end": 16,
+          "text_sha256": "f9f047aef2bbdbfa654fc4af8fec10e29832d0d9f6ce210aecce9589d8071ec0",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Every person who was in charge of, and responsible to, the company for the conduct of its business at the time, unless they prove the contravention was without their knowledge or that they exercised due diligence.",
+  "required_facts": [
+    [
+      "in charge of"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "essential-commodities-act-1955__handle-10233",
+      "key": "section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2678,
+    "number_ambiguity": 6559,
+    "title_collisions": 11,
+    "cluster_size": 11,
+    "equivalents": 8,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 34,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#34",
+    "alternatives_decided": [
+      {
+        "document_id": "essential-commodities-act-1955__handle-1579",
+        "key": "schedule:_/section:10",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "essential-commodities-act-1955__handle-19283",
+        "key": "section:10",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

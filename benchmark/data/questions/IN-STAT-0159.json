@@ -1,0 +1,76 @@
+{
+  "question_id": "IN-STAT-0159",
+  "question": "Since October 2023, which online marketplaces does Karnataka's GST penalty provision on e-commerce operators cover?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "karnataka-goods-and-services-tax-act-2017__handle-7006",
+          "key": "schedule:SECOND/section:32",
+          "citation": "KARNATAKA GOODS AND SERVICES TAX ACT, 2017, s. 32",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": "SECOND"
+            },
+            {
+              "unit_type": "section",
+              "number": "32"
+            }
+          ],
+          "char_start": 592772,
+          "char_end": 593098,
+          "page_start": 199,
+          "page_end": 199,
+          "text_sha256": "fc6ec9746d8c79d7e2ee077c192296aaa0d8f64f405e8c6a76de9ee69e325e60",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Electronic commerce operators who are liable to collect tax at source under section 52, with effect from 1 October 2023.",
+  "required_facts": [
+    [
+      "collect tax at source"
+    ],
+    [
+      "1st day of October 2023"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "karnataka-goods-and-services-tax-act-2017__handle-7006",
+      "key": "schedule:SECOND/section:32"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 326,
+    "number_ambiguity": 2639,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 665,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#665"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0157",
+  "question": "What is the fine for not cancelling an adhesive stamp in Jammu and Kashmir, and what does cancelling it require?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "stamp-act-1977-1920-a-d__handle-16541",
+          "key": "chapter:VII/section:63",
+          "citation": "STAMP ACT, 1977 (1920 A. D.), s. 63",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VII"
+            },
+            {
+              "unit_type": "section",
+              "number": "63"
+            }
+          ],
+          "char_start": 98256,
+          "char_end": 98517,
+          "page_start": 57,
+          "page_end": 57,
+          "text_sha256": "9c639cfef8d09b74bd339440394aa1fd15d58b1b2768daf0893788d72d6236dd",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "stamp-act-1977-1920-a-d__handle-16541",
+          "key": "schedule:I/section:12",
+          "citation": "STAMP ACT, 1977 (1920 A. D.), s. 12",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 35527,
+          "char_end": 36427,
+          "page_start": 26,
+          "page_end": 26,
+          "text_sha256": "f3cff3a62907e7b76fe6f067862886a5c83f66d72b476e3a0a3007f518702aed",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A fine of up to ten thousand rupees; the stamp must be cancelled so that it cannot be used again, otherwise the instrument is deemed unstamped.",
+  "required_facts": [
+    [
+      "ten thousand rupees"
+    ],
+    [
+      "cannot be used again"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "stamp-act-1977-1920-a-d__handle-16541",
+      "key": "chapter:VII/section:63"
+    },
+    {
+      "document_id": "stamp-act-1977-1920-a-d__handle-16541",
+      "key": "schedule:I/section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 261,
+    "number_ambiguity": 866,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 638,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#638"
+  }
+}

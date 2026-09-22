@@ -1,0 +1,117 @@
+{
+  "question_id": "IN-STAT-0145",
+  "question": "When a study of social impact is ordered before land is acquired, where must the notice be made available, and who conducts the study?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__rule-9010e6eb2b",
+          "key": "part:II/chapter:II/section:3",
+          "citation": "Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (Social Impact Assessment and Consent) Rules, 2014, r. 3",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 3236,
+          "char_end": 5619,
+          "page_start": 22,
+          "page_end": 23,
+          "text_sha256": "de7c7071b40dc4503ee8474d21c959984d200f2c783934b7a78c670045aa1ee2",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__rule-9010e6eb2b",
+          "key": "part:II/chapter:II/section:4",
+          "citation": "Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (Social Impact Assessment and Consent) Rules, 2014, r. 4",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 5620,
+          "char_end": 7478,
+          "page_start": 23,
+          "page_end": 23,
+          "text_sha256": "e7d5a1681aca87cb17fdade9b26a00211a702d986cfb260f107e40c91ad813d2",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "In the local language to the Panchayat or municipality and in the Collector's, SDM's and Tehsil offices; it is commissioned through an independent organisation, not the Requiring Body.",
+  "required_facts": [
+    [
+      "local language"
+    ],
+    [
+      "independent organisation"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__rule-9010e6eb2b",
+      "key": "part:II/chapter:II/section:3"
+    },
+    {
+      "document_id": "right-to-fair-compensation-and-transparency-in-land-acquisit__rule-9010e6eb2b",
+      "key": "part:II/chapter:II/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2383,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 470,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#470"
+  }
+}

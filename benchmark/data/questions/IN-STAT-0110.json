@@ -1,0 +1,118 @@
+{
+  "question_id": "IN-STAT-0110",
+  "question": "Who sets the fee for asking a public authority for information, and in what languages may the request be written?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "right-to-information-act-2005__handle-2065",
+          "key": "chapter:VI/section:28",
+          "citation": "Right to Information Act, 2005, s. 28",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "28"
+            }
+          ],
+          "char_start": 63502,
+          "char_end": 64168,
+          "page_start": 22,
+          "page_end": 22,
+          "text_sha256": "f9aa8f8cdb7b0ba1c73693609374d76ebdb88c1368b61b2a42ae26d1fed3140a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "right-to-information-act-2005__handle-2065",
+          "key": "chapter:II/section:6",
+          "citation": "Right to Information Act, 2005, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 15240,
+          "char_end": 17025,
+          "page_start": 9,
+          "page_end": 9,
+          "text_sha256": "d99bb35869fa4ceb9acfeaea45d6f20cd9f53757f5beadd8ba467aadd1706282",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The competent authority prescribes the fee by rules; the request may be made in English, Hindi or the official language of the area, in writing or electronically.",
+  "required_facts": [
+    [
+      "fee payable"
+    ],
+    [
+      "Hindi"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "right-to-information-act-2005__handle-2065",
+      "key": "chapter:VI/section:28"
+    },
+    {
+      "document_id": "right-to-information-act-2005__handle-2065",
+      "key": "chapter:II/section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 666,
+    "number_ambiguity": 2988,
+    "title_collisions": 3,
+    "cluster_size": 1,
+    "equivalents": 1,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 111,
+    "tags": [
+      "cross_reference",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#111",
+    "alternatives_decided": [
+      {
+        "document_id": "right-to-information__handle-19840",
+        "key": "chapter:VI/section:28",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "does not state every required fact"
+      }
+    ]
+  }
+}

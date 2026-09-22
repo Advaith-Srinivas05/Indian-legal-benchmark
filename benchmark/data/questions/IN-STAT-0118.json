@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0118",
+  "question": "If an old law was never formally adapted for Nagaland, how can courts still apply it, and how long did the government have to adapt laws?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "state-of-nagaland-act-1962__handle-1384",
+          "key": "part:VI/section:27",
+          "citation": "State of Nagaland Act, 1962, s. 27",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "27"
+            }
+          ],
+          "char_start": 21115,
+          "char_end": 21638,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "f7365627c78f317d04bc2b30b2edecfc3bc94614c632c584483fbb24d55ea829",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "state-of-nagaland-act-1962__handle-1384",
+          "key": "part:VI/section:26",
+          "citation": "State of Nagaland Act, 1962, s. 26",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "26"
+            }
+          ],
+          "char_start": 20012,
+          "char_end": 21114,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "634b63778170138877ccac039e7f159b53eb17a6a4b4283fed79d7709665e49a",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Courts may construe the law, without affecting its substance, as needed to apply it to Nagaland; the government could adapt laws by order within two years of the appointed day.",
+  "required_facts": [
+    [
+      "construe the law"
+    ],
+    [
+      "two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "state-of-nagaland-act-1962__handle-1384",
+      "key": "part:VI/section:27"
+    },
+    {
+      "document_id": "state-of-nagaland-act-1962__handle-1384",
+      "key": "part:VI/section:26"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 523,
+    "number_ambiguity": 3095,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 168,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#168"
+  }
+}

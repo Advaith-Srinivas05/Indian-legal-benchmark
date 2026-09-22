@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0114",
+  "question": "When a multi-state cooperative converts into a farmers' producer company, what vote does it need and what happens to its property?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "companies-act-2013__handle-2114",
+          "key": "part:II/section:378L",
+          "citation": "Companies Act, 2013, s. 378L",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "378L"
+            }
+          ],
+          "char_start": 765915,
+          "char_end": 768826,
+          "page_start": 208,
+          "page_end": 208,
+          "text_sha256": "9ef076d553e8d9d18a0bea8e8908696562b560a7e7f2bd1ce4dafe40a781bb0d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "companies-act-2013__handle-2114",
+          "key": "part:II/section:378J",
+          "citation": "Companies Act, 2013, s. 378J",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "378J"
+            }
+          ],
+          "char_start": 762366,
+          "char_end": 765498,
+          "page_start": 207,
+          "page_end": 207,
+          "text_sha256": "3baa00cad001ddfc22fe31f778bb15dffcd52fd2def178098e186d7f8e3501ff",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It needs a special resolution of not less than two-thirds of its total members; on transformation all its properties, assets, rights and liabilities vest in the Producer Company.",
+  "required_facts": [
+    [
+      "two-thirds"
+    ],
+    [
+      "vest in the Producer Company"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "companies-act-2013__handle-2114",
+      "key": "part:II/section:378L"
+    },
+    {
+      "document_id": "companies-act-2013__handle-2114",
+      "key": "part:II/section:378J"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2911,
+    "number_ambiguity": 1,
+    "title_collisions": 4,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 144,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#144"
+  }
+}

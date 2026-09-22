@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0152",
+  "question": "What money goes into the fund of Goa's statutory body for building schools and colleges, and can it borrow in the open market?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "goa-education-development-corporation-act-2003__handle-13094",
+          "key": "chapter:IV/section:18",
+          "citation": "Goa Education Development Corporation Act, 2003, s. 18",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "18"
+            }
+          ],
+          "char_start": 16387,
+          "char_end": 18071,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "67f15792240c0529eb0bbc99799920714da896f1bdc374ec310abfd7c1e4ed58",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "goa-education-development-corporation-act-2003__handle-13094",
+          "key": "chapter:IV/section:20",
+          "citation": "Goa Education Development Corporation Act, 2003, s. 20",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "20"
+            }
+          ],
+          "char_start": 18072,
+          "char_end": 18302,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "36e4685aedbfc0b27915c5ee9156412e520e5e7a7312cffb7da8dbab741363d4",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Grants, subventions, loans, fees, sale proceeds and rents, among others; it may borrow money in the open market or otherwise, subject to prescribed conditions.",
+  "required_facts": [
+    [
+      "grants, subventions, loans"
+    ],
+    [
+      "borrow money in the open market"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-education-development-corporation-act-2003__handle-13094",
+      "key": "chapter:IV/section:18"
+    },
+    {
+      "document_id": "goa-education-development-corporation-act-2003__handle-13094",
+      "key": "chapter:IV/section:20"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1684,
+    "number_ambiguity": 4552,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 614,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#614"
+  }
+}

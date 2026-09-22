@@ -1,0 +1,109 @@
+{
+  "question_id": "IN-STAT-0144",
+  "question": "If a government-issued bond payable to whoever holds it goes missing, will the central bank reissue it, and what proof must someone claiming such paper provide?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "government-securities-regulations-2007__regulation-8881f415ad",
+          "key": "chapter:V/section:17",
+          "citation": "Government Securities Regulations, 2007, reg. 17",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "17"
+            }
+          ],
+          "char_start": 25237,
+          "char_end": 27832,
+          "page_start": 10,
+          "page_end": 11,
+          "text_sha256": "75807f917c0bdbeb19e376ac2bbab1a76f6270466b96e6ee889dde8104ef42fd",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "government-securities-regulations-2007__regulation-8881f415ad",
+          "key": "chapter:IV/section:12",
+          "citation": "Government Securities Regulations, 2007, reg. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 20631,
+          "char_end": 20789,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "02e02ef0a9803bf54af490b6aa06efcc193b15911bee868e02919f4dd935a0d0",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No, the Bank does not replace a lost or stolen bearer or prize bond; a claimant must apply to the Bank with documentary evidence supporting the claim.",
+  "required_facts": [
+    [
+      "shall not replace"
+    ],
+    [
+      "documentary evidence"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "government-securities-regulations-2007__regulation-8881f415ad",
+      "key": "chapter:V/section:17"
+    },
+    {
+      "document_id": "government-securities-regulations-2007__regulation-8881f415ad",
+      "key": "chapter:IV/section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2595,
+    "number_ambiguity": 4728,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 322,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#322"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0154",
+  "question": "Which earlier Act did Himachal Pradesh's essential services law repeal, and what conduct by an employee is an offence under it?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "himachal-pradesh-essential-services-maintenance-act-1972__handle-5393",
+          "key": "section:10",
+          "citation": "Himachal Pradesh Essential Services (Maintenance) Act, 1972, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 6839,
+          "char_end": 7621,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "652aba31e11e72aa539780c143f6047b4a918113acf0fc20130e86fd3598fa6b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "himachal-pradesh-essential-services-maintenance-act-1972__handle-5393",
+          "key": "section:5",
+          "citation": "Himachal Pradesh Essential Services (Maintenance) Act, 1972, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 3075,
+          "char_end": 4435,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "41a83f3d48ed82741a1e03dabb4d93a169ebe00dcebc2c1d1d88b9817afd4943",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The East Punjab Essential Services (Maintenance) Act, 1947 as applied to transferred areas; offences include disobeying a lawful order, abandoning the employment without excuse, or leaving a specified area without consent.",
+  "required_facts": [
+    [
+      "East Punjab Essential Services (Maintenance) Act, 1947"
+    ],
+    [
+      "disobeys any lawful order"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "himachal-pradesh-essential-services-maintenance-act-1972__handle-5393",
+      "key": "section:10"
+    },
+    {
+      "document_id": "himachal-pradesh-essential-services-maintenance-act-1972__handle-5393",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 782,
+    "number_ambiguity": 6559,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 624,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#624"
+  }
+}

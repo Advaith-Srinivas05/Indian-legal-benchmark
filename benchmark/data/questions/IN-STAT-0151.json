@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0151",
+  "question": "Are staff of Maharashtra's board for vocational training treated as public servants, and which service rules govern the pay of staff carried over from the old board?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "maharashtra-state-board-of-skill-vocational-education-and-tr__handle-19306",
+          "key": "chapter:VI/section:56",
+          "citation": "Maharashtra State Board of Skill, Vocational Education and Training Act, 2021, s. 56",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "56"
+            }
+          ],
+          "char_start": 86453,
+          "char_end": 86823,
+          "page_start": 25,
+          "page_end": 26,
+          "text_sha256": "a6183f3f80a1686285bebff3348a23e4ae54bea99a4eb311af555fc9c7813c0c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "maharashtra-state-board-of-skill-vocational-education-and-tr__handle-19306",
+          "key": "chapter:II/section:21",
+          "citation": "Maharashtra State Board of Skill, Vocational Education and Training Act, 2021, s. 21",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "21"
+            }
+          ],
+          "char_start": 31873,
+          "char_end": 33343,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "db4129c5d369dec27510c3e6986f3620f96a28b6eb68163672409d3b59efccf3",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes, members, officers and employees are deemed public servants under section 21 of the Indian Penal Code; continuing staff are governed by the Maharashtra Civil Services Rules.",
+  "required_facts": [
+    [
+      "public servants"
+    ],
+    [
+      "Maharashtra Civil Services Rules"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "maharashtra-state-board-of-skill-vocational-education-and-tr__handle-19306",
+      "key": "chapter:VI/section:56"
+    },
+    {
+      "document_id": "maharashtra-state-board-of-skill-vocational-education-and-tr__handle-19306",
+      "key": "chapter:II/section:21"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 370,
+    "number_ambiguity": 1125,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 612,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#612"
+  }
+}

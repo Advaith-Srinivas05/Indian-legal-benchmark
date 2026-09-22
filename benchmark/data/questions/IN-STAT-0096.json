@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0096",
+  "question": "How can the Centre bring a new tax law within the 1964 statute that validated tax recovery proceedings, and what counts as money owed to the Government under it?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "taxation-laws-continuation-and-validation-of-recovery-procee__handle-1427",
+          "key": "section:4",
+          "citation": "Taxation Laws (Continuation and Validation of Recovery Proceedings) Act, 1964, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 5553,
+          "char_end": 5923,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "bd37adba07476fbed032735cea994298563e6a914eda02aa4c0e3449f2c5e641",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "taxation-laws-continuation-and-validation-of-recovery-procee__handle-1427",
+          "key": "section:2",
+          "citation": "Taxation Laws (Continuation and Validation of Recovery Proceedings) Act, 1964, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 861,
+          "char_end": 2103,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "26abb35053689d01a23ffb03e5dfcfcbe3bffae366c355d3b0a655c3a420d1e8",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "By notification adding the Act to the Schedule, after which it is a scheduled Act; Government dues include any tax, duty, penalty, fine, interest, annuity deposit or other sum payable by an assessee under a scheduled Act.",
+  "required_facts": [
+    [
+      "Schedule"
+    ],
+    [
+      "annuity deposit"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "taxation-laws-continuation-and-validation-of-recovery-procee__handle-1427",
+      "key": "section:4"
+    },
+    {
+      "document_id": "taxation-laws-continuation-and-validation-of-recovery-procee__handle-1427",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 370,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 27,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#27"
+  }
+}

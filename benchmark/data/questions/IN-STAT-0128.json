@@ -1,0 +1,139 @@
+{
+  "question_id": "IN-STAT-0128",
+  "question": "How often must a pollution control board meet, and who makes the rules on its meeting procedure and quorum?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "air-prevention-and-control-of-pollution-act-1981__handle-1389",
+          "key": "chapter:VII/section:53",
+          "citation": "Air (Prevention and Control of Pollution) Act, 1981, s. 53",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VII"
+            },
+            {
+              "unit_type": "section",
+              "number": "53"
+            }
+          ],
+          "char_start": 73608,
+          "char_end": 75986,
+          "page_start": 22,
+          "page_end": 23,
+          "text_sha256": "1ec01aa915eae12d3b0f253740582413c43c29b07a5193fa927da67db3d4cb73",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "air-prevention-and-control-of-pollution-act-1981__handle-1389",
+          "key": "chapter:II/section:10",
+          "citation": "Air (Prevention and Control of Pollution) Act, 1981, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 16690,
+          "char_end": 17267,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "860ce9f9d59c925d59c51465afdae73654f391496735746b9b4ee8469f4c861e",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "At least once in every three months; the Central Government, in consultation with the Central Board, makes rules on meeting intervals, procedure and quorum.",
+  "required_facts": [
+    [
+      "once in every three months"
+    ],
+    [
+      "quorum"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "air-prevention-and-control-of-pollution-act-1981__handle-1389",
+      "key": "chapter:VII/section:53"
+    },
+    {
+      "document_id": "air-prevention-and-control-of-pollution-act-1981__handle-1389",
+      "key": "chapter:II/section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2378,
+    "number_ambiguity": 1269,
+    "title_collisions": 8,
+    "cluster_size": 5,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 219,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#219",
+    "alternatives_decided": [
+      {
+        "document_id": "air-prevention-and-control-of-pollution-act-1981__handle-15342",
+        "key": "chapter:VII/section:53",
+        "source": "same_instrument_version",
+        "included": false,
+        "reason": "does not state every required fact"
+      },
+      {
+        "document_id": "air-prevention-and-control-of-pollution-act-1981__handle-18981",
+        "key": "chapter:VII/section:53",
+        "source": "same_instrument_version",
+        "included": false,
+        "reason": "does not state every required fact"
+      },
+      {
+        "document_id": "air-prevention-and-control-of-pollution-act-1981__handle-7781",
+        "key": "chapter:VII/section:53",
+        "source": "same_instrument_version",
+        "included": false,
+        "reason": "does not state every required fact"
+      },
+      {
+        "document_id": "air-prevention-and-control-of-pollution-act-1981__handle-9462",
+        "key": "chapter:VII/section:53",
+        "source": "same_instrument_version",
+        "included": false,
+        "reason": "does not state every required fact"
+      }
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0104",
+  "question": "What can the authority confirming a sentence of the NSG's own court do to that sentence, and what is the shortest custody punishment on the scale?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "national-security-guard-act-1986__handle-1853",
+          "key": "chapter:VIII/section:108",
+          "citation": "National Security Guard Act, 1986, s. 108",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "108"
+            }
+          ],
+          "char_start": 89808,
+          "char_end": 90331,
+          "page_start": 27,
+          "page_end": 27,
+          "text_sha256": "be83303ba3df9ff7e2f3689b6bb9ea27b87c78eec9eefd3e7e8ce10c12bcce74",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "national-security-guard-act-1986__handle-1853",
+          "key": "chapter:IV/section:47",
+          "citation": "National Security Guard Act, 1986, s. 47",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "47"
+            }
+          ],
+          "char_start": 44879,
+          "char_end": 46338,
+          "page_start": 16,
+          "page_end": 16,
+          "text_sha256": "07eecdd86404f5d0df231c9a1068dc4dd2479ae6edd00914505e168baf53a7ad",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It may mitigate or remit the punishment, commute it to a lower punishment on the scale, or set aside an illegal trial; the scale includes imprisonment for a term not exceeding three months in Security Guard custody.",
+  "required_facts": [
+    [
+      "mitigate or remit"
+    ],
+    [
+      "three months"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "national-security-guard-act-1986__handle-1853",
+      "key": "chapter:VIII/section:108"
+    },
+    {
+      "document_id": "national-security-guard-act-1986__handle-1853",
+      "key": "chapter:IV/section:47"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 523,
+    "number_ambiguity": 378,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 87,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#87"
+  }
+}

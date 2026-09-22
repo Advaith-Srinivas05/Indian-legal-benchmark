@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0139",
+  "question": "Newspaper editors generally cannot take money from abroad; can one still accept a salary from a foreign employer?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "foreign-contribution-regulation-act-2010__handle-2098",
+          "key": "chapter:II/section:4",
+          "citation": "Foreign Contribution (Regulation) Act, 2010, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 17390,
+          "char_end": 19064,
+          "page_start": 10,
+          "page_end": 11,
+          "text_sha256": "c4312e0865e095912bf148bfe6a438d7aa8ef0b30b7066093fceb92b4b96fe4e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "foreign-contribution-regulation-act-2010__handle-2098",
+          "key": "chapter:II/section:3",
+          "citation": "Foreign Contribution (Regulation) Act, 2010, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 14370,
+          "char_end": 17389,
+          "page_start": 9,
+          "page_end": 10,
+          "text_sha256": "f866f676f1d6da2f07ef1ce9d7234534f8a8d4e0037b1f2fdab0bc3f5e8e2ec2",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. The ban on foreign contributions to editors and similar persons does not apply to salary, wages or other remuneration from a foreign source, subject to the Centre's power to prohibit dealing with money accepted in contravention.",
+  "required_facts": [
+    [
+      "salary, wages"
+    ],
+    [
+      "editor"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "foreign-contribution-regulation-act-2010__handle-2098",
+      "key": "chapter:II/section:4"
+    },
+    {
+      "document_id": "foreign-contribution-regulation-act-2010__handle-2098",
+      "key": "chapter:II/section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1674,
+    "number_ambiguity": 8272,
+    "title_collisions": 3,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 292,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#292"
+  }
+}

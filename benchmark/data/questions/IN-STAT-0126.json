@@ -1,0 +1,168 @@
+{
+  "question_id": "IN-STAT-0126",
+  "question": "Who qualifies for free legal aid, and is a sworn statement of income enough to prove eligibility?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "legal-services-authorities-act-1987__handle-1925",
+          "key": "chapter:IV/section:13",
+          "citation": "Legal Services Authorities Act, 1987, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 25644,
+          "char_end": 26149,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "fe77141c7520236c4b8da3cb903dac850c55cbe18838638fc150f076f97328c1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "legal-services-authorities-act-1987__handle-16128",
+          "key": "chapter:IV/section:13",
+          "citation": "LEGAL SERVICES AUTHORITIES ACT, 1987, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 25644,
+          "char_end": 26149,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "fe77141c7520236c4b8da3cb903dac850c55cbe18838638fc150f076f97328c1",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "legal-services-authorities-act-1987__handle-19023",
+          "key": "chapter:IV/section:13",
+          "citation": "legal services authorities act, 1987, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 25644,
+          "char_end": 26149,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "fe77141c7520236c4b8da3cb903dac850c55cbe18838638fc150f076f97328c1",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "legal-services-authorities-act-1987__handle-1925",
+          "key": "chapter:IV/section:12",
+          "citation": "Legal Services Authorities Act, 1987, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 24088,
+          "char_end": 25643,
+          "page_start": 9,
+          "page_end": 10,
+          "text_sha256": "5b54545d1c952c6cea2d7c5127a112ffba8292960829cd13d64908298b8947aa",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Among others, members of Scheduled Castes or Tribes, trafficking victims, women and children, persons with disability and disaster victims, subject to a prima facie case; an income affidavit is generally sufficient unless the Authority has reason to disbelieve it.",
+  "required_facts": [
+    [
+      "Scheduled Caste"
+    ],
+    [
+      "affidavit"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "legal-services-authorities-act-1987__handle-1925",
+      "key": "chapter:IV/section:13"
+    },
+    {
+      "document_id": "legal-services-authorities-act-1987__handle-1925",
+      "key": "chapter:IV/section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 505,
+    "number_ambiguity": 5702,
+    "title_collisions": 5,
+    "cluster_size": 5,
+    "equivalents": 2,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 191,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#191",
+    "alternatives_decided": [
+      {
+        "document_id": "legal-service-authorities-act-1987__handle-10960",
+        "key": "chapter:IV/section:13",
+        "source": "same_instrument_version",
+        "included": false,
+        "reason": "does not state every required fact"
+      },
+      {
+        "document_id": "legal-services-authorities-act-1987__handle-9316",
+        "key": "chapter:IV/section:13",
+        "source": "same_instrument_version",
+        "included": false,
+        "reason": "does not state every required fact"
+      }
+    ]
+  }
+}

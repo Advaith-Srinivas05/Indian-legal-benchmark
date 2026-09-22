@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0143",
+  "question": "Which officer of Rajasthan's industrial development corporation can take encroachers to court, and what can that officer seize from encroached land?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "riico-industrial-areas-prevention-of-unauthorised-developmen__regulation-c815c24d5b",
+          "key": "section:9",
+          "citation": "RIICO Industrial Areas (Prevention of Unauthorised Development and Encroachment) Regulations, 2003, reg. 9",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "9"
+            }
+          ],
+          "char_start": 6190,
+          "char_end": 6607,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "46aebc540545c56b59e559c4e52c8712f490058496bd6d8f70af13f38cff5aa8",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "riico-industrial-areas-prevention-of-unauthorised-developmen__regulation-c815c24d5b",
+          "key": "section:4",
+          "citation": "RIICO Industrial Areas (Prevention of Unauthorised Development and Encroachment) Regulations, 2003, reg. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 3709,
+          "char_end": 4286,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "35f19e75824195b2485baf4d179282a93c04256a0fd3514d3ddceb1ff440aabb",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "An officer not below Assistant Regional Manager authorised by the Managing Director; that officer may attach or seize property found on or fastened to the encroached land.",
+  "required_facts": [
+    [
+      "Assistant Regional Manager"
+    ],
+    [
+      "attach or seize"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "riico-industrial-areas-prevention-of-unauthorised-developmen__regulation-c815c24d5b",
+      "key": "section:9"
+    },
+    {
+      "document_id": "riico-industrial-areas-prevention-of-unauthorised-developmen__regulation-c815c24d5b",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 417,
+    "number_ambiguity": 6389,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 303,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#303"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "question_id": "IN-STAT-0120",
+  "question": "May a waqf's manager pay the cost of preparing its accounts out of its income, and by what date each year must the accounts be filed?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "unified-waqf-management-empowerment-efficiency-and-developme__handle-1984",
+          "key": "chapter:VI/section:57",
+          "citation": "Unified Waqf Management, Empowerment, Efficiency and Development Act, 1995, s. 57",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "57"
+            }
+          ],
+          "char_start": 97611,
+          "char_end": 98112,
+          "page_start": 33,
+          "page_end": 33,
+          "text_sha256": "f9d71bc38206bee6cff60c16a8efec8edbf459d3f03ce5dd0844c30542ed8c6e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "unified-waqf-management-empowerment-efficiency-and-developme__handle-1984",
+          "key": "chapter:VI/section:46",
+          "citation": "Unified Waqf Management, Empowerment, Efficiency and Development Act, 1995, s. 46",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "46"
+            }
+          ],
+          "char_start": 77420,
+          "char_end": 78346,
+          "page_start": 28,
+          "page_end": 28,
+          "text_sha256": "1587d998d618bd54690b9a0b0323d84b983fdc449b2e5e45f9c978772831e548",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes, the mutawalli may pay such expenses from the income of the waqf property; the annual statement of accounts must be furnished to the Board before the first day of October.",
+  "required_facts": [
+    [
+      "income of the"
+    ],
+    [
+      "October"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "unified-waqf-management-empowerment-efficiency-and-developme__handle-1984",
+      "key": "chapter:VI/section:57"
+    },
+    {
+      "document_id": "unified-waqf-management-empowerment-efficiency-and-developme__handle-1984",
+      "key": "chapter:VI/section:46"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 501,
+    "number_ambiguity": 1073,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 4,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 176,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#176",
+    "alternatives_decided": [
+      {
+        "document_id": "the-waqf-act-1995__handle-8877",
+        "key": "chapter:VI/section:57",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "does not state every required fact"
+      },
+      {
+        "document_id": "waqf-act-1995__handle-15545",
+        "key": "chapter:VI/section:57",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "does not state every required fact"
+      },
+      {
+        "document_id": "waqf-act-1995__handle-15941",
+        "key": "chapter:VI/section:57",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "does not state every required fact"
+      },
+      {
+        "document_id": "waqf-act-1995__handle-19319",
+        "key": "chapter:VI/section:57",
+        "source": "cross_instrument_equivalent",
+        "included": false,
+        "reason": "does not state every required fact"
+      }
+    ]
+  }
+}

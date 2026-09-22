@@ -1,0 +1,102 @@
+{
+  "question_id": "IN-STAT-0147",
+  "question": "What must a Delhi bed-and-breakfast host report about foreign guests and how quickly, and on which form is registration sought?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "national-capital-territory-of-delhi-incredible-india-bed-and__rule-295e259ab0",
+          "key": "section:5",
+          "citation": "National Capital Territory of Delhi (Incredible India) Bed and Breakfast Establishments (Registration and Regulation) Act, 2007 (Delhi Act 11 of 2007), r. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 3043,
+          "char_end": 3584,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "6efd02e3d997dc0668ac56411342a84e72c261c9080309d62802ca5040e1d5ff",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "national-capital-territory-of-delhi-incredible-india-bed-and__rule-295e259ab0",
+          "key": "section:3",
+          "citation": "National Capital Territory of Delhi (Incredible India) Bed and Breakfast Establishments (Registration and Regulation) Act, 2007 (Delhi Act 11 of 2007), r. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 1930,
+          "char_end": 2141,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "d2cab0712dd8eef83098beaeb833ee929578a06a1551a7d655653180cdf2f29f",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Particulars of any foreigner staying must be given to the district Foreigners' Registration Officer within twenty-four hours of check-in; registration is applied for in Form A.",
+  "required_facts": [
+    [
+      "twenty-four hours"
+    ],
+    [
+      "Form ‘A’",
+      "Form 'A'"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "national-capital-territory-of-delhi-incredible-india-bed-and__rule-295e259ab0",
+      "key": "section:5"
+    },
+    {
+      "document_id": "national-capital-territory-of-delhi-incredible-india-bed-and__rule-295e259ab0",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 541,
+    "number_ambiguity": 7842,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 529,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#529"
+  }
+}

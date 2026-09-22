@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0160",
+  "question": "Which body settles fights over which union gets official recognition in Maharashtra, and how long does someone found guilty by a labour judge have to challenge it?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "maharashtra-recognition-of-trade-unions-and-prevention-of-un__handle-15922",
+          "key": "chapter:II/section:5",
+          "citation": "Maharashtra Recognition of Trade Unions and Prevention of Unfair Labour Practices Act, 1971, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 14178,
+          "char_end": 15076,
+          "page_start": 9,
+          "page_end": 9,
+          "text_sha256": "0aa572fb154030427ea485a6abd0b118b00571bb14bb4f8478d3361db3d1c3f5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "maharashtra-recognition-of-trade-unions-and-prevention-of-un__handle-15922",
+          "key": "chapter:VIII/section:42",
+          "citation": "Maharashtra Recognition of Trade Unions and Prevention of Unfair Labour Practices Act, 1971, s. 42",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "42"
+            }
+          ],
+          "char_start": 58569,
+          "char_end": 59219,
+          "page_start": 21,
+          "page_end": 21,
+          "text_sha256": "232507055539418fe2fb369bd368076fdce5fdd596ddfb60fb95c9a445cb4980",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Applications for grant, substitution or cancellation of a union's recognition and unfair labour practice complaints, among others; appeals lie within thirty days of the conviction.",
+  "required_facts": [
+    [
+      "recognition"
+    ],
+    [
+      "thirty days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "maharashtra-recognition-of-trade-unions-and-prevention-of-un__handle-15922",
+      "key": "chapter:II/section:5"
+    },
+    {
+      "document_id": "maharashtra-recognition-of-trade-unions-and-prevention-of-un__handle-15922",
+      "key": "chapter:VIII/section:42"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 898,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 666,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#666"
+  }
+}

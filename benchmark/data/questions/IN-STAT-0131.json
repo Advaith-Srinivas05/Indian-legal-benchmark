@@ -1,0 +1,101 @@
+{
+  "question_id": "IN-STAT-0131",
+  "question": "Is it a crime to knowingly give shelter to someone who is about to spy, and how is an attempt at such an offence punished?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "official-secrets-act-1923__handle-2379",
+          "key": "section:10",
+          "citation": "Official Secrets Act, 1923, s. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 19973,
+          "char_end": 21166,
+          "page_start": 7,
+          "page_end": 8,
+          "text_sha256": "9366c2bcae37eb2f51582904b251cdd336ed665f006324def5ea1a16ba4b22dc",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "official-secrets-act-1923__handle-2379",
+          "key": "section:9",
+          "citation": "Official Secrets Act, 1923, s. 9",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "9"
+            }
+          ],
+          "char_start": 19712,
+          "char_end": 19972,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "a41d1255143a7f1c138fdffdba36c6ed7f7608c3436ad706217af54d9e3e8037",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes, knowingly harbouring such a person is an offence; an attempt or abetment is punishable with the same punishment as the offence itself.",
+  "required_facts": [
+    [
+      "harbours"
+    ],
+    [
+      "same punishment"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "official-secrets-act-1923__handle-2379",
+      "key": "section:10"
+    },
+    {
+      "document_id": "official-secrets-act-1923__handle-2379",
+      "key": "section:9"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1193,
+    "number_ambiguity": 6559,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 255,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#255"
+  }
+}

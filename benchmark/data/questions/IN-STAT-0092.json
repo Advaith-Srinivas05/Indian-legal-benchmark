@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0092",
+  "question": "When a court is asked to let bank ledgers be used as evidence, who decides who pays for the application, and when can a bank employee be forced to bring the books in?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "bankers-books-evidence-act-1891__handle-2322",
+          "key": "section:7",
+          "citation": "Bankers Books Evidence Act, 1891, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 8760,
+          "char_end": 10475,
+          "page_start": 4,
+          "page_end": 5,
+          "text_sha256": "544ab7cc2b1a39890437b72493c41bfea9e44869bdb11267a04d656f38722053",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "bankers-books-evidence-act-1891__handle-2322",
+          "key": "section:5",
+          "citation": "Bankers Books Evidence Act, 1891, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 7116,
+          "char_end": 7523,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "de6d36903faedb1eb9190540a79ae4b5c804130eea8a811d476a02676acf2e17",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Costs are in the discretion of the Court or Judge, who may order the bank to pay them if its fault or delay caused them. A bank officer cannot be compelled to produce the books in proceedings the bank is not a party to, unless the Court or Judge orders it for special cause.",
+  "required_facts": [
+    [
+      "discretion of the Court"
+    ],
+    [
+      "special cause"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bankers-books-evidence-act-1891__handle-2322",
+      "key": "section:7"
+    },
+    {
+      "document_id": "bankers-books-evidence-act-1891__handle-2322",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1715,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 3,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#3"
+  }
+}

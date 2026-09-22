@@ -1,0 +1,134 @@
+{
+  "question_id": "IN-STAT-0137",
+  "question": "Before the insolvency regulator was set up, who exercised its powers?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "insolvency-and-bankruptcy-code-2016__handle-2154",
+          "key": "part:V/section:244",
+          "citation": "Insolvency and Bankruptcy Code, 2016., s. 244",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "244"
+            }
+          ],
+          "char_start": 436066,
+          "char_end": 437156,
+          "page_start": 154,
+          "page_end": 154,
+          "text_sha256": "0da28d8d09500b821e7c532f804ac0598c369f29f34d4e132a4f30dd5c3279be",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "insolvency-and-bankruptcy-code-2016__handle-15479",
+          "key": "part:V/section:244",
+          "citation": "INSOLVENCY AND BANKRUPTCY CODE, 2016, s. 244",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "244"
+            }
+          ],
+          "char_start": 353362,
+          "char_end": 354452,
+          "page_start": 122,
+          "page_end": 122,
+          "text_sha256": "0da28d8d09500b821e7c532f804ac0598c369f29f34d4e132a4f30dd5c3279be",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "insolvency-and-bankruptcy-code-2016__handle-2154",
+          "key": "part:IV/chapter:I/section:195",
+          "citation": "Insolvency and Bankruptcy Code, 2016., s. 195",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "IV"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "195"
+            }
+          ],
+          "char_start": 363789,
+          "char_end": 364027,
+          "page_start": 129,
+          "page_end": 129,
+          "text_sha256": "552df1f1615142a05d8ac8a9ff295188ea29d0957cd413b7849295a281542885",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Central Government, unless it designated a financial sector regulator to exercise the Board's powers in the meantime.",
+  "required_facts": [
+    [
+      "Central Government"
+    ],
+    [
+      "financial sector regulator"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "insolvency-and-bankruptcy-code-2016__handle-2154",
+      "key": "part:V/section:244"
+    },
+    {
+      "document_id": "insolvency-and-bankruptcy-code-2016__handle-2154",
+      "key": "part:IV/chapter:I/section:195"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1090,
+    "number_ambiguity": 88,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 278,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#278"
+  }
+}

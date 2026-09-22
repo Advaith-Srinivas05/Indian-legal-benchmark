@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0130",
+  "question": "If development works on one plot also benefit neighbouring land in Delhi, must the neighbours contribute, and how is an unpaid contribution recovered?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "delhi-and-ajmer-merwara-land-development-act-1948__handle-1630",
+          "key": "chapter:II/section:12",
+          "citation": "Delhi and Ajmer-Merwara Land Development Act, 1948, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 11128,
+          "char_end": 11503,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "43a17832861afa892730e63870b57299368ccb3d090cacae302f8e78490b59eb",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "delhi-and-ajmer-merwara-land-development-act-1948__handle-1630",
+          "key": "chapter:II/section:11",
+          "citation": "Delhi and Ajmer-Merwara Land Development Act, 1948, s. 11",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "11"
+            }
+          ],
+          "char_start": 10501,
+          "char_end": 11127,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "3f62aae4ec25dcdea03a783c9012681880c06c2aa9cacef16b9ff65ada99c524",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Owners of other land likely to benefit must contribute an amount the Board determines; unpaid contributions are recovered as arrears of land revenue.",
+  "required_facts": [
+    [
+      "likely to benefit"
+    ],
+    [
+      "arrears of land revenue"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "delhi-and-ajmer-merwara-land-development-act-1948__handle-1630",
+      "key": "chapter:II/section:12"
+    },
+    {
+      "document_id": "delhi-and-ajmer-merwara-land-development-act-1948__handle-1630",
+      "key": "chapter:II/section:11"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 375,
+    "number_ambiguity": 5903,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 242,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#242"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0095",
+  "question": "In which suits must the value used for court fees equal the value used to decide a court's jurisdiction, and from what date did that rule apply?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "suits-valuation-act-1887__handle-2311",
+          "key": "part:II/section:8",
+          "citation": "Suits Valuation Act, 1887, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 4645,
+          "char_end": 5080,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "3c6799f0e27403fcb122cb35640c86ee157dbd0828f7d51c1145f909e223136e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "suits-valuation-act-1887__handle-2311",
+          "key": "part:II/section:7",
+          "citation": "Suits Valuation Act, 1887, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 4535,
+          "char_end": 4644,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "6b718e8c0788cbdf89408c6a19ed22f2829fff8152c001bc16c347c81f815040",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "In suits, other than those excluded, where court-fees are payable ad valorem under the Court-fees Act, 1870, the two values are the same; that Part came into force on the first day of July, 1887.",
+  "required_facts": [
+    [
+      "ad valorem"
+    ],
+    [
+      "first day of July, 1887"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "suits-valuation-act-1887__handle-2311",
+      "key": "part:II/section:8"
+    },
+    {
+      "document_id": "suits-valuation-act-1887__handle-2311",
+      "key": "part:II/section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 435,
+    "number_ambiguity": 6826,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 11,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#11"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "question_id": "IN-STAT-0127",
+  "question": "During a land revenue settlement in Tripura, can the Collector fix survey mistakes, and which officers normally handle survey and settlement matters?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "tripura-land-revenue-and-land-reforms-act-1960__handle-1564",
+          "key": "part:II/chapter:IV/section:41",
+          "citation": "Tripura Land Revenue and Land Reforms Act, 1960, s. 41",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "41"
+            }
+          ],
+          "char_start": 38817,
+          "char_end": 39469,
+          "page_start": 16,
+          "page_end": 16,
+          "text_sha256": "94dac7cce31b03214dc937fc20912fddd070bff74993970c9b06937f5d94c86a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "tripura-land-revenue-and-land-reforms-act-1960__handle-1564",
+          "key": "part:II/chapter:II/section:6",
+          "citation": "Tripura Land Revenue and Land Reforms Act, 1960, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 18084,
+          "char_end": 18567,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "868d62fd0cffa9cd1c9ba67daae4639be59973c9a1ae5b6721d42fcab095328c",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes, the Collector may correct errors in area or assessment due to survey mistakes or arithmetical miscalculation; settlement officers take cognizance of survey, settlement of revenue rates and land records.",
+  "required_facts": [
+    [
+      "arithmetical miscalculation"
+    ],
+    [
+      "survey of land"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "tripura-land-revenue-and-land-reforms-act-1960__handle-1564",
+      "key": "part:II/chapter:IV/section:41"
+    },
+    {
+      "document_id": "tripura-land-revenue-and-land-reforms-act-1960__handle-1564",
+      "key": "part:II/chapter:II/section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 652,
+    "number_ambiguity": 1817,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 196,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#196"
+  }
+}

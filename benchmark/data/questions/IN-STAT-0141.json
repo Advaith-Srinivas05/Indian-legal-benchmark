@@ -1,0 +1,109 @@
+{
+  "question_id": "IN-STAT-0141",
+  "question": "Before a cinema is licensed, what must the licensing authority be satisfied about, and who sets the time limit for appealing its decisions?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "cinematograph-act-1952__handle-2170",
+          "key": "part:may/section:16",
+          "citation": "Cinematograph Act, 1952, s. 16",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "may"
+            },
+            {
+              "unit_type": "section",
+              "number": "16"
+            }
+          ],
+          "char_start": 35215,
+          "char_end": 36463,
+          "page_start": 15,
+          "page_end": 16,
+          "text_sha256": "4ac7be81b575fb7f615a4ce39db7c2776c81bf500630b09a7d84ed086e017a27",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "cinematograph-act-1952__handle-2170",
+          "key": "part:III/section:12",
+          "citation": "Cinematograph Act, 1952, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 30821,
+          "char_end": 31625,
+          "page_start": 14,
+          "page_end": 14,
+          "text_sha256": "58ba91dd125610ff8c0b5817d2ffce73d58f19e1a15ef6b8e2fc2b7b94340c03",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "That the rules have been substantially complied with and adequate precautions taken for the safety of audiences; the Central Government prescribes by rules the time for appeals.",
+  "required_facts": [
+    [
+      "adequate precautions"
+    ],
+    [
+      "Central Government"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "cinematograph-act-1952__handle-2170",
+      "key": "part:may/section:16"
+    },
+    {
+      "document_id": "cinematograph-act-1952__handle-2170",
+      "key": "part:III/section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1248,
+    "number_ambiguity": 5029,
+    "title_collisions": 3,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 296,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#296"
+  }
+}

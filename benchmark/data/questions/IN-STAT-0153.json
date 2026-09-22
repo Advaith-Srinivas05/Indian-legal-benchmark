@@ -1,0 +1,101 @@
+{
+  "question_id": "IN-STAT-0153",
+  "question": "When does a Tamil Nadu trader using the 2011 scheme for old sales-tax dues get cleared, and what happens if they paid less than ninety per cent upfront?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "tamil-nadu-sales-tax-settlement-of-arrears-act-2011__handle-19520",
+          "key": "section:8",
+          "citation": "Tamil Nadu  Sales Tax (Settlement of Arrears) Act, 2011, s. 8",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 7386,
+          "char_end": 8668,
+          "page_start": 4,
+          "page_end": 5,
+          "text_sha256": "25f84370e0a183a1a2643d827bedadde0beec48ae513ac629b5ce3654968c65b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "tamil-nadu-sales-tax-settlement-of-arrears-act-2011__handle-19520",
+          "key": "section:6",
+          "citation": "Tamil Nadu  Sales Tax (Settlement of Arrears) Act, 2011, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 4529,
+          "char_end": 5579,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "6c940a3f8c4fcce7678a698def1fbc3b3e51c435c53bee363437355f3f613c5f",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "On paying the determined amount they receive a certificate and are discharged from the balance; if less than ninety per cent was paid with the application, the authority summarily rejects it.",
+  "required_facts": [
+    [
+      "certificate"
+    ],
+    [
+      "ninety per cent"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "tamil-nadu-sales-tax-settlement-of-arrears-act-2011__handle-19520",
+      "key": "section:8"
+    },
+    {
+      "document_id": "tamil-nadu-sales-tax-settlement-of-arrears-act-2011__handle-19520",
+      "key": "section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1282,
+    "number_ambiguity": 6826,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 620,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#620"
+  }
+}

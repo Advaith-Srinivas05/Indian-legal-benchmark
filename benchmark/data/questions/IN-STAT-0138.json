@@ -1,0 +1,109 @@
+{
+  "question_id": "IN-STAT-0138",
+  "question": "Can a court take up a charge of lying in import documents without official permission, and what is the maximum punishment?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "customs-act-1962__handle-2475",
+          "key": "chapter:XVI/section:137",
+          "citation": "Customs Act,1962, s. 137",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XVI"
+            },
+            {
+              "unit_type": "section",
+              "number": "137"
+            }
+          ],
+          "char_start": 341014,
+          "char_end": 343943,
+          "page_start": 112,
+          "page_end": 112,
+          "text_sha256": "cbf1b634fa49642704887c104f0ba8dd0de1a10b01a53df8e6f79408d3345ada",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "customs-act-1962__handle-2475",
+          "key": "chapter:XVI/section:132",
+          "citation": "Customs Act,1962, s. 132",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XVI"
+            },
+            {
+              "unit_type": "section",
+              "number": "132"
+            }
+          ],
+          "char_start": 331472,
+          "char_end": 331919,
+          "page_start": 109,
+          "page_end": 109,
+          "text_sha256": "234bc78668f1b39562f72ef70b82a29106ae53d56883dc80d73490d3886881d4",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No court takes cognizance without the previous sanction of the Principal Commissioner or Commissioner of Customs; a false declaration is punishable with up to two years, or fine, or both.",
+  "required_facts": [
+    [
+      "previous sanction"
+    ],
+    [
+      "two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "customs-act-1962__handle-2475",
+      "key": "chapter:XVI/section:137"
+    },
+    {
+      "document_id": "customs-act-1962__handle-2475",
+      "key": "chapter:XVI/section:132"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2929,
+    "number_ambiguity": 273,
+    "title_collisions": 3,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 285,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#285"
+  }
+}

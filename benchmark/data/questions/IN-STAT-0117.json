@@ -1,0 +1,152 @@
+{
+  "question_id": "IN-STAT-0117",
+  "question": "On what grounds is a civil marriage under the secular marriage law void, and what is the first condition such a marriage must meet?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "special-marriage-act-1954__handle-1387",
+          "key": "chapter:VI/section:24",
+          "citation": "Special Marriage Act, 1954, s. 24",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "24"
+            }
+          ],
+          "char_start": 24680,
+          "char_end": 25639,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "7dcb01cd060826dd66c17260307ffb83a424227c9e2a6d4f7cf1cd5c4b9536b3",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "special-marriage-act-1954__handle-15480",
+          "key": "chapter:VI/section:24",
+          "citation": "SPECIAL MARRIAGE ACT, 1954, s. 24",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "24"
+            }
+          ],
+          "char_start": 23503,
+          "char_end": 24462,
+          "page_start": 9,
+          "page_end": 10,
+          "text_sha256": "7dcb01cd060826dd66c17260307ffb83a424227c9e2a6d4f7cf1cd5c4b9536b3",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "special-marriage-act-1954__handle-20574",
+          "key": "chapter:VI/section:24",
+          "citation": "SPECIAL MARRIAGE ACT, 1954, s. 24",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "24"
+            }
+          ],
+          "char_start": 23503,
+          "char_end": 24462,
+          "page_start": 9,
+          "page_end": 10,
+          "text_sha256": "7dcb01cd060826dd66c17260307ffb83a424227c9e2a6d4f7cf1cd5c4b9536b3",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "special-marriage-act-1954__handle-1387",
+          "key": "chapter:II/section:4",
+          "citation": "Special Marriage Act, 1954, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 7500,
+          "char_end": 9919,
+          "page_start": 7,
+          "page_end": 8,
+          "text_sha256": "2a25eefefd086de29bf42935045fc849de2fdf5afd3f0860423c03d16d352016",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It is void if any of the basic conditions was not met or the respondent was impotent at marriage and when the suit was filed; the first condition is that neither party has a spouse living.",
+  "required_facts": [
+    [
+      "impotent"
+    ],
+    [
+      "neither party has a spouse living"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "special-marriage-act-1954__handle-1387",
+      "key": "chapter:VI/section:24"
+    },
+    {
+      "document_id": "special-marriage-act-1954__handle-1387",
+      "key": "chapter:II/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 959,
+    "number_ambiguity": 3431,
+    "title_collisions": 4,
+    "cluster_size": 3,
+    "equivalents": 2,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 167,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#167"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "question_id": "IN-STAT-0133",
+  "question": "How many members sit on the regulator that fixes airport charges, and who chairs the committee that recommends them?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "airports-economic-regulatory-authority-of-india-act-2008__handle-2090",
+          "key": "chapter:II/section:4",
+          "citation": "Airports Economic Regulatory Authority of India Act, 2008, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 7867,
+          "char_end": 9233,
+          "page_start": 5,
+          "page_end": 6,
+          "text_sha256": "28c267373681a8c690878fce3de70270933c16c4249a32cf0b6e69f468a7965e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "airports-economic-regulatory-authority-of-india-act-2008__handle-2090",
+          "key": "chapter:II/section:5",
+          "citation": "Airports Economic Regulatory Authority of India Act, 2008, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 9234,
+          "char_end": 10776,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "968aa13180f643eb065a7a6d8ecdae227685c69125ee2b520c96aeb1f9e31ec1",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A Chairperson and two other Members (plus a Defence-nominated Member for civil enclaves in defence airfields); the Selection Committee is chaired by the Cabinet Secretary.",
+  "required_facts": [
+    [
+      "two other Members"
+    ],
+    [
+      "Cabinet Secretary"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "airports-economic-regulatory-authority-of-india-act-2008__handle-2090",
+      "key": "chapter:II/section:4"
+    },
+    {
+      "document_id": "airports-economic-regulatory-authority-of-india-act-2008__handle-2090",
+      "key": "chapter:II/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1366,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 270,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#270"
+  }
+}

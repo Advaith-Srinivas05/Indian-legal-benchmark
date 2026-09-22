@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0136",
+  "question": "Which officers can the Centre empower to arrest and investigate attacks on shipping and offshore installations, and what counts as a fixed platform?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "suppression-of-unlawful-acts-against-safety-of-maritime-navi__handle-2009",
+          "key": "chapter:II/section:4",
+          "citation": "Suppression of Unlawful Acts Against Safety of Maritime Navigation and Fixed Platforms on Continental Shelf Act, 2002, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 10754,
+          "char_end": 11545,
+          "page_start": 4,
+          "page_end": 5,
+          "text_sha256": "aadb8db85dc9f71f407cfc889685a35b7384d5a67067cd6df9bb4304d06187c5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "suppression-of-unlawful-acts-against-safety-of-maritime-navi__handle-2009",
+          "key": "chapter:I/section:2",
+          "citation": "Suppression of Unlawful Acts Against Safety of Maritime Navigation and Fixed Platforms on Continental Shelf Act, 2002, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 3679,
+          "char_end": 4932,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "3190a76e0d177deee200e6072d6e352dc5cba8dbb583217ed24d34a9da41b03b",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Any gazetted officer of the Coast Guard or other gazetted Central Government officer; a fixed platform is an artificial island, installation or structure permanently attached to the seabed.",
+  "required_facts": [
+    [
+      "Coast Guard"
+    ],
+    [
+      "artificial island"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "suppression-of-unlawful-acts-against-safety-of-maritime-navi__handle-2009",
+      "key": "chapter:II/section:4"
+    },
+    {
+      "document_id": "suppression-of-unlawful-acts-against-safety-of-maritime-navi__handle-2009",
+      "key": "chapter:I/section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 791,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 276,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#276"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0125",
+  "question": "Who can be rewarded with part of the fine imposed on people running a common gaming house, and who is punishable for keeping one?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "public-gambling-act-1867__handle-2269",
+          "key": "section:16",
+          "citation": "Public Gambling Act, 1867, s. 16",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "16"
+            }
+          ],
+          "char_start": 17937,
+          "char_end": 18236,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "90b2a4d623556cf85ffa75a987b12e428f152d32f08e9016a14623f376286345",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "public-gambling-act-1867__handle-2269",
+          "key": "section:3",
+          "citation": "Public Gambling Act, 1867, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 5608,
+          "char_end": 6679,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "420d3bcae9a52780e101c18673484c5d68f007f35a898d09eb5dfff92dbf1779",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The magistrate may direct part of the fine or forfeited proceeds to be paid to an informer; the owner or occupier who keeps or permits a common gaming-house, and whoever manages it, is punishable.",
+  "required_facts": [
+    [
+      "informer"
+    ],
+    [
+      "owner or occupier"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "public-gambling-act-1867__handle-2269",
+      "key": "section:16"
+    },
+    {
+      "document_id": "public-gambling-act-1867__handle-2269",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 299,
+    "number_ambiguity": 5029,
+    "title_collisions": 3,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 186,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#186"
+  }
+}

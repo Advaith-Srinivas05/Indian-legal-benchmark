@@ -1,0 +1,117 @@
+{
+  "question_id": "IN-STAT-0135",
+  "question": "In what languages must rules governing jails be displayed to staff, and who makes those rules?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "prisons-act-1894__handle-2325",
+          "key": "chapter:XII/section:61",
+          "citation": "Prisons Act, 1894, s. 61",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "61"
+            }
+          ],
+          "char_start": 55745,
+          "char_end": 56000,
+          "page_start": 21,
+          "page_end": 21,
+          "text_sha256": "c40004843d83538bca7ecb6c4541c4eb827b834f4007be3d6a3c8a88eb0b2530",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "prisons-act-1894__handle-2325",
+          "key": "chapter:XII/section:59",
+          "citation": "Prisons Act, 1894, s. 59",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XII"
+            },
+            {
+              "unit_type": "section",
+              "number": "59"
+            }
+          ],
+          "char_start": 50553,
+          "char_end": 55744,
+          "page_start": 19,
+          "page_end": 21,
+          "text_sha256": "18d285791bdc6798a094b869bc341fa48a3e8a10ba89c5ee0436a0f361b1ac06",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "They must be exhibited in English and in the vernacular where all prison employees have access; the State Government makes the rules by notification.",
+  "required_facts": [
+    [
+      "English and in the Vernacular"
+    ],
+    [
+      "State Government"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prisons-act-1894__handle-2325",
+      "key": "chapter:XII/section:61"
+    },
+    {
+      "document_id": "prisons-act-1894__handle-2325",
+      "key": "chapter:XII/section:59"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 255,
+    "number_ambiguity": 960,
+    "title_collisions": 6,
+    "cluster_size": 2,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 275,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#275",
+    "alternatives_decided": [
+      {
+        "document_id": "prisons-act-1894__handle-15405",
+        "key": "chapter:XII/section:61",
+        "source": "same_instrument_version",
+        "included": false,
+        "reason": "does not state every required fact"
+      }
+    ]
+  }
+}
