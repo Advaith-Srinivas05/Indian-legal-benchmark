@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0474",
+  "question": "Under the old law on road and bridge tolls, what can collectors do if a cart driver refuses to pay?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "indian-tolls-act-1851__handle-2274",
+          "key": "section:3",
+          "citation": "Indian Tolls Act, 1851, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 5746,
+          "char_end": 6959,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "ccf21c0f85ffdb75e56749af1a48d60403f675626a54144b50f6ad36391416b4",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Seize the carriage, animals or part of their load; if the toll stays unpaid for twenty-four hours, the superintending officer may sell the property.",
+  "required_facts": [
+    [
+      "seize"
+    ],
+    [
+      "twenty-four hours"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-tolls-act-1851__handle-2274",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1213,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 234,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#234"
+  }
+}

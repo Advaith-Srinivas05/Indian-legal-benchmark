@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0465",
+  "question": "Is a paramilitary constable who learns of a planned mutiny and stays silent committing an offence?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "central-reserve-police-force-act-1949__handle-1608",
+          "key": "section:9",
+          "citation": "Central Reserve Police Force Act, 1949, s. 9",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "9"
+            }
+          ],
+          "char_start": 6069,
+          "char_end": 8192,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "40a7f6232052fb2d4966a0ec76a34dccb5866b3004c9fa5363ecea91ae59919b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. Failing to give information of a known mutiny or conspiracy to mutiny to a superior officer without delay is among the more heinous offences.",
+  "required_facts": [
+    [
+      "mutiny"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "central-reserve-police-force-act-1949__handle-1608",
+      "key": "section:9"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2123,
+    "number_ambiguity": 6389,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 57,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#57"
+  }
+}

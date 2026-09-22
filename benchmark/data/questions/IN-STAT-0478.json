@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0478",
+  "question": "Can India's state-owned life insurer buy goods from a company linked to one of its directors?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "life-insurance-corporation-act-1956__handle-1632",
+          "key": "chapter:II/section:4C",
+          "citation": "Life Insurance Corporation Act, 1956, s. 4C",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4C"
+            }
+          ],
+          "char_start": 26857,
+          "char_end": 31944,
+          "page_start": 12,
+          "page_end": 13,
+          "text_sha256": "e48ceecb9252e107142ec82c5a8555340786794f3695a45dfc5b68e4bcd56712",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Only with the consent of the Board and subject to prescribed conditions.",
+  "required_facts": [
+    [
+      "consent of the Board"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "life-insurance-corporation-act-1956__handle-1632",
+      "key": "chapter:II/section:4C"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 5087,
+    "number_ambiguity": 30,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 282,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#282"
+  }
+}

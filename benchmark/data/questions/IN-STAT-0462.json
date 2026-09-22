@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0462",
+  "question": "Does the 2019 clean-up statute that scrapped obsolete laws disturb other statutes that incorporated those laws?",
+  "category": "cross_reference",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "repealing-and-amending-act-2019__handle-11956",
+          "key": "section:4",
+          "citation": "Repealing and Amending Act, 2019, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 919,
+          "char_end": 6411,
+          "page_start": 2,
+          "page_end": 4,
+          "text_sha256": "c7c043d71867f43a3e220fb21ea6e1c0e179a9cfc27d491eae0b219eaef1b6de",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "repealing-and-amending-act-2019__handle-11956",
+          "key": "section:2",
+          "citation": "Repealing and Amending Act, 2019, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 637,
+          "char_end": 740,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "c4743bd40a6e26396ee4a83802b741f1a77d859db7f4ed611bdeed352403e9d9",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. Repealing the enactments in its First Schedule does not affect any other enactment in which a repealed enactment was applied, incorporated or referred to.",
+  "required_facts": [
+    [
+      "First Schedule"
+    ],
+    [
+      "shall not affect"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "repealing-and-amending-act-2019__handle-11956",
+      "key": "section:4"
+    },
+    {
+      "document_id": "repealing-and-amending-act-2019__handle-11956",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 5492,
+    "number_ambiguity": 8272,
+    "title_collisions": 6,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 125,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#125"
+  }
+}

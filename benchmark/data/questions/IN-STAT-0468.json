@@ -1,0 +1,76 @@
+{
+  "question_id": "IN-STAT-0468",
+  "question": "If timber dues owed to the forest department go unpaid, what can the department do with the timber?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "indian-forest-act-1927__handle-2388",
+          "key": "chapter:XIII/section:83",
+          "citation": "Indian Forest Act, 1927, s. 83",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "83"
+            }
+          ],
+          "char_start": 260000,
+          "char_end": 260754,
+          "page_start": 79,
+          "page_end": 79,
+          "text_sha256": "1647ecaf64b8da1cc6dfc351ef0d65a1b63470ddcca2359efb3b86343bc12920",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The amount is a first charge on the produce; a Forest-officer may take possession and, if still unpaid, sell it by public auction, applying the proceeds first to the dues.",
+  "required_facts": [
+    [
+      "first charge"
+    ],
+    [
+      "public auction"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-forest-act-1927__handle-2388",
+      "key": "chapter:XIII/section:83"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 754,
+    "number_ambiguity": 609,
+    "title_collisions": 9,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 112,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#112"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "question_id": "IN-STAT-0461",
+  "question": "Under the 2020 direct-tax dispute settlement scheme, before whom is a declaration filed, and who prescribes its form?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "direct-tax-vivad-se-vishwas-act-2020__handle-13812",
+          "key": "section:12",
+          "citation": "Direct Tax Vivad se Vishwas Act, 2020, s. 12",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 23635,
+          "char_end": 25590,
+          "page_start": 9,
+          "page_end": 9,
+          "text_sha256": "38ebcc53440c8eed13b6d2e2a7d2ab6ac5715f1867b3fb71c3d18ed86d98cbf7",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "direct-tax-vivad-se-vishwas-act-2020__handle-13812",
+          "key": "section:4",
+          "citation": "Direct Tax Vivad se Vishwas Act, 2020, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 12625,
+          "char_end": 22202,
+          "page_start": 6,
+          "page_end": 8,
+          "text_sha256": "c36f96770a83291d25316d04881ba8bcb6de2b00a9bbf257660d0629f6fd7c31",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Before the designated authority, in the form and verified in the manner prescribed by rules made by the Central Government.",
+  "required_facts": [
+    [
+      "designated authority"
+    ],
+    [
+      "Central Government"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "direct-tax-vivad-se-vishwas-act-2020__handle-13812",
+      "key": "section:12"
+    },
+    {
+      "document_id": "direct-tax-vivad-se-vishwas-act-2020__handle-13812",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1955,
+    "number_ambiguity": 5903,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "rejected",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 146,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#146",
+    "rejection_reason": "The referenced provision (section 4) is not gold-eligible, so the second hop cannot be gold evidence."
+  }
+}

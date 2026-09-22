@@ -1,0 +1,96 @@
+{
+  "question_id": "IN-STAT-0469",
+  "question": "What is the maximum punishment for maliciously setting off a blast likely to endanger life, even if nobody is hurt?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "explosive-substances-act-1908__handle-2342",
+          "key": "section:3",
+          "citation": "Explosive Substances Act, 1908, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 2093,
+          "char_end": 4961,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "d3afc0652a876ce6bd0afd7ff31391edd1237889e918952ad3f44bf33075d358",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "explosive-substances-act-1908__handle-15372",
+          "key": "section:3",
+          "citation": "EXPLOSIVE SUBSTANCES ACT, 1908, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 2093,
+          "char_end": 4943,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "1caadab62f68546873835cb9693924c7a28c63def91519ed780b4c54d69d617a",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Imprisonment for life, or rigorous imprisonment of not less than ten years, and fine.",
+  "required_facts": [
+    [
+      "imprisonment for life"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "explosive-substances-act-1908__handle-2342",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2868,
+    "number_ambiguity": 9183,
+    "title_collisions": 4,
+    "cluster_size": 2,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 126,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#126",
+    "alternatives_decided": [
+      {
+        "document_id": "explosive-substances-act-1908__handle-15372",
+        "key": "section:3",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

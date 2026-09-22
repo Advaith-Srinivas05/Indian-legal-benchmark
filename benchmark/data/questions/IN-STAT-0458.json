@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0458",
+  "question": "In north Indian canal law, if canal water is wasted and the culprit cannot be found, who pays and can charges be added to penalties?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "northern-india-canal-and-drainage-act-1873__handle-2282",
+          "key": "part:V/section:35",
+          "citation": "Northern India Canal and Drainage Act, 1873, s. 35",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "35"
+            }
+          ],
+          "char_start": 51907,
+          "char_end": 52837,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "21cad48ec6a99d0d8387c0763cda0a5eb6542dd6b234720dfa05a958be046ef5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "northern-india-canal-and-drainage-act-1873__handle-2282",
+          "key": "part:V/section:33",
+          "citation": "Northern India Canal and Drainage Act, 1873, s. 33",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "33"
+            }
+          ],
+          "char_start": 50873,
+          "char_end": 51468,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "b64fb49d7c7a69e56b23a7ae04c98860941a829d959fc6ba9ca799501819c863",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "All persons chargeable for water through that water-course are jointly liable, and such charges may be recovered in addition to any penalties.",
+  "required_facts": [
+    [
+      "jointly liable"
+    ],
+    [
+      "in addition to any penalties"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "northern-india-canal-and-drainage-act-1873__handle-2282",
+      "key": "part:V/section:35"
+    },
+    {
+      "document_id": "northern-india-canal-and-drainage-act-1873__handle-2282",
+      "key": "part:V/section:33"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 930,
+    "number_ambiguity": 2321,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 295,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#295"
+  }
+}

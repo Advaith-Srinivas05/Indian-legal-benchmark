@@ -1,0 +1,77 @@
+{
+  "question_id": "IN-STAT-0479",
+  "question": "Can one business obtain a single permit for running a plant, cigar rolling and hiring labour through middlemen?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "occupational-safety-health-and-working-conditions-code-2020__handle-22041",
+          "key": "part:VIII/chapter:XIV/section:119",
+          "citation": "Occupational Safety, Health and Working Conditions Code, 2020, s. 119",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "XIV"
+            },
+            {
+              "unit_type": "section",
+              "number": "119"
+            }
+          ],
+          "char_start": 212701,
+          "char_end": 215528,
+          "page_start": 61,
+          "page_end": 61,
+          "text_sha256": "ff7a1f57e3822201ce55ba08287389984e48ee3a97d0299f215f00163ff3787b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. It may apply, electronically or otherwise, to the designated authority for a common licence for any combination of these.",
+  "required_facts": [
+    [
+      "common licence"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "occupational-safety-health-and-working-conditions-code-2020__handle-22041",
+      "key": "part:VIII/chapter:XIV/section:119"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2827,
+    "number_ambiguity": 311,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 291,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#291"
+  }
+}

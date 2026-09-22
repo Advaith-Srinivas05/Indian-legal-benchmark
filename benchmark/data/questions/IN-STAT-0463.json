@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0463",
+  "question": "What happens to a member of the army's reserve pool who, with no valid excuse, doesn't turn up when summoned?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "indian-reserve-forces-act-1888__handle-2314",
+          "key": "section:6",
+          "citation": "Indian Reserve Forces Act, 1888, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 2934,
+          "char_end": 8656,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "99a932e17a8b95d6265e9376429afd32ab712f7d2771ae044197038494947cde",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "He is liable to punishment on conviction by a court-martial or, on conviction before a magistrate, to fine or imprisonment as the Act provides.",
+  "required_facts": [
+    [
+      "court-martial"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-reserve-forces-act-1888__handle-2314",
+      "key": "section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 5722,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 43,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#43"
+  }
+}

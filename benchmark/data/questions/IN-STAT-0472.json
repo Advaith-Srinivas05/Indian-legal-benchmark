@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0472",
+  "question": "When a factory inspector takes a sample from a match maker to test for banned phosphorus, can the manufacturer demand a share?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "white-phosphorus-matches-prohibition-act-1913__handle-2353",
+          "key": "section:5",
+          "citation": "White Phosphorus Matches Prohibition Act, 1913, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 1741,
+          "char_end": 2540,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "f7335886615f5e5a3b23ca86e4cb8c3cfe92370716c2a678b023a614aff5bb44",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. He may require the Inspector to divide the sample into two parts and mark, seal and deliver one to him.",
+  "required_facts": [
+    [
+      "two parts"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "white-phosphorus-matches-prohibition-act-1913__handle-2353",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 799,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 211,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#211"
+  }
+}

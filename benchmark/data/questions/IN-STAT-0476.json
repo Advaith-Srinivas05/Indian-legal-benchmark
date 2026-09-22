@@ -1,0 +1,76 @@
+{
+  "question_id": "IN-STAT-0476",
+  "question": "Who chairs the student body at the central university in Gangtok, and how are its members picked?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "sikkim-university-act-2006__handle-2049",
+          "key": "schedule:_/section:39",
+          "citation": "Sikkim University Act, 2006, s. 39",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "39"
+            }
+          ],
+          "char_start": 96082,
+          "char_end": 97309,
+          "page_start": 33,
+          "page_end": 33,
+          "text_sha256": "a33dabb24342c3234bf69a9cb15f427b88db6d1a24cf0a34372bf24c0bec5ce6",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Dean of Students' Welfare chairs it; it has twenty students nominated by the Academic Council on merit plus elected representatives.",
+  "required_facts": [
+    [
+      "Dean of Students"
+    ],
+    [
+      "twenty students"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "sikkim-university-act-2006__handle-2049",
+      "key": "schedule:_/section:39"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1227,
+    "number_ambiguity": 1941,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 245,
+    "tags": [
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#245"
+  }
+}

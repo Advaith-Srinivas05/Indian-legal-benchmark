@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0464",
+  "question": "When an insurer goes bust, can the life policy fund be used to pay its motor or fire claims?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "insurance-act-1938__handle-2304",
+          "key": "part:II/section:56",
+          "citation": "Insurance Act, 1938, s. 56",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "56"
+            }
+          ],
+          "char_start": 192326,
+          "char_end": 195113,
+          "page_start": 69,
+          "page_end": 69,
+          "text_sha256": "fd7410363c49555ceeffe0dd7f4521f4ea4ba234bdbd08c0e6a9bb36b22e5876",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. Life insurance assets and liabilities are valued separately and applied only to life business liabilities, except so far as the assets exceed those liabilities.",
+  "required_facts": [
+    [
+      "life insurance business"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "insurance-act-1938__handle-2304",
+      "key": "part:II/section:56"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2787,
+    "number_ambiguity": 1125,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 47,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#47"
+  }
+}

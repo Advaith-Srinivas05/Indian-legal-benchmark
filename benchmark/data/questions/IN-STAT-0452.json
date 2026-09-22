@@ -1,0 +1,86 @@
+{
+  "question_id": "IN-STAT-0452",
+  "question": "What penalty does a chemist struck off the register face for not handing back the registration certificate, and when is it due?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "pharmacy-act-1948__handle-1364",
+          "key": "chapter:V/section:43",
+          "citation": "Pharmacy Act, 1948, s. 43",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "43"
+            }
+          ],
+          "char_start": 64410,
+          "char_end": 66383,
+          "page_start": 22,
+          "page_end": 23,
+          "text_sha256": "bc4efd7451b13db9667f3281a18def797625c696048fa48663fe8465c2ac9b6d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A penalty which may extend to five thousand rupees, payable within ten days from the removal of the name from the register.",
+  "required_facts": [
+    [
+      "five thousand rupees"
+    ],
+    [
+      "ten days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "pharmacy-act-1948__handle-1364",
+      "key": "chapter:V/section:43"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1973,
+    "number_ambiguity": 1696,
+    "title_collisions": 3,
+    "cluster_size": 2,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 7,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#7",
+    "alternatives_decided": [
+      {
+        "document_id": "pharmacy-act-1948__handle-19163",
+        "key": "chapter:V/section:43",
+        "source": "same_instrument_version",
+        "included": false,
+        "reason": "does not state every required fact"
+      }
+    ]
+  }
+}

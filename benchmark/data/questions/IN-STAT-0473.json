@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0473",
+  "question": "For how long is a central university's chief finance official appointed?",
+  "category": "situational",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "central-universities-act-2009__handle-2080",
+          "key": "schedule:SECOND/section:7",
+          "citation": "Central Universities Act, 2009, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": "SECOND"
+            },
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 77194,
+          "char_end": 80171,
+          "page_start": 23,
+          "page_end": 24,
+          "text_sha256": "dc0dfbdb0ce996d889861d72be7911ae1efdecb7246e22576899989fbc2850a7",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A term of five years, with eligibility for re-appointment; appointment is by the Executive Council on a Selection Committee's recommendation.",
+  "required_facts": [
+    [
+      "five years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "central-universities-act-2009__handle-2080",
+      "key": "schedule:SECOND/section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2977,
+    "number_ambiguity": 7124,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 224,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#224"
+  }
+}

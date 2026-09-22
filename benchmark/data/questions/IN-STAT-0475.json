@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0475",
+  "question": "At the central university in Imphal, can the top administrative body change a draft academic rulebook sent to it?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "manipur-university-act-2005__handle-2051",
+          "key": "schedule:_/section:41",
+          "citation": "Manipur University Act, 2005, s. 41",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "41"
+            }
+          ],
+          "char_start": 100757,
+          "char_end": 102633,
+          "page_start": 31,
+          "page_end": 32,
+          "text_sha256": "d4171088ed1c6c1993cb096d27a289e736cb9391ab73b9836e84911ee0e88a53",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. Such Ordinances need a draft proposed by the Academic Council, and the Executive Council cannot amend the draft.",
+  "required_facts": [
+    [
+      "Academic Council"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "manipur-university-act-2005__handle-2051",
+      "key": "schedule:_/section:41"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1876,
+    "number_ambiguity": 1817,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 236,
+    "tags": [
+      "numeric",
+      "has_parallel_law"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#236"
+  }
+}

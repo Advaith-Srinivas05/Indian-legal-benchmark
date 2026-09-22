@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0480",
+  "question": "What kind of body did the Centre create in 1961 to protect bank depositors?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "deposit-insurance-and-credit-guarantee-corporation-act-1961__handle-1655",
+          "key": "chapter:II/section:3",
+          "citation": "Deposit Insurance and Credit Guarantee Corporation Act, 1961, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 11229,
+          "char_end": 12636,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "734106bf557bfb0c995c4e7e779fbcc60f0076d0a1a1982dee5f05e8175967b2",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A body corporate named the Deposit Insurance Corporation, with perpetual succession and a common seal.",
+  "required_facts": [
+    [
+      "Deposit Insurance Corporation"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "deposit-insurance-and-credit-guarantee-corporation-act-1961__handle-1655",
+      "key": "chapter:II/section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1407,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 256,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#256"
+  }
+}

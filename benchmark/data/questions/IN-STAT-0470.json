@@ -1,0 +1,73 @@
+{
+  "question_id": "IN-STAT-0470",
+  "question": "Which bodies maintain the roll of accepted traditional-medicine qualifications awarded within India?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "national-commission-for-indian-system-of-medicine-act-2020__handle-15622",
+          "key": "chapter:VI/section:35",
+          "citation": "National Commission for Indian System of Medicine Act, 2020, s. 35",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "35"
+            }
+          ],
+          "char_start": 55405,
+          "char_end": 58497,
+          "page_start": 19,
+          "page_end": 20,
+          "text_sha256": "3f917e51781112e536b82c06bf79f78a6233fdb0d278a7545fa99fe2b1b47bab",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Board of Ayurveda or the Board of Unani, Siddha and Sowa-Rigpa, as the case may be.",
+  "required_facts": [
+    [
+      "Board of Ayurveda"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "national-commission-for-indian-system-of-medicine-act-2020__handle-15622",
+      "key": "chapter:VI/section:35"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3092,
+    "number_ambiguity": 2321,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 170,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#170"
+  }
+}

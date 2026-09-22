@@ -1,0 +1,107 @@
+{
+  "question_id": "IN-STAT-0467",
+  "question": "Which courts try offences involving property held in someone else's name, and how are they chosen?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "prohibition-of-benami-property-transactions-act-1988__handle-1840",
+          "key": "chapter:VI/section:50",
+          "citation": "Prohibition of Benami Property Transactions Act, 1988, s. 50",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "50"
+            }
+          ],
+          "char_start": 54967,
+          "char_end": 56129,
+          "page_start": 20,
+          "page_end": 20,
+          "text_sha256": "196dcca369a510cec76d27d5bea020b45cdda8ea5889e52be8203d49cf218e67",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "prohibition-of-benami-property-transactions-act-1988__handle-15415",
+          "key": "chapter:VI/section:50",
+          "citation": "PROHIBITION OF BENAMI PROPERTY TRANSACTIONS ACT, 1988, s. 50",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "50"
+            }
+          ],
+          "char_start": 54874,
+          "char_end": 56036,
+          "page_start": 19,
+          "page_end": 19,
+          "text_sha256": "7925bd162b31ade6d9b63942a014150ab8a7cb3e552e88ae62bf25870037adcf",
+          "evidence_confidence": "high",
+          "source": "cross_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Courts of Session designated as Special Courts by the Central Government in consultation with the Chief Justice of the High Court.",
+  "required_facts": [
+    [
+      "Special Court"
+    ],
+    [
+      "Chief Justice"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prohibition-of-benami-property-transactions-act-1988__handle-1840",
+      "key": "chapter:VI/section:50"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1162,
+    "number_ambiguity": 1378,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 1,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 67,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#67",
+    "alternatives_decided": [
+      {
+        "document_id": "prohibition-of-benami-property-transactions-act-1988__handle-15415",
+        "key": "chapter:VI/section:50",
+        "source": "cross_instrument_equivalent",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

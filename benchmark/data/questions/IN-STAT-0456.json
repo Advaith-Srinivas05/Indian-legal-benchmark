@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0456",
+  "question": "Before a state converts forest land to non-forest use, whose approval is needed and who advises on granting it?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "van-sanrakshan-evam-samvardhan-adhiniyam-1980__handle-1760",
+          "key": "section:2",
+          "citation": "Van (Sanrakshan Evam Samvardhan) Adhiniyam, 1980, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 4832,
+          "char_end": 7792,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "09538f075179420a6ab35ce7c7cdcfb8d51c48232da49770d91f2deb6a3f9275",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "van-sanrakshan-evam-samvardhan-adhiniyam-1980__handle-1760",
+          "key": "section:3",
+          "citation": "Van (Sanrakshan Evam Samvardhan) Adhiniyam, 1980, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 7793,
+          "char_end": 8394,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "c5bf56c3d9912f84d7d1b6766e3248e2eef6a8f045e4dad2d9e122ad7811183c",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The prior approval of the Central Government, which may constitute an Advisory Committee to advise it on the grant of such approval.",
+  "required_facts": [
+    [
+      "prior approval of the Central Government"
+    ],
+    [
+      "Advisory Committee"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "van-sanrakshan-evam-samvardhan-adhiniyam-1980__handle-1760",
+      "key": "section:2"
+    },
+    {
+      "document_id": "van-sanrakshan-evam-samvardhan-adhiniyam-1980__handle-1760",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2960,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 65,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#65"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0457",
+  "question": "When a Hindu leaves property by will to someone not yet born, which limits govern the gift?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "hindu-disposition-of-property-act-1916__handle-2357",
+          "key": "section:3",
+          "citation": "Hindu Disposition of Property Act, 1916, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 1325,
+          "char_end": 1864,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "b8fd161104cc8bc83d9f792c28bdcce588fbb1b96057b944eafdfd7a4473f1d9",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "hindu-disposition-of-property-act-1916__handle-2357",
+          "key": "section:2",
+          "citation": "Hindu Disposition of Property Act, 1916, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 970,
+          "char_end": 1324,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "7b419e3864f1c0530ac3605938a130af9771ecf4c26dfa66893b2943f199d725",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Such a disposition is not invalid merely because the beneficiary was not in existence, but by will it is subject to sections 113, 114, 115 and 116 of the Indian Succession Act, 1925.",
+  "required_facts": [
+    [
+      "not in existence"
+    ],
+    [
+      "113, 114, 115 and 116"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "hindu-disposition-of-property-act-1916__handle-2357",
+      "key": "section:3"
+    },
+    {
+      "document_id": "hindu-disposition-of-property-act-1916__handle-2357",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 539,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 69,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#69"
+  }
+}

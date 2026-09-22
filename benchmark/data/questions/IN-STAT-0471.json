@@ -1,0 +1,104 @@
+{
+  "question_id": "IN-STAT-0471",
+  "question": "In the Lutyens' Delhi civic area, when can the council drain a block of buildings together?",
+  "category": "situational",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "new-delhi-municipal-council-act-1994__handle-1986",
+          "key": "chapter:XI/section:177",
+          "citation": "New Delhi Municipal Council Act, 1994, s. 177",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "177"
+            }
+          ],
+          "char_start": 227881,
+          "char_end": 229085,
+          "page_start": 75,
+          "page_end": 75,
+          "text_sha256": "71e00c207863a08785d48c3655889816595eb8cb2f04885eb953c5048adde1f8",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "new-delhi-municipal-council-act-1994__handle-15068",
+          "key": "chapter:XI/section:177",
+          "citation": "New Delhi Municipal Council Act, 1994, s. 177",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "177"
+            }
+          ],
+          "char_start": 203535,
+          "char_end": 204737,
+          "page_start": 59,
+          "page_end": 60,
+          "text_sha256": "f33b5763358408653a443a19cb5b1c14dff1cade3642e262c3042877ce9daf56",
+          "evidence_confidence": "high",
+          "source": "cross_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "When combined drainage is more economical and a municipal drain of sufficient size exists or is being built within thirty meters of the block.",
+  "required_facts": [
+    [
+      "thirty meters"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "new-delhi-municipal-council-act-1994__handle-1986",
+      "key": "chapter:XI/section:177"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1204,
+    "number_ambiguity": 165,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 1,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 205,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#205",
+    "alternatives_decided": [
+      {
+        "document_id": "new-delhi-municipal-council-act-1994__handle-15068",
+        "key": "chapter:XI/section:177",
+        "source": "cross_instrument_equivalent",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

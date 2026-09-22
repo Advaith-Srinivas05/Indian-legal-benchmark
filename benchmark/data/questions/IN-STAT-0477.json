@@ -1,0 +1,76 @@
+{
+  "question_id": "IN-STAT-0477",
+  "question": "How is a service-contract quarrel between a government-funded IT institute and its employee settled?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "indian-institutes-of-information-technology-act-2014__handle-2135",
+          "key": "chapter:IV/section:37",
+          "citation": "Indian Institutes of Information Technology Act, 2014, s. 37",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "37"
+            }
+          ],
+          "char_start": 42189,
+          "char_end": 44277,
+          "page_start": 16,
+          "page_end": 17,
+          "text_sha256": "8b3c18016c36d7889aaa9ffb5f2c6a3a924a75f7ad4ead36e04f599f0830ab76",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "By a Tribunal of Arbitration of one member appointed by the Institute, one nominated by the employee and an umpire appointed by the Visitor; its decision is final.",
+  "required_facts": [
+    [
+      "umpire"
+    ],
+    [
+      "Visitor"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-institutes-of-information-technology-act-2014__handle-2135",
+      "key": "chapter:IV/section:37"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2088,
+    "number_ambiguity": 2113,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 262,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#262"
+  }
+}

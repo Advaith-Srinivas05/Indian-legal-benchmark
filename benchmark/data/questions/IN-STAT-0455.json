@@ -1,0 +1,77 @@
+{
+  "question_id": "IN-STAT-0455",
+  "question": "After the government took over a Bombay engineering firm in 1972, how long did shareholders have to lodge claims with the tribunal?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "richardson-and-cruddas-limited-acquisition-and-transfer-of-u__handle-1738",
+          "key": "part:II/chapter:II/section:14",
+          "citation": "Richardson and Cruddas Limited (Acquisition and Transfer of Undertaking) Act, 1972, s. 14",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "14"
+            }
+          ],
+          "char_start": 19441,
+          "char_end": 20243,
+          "page_start": 9,
+          "page_end": 9,
+          "text_sha256": "53f51324bb20e4642d21a3477d8af3fdf1aa559cf5ed9e4cbf5d6852a28e5870",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Thirty days from the date specified in the Tribunal's notification.",
+  "required_facts": [
+    [
+      "thirty days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "richardson-and-cruddas-limited-acquisition-and-transfer-of-u__handle-1738",
+      "key": "part:II/chapter:II/section:14"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 802,
+    "number_ambiguity": 5435,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 238,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#238"
+  }
+}

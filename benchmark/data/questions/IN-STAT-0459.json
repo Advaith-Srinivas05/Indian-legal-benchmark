@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0459",
+  "question": "When central laws were extended to Jammu and Kashmir in 1968, how could the Centre handle references in state laws to old authorities?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "central-laws-extension-to-jammu-and-kashmir-act-1968__handle-1555",
+          "key": "section:6",
+          "citation": "Central Laws (Extension to Jammu and Kashmir) Act, 1968, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 3738,
+          "char_end": 4985,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "2f49ceb4ec63c399c1d86458a29d2f9b5dcc94280c51c3f4baa931075e12ae13",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "central-laws-extension-to-jammu-and-kashmir-act-1968__handle-1555",
+          "key": "section:4",
+          "citation": "Central Laws (Extension to Jammu and Kashmir) Act, 1968, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 1635,
+          "char_end": 2145,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "3fd81721766bbb97c104867a804416a665eac6dd9c6ad2d7146baefd8e6dae5c",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "References to an old authority take effect as references to the corresponding new authority, and a difficulty-removal order may specify which authorities correspond.",
+  "required_facts": [
+    [
+      "corresponding"
+    ],
+    [
+      "new authority"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "central-laws-extension-to-jammu-and-kashmir-act-1968__handle-1555",
+      "key": "section:6"
+    },
+    {
+      "document_id": "central-laws-extension-to-jammu-and-kashmir-act-1968__handle-1555",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1247,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 174,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#174"
+  }
+}

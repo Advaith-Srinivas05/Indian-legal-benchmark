@@ -1,0 +1,95 @@
+{
+  "question_id": "IN-STAT-0454",
+  "question": "How long must a clinic doing prenatal scans keep its consent forms and reports?",
+  "category": "numeric_threshold",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "pre-conception-and-pre-natal-diagnostic-techniques-prohibiti__handle-1937",
+          "key": "chapter:VIII/section:29",
+          "citation": "Pre-conception and Pre-natal Diagnostic Techniques (Prohibition of Sex Selection) Act, 1994, s. 29",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "29"
+            }
+          ],
+          "char_start": 44748,
+          "char_end": 45481,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "d84607ef88cd27f887cccc73be97b1381930f666557d7fbb355e702513c29416",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "pre-conception-and-pre-natal-diagnostic-techniques-prohibiti__handle-7801",
+          "key": "chapter:VIII/section:29",
+          "citation": "PRE-CONCEPTION AND PRE-NATAL DIAGNOSTIC TECHNIQUES (PROHIBITION OF SEX SELECTION) ACT, 1994, s. 29",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "29"
+            }
+          ],
+          "char_start": 43849,
+          "char_end": 44582,
+          "page_start": 15,
+          "page_end": 15,
+          "text_sha256": "d84607ef88cd27f887cccc73be97b1381930f666557d7fbb355e702513c29416",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Two years or such period as prescribed, or until final disposal of any proceedings against the clinic.",
+  "required_facts": [
+    [
+      "two years"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "pre-conception-and-pre-natal-diagnostic-techniques-prohibiti__handle-1937",
+      "key": "chapter:VIII/section:29"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 733,
+    "number_ambiguity": 2896,
+    "title_collisions": 3,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 200,
+    "tags": [
+      "numeric"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#200"
+  }
+}

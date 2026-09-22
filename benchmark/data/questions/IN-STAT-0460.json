@@ -1,0 +1,109 @@
+{
+  "question_id": "IN-STAT-0460",
+  "question": "Can a company's articles override the 1960 statutory rule on tax-free dividends for older preference shares?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "preference-shares-regulation-of-dividends-act-1960__handle-1572",
+          "key": "schedule:_/section:5",
+          "citation": "Preference Shares (Regulation of Dividends) Act, 1960, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 8818,
+          "char_end": 9452,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "bc4e5c9204e306622926ad9ea94b1ce3307b46aea3502e95c251b9220b73d525",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "preference-shares-regulation-of-dividends-act-1960__handle-1572",
+          "key": "schedule:_/section:3",
+          "citation": "Preference Shares (Regulation of Dividends) Act, 1960, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 2557,
+          "char_end": 8817,
+          "page_start": 2,
+          "page_end": 4,
+          "text_sha256": "80889a66c33a7efc3407ff173d10e8d2d85f616d45d148991f412e93f786801c",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. The Act overrides the memorandum, articles and shareholder agreements; shares issued before 1 April 1960 with tax-free dividends carry a preferential right to dividends without deduction as the Act provides.",
+  "required_facts": [
+    [
+      "notwithstanding anything to the contrary"
+    ],
+    [
+      "1st April, 1960"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "preference-shares-regulation-of-dividends-act-1960__handle-1572",
+      "key": "schedule:_/section:5"
+    },
+    {
+      "document_id": "preference-shares-regulation-of-dividends-act-1960__handle-1572",
+      "key": "schedule:_/section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 634,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "rejected",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 194,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#194",
+    "rejection_reason": "The referenced provision (section 3) is not gold-eligible, so the second hop cannot be gold evidence."
+  }
+}
