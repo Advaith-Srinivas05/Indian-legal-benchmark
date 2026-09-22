@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0443",
+  "question": "Under section 11 of the Public Gambling Act, 1867 as in force in Rajasthan, when is a gaming witness indemnified?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "public-gambling-act-1867__handle-18693",
+          "key": "section:11",
+          "citation": "public gambling act, 1867, s. 11",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "11"
+            }
+          ],
+          "char_start": 67703,
+          "char_end": 68313,
+          "page_start": 27,
+          "page_end": 27,
+          "text_sha256": "d7d8a2e7d2527006fe61e471dcccc6ebe3d2b9b1ca3281cd33e4dbc03adbae08",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "When, examined before a magistrate, he makes in the magistrate's opinion a true and faithful discovery of all things asked.",
+  "required_facts": [
+    [
+      "true and faithful discovery"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "public-gambling-act-1867__handle-18693",
+      "key": "section:11"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 610,
+    "number_ambiguity": 6050,
+    "title_collisions": 3,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 651,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#651"
+  }
+}

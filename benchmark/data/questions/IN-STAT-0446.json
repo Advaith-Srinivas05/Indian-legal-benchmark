@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0446",
+  "question": "Under section 35 of the Himachal Pradesh University of Health Sciences Act, 2017, what is credited to the University's general fund?",
+  "category": "provision_lookup",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "himachal-pradesh-university-of-health-sciences-act-2017__handle-21265",
+          "key": "section:35",
+          "citation": "HIMACHAL PRADESH UNIVERSITY OF HEALTH SCIENCES ACT, 2017, s. 35",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "35"
+            }
+          ],
+          "char_start": 40696,
+          "char_end": 41179,
+          "page_start": 20,
+          "page_end": 20,
+          "text_sha256": "18d4f6a2aa1828fd12db5dadf1f1949978d585ac40aefee05492d3033126a83b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Income from fees, endowments and grants; State Government grants; and grants from the Central Government, UGC and international donors such as the World Health Organization and UNICEF.",
+  "required_facts": [
+    [
+      "World Health Organization"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "himachal-pradesh-university-of-health-sciences-act-2017__handle-21265",
+      "key": "section:35"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 483,
+    "number_ambiguity": 2321,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 701,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#701"
+  }
+}

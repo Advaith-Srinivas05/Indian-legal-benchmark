@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0431",
+  "question": "Under rule 16 of the Karnataka State Road Safety Authority Rules, 2023, in which languages are books of account kept?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-karnataka-state-road-safety-authority-rules-2023__rule-7771bae968",
+          "key": "section:16",
+          "citation": "The Karnataka State Road Safety Authority Rules, 2023, r. 16",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "16"
+            }
+          ],
+          "char_start": 26711,
+          "char_end": 27901,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "10d5e841cc89c9b2778019bdbd663feaecf0338a3b1169e78177547d505e022d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Both Kannada and English, with figures allowed in Arabic numerals.",
+  "required_facts": [
+    [
+      "Kannada and English"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-karnataka-state-road-safety-authority-rules-2023__rule-7771bae968",
+      "key": "section:16"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1190,
+    "number_ambiguity": 5029,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 587,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#587"
+  }
+}

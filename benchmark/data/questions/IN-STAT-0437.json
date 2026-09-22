@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0437",
+  "question": "Under section 30 of the National Law School of India Act, 1986, what recommendation is needed before an honorary degree is conferred?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "national-law-school-of-india-act-1986__handle-7620",
+          "key": "schedule:_/section:30",
+          "citation": "NATIONAL LAW SCHOOL OF INDIA ACT, 1986, s. 30",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "30"
+            }
+          ],
+          "char_start": 65029,
+          "char_end": 65464,
+          "page_start": 25,
+          "page_end": 25,
+          "text_sha256": "8a3d1cc2f6163ea10a6abb46eb957f14c20040e10a08bf55128f748ee39b074c",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A recommendation by not less than two thirds of the members of the Academic Council, after which the General Council may decide by resolution.",
+  "required_facts": [
+    [
+      "two thirds"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "national-law-school-of-india-act-1986__handle-7620",
+      "key": "schedule:_/section:30"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 435,
+    "number_ambiguity": 2821,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 607,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#607"
+  }
+}

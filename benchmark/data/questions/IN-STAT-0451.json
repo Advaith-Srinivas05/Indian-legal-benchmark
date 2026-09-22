@@ -1,0 +1,94 @@
+{
+  "question_id": "IN-STAT-0451",
+  "question": "Under section 27 of the Jagath University Act, 2018, who is Secretary of the Finance Committee?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "jagath-university-act-2018__handle-7120",
+          "key": "section:27",
+          "citation": "JAGATH UNIVERSITY ACT, 2018, s. 27",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "27"
+            }
+          ],
+          "char_start": 39619,
+          "char_end": 40469,
+          "page_start": 13,
+          "page_end": 13,
+          "text_sha256": "2bc6dcc51ccd46accbe6974a30a750b82fe91ce8818b8e5d33d8ec295212664a",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "sri-jagadhguru-murugarajendra-university-act-2020__handle-17238",
+          "key": "section:27",
+          "citation": "Sri Jagadhguru Murugarajendra University Act, 2020., s. 27",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "27"
+            }
+          ],
+          "char_start": 40891,
+          "char_end": 41738,
+          "page_start": 17,
+          "page_end": 17,
+          "text_sha256": "56ea00b575a6b2b69de56338a786e5b535f4b53a61a4e42a9e782a683124464e",
+          "evidence_confidence": "high",
+          "source": "cross_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Finance Officer.",
+  "required_facts": [
+    [
+      "Finance Officer"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "jagath-university-act-2018__handle-7120",
+      "key": "section:27"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 850,
+    "number_ambiguity": 3095,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 1,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 685,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#685",
+    "alternatives_decided": [
+      {
+        "document_id": "sri-jagadhguru-murugarajendra-university-act-2020__handle-17238",
+        "key": "section:27",
+        "source": "cross_instrument_equivalent",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

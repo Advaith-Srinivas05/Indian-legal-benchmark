@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0428",
+  "question": "Under rule 38 of the Coast Guard (Seniority and Promotion) Rules, 1987, what happens when an enrolled person was promoted wrongly?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "coast-guard-seniority-and-promotion-rules-1987__rule-94e473f277",
+          "key": "section:38",
+          "citation": "Coast Guard (Seniority and Promotion) Rules,1987, r. 38",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "38"
+            }
+          ],
+          "char_start": 37537,
+          "char_end": 37807,
+          "page_start": 19,
+          "page_end": 19,
+          "text_sha256": "7b533fd837af27b2196837c515f8365b61f229786948aea3f336522bc4f1856d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The promotion may be cancelled and the excess payment for the period recovered.",
+  "required_facts": [
+    [
+      "cancelled"
+    ],
+    [
+      "recovered"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "coast-guard-seniority-and-promotion-rules-1987__rule-94e473f277",
+      "key": "section:38"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 270,
+    "number_ambiguity": 2035,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 581,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#581"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0436",
+  "question": "Under section 37 of the Kerala Industrial Infrastructure Development Act, 1993, how are public notices made known?",
+  "category": "provision_lookup",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "kerala-industrial-infrastructure-development-act-1993__handle-22262",
+          "key": "chapter:VIII/section:37",
+          "citation": "KERALA INDUSTRIAL INFRASTRUCTURE DEVELOPMENT ACT, 1993, s. 37",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "37"
+            }
+          ],
+          "char_start": 42581,
+          "char_end": 43104,
+          "page_start": 18,
+          "page_end": 18,
+          "text_sha256": "53aaf9a7899f7ea3a64ea1677ccd869bac2dafad8fc62d53b98e4d71bf0437aa",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "In writing over the officer's signature, by affixing copies in conspicuous public places, by beat of drum, or by newspaper advertisement, or any two or more of these.",
+  "required_facts": [
+    [
+      "beat of drum"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "kerala-industrial-infrastructure-development-act-1993__handle-22262",
+      "key": "chapter:VIII/section:37"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 523,
+    "number_ambiguity": 2113,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 604,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#604"
+  }
+}

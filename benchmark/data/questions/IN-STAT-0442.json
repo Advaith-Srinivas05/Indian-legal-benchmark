@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0442",
+  "question": "Under section 16 of the Public Gambling Act, 1867 as applied in Chandigarh, to whom may part of a fine be paid?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "public-gambling-act-1867__handle-15437",
+          "key": "section:16",
+          "citation": "PUBLIC GAMBLING ACT, 1867., s. 16",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "16"
+            }
+          ],
+          "char_start": 15818,
+          "char_end": 16157,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "632131f442d010521b038083fe221dd4946b1032d688be976109c0763f62eeeb",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "To an informer, at the direction of the trying Magistrate.",
+  "required_facts": [
+    [
+      "informer"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "public-gambling-act-1867__handle-15437",
+      "key": "section:16"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 339,
+    "number_ambiguity": 5029,
+    "title_collisions": 3,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 639,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#639"
+  }
+}

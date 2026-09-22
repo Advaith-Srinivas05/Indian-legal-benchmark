@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0441",
+  "question": "Under section 2 of the Indian Easements (Extension) Act, 1961 of Kerala, which version of the Indian Easements Act is extended to the whole State?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "indian-easements-extension-act-1961__handle-22210",
+          "key": "section:2",
+          "citation": "INDIAN EASEMENTS (EXTENSION) ACT, 1961, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 778,
+          "char_end": 1109,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "d825c6508855c4ec08e075eba49a4e7909500e5e0c71e069e0c31e1b9feb1dcd",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Act as in force in the Malabar district referred to in the States Reorganisation Act, 1956.",
+  "required_facts": [
+    [
+      "Malabar"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-easements-extension-act-1961__handle-22210",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 331,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 630,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#630"
+  }
+}

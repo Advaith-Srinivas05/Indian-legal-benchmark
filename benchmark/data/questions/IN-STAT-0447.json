@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0447",
+  "question": "Under section 3 of the Salary and Allowances of the Chief Whip in the Legislative Assembly of the National Capital Territory of Delhi Act, 2003, at what rate is the Chief Whip paid?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "salary-and-allowances-of-the-chief-whip-in-the-legislative-a__handle-13685",
+          "key": "section:3",
+          "citation": "Salary and Allowances of the Chief Whip in the Legislative Assembly of the National Capital Territory of Delhi Act, 2003, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 1323,
+          "char_end": 2619,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "ab82d4585de8bbbf419c2b47dd4a466101a085eca1d3ba6f7980c8e28901f065",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "At the same rates of salary, constituency and daily allowance as a Minister of the Delhi Government.",
+  "required_facts": [
+    [
+      "Minister"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "salary-and-allowances-of-the-chief-whip-in-the-legislative-a__handle-13685",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1296,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 704,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#704"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "question_id": "IN-STAT-0450",
+  "question": "Under section 13 of the Chhattisgarh Bhumi Sena Adhiniyam, 1981, what protection does a Bhumi Sainik on duty have?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "chhattisgarh-bhumi-sena-adhiniyam-1981__handle-21472",
+          "key": "section:13",
+          "citation": "Chhattisgarh Bhumi Sena Adhiniyam, 1981., s. 13",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 7756,
+          "char_end": 8326,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "a9f84d266f057a89fe98b1829664a081bd6cf137e8c6356aaf829be2396d5e74",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "madhya-pradesh-bhumi-sena-adhiniyam-1981__handle-5786",
+          "key": "section:13",
+          "citation": "MADHYA PRADESH BHUMI SENA ADHINIYAM, 1981, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 7756,
+          "char_end": 8326,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "a9f84d266f057a89fe98b1829664a081bd6cf137e8c6356aaf829be2396d5e74",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The powers, privileges and protection of a public servant, and no prosecution for acts in discharge of duty without previous sanction.",
+  "required_facts": [
+    [
+      "public servant"
+    ],
+    [
+      "previous sanction"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "chhattisgarh-bhumi-sena-adhiniyam-1981__handle-21472",
+      "key": "section:13"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 570,
+    "number_ambiguity": 5702,
+    "title_collisions": 1,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 724,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#724"
+  }
+}

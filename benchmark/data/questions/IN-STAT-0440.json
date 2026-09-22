@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0440",
+  "question": "Under section 17 of the Goa Ayurvedic and other Allied Indian Systems of Medicine Council Act, 2019, who may summon meetings before regulations are made?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-ayurvedic-and-other-allied-indian-systems-of-medicine-co__handle-19769",
+          "key": "chapter:III/section:17",
+          "citation": "Goa Ayurvedic and other Allied Indian Systems of Medicine Council Act, 2019, s. 17",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "17"
+            }
+          ],
+          "char_start": 12118,
+          "char_end": 12504,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "49bbcc893203e074e37599af545bedff11b216966e678dcab0f6a75ff94748a2",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The President, by circulating notice to each member.",
+  "required_facts": [
+    [
+      "President"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-ayurvedic-and-other-allied-indian-systems-of-medicine-co__handle-19769",
+      "key": "chapter:III/section:17"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 386,
+    "number_ambiguity": 4728,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 623,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#623"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0427",
+  "question": "Under rule 16 of the Metro Railways (Procedure of Claims) Rules, 2017, who pays the experts associated with a claim inquiry?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "metro-railways-procedure-of-claims-rules-2017__rule-6e27ed6289",
+          "key": "part:II/section:16",
+          "citation": "Metro Railways (Procedure of Claims) Rules, 2017, r. 16",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "16"
+            }
+          ],
+          "char_start": 11203,
+          "char_end": 11678,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "d7a966f680e45d93f3ea09910844ce844be331170c3a857c92a55a31ef212ad8",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Metro Railway Administration pays the fees or allowances fixed by the Claims Commissioner.",
+  "required_facts": [
+    [
+      "Metro Railway Administration"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "metro-railways-procedure-of-claims-rules-2017__rule-6e27ed6289",
+      "key": "part:II/section:16"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 475,
+    "number_ambiguity": 5029,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 580,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#580"
+  }
+}

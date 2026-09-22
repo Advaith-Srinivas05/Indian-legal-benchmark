@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0439",
+  "question": "What does section 7 of the Goa Reconstruction of Registers and Records Act, 2005 repeal?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-reconstruction-of-registers-and-records-act-2005__handle-6090",
+          "key": "section:7",
+          "citation": "Goa Reconstruction of Registers and Records Act, 2005, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 6606,
+          "char_end": 7281,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "f663bbf14cef1aa128e443abc2f51d4e5ca9bf23a3bb653871b861fb0cf943d0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Articles 78 to 88 of the Codigo do Registo Civil do Estado da India approved by Decree dated 9-11-1912.",
+  "required_facts": [
+    [
+      "Articles 78 to 88"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-reconstruction-of-registers-and-records-act-2005__handle-6090",
+      "key": "section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 675,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 617,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#617"
+  }
+}

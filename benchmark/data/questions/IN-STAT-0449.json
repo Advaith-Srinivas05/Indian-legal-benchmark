@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0449",
+  "question": "Under section 3 of the Himachal Pradesh Administrative Tribunal (Transfer of Decided cases and Pending Applications) Act, 2019, where do cases the Tribunal received from civil courts go?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "himachal-pradesh-administrative-tribunal-transfer-of-decided__handle-21950",
+          "key": "section:3",
+          "citation": "Himachal Pradesh Administrative Tribunal (Transfer of Decided cases and Pending Applications) Act, 2019, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 2149,
+          "char_end": 4110,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "a85671b6a24446d992af3bb626f94e027924b948bc7ca7ace917d0362f0bab0b",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "They stand transferred back to the civil court they came from, or to the competent court in its place.",
+  "required_facts": [
+    [
+      "transferred back"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "himachal-pradesh-administrative-tribunal-transfer-of-decided__handle-21950",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1961,
+    "number_ambiguity": 9183,
+    "title_collisions": 3,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 708,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#708"
+  }
+}

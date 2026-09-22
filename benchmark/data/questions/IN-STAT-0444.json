@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0444",
+  "question": "Under section 6 of the Karnataka Health Cess Act, 1962, how does the health cess relate to other levies?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "karnataka-health-cess-act-1962__handle-7092",
+          "key": "section:6",
+          "citation": "KARNATAKA HEALTH CESS ACT, 1962, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 6097,
+          "char_end": 6406,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "b7074983e58fd8113069d10cfd8481ef6dbfba3af217aedbedc7335bad32465d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It is in addition to, and not in lieu of, any other duty or cess levied under any other law.",
+  "required_facts": [
+    [
+      "in addition to"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "karnataka-health-cess-act-1962__handle-7092",
+      "key": "section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 309,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 671,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#671"
+  }
+}
