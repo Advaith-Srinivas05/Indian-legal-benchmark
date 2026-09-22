@@ -21,11 +21,15 @@ _SPACE = re.compile(r"\s+")
 
 #: A quantity is a *fact* only with a unit. A bare number matches the provision's
 #: own number, which any answer satisfies by citing it.
+_NUMBER_WORDS = ("one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|"
+                 "fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|"
+                 "fifty|sixty|seventy|eighty|ninety|hundred|thousand|lakh|crore")
+#: The end is "not followed by a letter", not ``\b``: a word boundary cannot
+#: follow "%" when a space comes next, so "12%" would never match.
 QUANTITY = re.compile(
-    r"\b(?:\d[\d,]*(?:\.\d+)?|one|two|three|four|five|six|seven|eight|nine|ten|"
-    r"eleven|twelve|fifteen|twenty|thirty|forty|fifty|sixty|ninety|hundred|thousand)"
+    rf"\b(?:\d[\d,]*(?:\.\d+)?|(?:{_NUMBER_WORDS})s?)"          # "five thousands" occurs
     r"\s*(?:per\s*cent|percent|%|rupees|rs\.?|years?|months?|weeks?|days?|hours?"
-    r"|lakhs?|crores?|kilograms?|kg|metres?|litres?)\b",
+    r"|lakhs?|crores?|kilograms?|kg|metres?|litres?)(?![A-Za-z])",
     re.IGNORECASE)
 
 
