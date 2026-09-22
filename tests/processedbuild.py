@@ -192,8 +192,14 @@ A fee of ten rupees shall be paid with every application.
 An appeal lies to the Collector within thirty days."""
 
 
+#: Appended to every section by ``make_act(..., long=True)`` so sections clear the
+#: 150-character floor for gold evidence.
+LONG_BODY = (" Every officer acting under this section shall record the reasons for the"
+             " decision in writing and communicate them to the applicant without delay.")
+
+
 def make_act(title: str, sections: int = 20, *, changed: Iterable[int] = (),
-             per_page: int = 10) -> list[PageText]:
+             per_page: int = 10, long: bool = False, topic: str = "matter") -> list[PageText]:
     """A synthetic Act in house style, with every section distinct.
 
     Sections listed in *changed* get a different body, so two calls differing
@@ -203,9 +209,11 @@ def make_act(title: str, sections: int = 20, *, changed: Iterable[int] = (),
     changed = set(changed)
     lines = [title.upper()]
     for n in range(1, sections + 1):
-        body = (f"The authority shall revise matter {n} within {n + 90} days of receipt."
+        body = (f"The authority shall revise {topic} {n} within {n + 90} days of receipt."
                 if n in changed else
-                f"The authority shall consider matter {n} within {n + 10} days of receipt.")
+                f"The authority shall consider {topic} {n} within {n + 10} days of receipt.")
+        if long:
+            body += LONG_BODY
         lines.append(f"{n}. Subject number {n}.—{body}")
     pages = [lines[i:i + per_page] for i in range(0, len(lines), per_page)]
     return [make_page(i + 1, "\n".join(chunk)) for i, chunk in enumerate(pages)]

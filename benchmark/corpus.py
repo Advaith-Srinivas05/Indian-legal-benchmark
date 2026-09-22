@@ -294,6 +294,12 @@ def main(argv: Optional[list[str]] = None) -> int:
     dup = sub.add_parser("duplicates", help="Find copies of the same instrument and identical provisions.")
     dup.add_argument("--review-sample", type=Path, metavar="CSV",
                      help="Also write a stratified sample of edges for human review to this CSV.")
+    sub.add_parser("evidence", help="Build the gold evidence pool into <data-dir>/benchmark_build/.")
+    smp = sub.add_parser("sample", help="Draw a seeded, stratified sample of gold candidates.")
+    smp.add_argument("--seed", type=int, required=True)
+    smp.add_argument("--size", type=int, default=config.DEFAULT_SAMPLE_SIZE)
+    smp.add_argument("--verify", type=Path, metavar="SAMPLE",
+                     help="Instead of drawing, check an existing sample against the corpus.")
     sub.add_parser("verify", help="Re-check the published corpus files.")
     args = parser.parse_args(argv)
     out = args.out or args.data_dir / config.CORPUS_SUBDIR
@@ -318,6 +324,26 @@ def main(argv: Optional[list[str]] = None) -> int:
         if args.review_sample:
             rows = write_review_sample(out, args.review_sample)
             print(f"wrote {rows} edges for review to {args.review_sample}")
+        return 0
+
+    build_dir = args.data_dir / config.BUILD_SUBDIR
+    if args.command == "evidence":
+        from .sample import write_pool
+        print(json.dumps(write_pool(out, build_dir), indent=2))
+        return 0
+
+    if args.command == "sample":
+        from .sample import verify_sample, write_sample
+        if args.verify:
+            problems = verify_sample(args.verify, out)
+            print(f"{args.verify}: {len(problems)} problem(s)")
+            for p in problems[:50]:
+                print("  " + p)
+            return 1 if problems else 0
+        path = write_sample(out, build_dir, seed=args.seed, size=args.size)
+        sample = json.loads(path.read_text(encoding="utf-8"))
+        print(json.dumps(sample["by_category"], indent=2))
+        print(f"wrote {len(sample['rows'])} candidates to {path}")
         return 0
 
     result = verify_corpus(out)

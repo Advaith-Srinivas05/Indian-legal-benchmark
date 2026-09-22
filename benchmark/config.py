@@ -54,3 +54,33 @@ STRONG_DETECTORS = frozenset({"numbered_heading_dash", "article_heading_dash"})
 
 #: Evidence-confidence tiers, in the order they are reported.
 CONFIDENCE_TIERS = ("high", "medium", "low")
+
+# --- Gold evidence pool and sampling ---------------------------------------------
+
+#: Construction workspace under the data directory: not published, gitignored.
+BUILD_SUBDIR = Path("benchmark_build")
+POOL_FILENAME = "evidence_pool.jsonl"
+POOL_REPORT_FILENAME = "evidence_report.json"
+
+#: Only born-digital PDFs supply gold. A scanned PDF's own text layer is OCR done
+#: by someone else and never checked; it carries the same "103 read as 108" risk
+#: as ours, invisibly to the tier rule.
+GOLD_TEXT_SOURCES = frozenset({"born_digital"})
+GOLD_MIN_CHARS = 150
+#: The headline budget is 8,000 characters; a gold span must fit well inside it.
+#: The corpus's longest "provision" is a 428,087-character parse failure.
+GOLD_MAX_CHARS = 6000
+GOLD_STUB_MAX_WORDS = 12
+#: Exclusion reasons, in the order they are tested and reported.
+GOLD_EXCLUSION_ORDER = ("tier", "ambiguous", "title_conflict", "text_source", "structure",
+                        "too_short", "too_long", "stub")
+
+#: Share of a sample drawn from each category. Not proportional to the pool,
+#: which state acts dominate (two thirds): Central Acts are the law most people
+#: ask about, and rules and regulations must be represented at all.
+DEFAULT_ALLOCATION = {"central_acts": 0.30, "state_acts": 0.40, "rules": 0.20, "regulations": 0.10}
+DEFAULT_SAMPLE_SIZE = 1000
+#: Drawn samples are tracked in git: authoring works from them, and a question's
+#: provenance names the sample row it came from.
+SAMPLES_DIR = Path(__file__).resolve().parent / "data" / "samples"
+SAMPLE_SCHEMA_VERSION = 1
