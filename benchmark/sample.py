@@ -51,13 +51,28 @@ def load_pool(build_dir: Path, corpus_dir: Path) -> list[dict]:
         return [json.loads(line) for line in handle]
 
 
+def _instrument(row: dict) -> str:
+    return row["cluster_id"] or row["document_id"]
+
+
 def draw(pool: list[dict], *, seed: int, size: int,
-         allocation: Optional[dict[str, float]] = None) -> tuple[list[dict], dict]:
-    """Draw *size* candidates. Returns (rows, per-category report)."""
-    allocation = allocation or config.DEFAULT_ALLOCATION
-    if abs(sum(allocation.values()) - 1.0) > 1e-9:
-        raise ValueError(f"allocation shares sum to {sum(allocation.values())}, not 1")
+         allocation: Optional[dict[str, float]] = None, tag: Optional[str] = None,
+         exclude: Optional[list[dict]] = None) -> tuple[list[dict], dict]:
+    """Draw *size* candidates. Returns (rows, per-category report).
+
+    *tag* restricts the draw to provisions carrying that author tag — a top-up
+    for a question category the main sample under-supplies. *exclude* is an
+    earlier sample's rows: its instruments and equivalence classes are not drawn
+    again, so a top-up never overlaps what it tops up. *allocation* may be
+    ``"proportional"``: shares follow the filtered pool's instruments.
+    """
     rng = random.Random(seed)
+    excluded_instruments = {_instrument(r) for r in exclude or []}
+    excluded_classes = {r["equivalence_class"] for r in exclude or [] if r["equivalence_class"]}
+    pool = [r for r in pool
+            if (tag is None or tag in r["tags"])
+            and _instrument(r) not in excluded_instruments
+            and r["equivalence_class"] not in excluded_classes]
 
     # Collapse word-for-word identical provisions to one representative each.
     seen_class: set[str] = set()
@@ -70,16 +85,25 @@ def draw(pool: list[dict], *, seed: int, size: int,
             seen_class.add(cls)
         unique.append(row)
 
+    if allocation == "proportional":
+        counts: dict[str, set] = defaultdict(set)
+        for row in unique:
+            counts[row["category"]].add(_instrument(row))
+        total = sum(len(v) for v in counts.values()) or 1
+        allocation = {c: len(v) / total for c, v in sorted(counts.items())} or dict(config.DEFAULT_ALLOCATION)
+    allocation = allocation or config.DEFAULT_ALLOCATION
+    if abs(sum(allocation.values()) - 1.0) > 1e-9:
+        raise ValueError(f"allocation shares sum to {sum(allocation.values())}, not 1")
+
     # One home category per instrument. A cluster can hold a Central Act and its
     # state-collection copies; without this it would be an instrument in both
     # strata and could be drawn twice. Central wins, then the first document.
     home: dict[str, str] = {}
     for row in sorted(unique, key=lambda r: (r["category"] != "central_acts", r["document_id"])):
-        home.setdefault(row["cluster_id"] or row["document_id"], row["category"])
+        home.setdefault(_instrument(row), row["category"])
     by_instrument: dict[str, dict[str, list[dict]]] = defaultdict(lambda: defaultdict(list))
     for row in unique:
-        instrument = row["cluster_id"] or row["document_id"]
-        by_instrument[home[instrument]][instrument].append(row)
+        by_instrument[home[_instrument(row)]][_instrument(row)].append(row)
 
     targets = _targets(size, allocation)
     drawn: list[dict] = []
@@ -118,15 +142,23 @@ def _targets(size: int, allocation: dict[str, float]) -> dict[str, int]:
 
 
 def write_sample(corpus_dir: Path, build_dir: Path, *, seed: int, size: int,
-                 out_dir: Optional[Path] = None, allocation: Optional[dict] = None) -> Path:
+                 out_dir: Optional[Path] = None, allocation=None, tag: Optional[str] = None,
+                 exclude_sample: Optional[Path] = None) -> Path:
     from .corpus import _json, _write_atomic
 
     pool = load_pool(build_dir, corpus_dir)
-    rows, report = draw(pool, seed=seed, size=size, allocation=allocation)
+    exclude = None
+    if exclude_sample:
+        exclude = json.loads(Path(exclude_sample).read_text(encoding="utf-8"))["rows"]
+    if tag and allocation is None:
+        allocation = "proportional"
+    rows, report = draw(pool, seed=seed, size=size, allocation=allocation, tag=tag, exclude=exclude)
     payload = {
         "sample_schema_version": config.SAMPLE_SCHEMA_VERSION,
         "seed": seed,
         "size": size,
+        "tag": tag,
+        "excludes_sample": Path(exclude_sample).name if exclude_sample else None,
         "allocation": allocation or config.DEFAULT_ALLOCATION,
         "corpus_fingerprint": corpus_fingerprint(corpus_dir),
         "corpus_schema_version": config.CORPUS_SCHEMA_VERSION,
@@ -135,7 +167,7 @@ def write_sample(corpus_dir: Path, build_dir: Path, *, seed: int, size: int,
         "rows": rows,
     }
     out_dir = Path(out_dir) if out_dir else config.SAMPLES_DIR
-    path = out_dir / f"sample-s{seed}-n{size}.json"
+    path = out_dir / (f"sample-s{seed}-n{size}" + (f"-{tag}" if tag else "") + ".json")
     _write_atomic(path, _json(payload))
     return path
 

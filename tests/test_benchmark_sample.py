@@ -186,6 +186,18 @@ def test_an_allocation_that_does_not_sum_to_one_is_refused(tmp_path):
         draw([], seed=1, size=10, allocation={"central_acts": 0.5})
 
 
+def test_a_tagged_top_up_draws_only_that_tag_and_never_overlaps_the_base(tmp_path):
+    _, corpus = make_data(tmp_path)
+    rows, _ = build_pool(corpus)
+    base, _ = draw(rows, seed=1, size=3,
+                   allocation={"central_acts": 0.0, "state_acts": 0.0, "rules": 1.0, "regulations": 0.0})
+    top, report = draw(rows, seed=2, size=50, tag="numeric", exclude=base, allocation="proportional")
+    assert top and all("numeric" in r["tags"] for r in top)
+    base_instruments = {r["cluster_id"] or r["document_id"] for r in base}
+    assert not base_instruments & {r["cluster_id"] or r["document_id"] for r in top}
+    assert sum(v["target"] for v in report.values()) == 50
+
+
 # --- Written samples ---------------------------------------------------------------
 
 
