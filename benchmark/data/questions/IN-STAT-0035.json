@@ -54,7 +54,7 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 773,
     "tags": [
@@ -63,10 +63,18 @@
       "cross_reference"
     ],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260922-n1000.json#773"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
+    "ref": "sample-s20260922-n1000.json#773",
+    "verification_note": "Boundary: the span also contains the text of the following section (preparation of lists). The definition asked about is intact and correctly cited."
   }
 }

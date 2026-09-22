@@ -192,24 +192,6 @@
           "text_sha256": "6a32bf1e1d0c46cc6287a780b1fe2e4c4e816ce44a12f0344ea70db4d11898b9",
           "evidence_confidence": "high",
           "source": "same_instrument_version"
-        },
-        {
-          "document_id": "essential-commodities-act-1955__handle-19283",
-          "key": "section:10",
-          "citation": "Essential Commodities Act, 1955, s. 10",
-          "unit_path": [
-            {
-              "unit_type": "section",
-              "number": "10"
-            }
-          ],
-          "char_start": 86983,
-          "char_end": 91571,
-          "page_start": 15,
-          "page_end": 16,
-          "text_sha256": "f9f047aef2bbdbfa654fc4af8fec10e29832d0d9f6ce210aecce9589d8071ec0",
-          "evidence_confidence": "high",
-          "source": "same_instrument_version"
         }
       ]
     }
@@ -237,17 +219,24 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 34,
     "tags": [
       "cross_reference"
     ],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
     "ref": "sample-s20260922-n1000.json#34",
     "alternatives_decided": [
       {
@@ -264,6 +253,7 @@
         "included": true,
         "reason": "states every required fact"
       }
-    ]
+    ],
+    "verification_note": "Removed one same-instrument version (handle-19283) whose s. 10 text is interleaved with footnotes and text from another section. The s. 10 span also runs into ss. 10A-10C; the fact asked about is in s. 10(1)."
   }
 }

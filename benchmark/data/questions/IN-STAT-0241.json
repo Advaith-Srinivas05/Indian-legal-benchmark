@@ -1,6 +1,6 @@
 {
   "question_id": "IN-STAT-0241",
-  "question": "Can a border guard join a labour union or a party-affiliated group?",
+  "question": "Can a member of the force guarding India's borders with Pakistan and Bangladesh join a labour union or a party-affiliated group?",
   "category": "situational",
   "answer_type": "abstractive",
   "jurisdiction_hint": null,
@@ -60,15 +60,23 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 180,
     "tags": [],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260922-n1000.json#180"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
+    "ref": "sample-s20260922-n1000.json#180",
+    "verification_note": "Question narrowed to the force guarding the Pakistan and Bangladesh borders: other border forces' Acts contain a near-identical restriction."
   }
 }

@@ -9,18 +9,25 @@
   "unanswerable": true,
   "difficulty": {},
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": null,
     "sample_index": null,
     "tags": [],
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
     "ref": "unanswerable#missing-6",
     "drafting_method": "language_model"
   },
   "question": "Under section 48 of the Digital Personal Data Protection Act, 2023, what compensation can an individual claim directly from a data fiduciary?",
-  "gold_answer": "The corpus does not answer this. Digital Personal Data Protection Act, 2023 has no section 48; its highest-numbered section is 44, so the provision asked about does not exist.",
+  "gold_answer": "The corpus does not answer this. Digital Personal Data Protection Act, 2023 has no section 48, so the provision asked about does not exist.",
   "required_facts": []
 }

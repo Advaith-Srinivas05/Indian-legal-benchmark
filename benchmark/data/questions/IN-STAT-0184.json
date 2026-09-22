@@ -1,6 +1,6 @@
 {
   "question_id": "IN-STAT-0184",
-  "question": "If soldiers exercising special powers in a disturbed area detain someone, what must they do with that person?",
+  "question": "If soldiers exercising special powers in a disturbed area of the north-eastern states detain someone, what must they do with that person?",
   "category": "situational",
   "answer_type": "abstractive",
   "jurisdiction_hint": null,
@@ -56,15 +56,23 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 4,
     "tags": [],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260922-n1000.json#4"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
+    "ref": "sample-s20260922-n1000.json#4",
+    "verification_note": "Question narrowed to the north-eastern states: the Punjab-Chandigarh and Jammu-Kashmir special-powers Acts contain the same hand-over rule, and the unqualified question did not pick out this Act."
   }
 }

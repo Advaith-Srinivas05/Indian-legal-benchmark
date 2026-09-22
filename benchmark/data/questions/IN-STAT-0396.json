@@ -53,15 +53,23 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 535,
     "tags": [],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260922-n1000.json#535"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
+    "ref": "sample-s20260922-n1000.json#535",
+    "verification_note": "Boundary: the r. 4 span also contains the notification's signature, the appended Form A and garbled Hindi Gazette headers. The refund deduction in r. 4(1) is intact."
   }
 }

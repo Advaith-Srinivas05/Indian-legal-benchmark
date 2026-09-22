@@ -1,6 +1,6 @@
 {
   "question_id": "IN-STAT-0494",
-  "question": "Who checks that employers pay men and women equally for the same work, and what is their legal status?",
+  "question": "Under the 1976 law on equal pay for men and women, who checks that employers comply, and what is their legal status?",
   "category": "situational",
   "answer_type": "abstractive",
   "jurisdiction_hint": null,
@@ -56,15 +56,23 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 836,
     "tags": [],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260922-n1000.json#836"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
+    "ref": "sample-s20260922-n1000.json#836",
+    "verification_note": "Question tied to the 1976 equal pay law: the Code on Wages, 2019 assigns the same checks to differently named officers."
   }
 }

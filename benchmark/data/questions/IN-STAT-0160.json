@@ -63,8 +63,11 @@
     }
   ],
   "proposed_alternatives": [],
-  "gold_answer": "Applications for grant, substitution or cancellation of a union's recognition and unfair labour practice complaints, among others; appeals lie within thirty days of the conviction.",
+  "gold_answer": "The Industrial Court, which decides applications for grant, substitution or cancellation of a union's recognition; an appeal against a Labour Court conviction lies to the Industrial Court within thirty days of the conviction.",
   "required_facts": [
+    [
+      "Industrial Court"
+    ],
     [
       "recognition"
     ],
@@ -92,17 +95,25 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 666,
     "tags": [
       "cross_reference"
     ],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260922-n1000.json#666"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
+    "ref": "sample-s20260922-n1000.json#666",
+    "verification_note": "Corrected the gold answer, which did not name the body asked about, and added 'Industrial Court' as a required fact."
   }
 }

@@ -1,6 +1,6 @@
 {
   "question_id": "IN-STAT-0492",
-  "question": "Before whom does an injured worker file a claim for workplace accident compensation?",
+  "question": "Under the 1923 law on payouts to injured workmen, before whom is a claim for an accident made?",
   "category": "situational",
   "answer_type": "extractive",
   "jurisdiction_hint": null,
@@ -53,15 +53,23 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 751,
     "tags": [],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260922-n1000.json#751"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
+    "ref": "sample-s20260922-n1000.json#751",
+    "verification_note": "Question tied to the 1923 workmen's compensation law: the Code on Social Security, 2020 routes the same claims to a differently named authority, so the unqualified question had two answers."
   }
 }

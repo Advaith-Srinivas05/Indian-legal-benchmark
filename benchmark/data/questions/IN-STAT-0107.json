@@ -63,7 +63,7 @@
     }
   ],
   "proposed_alternatives": [],
-  "gold_answer": "It may temporarily close or restrict traffic when exercising its powers over a highway that has become congested or unsafe (or to protect weak road surfaces and bridges from heavy vehicles).",
+  "gold_answer": "It may temporarily close the Highway or part of it, or restrict or regulate traffic on it, when exercising its powers over a Highway that is or has become congested or unsafe for vehicular or pedestrian traffic.",
   "required_facts": [
     [
       "temporarily close"
@@ -92,7 +92,7 @@
     "cross_instrument_equivalents": true
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 103,
     "tags": [
@@ -100,10 +100,17 @@
       "has_parallel_law"
     ],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
     "ref": "sample-s20260922-n1000.json#103",
     "alternatives_decided": [
       {
@@ -113,6 +120,7 @@
         "included": false,
         "reason": "does not state every required fact"
       }
-    ]
+    ],
+    "verification_note": "Trimmed the gold answer: the clause about protecting weak roads and bridges came from s. 32, which is not in the evidence."
   }
 }

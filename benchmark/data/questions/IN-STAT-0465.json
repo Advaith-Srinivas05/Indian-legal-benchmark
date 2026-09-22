@@ -1,6 +1,6 @@
 {
   "question_id": "IN-STAT-0465",
-  "question": "Is a paramilitary constable who learns of a planned mutiny and stays silent committing an offence?",
+  "question": "Is a constable of India's largest central armed police force who learns of a planned mutiny and stays silent committing an offence?",
   "category": "situational",
   "answer_type": "boolean",
   "jurisdiction_hint": null,
@@ -53,17 +53,25 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 57,
     "tags": [
       "numeric"
     ],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260922-n1000.json#57"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
+    "ref": "sample-s20260922-n1000.json#57",
+    "verification_note": "Question narrowed to India's largest central armed police force: other armed police Acts contain near-identical 'more heinous offences' provisions."
   }
 }

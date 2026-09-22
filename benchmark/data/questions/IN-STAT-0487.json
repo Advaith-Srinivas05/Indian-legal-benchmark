@@ -92,17 +92,25 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "rejected",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 680,
     "tags": [
       "cross_reference"
     ],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260922-n1000.json#680"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": false,
+      "text_undamaged": false,
+      "answer_follows": false,
+      "facts_present": false,
+      "question_fair": false,
+      "alternatives_checked": false
+    },
+    "ref": "sample-s20260922-n1000.json#680",
+    "rejection_reason": "The drafted second hop (s. 443, who serves notices) is not the provision the question depends on; the answer comes wholly from s. 445, and s. 444 (the persons to be served) is not in the evidence."
   }
 }

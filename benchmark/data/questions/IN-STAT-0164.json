@@ -53,7 +53,7 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260923-n100-has_parallel_law.json",
     "sample_index": 34,
     "tags": [
@@ -62,10 +62,18 @@
       "has_parallel_law"
     ],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260923-n100-has_parallel_law.json#34"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
+    "ref": "sample-s20260923-n100-has_parallel_law.json#34",
+    "verification_note": "Boundary: the s. 4 span also contains s. 5. The inquest bar is in s. 4(1)."
   }
 }

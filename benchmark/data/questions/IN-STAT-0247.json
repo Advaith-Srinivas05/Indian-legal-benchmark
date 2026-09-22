@@ -57,15 +57,23 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "rejected",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 203,
     "tags": [],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260922-n1000.json#203"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": false,
+      "text_undamaged": false,
+      "answer_follows": false,
+      "facts_present": false,
+      "question_fair": false,
+      "alternatives_checked": false
+    },
+    "ref": "sample-s20260922-n1000.json#203",
+    "rejection_reason": "Citation error: the evidence is Order XXI rule 83 of the Code of Civil Procedure's First Schedule, but the corpus keys it as appendix C, section 83, so the gold citation 's. 83' points at the wrong provision."
   }
 }

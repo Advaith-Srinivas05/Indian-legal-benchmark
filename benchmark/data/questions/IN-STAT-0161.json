@@ -57,17 +57,25 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260923-n100-has_parallel_law.json",
     "sample_index": 13,
     "tags": [
       "has_parallel_law"
     ],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
-    "ref": "sample-s20260923-n100-has_parallel_law.json#13"
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
+    "ref": "sample-s20260923-n100-has_parallel_law.json#13",
+    "verification_note": "A publisher's running footer sits mid-sentence in r. 149; the Sunday bar is intact."
   }
 }

@@ -56,17 +56,24 @@
     "cross_instrument_equivalents": true
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260923-n100-has_parallel_law.json",
     "sample_index": 77,
     "tags": [
       "has_parallel_law"
     ],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
     "ref": "sample-s20260923-n100-has_parallel_law.json#77",
     "alternatives_decided": [
       {
@@ -83,6 +90,7 @@
         "included": false,
         "reason": "another state's law is the wrong answer to a jurisdictional question"
       }
-    ]
+    ],
+    "verification_note": "Boundary: the s. 73 span runs on through ss. 74-78A. The list of authorities is in s. 73(1)."
   }
 }

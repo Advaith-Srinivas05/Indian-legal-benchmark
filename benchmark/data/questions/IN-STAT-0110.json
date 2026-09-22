@@ -92,7 +92,7 @@
     "cross_instrument_equivalents": true
   },
   "provenance": {
-    "status": "draft",
+    "status": "rejected",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 111,
     "tags": [
@@ -100,10 +100,17 @@
       "has_parallel_law"
     ],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": false,
+      "text_undamaged": false,
+      "answer_follows": false,
+      "facts_present": false,
+      "question_fair": false,
+      "alternatives_checked": false
+    },
     "ref": "sample-s20260922-n1000.json#111",
     "alternatives_decided": [
       {
@@ -113,6 +120,7 @@
         "included": false,
         "reason": "does not state every required fact"
       }
-    ]
+    ],
+    "rejection_reason": "The gold answer credits only the competent authority's rules under s. 28, but fees under s. 6(1) are also prescribed by the appropriate Government under s. 27, so an answer citing s. 27 would be equally correct and the question does not distinguish them."
   }
 }

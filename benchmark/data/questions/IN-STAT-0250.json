@@ -233,15 +233,22 @@
     "cross_instrument_equivalents": false
   },
   "provenance": {
-    "status": "draft",
+    "status": "verified",
     "sample": "sample-s20260922-n1000.json",
     "sample_index": 207,
     "tags": [],
     "drafting_method": "language_model",
-    "verified_by": null,
-    "verified_at": null,
-    "verification_method": null,
-    "verification": {},
+    "verified_by": "language-model",
+    "verified_at": "2026-09-22",
+    "verification_method": "text_review",
+    "verification": {
+      "span_matches_source": true,
+      "text_undamaged": true,
+      "answer_follows": true,
+      "facts_present": true,
+      "question_fair": true,
+      "alternatives_checked": true
+    },
     "ref": "sample-s20260922-n1000.json#207",
     "alternatives_decided": [
       {
@@ -286,6 +293,7 @@
         "included": true,
         "reason": "states every required fact"
       }
-    ]
+    ],
+    "verification_note": "The s. 87 span carries appended state amendments (Haryana, Andhra Pradesh, Maharashtra); the central rule in s. 87(1) is intact."
   }
 }
