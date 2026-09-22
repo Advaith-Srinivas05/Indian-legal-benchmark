@@ -158,6 +158,10 @@ def apply_batch(corpus_dir: Path, spec_path: Path, *, drafting_method: str,
         category = item["category"]
         ref = item.get("ref") or f"{spec.get('sample')}#{item.get('index')}"
         q = existing.get(ref)
+        if q is not None and q["category"] != category and category != "unanswerable":
+            # Re-categorised: rebuild the evidence for the new category, keep the id.
+            q = new_draft(corpus_dir, sample_path, item["index"], category, directory=directory,
+                          question_id=q["question_id"])
         if q is None:
             if category == "unanswerable":
                 q = {"question_id": next_id(directory), "category": "unanswerable", "answer_type": "abstractive",

@@ -366,6 +366,42 @@ def test_a_model_verification_records_its_method(env, tmp_path, samples_dir):
     assert problems(env, stored) == []
 
 
+def test_a_short_cited_provision_is_valid_second_hop_evidence(env):
+    """Section 1 of the fixture is under 150 characters' worth of question, but a
+    cited provision needs no length floor — only the sampled one does."""
+    q = draft(env, "licensing-act__handle-1", "section:2", "cross_reference")
+    q.update(question="Which official decides applications, and how long do they have?",
+             gold_answer="The licensing authority appointed for the district; thirty days.",
+             required_facts=[["licensing authority"], ["thirty days"]], proposed_alternatives=[])
+    from benchmark import evidence
+    real = evidence.exclusion
+    try:
+        evidence_calls = []
+        import benchmark.questions as bq
+        bq.exclusion = lambda p, m, c, t: ("too_short" if p["key"] == "section:3" else real(p, m, c, t))
+        assert problems(env, q) == []
+        bq.exclusion = lambda p, m, c, t: ("too_long" if p["key"] == "section:3" else real(p, m, c, t))
+        assert has(problems(env, q), "group g2: no location is gold-eligible")[0]
+    finally:
+        bq.exclusion = real
+
+
+def test_re_categorising_a_batch_item_rebuilds_its_evidence_and_keeps_its_id(env, tmp_path, samples_dir):
+    idx = env["index"][("licensing-act__handle-1", "section:2")]
+    base = {"index": idx, "question": "Which official decides applications, and how long do they have?",
+            "gold_answer": "The licensing authority; thirty days.",
+            "required_facts": [["licensing authority"], ["thirty days"]]}
+    authoring.apply_batch(env["corpus"], batch(env, tmp_path, [{**base, "category": "cross_reference"}]),
+                          drafting_method="human", directory=env["qdir"])
+    authoring.apply_batch(env["corpus"], batch(env, tmp_path, [{
+        **base, "category": "situational", "required_facts": [["licensing authority"]],
+        "question": "Which official is meant by the licensing body in this law?"}]),
+        drafting_method="human", directory=env["qdir"])
+    [q] = authoring.load_questions(env["qdir"])
+    assert q["question_id"] == "IN-STAT-0001" and q["category"] == "situational"
+    assert len(q["gold_evidence"]) == 1 and q["gold_evidence"][0]["requirement"] == "sufficient"
+
+
 def test_an_undeclared_drafting_method_is_refused(env):
     q = written(env)
     q["provenance"]["drafting_method"] = None

@@ -239,6 +239,11 @@ def _check_evidence(q: dict, corpus: Corpus, add) -> Optional[dict]:
             add(f"group {g.get('group_id')} has no locations")
             continue
         anchored = False
+        # The length floor exists so the *sampled* provision has something to ask
+        # about; a one-line commencement clause is perfectly good second-hop
+        # evidence. The ceiling still applies: a span over the budget cannot be
+        # covered at all.
+        tolerated = {"too_short"} if g is not groups[0] else set()
         for loc in g["locations"]:
             label = f"{loc.get('document_id')} {loc.get('key')}"
             if loc.get("source") not in LOCATION_SOURCES:
@@ -255,7 +260,8 @@ def _check_evidence(q: dict, corpus: Corpus, add) -> Optional[dict]:
             if hashlib.sha256(text.encode("utf-8")).hexdigest() != p["text_sha256"]:
                 add(f"{label}: span no longer reproduces its text")
             texts[(loc["document_id"], loc["key"])] = text
-            if exclusion(p, meta, corpus.conflicted(), text) is None:
+            reason = exclusion(p, meta, corpus.conflicted(), text)
+            if reason is None or reason in tolerated:
                 anchored = True
         if not anchored:
             add(f"group {g.get('group_id')}: no location is gold-eligible (high tier, born digital, "
