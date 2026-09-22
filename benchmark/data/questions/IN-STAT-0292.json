@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0292",
+  "question": "If a postal remittance can't be delivered, does the sender get the fee back along with the money?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-post-office-regulations-2024__regulation-63a86199aa",
+          "key": "chapter:X/section:153",
+          "citation": "The Post Office  Regulations, 2024, reg. 153",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "X"
+            },
+            {
+              "unit_type": "section",
+              "number": "153"
+            }
+          ],
+          "char_start": 150583,
+          "char_end": 150777,
+          "page_start": 168,
+          "page_end": 168,
+          "text_sha256": "4c99bf41fbf2402da9326318c1e99567e0f633be073c1b28755442b06505aaef",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. The amount is paid back to the remitter excluding the commission.",
+  "required_facts": [
+    [
+      "excluding the commission"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-post-office-regulations-2024__regulation-63a86199aa",
+      "key": "chapter:X/section:153"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 194,
+    "number_ambiguity": 224,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 323,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#323"
+  }
+}

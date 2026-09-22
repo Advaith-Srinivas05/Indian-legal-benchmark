@@ -1,0 +1,93 @@
+{
+  "question_id": "IN-STAT-0279",
+  "question": "If a bank cashes a crossed cheque over the counter instead of through another bank, whom is it answerable to?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "negotiable-instruments-act-1881__handle-2189",
+          "key": "chapter:XIV/section:129",
+          "citation": "Negotiable Instruments Act, 1881, s. 129",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XIV"
+            },
+            {
+              "unit_type": "section",
+              "number": "129"
+            }
+          ],
+          "char_start": 75368,
+          "char_end": 75744,
+          "page_start": 26,
+          "page_end": 26,
+          "text_sha256": "4e4ec042551ae7242df59ed6dcdf1c1c2a1e5d33999fac4cb2f694a2494009f6",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "negotiable-instruments-act-1881__handle-15327",
+          "key": "chapter:XIV/section:129",
+          "citation": "NEGOTIABLE INSTRUMENTS ACT, 1881, s. 129",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XIV"
+            },
+            {
+              "unit_type": "section",
+              "number": "129"
+            }
+          ],
+          "char_start": 75282,
+          "char_end": 75658,
+          "page_start": 26,
+          "page_end": 26,
+          "text_sha256": "4e4ec042551ae7242df59ed6dcdf1c1c2a1e5d33999fac4cb2f694a2494009f6",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The banker is liable to the true owner of the cheque for any loss sustained because it was so paid.",
+  "required_facts": [
+    [
+      "true owner"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "negotiable-instruments-act-1881__handle-2189",
+      "key": "chapter:XIV/section:129"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 376,
+    "number_ambiguity": 286,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 269,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#269"
+  }
+}

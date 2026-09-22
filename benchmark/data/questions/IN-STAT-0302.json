@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0302",
+  "question": "What does section 7 of the Chandigarh Disturbed Areas Act, 1983 repeal?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "chandigarh-disturbed-areas-act-1983__handle-1823",
+          "key": "section:7",
+          "citation": "Chandigarh Disturbed Areas Act, 1983, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 3059,
+          "char_end": 3351,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "84c8337b375c99572c5ee21bcfe57bc37b851e086abd959a5209e405a2774645",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Chandigarh Disturbed Areas Ordinance, 1983, with actions under it deemed taken under the Act.",
+  "required_facts": [
+    [
+      "Ordinance, 1983"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "chandigarh-disturbed-areas-act-1983__handle-1823",
+      "key": "section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 292,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 271,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#271"
+  }
+}

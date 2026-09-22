@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0294",
+  "question": "Can a man with two living wives be hired as a translator at the public broadcaster?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "prasar-bharati-broadcasting-corporation-of-india-official-la__regulation-c2ba9f6eb9",
+          "key": "schedule:_/section:5",
+          "citation": "Prasar Bharati (Broadcasting Corporation of India) Official Language Posts Recruitment Regulations, 2021, reg. 5",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 1751,
+          "char_end": 2330,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "e90b0e2cdd3e53f2663d238c2d2aa28b466bc8ef3618b78300de500f17b99146",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Generally no, unless the Corporation is satisfied the marriage is permitted by the applicable personal law and there are other grounds, and exempts him.",
+  "required_facts": [
+    [
+      "spouse living"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prasar-bharati-broadcasting-corporation-of-india-official-la__regulation-c2ba9f6eb9",
+      "key": "schedule:_/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 579,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 329,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#329"
+  }
+}

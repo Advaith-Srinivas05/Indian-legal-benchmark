@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0270",
+  "question": "When soldiers deployed with special powers in the north-west detain someone, where must they hand the detainee over?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "armed-forces-punjab-and-chandigarh-special-powers-act-1983__handle-1843",
+          "key": "section:6",
+          "citation": "Armed Forces (Punjab and Chandigarh) Special Powers Act, 1983, s. 6",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 5091,
+          "char_end": 5655,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "03497896d15315b835cc9cb2e48652bfd5fb01f8d2c1c7866e576c1df03d1216",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "To the officer-in-charge of the nearest police station with the least possible delay, with a report of the circumstances of the arrest.",
+  "required_facts": [
+    [
+      "nearest police station"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "armed-forces-punjab-and-chandigarh-special-powers-act-1983__handle-1843",
+      "key": "section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 564,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 227,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#227"
+  }
+}

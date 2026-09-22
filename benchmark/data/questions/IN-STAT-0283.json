@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0283",
+  "question": "Can an unregistered ship brought to India to be broken up be put on the Indian register?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "merchant-shipping-act-2025__handle-22147",
+          "key": "part:III/section:17",
+          "citation": "Merchant Shipping Act, 2025, s. 17",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "17"
+            }
+          ],
+          "char_start": 49743,
+          "char_end": 50135,
+          "page_start": 22,
+          "page_end": 22,
+          "text_sha256": "48fee306e2799939db630b76455a99c23234890a9dbc45444070908dd0423591",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. It may be registered temporarily, in the prescribed manner and for the prescribed duration and conditions.",
+  "required_facts": [
+    [
+      "registered temporarily"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "merchant-shipping-act-2025__handle-22147",
+      "key": "part:III/section:17"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 392,
+    "number_ambiguity": 4728,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 284,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#284"
+  }
+}

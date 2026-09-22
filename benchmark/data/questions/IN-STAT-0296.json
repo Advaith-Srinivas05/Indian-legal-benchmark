@@ -1,0 +1,175 @@
+{
+  "question_id": "IN-STAT-0296",
+  "question": "In Delhi, which official can be empowered to enforce the law protecting elderly parents?",
+  "category": "jurisdictional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": "Delhi",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "maintenance-and-welfare-of-parents-and-senior-citizens-act-2__handle-13696",
+          "key": "chapter:V/section:22",
+          "citation": "Maintenance and Welfare of Parents and Senior Citizens Act, 2007, s. 22",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "22"
+            }
+          ],
+          "char_start": 20871,
+          "char_end": 21574,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "3eecb71d5244d40f814faa1481b092c8de64105cbc9c8840bb95e51d8dc544a0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "maintenance-and-welfare-of-parents-and-senior-citizens-act-2__handle-18950",
+          "key": "chapter:V/section:22",
+          "citation": "maintenance and welfare of parents and senior citizens act, 2007, s. 22",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "22"
+            }
+          ],
+          "char_start": 20871,
+          "char_end": 21574,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "3eecb71d5244d40f814faa1481b092c8de64105cbc9c8840bb95e51d8dc544a0",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "maintenance-and-welfare-of-parents-and-senior-citizens-act-2__handle-8865",
+          "key": "chapter:V/section:22",
+          "citation": "MAINTENANCE AND WELFARE OF PARENTS AND SENIOR  CITIZENS ACT, 2007, s. 22",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "22"
+            }
+          ],
+          "char_start": 20871,
+          "char_end": 21574,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "3eecb71d5244d40f814faa1481b092c8de64105cbc9c8840bb95e51d8dc544a0",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "maintenance-and-welfare-of-parents-and-senior-citizens-act-2__handle-15948",
+          "key": "chapter:V/section:22",
+          "citation": "Maintenance and Welfare of Parents and Senior Citizens Act, 2007, s. 22",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "22"
+            }
+          ],
+          "char_start": 20821,
+          "char_end": 21523,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "24493584da6f68a14709ac30efc9b25c19bf645e7ed77a93df821e2b47c3e2b5",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "maintenance-and-welfare-of-parents-and-senior-citizens-act-2__handle-2033",
+          "key": "chapter:V/section:22",
+          "citation": "Maintenance and Welfare of Parents and Senior Citizens Act, 2007, s. 22",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "22"
+            }
+          ],
+          "char_start": 20821,
+          "char_end": 21523,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "24493584da6f68a14709ac30efc9b25c19bf645e7ed77a93df821e2b47c3e2b5",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The District Magistrate, who may specify a subordinate officer to exercise those powers.",
+  "required_facts": [
+    [
+      "District Magistrate"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "maintenance-and-welfare-of-parents-and-senior-citizens-act-2__handle-13696",
+      "key": "chapter:V/section:22"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 703,
+    "number_ambiguity": 3781,
+    "title_collisions": 8,
+    "cluster_size": 5,
+    "equivalents": 2,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 235,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#235",
+    "alternatives_decided": [
+      {
+        "document_id": "maintenance-and-welfare-of-parents-and-senior-citizens-act-2__handle-15948",
+        "key": "chapter:V/section:22",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "maintenance-and-welfare-of-parents-and-senior-citizens-act-2__handle-2033",
+        "key": "chapter:V/section:22",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

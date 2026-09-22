@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0281",
+  "question": "Can a wife sue on her own to recover property that is legally hers alone?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "married-womens-property-act-1874__handle-2283",
+          "key": "section:17",
+          "citation": "Married Womens Property Act, 1874, s. 17",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "17"
+            }
+          ],
+          "char_start": 6879,
+          "char_end": 7457,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "821d1d32e113c8deed785bfc8f556776b7c4689f570d83e59d3c5dc702b5a9a2",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. A married woman may maintain a suit in her own name for her separate property, with the same remedies as if she were unmarried.",
+  "required_facts": [
+    [
+      "her own name"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "married-womens-property-act-1874__handle-2283",
+      "key": "section:17"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 578,
+    "number_ambiguity": 4728,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 280,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#280"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0275",
+  "question": "When investigators into dirty-money offences find documents during a search, what is assumed about them?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "prevention-of-money-laundering-act-2002__handle-2036",
+          "key": "chapter:V/section:22",
+          "citation": "Prevention of Money-Laundering Act, 2002, s. 22",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "22"
+            }
+          ],
+          "char_start": 61706,
+          "char_end": 63598,
+          "page_start": 20,
+          "page_end": 21,
+          "text_sha256": "f7a22676a8bb3312700d3f7cc8657b6e4607cab9e0927cf7450f8aab6fed8f25",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "That the records or property belong to the person in whose possession they were found, that their contents are true, and that signatures and handwriting are genuine.",
+  "required_facts": [
+    [
+      "belong"
+    ],
+    [
+      "true"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prevention-of-money-laundering-act-2002__handle-2036",
+      "key": "chapter:V/section:22"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1892,
+    "number_ambiguity": 3781,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 257,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#257"
+  }
+}

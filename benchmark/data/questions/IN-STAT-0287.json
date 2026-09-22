@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0287",
+  "question": "How much warning does a firm holding pension scheme assets get before a regulator's audit?",
+  "category": "situational",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "pension-fund-regulatory-and-development-authority-custodian__regulation-c55c1ea3ee",
+          "key": "chapter:IV/section:23",
+          "citation": "Pension Fund Regulatory and Development Authority (Custodian of Securities) Regulations, 2015, reg. 23",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "23"
+            }
+          ],
+          "char_start": 35490,
+          "char_end": 36124,
+          "page_start": 29,
+          "page_end": 29,
+          "text_sha256": "cf25490dea0f9aa0c09ac7e6ed3f3df91b1b7b66b21923cb449317d3910807ac",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Ten working days' notice, unless the Authority is satisfied an immediate inspection is needed to safeguard subscribers.",
+  "required_facts": [
+    [
+      "ten working days"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "pension-fund-regulatory-and-development-authority-custodian__regulation-c55c1ea3ee",
+      "key": "chapter:IV/section:23"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 634,
+    "number_ambiguity": 3685,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 304,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#304"
+  }
+}

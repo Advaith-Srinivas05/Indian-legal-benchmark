@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0276",
+  "question": "If a stored-goods receipt was obtained from its owner by trickery and then transferred to an innocent buyer who paid for it, is the transfer still valid?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "warehousing-development-and-regulation-act-2007__handle-2020",
+          "key": "chapter:IV/section:17",
+          "citation": "Warehousing (Development and Regulation) Act, 2007, s. 17",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "17"
+            }
+          ],
+          "char_start": 24293,
+          "char_end": 24881,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "df029c41cf540d7fbe96a17b25cc2d47461ddf4d82eb89fed0d1a11beaeb91a1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes, provided the person to whom it was negotiated paid value without knowing of the fraud, mistake, duress or breach of duty.",
+  "required_facts": [
+    [
+      "paid value"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "warehousing-development-and-regulation-act-2007__handle-2020",
+      "key": "chapter:IV/section:17"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 588,
+    "number_ambiguity": 4728,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 258,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#258"
+  }
+}

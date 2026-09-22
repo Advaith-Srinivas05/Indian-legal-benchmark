@@ -1,0 +1,78 @@
+{
+  "question_id": "IN-STAT-0297",
+  "question": "What are the sources of funds of the Foundation under section 13 of the Anusandhan National Research Foundation Act, 2023?",
+  "category": "provision_lookup",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "anusandhan-national-research-foundation-act-2023__handle-19767",
+          "key": "part:II/chapter:III/section:13",
+          "citation": "Anusandhan  National Research Foundation Act, 2023, s. 13",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 16771,
+          "char_end": 19149,
+          "page_start": 7,
+          "page_end": 8,
+          "text_sha256": "f479859a37e1a1e33d26f769d5e5870ab67e1c573b82105746e189f70d3b6c86",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Central Government grants and loans, research sums and donations from public, private, philanthropic or international bodies, recoveries of granted amounts, investment income, and other amounts.",
+  "required_facts": [
+    [
+      "grants and loans"
+    ],
+    [
+      "donations"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "anusandhan-national-research-foundation-act-2023__handle-19767",
+      "key": "part:II/chapter:III/section:13"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2378,
+    "number_ambiguity": 5702,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 231,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#231"
+  }
+}

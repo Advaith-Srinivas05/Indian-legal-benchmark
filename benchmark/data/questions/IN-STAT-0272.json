@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0272",
+  "question": "Must the tribunal hearing appeals in telephone and internet disputes follow the civil procedure code?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "telecom-regulatory-authority-of-india-act-1997__handle-1929",
+          "key": "chapter:III/section:16",
+          "citation": "Telecom Regulatory Authority of India Act, 1997, s. 16",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "16"
+            }
+          ],
+          "char_start": 36963,
+          "char_end": 38698,
+          "page_start": 14,
+          "page_end": 14,
+          "text_sha256": "88a3d7af1c15db1b05b90814c7783fd42a9be4676b379f1d25979fe6749295bc",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. It is not bound by the Code of Civil Procedure but is guided by the principles of natural justice and may regulate its own procedure.",
+  "required_facts": [
+    [
+      "natural justice"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "telecom-regulatory-authority-of-india-act-1997__handle-1929",
+      "key": "chapter:III/section:16"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1735,
+    "number_ambiguity": 5029,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 239,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#239"
+  }
+}

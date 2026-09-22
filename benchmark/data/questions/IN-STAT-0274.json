@@ -1,0 +1,153 @@
+{
+  "question_id": "IN-STAT-0274",
+  "question": "During a calamity, can officials commandeer a private truck to carry relief supplies?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "disaster-management-act-2005__handle-12819",
+          "key": "chapter:XI/section:65",
+          "citation": "DISASTER MANAGEMENT ACT, 2005, s. 65",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "65"
+            }
+          ],
+          "char_start": 80582,
+          "char_end": 82188,
+          "page_start": 26,
+          "page_end": 26,
+          "text_sha256": "e813de2fec7f0c10c3d7bd4fe19eb1ec0279d9c51bfef4a907444b82235bba03",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "disaster-management-act-2005__handle-14738",
+          "key": "chapter:XI/section:65",
+          "citation": "DISASTER MANAGEMENT ACT, 2005, s. 65",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "65"
+            }
+          ],
+          "char_start": 80582,
+          "char_end": 82188,
+          "page_start": 26,
+          "page_end": 26,
+          "text_sha256": "e813de2fec7f0c10c3d7bd4fe19eb1ec0279d9c51bfef4a907444b82235bba03",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "disaster-management-act-2005__handle-18558",
+          "key": "chapter:XI/section:65",
+          "citation": "Disaster Management Act, 2005, s. 65",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "65"
+            }
+          ],
+          "char_start": 96381,
+          "char_end": 98036,
+          "page_start": 33,
+          "page_end": 34,
+          "text_sha256": "2e72c195c31970fac834b50613721802c59b7f954d5cb4bf6bb644efff585cde",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        },
+        {
+          "document_id": "disaster-management-act-2005__handle-2045",
+          "key": "chapter:XI/section:65",
+          "citation": "Disaster Management Act, 2005, s. 65",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XI"
+            },
+            {
+              "unit_type": "section",
+              "number": "65"
+            }
+          ],
+          "char_start": 96533,
+          "char_end": 98188,
+          "page_start": 33,
+          "page_end": 34,
+          "text_sha256": "2e72c195c31970fac834b50613721802c59b7f954d5cb4bf6bb644efff585cde",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. The authority or an authorised officer may requisition vehicles needed for transporting resources to or from affected areas or for rescue.",
+  "required_facts": [
+    [
+      "requisition"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "disaster-management-act-2005__handle-12819",
+      "key": "chapter:XI/section:65"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1606,
+    "number_ambiguity": 853,
+    "title_collisions": 4,
+    "cluster_size": 4,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 246,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#246",
+    "alternatives_decided": [
+      {
+        "document_id": "disaster-management-act-2005__handle-18558",
+        "key": "chapter:XI/section:65",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      },
+      {
+        "document_id": "disaster-management-act-2005__handle-2045",
+        "key": "chapter:XI/section:65",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

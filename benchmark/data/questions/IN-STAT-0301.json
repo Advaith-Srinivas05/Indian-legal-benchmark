@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0301",
+  "question": "From what date is the East Punjab rent law deemed in force in Chandigarh under section 3 of the East Punjab Urban Rent Restriction Act (Extension to Chandigarh) Act, 1974?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "east-punjab-urban-rent-restriction-act-extension-to-chandiga__handle-1610",
+          "key": "section:3",
+          "citation": "East Punjab Urban Rent Restriction Act (Extension to Chandigarh) Act, 1974, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 1182,
+          "char_end": 1711,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "b060f714761badb146586e5a799e315f59ff37334d1b9cc88021f6c3ee0ff527",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "From the 4th day of November, 1972.",
+  "required_facts": [
+    [
+      "4th day of November, 1972"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "east-punjab-urban-rent-restriction-act-extension-to-chandiga__handle-1610",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 529,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 299,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#299"
+  }
+}

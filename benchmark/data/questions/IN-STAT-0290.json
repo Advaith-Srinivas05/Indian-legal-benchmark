@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0290",
+  "question": "Before a lien can be recorded on a digital grain-storage receipt, who must instruct the repository?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "wdra-electronic-negotiable-warehouse-receipts-regulations-20__regulation-8b367902c1",
+          "key": "chapter:III/section:9",
+          "citation": "WDRA(Electronic Negotiable Warehouse Receipts) Regulations, 2017, reg. 9",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "9"
+            }
+          ],
+          "char_start": 9163,
+          "char_end": 10308,
+          "page_start": 8,
+          "page_end": 8,
+          "text_sha256": "0d31994739f35dfd0c60f4dd141823ac2234c17e1009f771a153cde4e412e452",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Both the holder of the receipt and the pledgee.",
+  "required_facts": [
+    [
+      "pledgee"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "wdra-electronic-negotiable-warehouse-receipts-regulations-20__regulation-8b367902c1",
+      "key": "chapter:III/section:9"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1145,
+    "number_ambiguity": 6389,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 317,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#317"
+  }
+}

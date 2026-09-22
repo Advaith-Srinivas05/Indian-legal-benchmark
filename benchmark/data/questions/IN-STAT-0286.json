@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0286",
+  "question": "If someone's national biometric ID details were published unlawfully, under which provision do they raise a complaint?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-aadhaar-sharing-of-information-regulations-2016__regulation-b6b3acc6a6",
+          "key": "chapter:II/section:8",
+          "citation": "The Aadhaar (Sharing of Information) Regulations, 2016, reg. 8",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "8"
+            }
+          ],
+          "char_start": 9186,
+          "char_end": 9558,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "1a830b3fe79bafc009fddbb4085eb3d0cd660c785be3867bee8080656641df37",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Under regulation 32 of the Aadhaar (Enrolment and Update) Regulations, 2016.",
+  "required_facts": [
+    [
+      "regulation 32"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-aadhaar-sharing-of-information-regulations-2016__regulation-b6b3acc6a6",
+      "key": "chapter:II/section:8"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 372,
+    "number_ambiguity": 6826,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 301,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#301"
+  }
+}

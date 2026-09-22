@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0277",
+  "question": "Can a company print the words 'Indian Standard' on its product label on its own initiative?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bureau-of-indian-standards-act-2016__handle-2157",
+          "key": "chapter:V/section:26",
+          "citation": "Bureau of Indian Standards Act, 2016., s. 26",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "26"
+            }
+          ],
+          "char_start": 39362,
+          "char_end": 40707,
+          "page_start": 13,
+          "page_end": 13,
+          "text_sha256": "f8d15287c0bd52de70d6691e07bcae7bd3a78da79d768d2b30285710c092bab0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. Using that expression in a way likely to deceive the public requires the previous permission of the Bureau.",
+  "required_facts": [
+    [
+      "previous permission"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bureau-of-indian-standards-act-2016__handle-2157",
+      "key": "chapter:V/section:26"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1345,
+    "number_ambiguity": 3259,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 263,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#263"
+  }
+}

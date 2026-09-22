@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0273",
+  "question": "Can the Union government fund itself with loans from the Mumbai-based monetary authority?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "fiscal-responsibility-and-budget-management-act-2003__handle-2064",
+          "key": "section:5",
+          "citation": "Fiscal Responsibility and Budget Management Act, 2003, s. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 9995,
+          "char_end": 11284,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "573c018b8ee291fdbd740684bf448e108d6f03c03f7c2180e714ee3c2c5b0206",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Generally no, except advances to meet a temporary excess of cash disbursement over cash receipts in a financial year under agreements with the Reserve Bank.",
+  "required_facts": [
+    [
+      "temporary excess"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "fiscal-responsibility-and-budget-management-act-2003__handle-2064",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1289,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 241,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#241"
+  }
+}

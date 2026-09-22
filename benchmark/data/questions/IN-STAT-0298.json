@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0298",
+  "question": "Under section 7 of the Rehabilitation Finance Administration Act, 1948, what must a member do on acquiring an interest in an assisted business?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "rehabilitation-finance-administration-act-1948__handle-1863",
+          "key": "section:7",
+          "citation": "Rehabilitation Finance Administration Act, 1948, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 5867,
+          "char_end": 6800,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "0296f795f684246d383e58679f0d330c5ee4b47e4b15358c749d4a0c39389479",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Immediately disclose it to the Administration and either resign or dispose of the interest as directed.",
+  "required_facts": [
+    [
+      "disclose"
+    ],
+    [
+      "resign"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "rehabilitation-finance-administration-act-1948__handle-1863",
+      "key": "section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 933,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 244,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#244"
+  }
+}

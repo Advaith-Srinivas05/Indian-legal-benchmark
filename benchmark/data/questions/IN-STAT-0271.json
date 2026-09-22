@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0271",
+  "question": "How are the rulings of the national body developing river and canal shipping routes made official?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "inland-waterways-authority-of-india-act-1985__handle-1856",
+          "key": "chapter:VI/section:30",
+          "citation": "Inland Waterways Authority of India Act, 1985, s. 30",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "30"
+            }
+          ],
+          "char_start": 28322,
+          "char_end": 28722,
+          "page_start": 12,
+          "page_end": 12,
+          "text_sha256": "d1e2c415d2342f0c86c2264502494f713ad12b3512caadd91c3b213ceb397552",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Orders and decisions are authenticated by the signature of the Chairman or another authorised member; other instruments by an authorised officer.",
+  "required_facts": [
+    [
+      "signature of the Chairman"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "inland-waterways-authority-of-india-act-1985__handle-1856",
+      "key": "chapter:VI/section:30"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 400,
+    "number_ambiguity": 2821,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 237,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#237"
+  }
+}

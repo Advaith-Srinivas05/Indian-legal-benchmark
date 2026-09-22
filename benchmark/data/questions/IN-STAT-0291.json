@@ -1,0 +1,93 @@
+{
+  "question_id": "IN-STAT-0291",
+  "question": "How must waste containing banned long-lasting toxic chemicals be got rid of?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "regulation-of-persistent-organic-pollutants-rules-2018__regulation-58812e1831",
+          "key": "part:II/section:5",
+          "citation": "Regulation of Persistent Organic Pollutants Rules, 2018, reg. 5",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 7034,
+          "char_end": 7242,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "5baa09343ea2be0034223e2e752f140168025f37826cf9e424f99d18091dd1e8",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "regulation-of-persistent-organic-pollutants-rules-2018__rule-1d5f590a60",
+          "key": "part:II/section:5",
+          "citation": "Regulation of Persistent Organic Pollutants Rules, 2018, r. 5",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 7034,
+          "char_end": 7242,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "5baa09343ea2be0034223e2e752f140168025f37826cf9e424f99d18091dd1e8",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "As per the Hazardous and Other Wastes (Management and Transboundary Movement) Rules, 2016.",
+  "required_facts": [
+    [
+      "Hazardous and Other Wastes"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "regulation-of-persistent-organic-pollutants-rules-2018__regulation-58812e1831",
+      "key": "part:II/section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 208,
+    "number_ambiguity": 7842,
+    "title_collisions": 2,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 319,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#319"
+  }
+}

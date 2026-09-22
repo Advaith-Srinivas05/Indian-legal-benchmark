@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0295",
+  "question": "If part of the Hyderabad museum board's central grant is unspent at year end, is it lost?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "salar-jung-museum-act-1961__handle-1646",
+          "key": "chapter:IV/section:20",
+          "citation": "Salar Jung Museum Act, 1961, s. 20",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "20"
+            }
+          ],
+          "char_start": 14129,
+          "char_end": 15211,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "ebc62643a66cd75eebe143adcba493e44df2040f87ce96252d383bac01e3eaff",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. The unspent sum may be carried forward to the next financial year and counted when fixing the next year's grant.",
+  "required_facts": [
+    [
+      "carried forward"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "salar-jung-museum-act-1961__handle-1646",
+      "key": "chapter:IV/section:20"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1082,
+    "number_ambiguity": 4221,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 281,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#281"
+  }
+}

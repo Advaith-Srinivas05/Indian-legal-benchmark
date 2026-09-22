@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0284",
+  "question": "What is the cap on the total debt a state-run storage corporation may carry?",
+  "category": "situational",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "warehousing-corporations-act-1962__handle-1371",
+          "key": "chapter:IV/section:27",
+          "citation": "Warehousing Corporations  Act, 1962, s. 27",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "27"
+            }
+          ],
+          "char_start": 33235,
+          "char_end": 35049,
+          "page_start": 13,
+          "page_end": 13,
+          "text_sha256": "3b52a090a4a9bc44678fcad70a2e325a8c2b5c8ede3f3a1c1ee0bfccdddc41b9",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Bonds, debentures and other borrowings outstanding may not exceed ten times its paid-up share capital and reserve fund.",
+  "required_facts": [
+    [
+      "ten times"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "warehousing-corporations-act-1962__handle-1371",
+      "key": "chapter:IV/section:27"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1814,
+    "number_ambiguity": 3095,
+    "title_collisions": 3,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 288,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#288"
+  }
+}

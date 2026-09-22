@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0299",
+  "question": "What is credited to a Board's fund under section 18 of the River Boards Act, 1956?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "river-boards-act-1956__handle-1659",
+          "key": "chapter:III/section:18",
+          "citation": "River Boards Act, 1956, s. 18",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "18"
+            }
+          ],
+          "char_start": 13257,
+          "char_end": 13738,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "41840737062f7aff7fda0f63422214a30a9bb0a537031be1db3e31d330a8d3ed",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "All sums paid to it by the Central Government or a State Government and all other receipts of the Board.",
+  "required_facts": [
+    [
+      "State Government"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "river-boards-act-1956__handle-1659",
+      "key": "chapter:III/section:18"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 481,
+    "number_ambiguity": 4552,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 249,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#249"
+  }
+}

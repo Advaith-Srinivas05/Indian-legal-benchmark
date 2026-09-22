@@ -1,0 +1,115 @@
+{
+  "question_id": "IN-STAT-0293",
+  "question": "What is the longest permitted length of each isolatable section of an overhead tram wire?",
+  "category": "situational",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "central-electricity-authority-measures-relating-to-safety-an__regulation-5b927cba75",
+          "key": "chapter:VIII/section:90",
+          "citation": "Central Electricity Authority (Measures relating to Safety and Electric Supply) Regulations, 2023, reg. 90",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "90"
+            }
+          ],
+          "char_start": 149968,
+          "char_end": 150139,
+          "page_start": 34,
+          "page_end": 34,
+          "text_sha256": "2e7b33ff0a36a358019cd31a47cfcec301b43a5858f1162944369db9b964672d",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "central-electricity-authority-measures-relating-to-safety-an__regulation-707ec6988c",
+          "key": "chapter:VIII/section:90",
+          "citation": "Central Electricity Authority (Measures relating to Safety and Electric Supply) Regulations, 2023., reg. 90",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "90"
+            }
+          ],
+          "char_start": 149968,
+          "char_end": 150139,
+          "page_start": 34,
+          "page_end": 34,
+          "text_sha256": "2e7b33ff0a36a358019cd31a47cfcec301b43a5858f1162944369db9b964672d",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        },
+        {
+          "document_id": "the-central-electricity-authority-measures-relating-to-safet__regulation-f0768b4d18",
+          "key": "chapter:VIII/section:90",
+          "citation": "The Central Electricity Authority (Measures relating to Safety and Electric Supply) Regulations, 2023, reg. 90",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VIII"
+            },
+            {
+              "unit_type": "section",
+              "number": "90"
+            }
+          ],
+          "char_start": 149968,
+          "char_end": 150139,
+          "page_start": 34,
+          "page_end": 34,
+          "text_sha256": "2e7b33ff0a36a358019cd31a47cfcec301b43a5858f1162944369db9b964672d",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "1.6 km, with means provided to isolate each section.",
+  "required_facts": [
+    [
+      "1.6 km"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "central-electricity-authority-measures-relating-to-safety-an__regulation-5b927cba75",
+      "key": "chapter:VIII/section:90"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 171,
+    "number_ambiguity": 521,
+    "title_collisions": 3,
+    "cluster_size": 3,
+    "equivalents": 2,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 324,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#324"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "question_id": "IN-STAT-0278",
+  "question": "Among which purposes is the capital cost of a project of the eastern river valley corporation divided?",
+  "category": "situational",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "damodar-valley-corporation-act-1948__handle-1807",
+          "key": "part:IV/section:33",
+          "citation": "Damodar Valley Corporation Act, 1948, s. 33",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "33"
+            }
+          ],
+          "char_start": 22040,
+          "char_end": 22863,
+          "page_start": 11,
+          "page_end": 12,
+          "text_sha256": "008625605be681e693d291a0dc56461ab13511ed4c0cd5f31225bdd393f29fb9",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Irrigation, power and flood control.",
+  "required_facts": [
+    [
+      "irrigation"
+    ],
+    [
+      "power"
+    ],
+    [
+      "flood control"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "damodar-valley-corporation-act-1948__handle-1807",
+      "key": "part:IV/section:33"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 823,
+    "number_ambiguity": 2499,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 268,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#268"
+  }
+}

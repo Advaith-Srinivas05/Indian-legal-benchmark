@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0280",
+  "question": "What happens if a plant breeder deliberately hides that a new crop variety was developed from seeds kept by village or tribal communities?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "protection-of-plant-varieties-and-farmers-rights-act-2001__handle-1909",
+          "key": "chapter:VI/section:40",
+          "citation": "Protection of Plant Varieties and Farmers Rights Act, 2001, s. 40",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "VI"
+            },
+            {
+              "unit_type": "section",
+              "number": "40"
+            }
+          ],
+          "char_start": 65653,
+          "char_end": 66267,
+          "page_start": 21,
+          "page_end": 21,
+          "text_sha256": "c69ff5186da4eb45e45b4f1d14f6b8b4b20216529eb3abf7dc7c38e8f69f78dc",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The breeder must disclose such use in the application; if satisfied the concealment was wilful, the Registrar may reject the application.",
+  "required_facts": [
+    [
+      "tribal or rural families"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "protection-of-plant-varieties-and-farmers-rights-act-2001__handle-1909",
+      "key": "chapter:VI/section:40"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 614,
+    "number_ambiguity": 1883,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 279,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#279"
+  }
+}

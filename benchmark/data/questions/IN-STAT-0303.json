@@ -1,0 +1,97 @@
+{
+  "question_id": "IN-STAT-0303",
+  "question": "What may an inspector examine under section 20 of the Prohibition of Employment as Manual Scavengers and their Rehabilitation Act, 2013?",
+  "category": "provision_lookup",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "prohibition-of-employment-as-manual-scavengers-and-their-reh__handle-2119",
+          "key": "chapter:V/section:20",
+          "citation": "Prohibition of Employment as Manual Scavengers and their Rehabilitation Act, 2013, s. 20",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "20"
+            }
+          ],
+          "char_start": 26247,
+          "char_end": 28487,
+          "page_start": 9,
+          "page_end": 10,
+          "text_sha256": "081c9329b8490f1b26b982b1dbb1c77bbd97f5fb89ca59a607df382b1558bc2f",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "prohibition-of-employment-as-manual-scavengers-and-their-reh__handle-18952",
+          "key": "part:II/chapter:V/section:20",
+          "citation": "prohibition of employment as manual scavengers and their rehabilitation act, 2013, s. 20",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "V"
+            },
+            {
+              "unit_type": "section",
+              "number": "20"
+            }
+          ],
+          "char_start": 26530,
+          "char_end": 28770,
+          "page_start": 9,
+          "page_end": 10,
+          "text_sha256": "081c9329b8490f1b26b982b1dbb1c77bbd97f5fb89ca59a607df382b1558bc2f",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Within local limits and at reasonable times, enter premises to examine and test any latrine, open drain or pit, or inspect places where manual scavenging is believed to occur.",
+  "required_facts": [
+    [
+      "latrine"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prohibition-of-employment-as-manual-scavengers-and-their-reh__handle-2119",
+      "key": "chapter:V/section:20"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2240,
+    "number_ambiguity": 4221,
+    "title_collisions": 4,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 230,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#230"
+  }
+}
