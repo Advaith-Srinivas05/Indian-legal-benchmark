@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0324",
+  "question": "In Karnataka, what happens to electricity duty a supplier collected in excess during a month?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-karnataka-electricity-taxation-on-consumption-or-sale-ru__rule-8da6cba76a",
+          "key": "section:9",
+          "citation": "The Karnataka Electricity (Taxation on consumption or Sale)  Rules, 2014., r. 9",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "9"
+            }
+          ],
+          "char_start": 8679,
+          "char_end": 9247,
+          "page_start": 4,
+          "page_end": 5,
+          "text_sha256": "1653053bb3bcb743d039386738fb1dadabe7e77c7ed6271ddce16145191b8db1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It may be adjusted in future bills or refunded after verification, subject to the Chief Electrical Inspector's satisfaction.",
+  "required_facts": [
+    [
+      "future bills"
+    ],
+    [
+      "refunded"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-karnataka-electricity-taxation-on-consumption-or-sale-ru__rule-8da6cba76a",
+      "key": "section:9"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 568,
+    "number_ambiguity": 6389,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 421,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#421"
+  }
+}

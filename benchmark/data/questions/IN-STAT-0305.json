@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0305",
+  "question": "Which official issues the permit to run a special bonded warehouse for imported goods?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "special-warehouse-licensing-regulations-2016-notification-no__regulation-f9d309db7a",
+          "key": "section:5",
+          "citation": "Special Warehouse Licensing Regulations, 2016. Notification No. 72 /2016 - Customs (N.T.) dated 14th May, 2016 In, reg. 5",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "5"
+            }
+          ],
+          "char_start": 4878,
+          "char_end": 5173,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "a17572da803cce65c2dd29d7c95dd7c585b01421ef3f99ad533d68204c346ad0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Principal Commissioner of Customs or Commissioner of Customs, once the eligibility conditions are fulfilled.",
+  "required_facts": [
+    [
+      "Commissioner of Customs"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "special-warehouse-licensing-regulations-2016-notification-no__regulation-f9d309db7a",
+      "key": "section:5"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 295,
+    "number_ambiguity": 7842,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 355,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#355"
+  }
+}

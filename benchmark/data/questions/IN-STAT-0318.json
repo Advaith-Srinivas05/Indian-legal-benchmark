@@ -1,0 +1,75 @@
+{
+  "question_id": "IN-STAT-0318",
+  "question": "What must a naval reserve officer who is overseas do when the reserves are mobilised?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "regulations-for-the-navy-part-iii__regulation-512de7c898",
+          "key": "part:III/chapter:IX/section:369",
+          "citation": "Regulations for the Navy Part III, reg. 369",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "IX"
+            },
+            {
+              "unit_type": "section",
+              "number": "369"
+            }
+          ],
+          "char_start": 515185,
+          "char_end": 515714,
+          "page_start": 204,
+          "page_end": 204,
+          "text_sha256": "c11f05334e138b1785b22bfc43ef23e2370bd63d47780fb489c2c32d3784837f",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Present himself aboard the first Indian Naval Ship he meets and report by letter to the Registrar of Reserves and the nearest Indian representative.",
+  "required_facts": [
+    [
+      "first Indian Naval Ship"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "regulations-for-the-navy-part-iii__regulation-512de7c898",
+      "key": "part:III/chapter:IX/section:369"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 529,
+    "number_ambiguity": 49,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 398,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#398"
+  }
+}

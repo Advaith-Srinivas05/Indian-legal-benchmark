@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0333",
+  "question": "In Haryana, can a property owner get the papers behind their municipal building-tax assessment before it is finalised?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Haryana",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "haryana-municipal-tax-on-building-and-land-rules-1987__rule-e773fbc392",
+          "key": "section:6",
+          "citation": "HARYANA MUNICIPAL (TAX ON BUILDING AND LAND) RULES, 1987, r. 6",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "6"
+            }
+          ],
+          "char_start": 2137,
+          "char_end": 2698,
+          "page_start": 1,
+          "page_end": 2,
+          "text_sha256": "3db73927847e70fcc9dc99d2f15f8203a6fab8cba46c6843754bd5282aec57c0",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. On demand the committee provides copies and information before the assessment is settled, but a certified copy requires the prescribed fee.",
+  "required_facts": [
+    [
+      "copies"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "haryana-municipal-tax-on-building-and-land-rules-1987__rule-e773fbc392",
+      "key": "section:6"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 561,
+    "number_ambiguity": 7376,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 452,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#452"
+  }
+}

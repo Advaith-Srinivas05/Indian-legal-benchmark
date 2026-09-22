@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0323",
+  "question": "In Karnataka, how can a moneylender pay the licence fee?",
+  "category": "jurisdictional",
+  "answer_type": "list",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-karnataka-money-lenders-rules-1965__rule-06b6874c96",
+          "key": "section:10",
+          "citation": "The Karnataka Money Lenders Rules 1965, r. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 5727,
+          "char_end": 6612,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "7aa2dbed614cafc0e28a9625e37cceb64ec943e4da9d3b05a615ddf2ae81d2d2",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "In cash with the application, by postal money order to the Assistant Registrar, or by crediting it to Government account at a Treasury or the Reserve Bank and forwarding the receipt.",
+  "required_facts": [
+    [
+      "postal money order"
+    ],
+    [
+      "cash"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-karnataka-money-lenders-rules-1965__rule-06b6874c96",
+      "key": "section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 885,
+    "number_ambiguity": 6559,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 411,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#411"
+  }
+}

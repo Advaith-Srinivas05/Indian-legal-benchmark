@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0329",
+  "question": "In Dadra and Nagar Haveli and Daman and Diu, who enforces the rules on used car batteries, and by when must it report yearly?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Dadra and Nagar Haveli and Daman and Diu",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-batteries-management-and-handling-rules-2001__rule-2791440ecc",
+          "key": "section:12",
+          "citation": "The Batteries (Management and Handling) Rules, 2001., r. 12",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 13230,
+          "char_end": 13494,
+          "page_start": 6,
+          "page_end": 6,
+          "text_sha256": "ad3422e02e95d6bfd339e84892212344d52a694ff4c5a912a741417c5324c6ad",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The State Board, which files an annual compliance status report to the Central Pollution Control Board by 30th April.",
+  "required_facts": [
+    [
+      "State Board"
+    ],
+    [
+      "30th April"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-batteries-management-and-handling-rules-2001__rule-2791440ecc",
+      "key": "section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 264,
+    "number_ambiguity": 5903,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 436,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#436"
+  }
+}

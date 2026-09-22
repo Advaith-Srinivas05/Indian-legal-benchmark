@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0314",
+  "question": "What paperwork does every member of the biometric ID authority submit at each sitting?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-unique-identification-authority-of-india-transaction-of__regulation-65d7f2a813",
+          "key": "chapter:I/section:14",
+          "citation": "The Unique Identification Authority of India (Transaction of Business at Meetings of the Authority) Regulations, 2016, reg. 14",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "14"
+            }
+          ],
+          "char_start": 12424,
+          "char_end": 13288,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "a6c6e8848e6b1242f908da9bc13c757c30a7aa75f509c8a9f297127dec888b37",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A Specific Declaration of Interest in Schedule I covering interests that might prejudice independence on agenda items.",
+  "required_facts": [
+    [
+      "Declaration of Interest"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-unique-identification-authority-of-india-transaction-of__regulation-65d7f2a813",
+      "key": "chapter:I/section:14"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 864,
+    "number_ambiguity": 5435,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 389,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#389"
+  }
+}

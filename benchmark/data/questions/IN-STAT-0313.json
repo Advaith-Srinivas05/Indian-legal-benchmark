@@ -1,0 +1,94 @@
+{
+  "question_id": "IN-STAT-0313",
+  "question": "When imports are cleared on a provisional duty assessment, can the officer demand a guarantor?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "customs-provisional-duty-assessment-regulations-2011__regulation-1c479eee94",
+          "key": "section:4",
+          "citation": "Customs (Provisional Duty Assessment) Regulations, 2011, reg. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 3090,
+          "char_end": 3276,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "51f67121c8837889a51f31d6c30021207038aabd21091cc61c3149b09c4502d2",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "customs-provisional-duty-assessment-regulations-2011__regulation-5406c9a9d8",
+          "key": "section:4",
+          "citation": "Customs (Provisional Duty Assessment) Regulations, 2011, reg. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 3097,
+          "char_end": 3283,
+          "page_start": 1,
+          "page_end": 2,
+          "text_sha256": "f508cd3a1a880f965704ab266da3bbf3ceca6ee1e38d678a4e1c0b04c54cfd54",
+          "evidence_confidence": "high",
+          "source": "cross_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. The proper officer may require the bond to be backed by such surety or security, or both, as he deems fit.",
+  "required_facts": [
+    [
+      "surety or security"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "customs-provisional-duty-assessment-regulations-2011__regulation-1c479eee94",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 186,
+    "number_ambiguity": 8272,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 1,
+    "cross_instrument_equivalents": true
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 387,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#387",
+    "alternatives_decided": [
+      {
+        "document_id": "customs-provisional-duty-assessment-regulations-2011__regulation-5406c9a9d8",
+        "key": "section:4",
+        "source": "cross_instrument_equivalent",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0316",
+  "question": "In Goa, where does a firm aggrieved by the industrial estate corporation's refusal of a plot transfer go?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Goa",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "goa-idc-transfer-sub-lease-regulations-2014-in-exercise-of-t__regulation-5c46303350",
+          "key": "schedule:I/section:24",
+          "citation": "Goa-IDC Transfer & Sub-Lease Regulations, 2014 - In exercise of the powers conferred by clause (d) of sub-section (1) of section 51 of the Goa Industrial Development Corporation Act, 1965, the Goa Industrial Development Corporation, with prior approval of the Government, hereby make the following regulations, reg. 24",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "24"
+            }
+          ],
+          "char_start": 28522,
+          "char_end": 29096,
+          "page_start": 10,
+          "page_end": 10,
+          "text_sha256": "78cd4c099496ad0a176a153b0f8524f4d22d483d93e5893d38758c2433301589",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "To the Grievance Redressal Authority appointed by the Board, which may recommend a remedy; the Board's decision is final, and the Managing Director acts until one is appointed.",
+  "required_facts": [
+    [
+      "Grievance Redressal Authority"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "goa-idc-transfer-sub-lease-regulations-2014-in-exercise-of-t__regulation-5c46303350",
+      "key": "schedule:I/section:24"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 574,
+    "number_ambiguity": 3431,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 395,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#395"
+  }
+}

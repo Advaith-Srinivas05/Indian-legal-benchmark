@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0331",
+  "question": "How many copies of an application for a compulsory licence to translate a book must be filed?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-copyright-rules-1958__rule-b7450e3f3d",
+          "key": "chapter:IV-A/section:11A",
+          "citation": "The Copyright Rules, 1958, r. 11A",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV-A"
+            },
+            {
+              "unit_type": "section",
+              "number": "11A"
+            }
+          ],
+          "char_start": 7766,
+          "char_end": 8110,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "66c707c0d6c54db387224132a31caac1d525c21acf10c619a03fc51c48c7a331",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It is made in triplicate in Form II-A with the prescribed fee.",
+  "required_facts": [
+    [
+      "triplicate"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-copyright-rules-1958__rule-b7450e3f3d",
+      "key": "chapter:IV-A/section:11A"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 344,
+    "number_ambiguity": 30,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 438,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#438"
+  }
+}

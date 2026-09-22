@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0307",
+  "question": "What is the lowest rank of officer who can sign off the anti-corruption watchdog's orders?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "central-vigilance-commission-procedure-for-transaction-and-a__regulation-dc59c69fc6",
+          "key": "chapter:IV/section:12",
+          "citation": "Central Vigilance Commission (Procedure for Transaction and Allocation of Business) Regulations, 2021, reg. 12",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 7648,
+          "char_end": 8210,
+          "page_start": 5,
+          "page_end": 5,
+          "text_sha256": "3894e44d44e1099fa3cd6b595db13d6d7881ce95c1631cff073140cfd34a01d3",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "An officer of the Commission not below the rank of an Under Secretary, authorised by the Chairperson.",
+  "required_facts": [
+    [
+      "Under Secretary"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "central-vigilance-commission-procedure-for-transaction-and-a__regulation-dc59c69fc6",
+      "key": "chapter:IV/section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 562,
+    "number_ambiguity": 5903,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 369,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#369"
+  }
+}

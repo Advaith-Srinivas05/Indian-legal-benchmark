@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0335",
+  "question": "In Maharashtra, into which income brackets does the housing authority sort people when disposing of land?",
+  "category": "jurisdictional",
+  "answer_type": "list",
+  "jurisdiction_hint": "Maharashtra",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-maharashtra-housing-and-area-development-disposal-of-lan__regulation-db06519097",
+          "key": "section:4",
+          "citation": "The Maharashtra housing and Area Development (Disposal of Land) Regulations, 1982, reg. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 6988,
+          "char_end": 7650,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "d96772c629c5804b0565aae04902dec771d554c113eeac9a67b9d920318a5e59",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Economically Weaker, Low Income, Middle Income and High Income groups.",
+  "required_facts": [
+    [
+      "Economically Weaker"
+    ],
+    [
+      "High Income Group"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-maharashtra-housing-and-area-development-disposal-of-lan__regulation-db06519097",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 662,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 350,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#350"
+  }
+}

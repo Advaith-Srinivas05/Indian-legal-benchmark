@@ -1,0 +1,75 @@
+{
+  "question_id": "IN-STAT-0336",
+  "question": "When did the Standards of Quality of Service (Broadcasting and Cable Services) (Cable Television – Non-CAS Areas) Regulations, 2009 come into force?",
+  "category": "provision_lookup",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "standards-of-quality-of-service-broadcasting-and-cable-servi__regulation-82621958e0",
+          "key": "part:III/chapter:I/section:1",
+          "citation": "Standards of Quality of Service (Broadcasting and Cable Services) (Cable Television – Non-CAS Areas) Regulations, 2009., reg. 1",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "I"
+            },
+            {
+              "unit_type": "section",
+              "number": "1"
+            }
+          ],
+          "char_start": 1176,
+          "char_end": 1750,
+          "page_start": 1,
+          "page_end": 2,
+          "text_sha256": "41a6b3fe4827ba46a515c88c9c88550db269845d7bcc739ad2d92f315fe88d52",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "On the 1st day of April, 2009.",
+  "required_facts": [
+    [
+      "1st day of April, 2009"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "standards-of-quality-of-service-broadcasting-and-cable-servi__regulation-82621958e0",
+      "key": "part:III/chapter:I/section:1"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 574,
+    "number_ambiguity": 10253,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 353,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#353"
+  }
+}

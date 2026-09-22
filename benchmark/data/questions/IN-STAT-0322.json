@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0322",
+  "question": "In Tamil Nadu, who reviews a Collector's order on the use of village common land, and where does a further challenge go?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Tamil Nadu",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-tamil-nadu-panchayat-restriction-and-control-to-regulate__rule-e38ffe0d53",
+          "key": "section:10",
+          "citation": "The Tamil Nadu Panchayat (Restriction and Control to regulate the use of Porambokes in Ryotwari Tracts) Rules, 2000, r. 10",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "10"
+            }
+          ],
+          "char_start": 5637,
+          "char_end": 5870,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "aed720ee36566311f95ac505eea9280272a47f51e30e79a9001ea250b57c830f",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A revision lies to the Commissioner of Land Administration, and a second revision to the Government.",
+  "required_facts": [
+    [
+      "Commissioner of Land Administration"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-tamil-nadu-panchayat-restriction-and-control-to-regulate__rule-e38ffe0d53",
+      "key": "section:10"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 233,
+    "number_ambiguity": 6559,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 409,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#409"
+  }
+}

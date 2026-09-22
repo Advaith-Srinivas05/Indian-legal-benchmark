@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0330",
+  "question": "Where does money collected as fines for polluting rivers end up?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "g-s-r-696-e-the-water-prevention-and-control-of-pollution-ma__rule-9e30a01027",
+          "key": "section:7",
+          "citation": "G.S.R. 696(E) The Water (Prevention and Control of Pollution) (Manner of Holding Inquiry and Imposition of Penalty) Rules, 2024., r. 7",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 5841,
+          "char_end": 9505,
+          "page_start": 7,
+          "page_end": 8,
+          "text_sha256": "4452a6b89fa96daccd5df82b82f83f501b576f4722cf0a6f4a218c1f544f9cbe",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "It is credited to the Environment Protection Fund.",
+  "required_facts": [
+    [
+      "Environment Protection Fund"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "g-s-r-696-e-the-water-prevention-and-control-of-pollution-ma__rule-9e30a01027",
+      "key": "section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3664,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 437,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#437"
+  }
+}

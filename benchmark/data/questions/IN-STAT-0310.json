@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0310",
+  "question": "In Jharkhand, who presides over the power regulator's hearings when its head cannot attend?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Jharkhand",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "jharkhand-electricity-regulatory-commission-conduct-of-busin__regulation-6b731ae95a",
+          "key": "chapter:II/section:13",
+          "citation": "Jharkhand Electricity Regulatory Commission-Conduct of Business Regulations, 2003, reg. 13",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "13"
+            }
+          ],
+          "char_start": 10074,
+          "char_end": 10522,
+          "page_start": 4,
+          "page_end": 4,
+          "text_sha256": "a57f2d525c07f5abb84a775200faa1f4092e9224efd0ff342c779164de9b9296",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A member nominated by the Chairman; failing a nomination or if there is no Chairman, a member chosen by the members present.",
+  "required_facts": [
+    [
+      "nominated by the Chairman"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "jharkhand-electricity-regulatory-commission-conduct-of-busin__regulation-6b731ae95a",
+      "key": "chapter:II/section:13"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 448,
+    "number_ambiguity": 5702,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 378,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#378"
+  }
+}

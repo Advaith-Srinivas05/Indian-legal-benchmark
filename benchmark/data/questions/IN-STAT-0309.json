@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0309",
+  "question": "In Himachal Pradesh, how are grid-use fees fixed for consumers buying power from other suppliers for short periods?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Himachal Pradesh",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-himachal-pradesh-electricity-regulatory-commission-short__regulation-c9c578d196",
+          "key": "schedule:_/section:16",
+          "citation": "The  Himachal Pradesh Electricity Regulatory Commission (Short Term Open Access)  Regulations, 2010, reg. 16",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "16"
+            }
+          ],
+          "char_start": 18472,
+          "char_end": 18815,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "216ab0f01161ff9a8e0b5fe1d72d294416ddc75c3998805ddcd47a70c96c5b77",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Transmission charges at par with the long-term transmission charges determined by the Commission.",
+  "required_facts": [
+    [
+      "at par"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-himachal-pradesh-electricity-regulatory-commission-short__regulation-c9c578d196",
+      "key": "schedule:_/section:16"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 343,
+    "number_ambiguity": 5029,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 371,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#371"
+  }
+}

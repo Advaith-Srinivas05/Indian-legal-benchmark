@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0312",
+  "question": "What details must the energy-rating sticker on a storage geyser show?",
+  "category": "situational",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "bureau-of-energy-efficiency-particulars-and-manner-of-their__regulation-0fb6d4a618",
+          "key": "section:3",
+          "citation": "Bureau of Energy Efficiency (Particulars and Manner of their Display on Labels of Stationary Storage Type Electric Water Heater) Regulations, 2016, reg. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 7225,
+          "char_end": 7819,
+          "page_start": 23,
+          "page_end": 23,
+          "text_sha256": "dc376f2b5cda0e3c311091a7b1dd04eda3f497e539a017143884e68850057726",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The BEE logo, equipment, brand, model and year, rated capacity, rated input power, standing loss, label period, star level and a unique series code.",
+  "required_facts": [
+    [
+      "standing loss"
+    ],
+    [
+      "star level"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bureau-of-energy-efficiency-particulars-and-manner-of-their__regulation-0fb6d4a618",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 594,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 382,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#382"
+  }
+}

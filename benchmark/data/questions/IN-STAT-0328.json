@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0328",
+  "question": "In Gujarat, what document does a shop owner get back after notifying the authorities of their establishment?",
+  "category": "jurisdictional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": "Gujarat",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-gujarat-shops-and-establishments-regulation-of-employmen__rule-899c7a248a",
+          "key": "part:IV-B/section:7",
+          "citation": "The Gujarat Shops and Establishments (Regulation of Employment and Conditions of Service) Rules, 2020, r. 7",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "IV-B"
+            },
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 5742,
+          "char_end": 6057,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "b815bd00d8113b1afe655200d0d02e108656c8a7c5d4055bc76806b0aa1e49d1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A receipt of the intimation in Form-E, issued online or otherwise and recorded in a register in Form-F.",
+  "required_facts": [
+    [
+      "Form-E"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-gujarat-shops-and-establishments-regulation-of-employmen__rule-899c7a248a",
+      "key": "part:IV-B/section:7"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 315,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 431,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#431"
+  }
+}

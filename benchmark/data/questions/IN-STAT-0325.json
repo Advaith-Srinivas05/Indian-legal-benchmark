@@ -1,0 +1,70 @@
+{
+  "question_id": "IN-STAT-0325",
+  "question": "By what routes can someone enter India's elite national police cadre?",
+  "category": "situational",
+  "answer_type": "list",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "indian-police-service-recruitment-rules-1954__rule-b5c631ff24",
+          "key": "section:4",
+          "citation": "Indian Police Service (Recruitment) Rules, 1954, r. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 2820,
+          "char_end": 4963,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "253785eb806865ae3d957eb4251189c5dfcee3d473a8b6086c70eb9cb1341cba",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "By a competitive examination, or by promotion of substantive members of a State Police Service.",
+  "required_facts": [
+    [
+      "competitive examination"
+    ],
+    [
+      "promotion"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "indian-police-service-recruitment-rules-1954__rule-b5c631ff24",
+      "key": "section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2143,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 422,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#422"
+  }
+}

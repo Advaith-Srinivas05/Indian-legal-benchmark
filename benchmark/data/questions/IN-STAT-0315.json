@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0315",
+  "question": "In Karnataka, after the court on encroached land rules, who actually takes back the land?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-karnataka-land-grabbing-prohibition-special-court-regula__regulation-d2fef92fd9",
+          "key": "section:39",
+          "citation": "The Karnataka Land Grabbing Prohibition (Special Court) Regulations, 2017, reg. 39",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "39"
+            }
+          ],
+          "char_start": 26759,
+          "char_end": 28781,
+          "page_start": 11,
+          "page_end": 11,
+          "text_sha256": "e38a251d4d1ae55436a30e43e9ffbb9a3b76148968261866dad88d4dc37f97dc",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Tahsildar or authorised officer deputes an officer not below the rank of Revenue Inspector to take possession and deliver it to the person the Court ordered.",
+  "required_facts": [
+    [
+      "Revenue Inspector"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-karnataka-land-grabbing-prohibition-special-court-regula__regulation-d2fef92fd9",
+      "key": "section:39"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2022,
+    "number_ambiguity": 1941,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 392,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#392"
+  }
+}

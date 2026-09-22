@@ -1,0 +1,75 @@
+{
+  "question_id": "IN-STAT-0308",
+  "question": "Can the bank that holds the national retirement scheme's money hand over subscriber data to others at will?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "pension-fund-regulatory-and-development-authority-trustee-ba__regulation-837b9e41af",
+          "key": "part:III/chapter:VII/section:38",
+          "citation": "Pension Fund Regulatory and Development Authority (Trustee Bank) Regulations, 2015, reg. 38",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "chapter",
+              "number": "VII"
+            },
+            {
+              "unit_type": "section",
+              "number": "38"
+            }
+          ],
+          "char_start": 49446,
+          "char_end": 49826,
+          "page_start": 28,
+          "page_end": 28,
+          "text_sha256": "414a63150ed61f91d8f3dad11a35ec4e30533bbdbc6a2d6730acbd342bbf69c7",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. It must keep absolute confidentiality and cannot share data without the Authority's prior permission, except as required by due process of law.",
+  "required_facts": [
+    [
+      "prior permission"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "pension-fund-regulatory-and-development-authority-trustee-ba__regulation-837b9e41af",
+      "key": "part:III/chapter:VII/section:38"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 380,
+    "number_ambiguity": 2035,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 370,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#370"
+  }
+}

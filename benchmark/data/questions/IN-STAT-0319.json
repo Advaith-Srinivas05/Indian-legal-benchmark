@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0319",
+  "question": "Where are the papers companies file with the government stored?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "chapter-xxiv-the-companies-registration-offices-and-fees-rul__rule-b3f750f607",
+          "key": "part:II/section:9",
+          "citation": "Chapter XXIV - The Companies (Registration Offices and Fees) Rules, 2014., r. 9",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "9"
+            }
+          ],
+          "char_start": 26612,
+          "char_end": 28267,
+          "page_start": 28,
+          "page_end": 28,
+          "text_sha256": "0c16232819edaf359e8f44a1eb7de4e4c31b708bc28ec5ced12b5a70770e4180",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "In a secure electronic registry set up and maintained by the Central Government.",
+  "required_facts": [
+    [
+      "electronic registry"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "chapter-xxiv-the-companies-registration-offices-and-fees-rul__rule-b3f750f607",
+      "key": "part:II/section:9"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1655,
+    "number_ambiguity": 6389,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 401,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#401"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0306",
+  "question": "Who must approve the body conducting postgraduate pharmacy examinations?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-master-of-pharmacy-course-regulation-2014__regulation-5d0a13c99a",
+          "key": "part:III/section:17",
+          "citation": "The Master of Pharmacy Course Regulation, 2014, reg. 17",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "17"
+            }
+          ],
+          "char_start": 22060,
+          "char_end": 22443,
+          "page_start": 7,
+          "page_end": 7,
+          "text_sha256": "49d75ac0e0023e1c7a3e9025ddb34569efe88616099ed7fcb682bf1f37e259f1",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Pharmacy Council of India, which approves the examining authority only if it fulfils the conditions in Appendix-B.",
+  "required_facts": [
+    [
+      "Pharmacy Council of India"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-master-of-pharmacy-course-regulation-2014__regulation-5d0a13c99a",
+      "key": "part:III/section:17"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 383,
+    "number_ambiguity": 4728,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 366,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#366"
+  }
+}

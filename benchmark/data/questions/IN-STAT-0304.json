@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0304",
+  "question": "For officers of Uttar Pradesh's state bus company, can short casual days off be tacked onto another kind of leave?",
+  "category": "jurisdictional",
+  "answer_type": "boolean",
+  "jurisdiction_hint": "Uttar Pradesh",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-uttar-pradesh-state-road-transport-corporation-officers__regulation-e1e6044a4c",
+          "key": "part:III/section:37",
+          "citation": "The Uttar Pradesh State Road Transport Corporation  Officers Service Regulations, 1998 as Amended, reg. 37",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "37"
+            }
+          ],
+          "char_start": 61753,
+          "char_end": 61928,
+          "page_start": 23,
+          "page_end": 23,
+          "text_sha256": "dc475e3f4a5dfa836e31e619a369d741fb84438d3fb3485ea8a2a808a8555a09",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. Casual Leave cannot be combined with any other leave, and it lapses at the close of the calendar year.",
+  "required_facts": [
+    [
+      "not be combined"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-uttar-pradesh-state-road-transport-corporation-officers__regulation-e1e6044a4c",
+      "key": "part:III/section:37"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 175,
+    "number_ambiguity": 2113,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 335,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#335"
+  }
+}

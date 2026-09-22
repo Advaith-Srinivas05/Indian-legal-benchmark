@@ -1,0 +1,93 @@
+{
+  "question_id": "IN-STAT-0317",
+  "question": "What basic standards must promotional statements about food meet?",
+  "category": "situational",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "food-safety-and-standards-advertising-and-claims-regulation__regulation-bdc4428334",
+          "key": "part:III/section:4",
+          "citation": "Food Safety and Standards (Advertising and Claims) Regulation, 2018, reg. 4",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 18827,
+          "char_end": 21332,
+          "page_start": 22,
+          "page_end": 22,
+          "text_sha256": "37a996546e6ee1200373833aceba4c5c562fb8415fe7698d894c047b6b8495fe",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "the-food-safety-and-standards-advertisements-and-claims-regu__regulation-cf9a85b891",
+          "key": "part:III/section:4",
+          "citation": "The Food Safety and Standards (Advertisements and Claims) Regulations, 2018, reg. 4",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 18827,
+          "char_end": 21332,
+          "page_start": 22,
+          "page_end": 22,
+          "text_sha256": "37a996546e6ee1200373833aceba4c5c562fb8415fe7698d894c047b6b8495fe",
+          "evidence_confidence": "high",
+          "source": "same_instrument_equivalent"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "They must be truthful, unambiguous, meaningful and not misleading, must not encourage excess consumption, and must not imply a varied diet cannot supply nutrients.",
+  "required_facts": [
+    [
+      "truthful"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "food-safety-and-standards-advertising-and-claims-regulation__regulation-bdc4428334",
+      "key": "part:III/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2505,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 2,
+    "equivalents": 1,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 396,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#396"
+  }
+}

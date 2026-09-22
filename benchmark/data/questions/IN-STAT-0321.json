@@ -1,0 +1,74 @@
+{
+  "question_id": "IN-STAT-0321",
+  "question": "In Karnataka, what must happen before a government employee is given a minor punishment?",
+  "category": "jurisdictional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": "Karnataka",
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "karnataka-civil-services-classification-control-and-appeal-r__rule-4562f219f5",
+          "key": "part:IV/section:12",
+          "citation": "Karnataka Civil Services (Classification, Control and Appeal) Rules, 1957., r. 12",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "IV"
+            },
+            {
+              "unit_type": "section",
+              "number": "12"
+            }
+          ],
+          "char_start": 45633,
+          "char_end": 47381,
+          "page_start": 28,
+          "page_end": 29,
+          "text_sha256": "7a4a5a6cac91f77cdfc3a993653ec18b97a99fc8baca1b109431915e580ab379",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "He must be informed in writing of the proposal and the imputations and given a reasonable opportunity to make a representation, with an inquiry where required.",
+  "required_facts": [
+    [
+      "informing the Government servant in writing"
+    ],
+    [
+      "representation"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "karnataka-civil-services-classification-control-and-appeal-r__rule-4562f219f5",
+      "key": "part:IV/section:12"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 1748,
+    "number_ambiguity": 5903,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 408,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#408"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "question_id": "IN-STAT-0326",
+  "question": "Can an app let users verify themselves with Aadhaar to create a digital health ID?",
+  "category": "situational",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "the-unique-health-identifier-rules-2021__rule-5cffcbe2bc",
+          "key": "section:3",
+          "citation": "The Unique Health Identifier Rules, 2021, r. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 2431,
+          "char_end": 2919,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "9fcb11c15dcee2fd14e24c9902e6ec8e51a78b8ef155ee0fb61918c5cd977eee",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. Entities may allow voluntary Aadhaar authentication as one option for creating a health ID, subject to the applicable regulations.",
+  "required_facts": [
+    [
+      "voluntary"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "the-unique-health-identifier-rules-2021__rule-5cffcbe2bc",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 488,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 423,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#423"
+  }
+}

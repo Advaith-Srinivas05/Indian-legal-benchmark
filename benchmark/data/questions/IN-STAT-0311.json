@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0311",
+  "question": "When India's largest public-sector lender issues preference shares, whose guidelines must it follow?",
+  "category": "situational",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "state-bank-of-india-general-amendment-regulations-2013__regulation-6a6bb8a628",
+          "key": "part:III/section:3B",
+          "citation": "State Bank of India General (Amendment) Regulations, 2013, reg. 3B",
+          "unit_path": [
+            {
+              "unit_type": "part",
+              "number": "III"
+            },
+            {
+              "unit_type": "section",
+              "number": "3B"
+            }
+          ],
+          "char_start": 6671,
+          "char_end": 7068,
+          "page_start": 18,
+          "page_end": 18,
+          "text_sha256": "de9ecea5e8e73cd7e846f3ca84b9ed6c521a2fb0e16fdcba94aebea2d42282bc",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Guidelines framed by the Reserve Bank; other capital issues follow the Central Board's procedure with reference to SEBI regulations.",
+  "required_facts": [
+    [
+      "Reserve Bank"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "state-bank-of-india-general-amendment-regulations-2013__regulation-6a6bb8a628",
+      "key": "part:III/section:3B"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 397,
+    "number_ambiguity": 39,
+    "title_collisions": 3,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 380,
+    "tags": [],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#380"
+  }
+}
