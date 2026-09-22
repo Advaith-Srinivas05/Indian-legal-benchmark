@@ -1,0 +1,132 @@
+{
+  "question_id": "IN-STAT-0486",
+  "question": "Someone already convicted of burning the national flag is later convicted of disrupting the national anthem. What is the minimum sentence?",
+  "category": "cross_reference",
+  "answer_type": "numeric",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "prevention-of-insults-to-national-honour-act-1971__handle-15401",
+          "key": "section:3",
+          "citation": "PREVENTION OF INSULTS TO NATIONAL HONOUR ACT, 1971, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 3718,
+          "char_end": 4346,
+          "page_start": 3,
+          "page_end": 3,
+          "text_sha256": "6b52f6933689d6631986a73866c308c919a33df126910486c05cf87d78519f20",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        },
+        {
+          "document_id": "prevention-of-insults-to-national-honour-act-1971__handle-1578",
+          "key": "schedule:_/section:3",
+          "citation": "Prevention of Insults to National Honour Act, 1971, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "schedule",
+              "number": null
+            },
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 4415,
+          "char_end": 6174,
+          "page_start": 5,
+          "page_end": 6,
+          "text_sha256": "e9b068638aeb637bdde5885b1295f07e3e107a5e36a3f6b598c1681cdeb1a393",
+          "evidence_confidence": "high",
+          "source": "same_instrument_version"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "prevention-of-insults-to-national-honour-act-1971__handle-15401",
+          "key": "section:2",
+          "citation": "PREVENTION OF INSULTS TO NATIONAL HONOUR ACT, 1971, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 724,
+          "char_end": 3717,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "97472e64852db2b35befc33d2a1bacdb62ec70976bd436c04a58d923c5075def",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Imprisonment for not less than one year, since a second conviction under either the flag-insult or the anthem offence attracts the enhanced penalty.",
+  "required_facts": [
+    [
+      "not be less than one year"
+    ],
+    [
+      "National Flag"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "prevention-of-insults-to-national-honour-act-1971__handle-15401",
+      "key": "section:3"
+    },
+    {
+      "document_id": "prevention-of-insults-to-national-honour-act-1971__handle-15401",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 628,
+    "number_ambiguity": 9183,
+    "title_collisions": 3,
+    "cluster_size": 2,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 610,
+    "tags": [
+      "numeric",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#610",
+    "alternatives_decided": [
+      {
+        "document_id": "prevention-of-insults-to-national-honour-act-1971__handle-1578",
+        "key": "schedule:_/section:3",
+        "source": "same_instrument_version",
+        "included": true,
+        "reason": "states every required fact"
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "question_id": "IN-STAT-0483",
+  "question": "Which adjudicating body does Kerala's 2017 statute on extra recruitment-board duties mean when it says 'Tribunal'?",
+  "category": "definitional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "kerala-public-service-commission-additional-functions-as-res__handle-22294",
+          "key": "section:2",
+          "citation": "KERALA  PUBLIC  SERVICE  COMMISSION (ADDITIONAL  FUNCTIONS  AS  RESPECTS  THE  SERVICES UNDER  THE  KERALA  ADMINISTRATIVE  TRIBUNAL)  ACT, 2017, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 1439,
+          "char_end": 3771,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "7995f4a9d46a8fa7c3a57009071a2f5cabd606ef0a6d1232cbddf71c3da6cbd5",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The Kerala Administrative Tribunal constituted under section 4(2) of the Administrative Tribunals Act, 1985.",
+  "required_facts": [
+    [
+      "Kerala Administrative Tribunal"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "kerala-public-service-commission-additional-functions-as-res__handle-22294",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2332,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "rejected",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 687,
+    "tags": [
+      "definitional",
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#687",
+    "rejection_reason": "The definition is short and made of the Act's own terms; no paraphrase keeps the question meaningful under the 50% overlap limit."
+  }
+}

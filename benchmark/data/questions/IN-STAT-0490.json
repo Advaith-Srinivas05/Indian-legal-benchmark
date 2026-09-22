@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0490",
+  "question": "After Kerala scrapped the old Travancore-Cochin power surcharge law, what happened to surcharge arrears?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "travancore-cochin-electricity-supply-surcharge-repeal-act-19__handle-22331",
+          "key": "section:3",
+          "citation": "TRAVANCORE-COCHIN ELECTRICITY SUPPLY  SURCHARGE (REPEAL) ACT, 1971, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 878,
+          "char_end": 1489,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "207a24f66f92e549e8f6c46594309516e0ba42bf745639ff8a4dc224f3782f4e",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "travancore-cochin-electricity-supply-surcharge-repeal-act-19__handle-22331",
+          "key": "section:2",
+          "citation": "TRAVANCORE-COCHIN ELECTRICITY SUPPLY  SURCHARGE (REPEAL) ACT, 1971, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 772,
+          "char_end": 877,
+          "page_start": 2,
+          "page_end": 2,
+          "text_sha256": "d3765d5c617113a1942478d7b39100c2c33f88bcb4b5f8ed0387291411fc554a",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The 1955 Act was repealed, and surcharge collected or recoverable is credited to the Kerala State Electricity Board's revenue accounts as its own revenue.",
+  "required_facts": [
+    [
+      "1955"
+    ],
+    [
+      "Electricity Board"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "travancore-cochin-electricity-supply-surcharge-repeal-act-19__handle-22331",
+      "key": "section:3"
+    },
+    {
+      "document_id": "travancore-cochin-electricity-supply-surcharge-repeal-act-19__handle-22331",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 611,
+    "number_ambiguity": 9183,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 667,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#667"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "question_id": "IN-STAT-0484",
+  "question": "Under a 1975 Maharashtra statute that deferred farm mandi board polls, who is meant by an administrator?",
+  "category": "definitional",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "maharashtra-agricultural-produce-marketing-regulation-postpo__handle-19781",
+          "key": "section:2",
+          "citation": "Maharashtra  Agricultural Produce Marketing (Regulation) (Postponement of Elections during the Emergency) Act,  1975., s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 4564,
+          "char_end": 7685,
+          "page_start": 3,
+          "page_end": 4,
+          "text_sha256": "94a89c289c8182a72d66feb445990c4250b5df89ceb88d6d954b74cfa3b713a6",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "A person appointed under section 45(2) of the Marketing Regulation Act to carry out the functions of a Market Committee.",
+  "required_facts": [
+    [
+      "Market Committee"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "maharashtra-agricultural-produce-marketing-regulation-postpo__handle-19781",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 3121,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 723,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#723"
+  }
+}

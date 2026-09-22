@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0487",
+  "question": "Can Delhi's civic corporation send a property-tax bill by plain post, and to whom?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "delhi-municipal-corporation-act-1957__handle-15067",
+          "key": "chapter:XXII/section:445",
+          "citation": "DELHI MUNICIPAL CORPORATION ACT, 1957, s. 445",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XXII"
+            },
+            {
+              "unit_type": "section",
+              "number": "445"
+            }
+          ],
+          "char_start": 430310,
+          "char_end": 430864,
+          "page_start": 132,
+          "page_end": 132,
+          "text_sha256": "72d377fcc5bf81cc72d4c0dcb611dac9114c1c5baf506a24988eb4fe8911bb18",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "delhi-municipal-corporation-act-1957__handle-15067",
+          "key": "chapter:XXII/section:443",
+          "citation": "DELHI MUNICIPAL CORPORATION ACT, 1957, s. 443",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "XXII"
+            },
+            {
+              "unit_type": "section",
+              "number": "443"
+            }
+          ],
+          "char_start": 426577,
+          "char_end": 426931,
+          "page_start": 131,
+          "page_end": 131,
+          "text_sha256": "b343115b942d03cb5b9dd5939b2d61c3de615a2776dd6eb7756c5d810fc9f004",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "Yes. It may be sent by ordinary prepaid post under a certificate of posting to the appropriate person specified for service of notices, at his last known residence or business.",
+  "required_facts": [
+    [
+      "ordinary post"
+    ],
+    [
+      "certificate of posting"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "delhi-municipal-corporation-act-1957__handle-15067",
+      "key": "chapter:XXII/section:445"
+    },
+    {
+      "document_id": "delhi-municipal-corporation-act-1957__handle-15067",
+      "key": "chapter:XXII/section:443"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 554,
+    "number_ambiguity": 40,
+    "title_collisions": 2,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 680,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#680"
+  }
+}

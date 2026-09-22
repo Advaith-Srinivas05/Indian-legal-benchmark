@@ -1,0 +1,72 @@
+{
+  "question_id": "IN-STAT-0481",
+  "question": "In Himachal Pradesh's law regulating the pine gum trade, what counts as resin?",
+  "category": "definitional",
+  "answer_type": "extractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "sufficient",
+      "locations": [
+        {
+          "document_id": "himachal-pradesh-resin-and-resin-products-regulation-of-trad__handle-5707",
+          "key": "section:2",
+          "citation": "Himachal Pradesh Resin and Resin Products (Regulation of Trade) Act, 1981, s. 2",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "2"
+            }
+          ],
+          "char_start": 2371,
+          "char_end": 4980,
+          "page_start": 2,
+          "page_end": 3,
+          "text_sha256": "1b840b0f2cba6599544850004c403ef6917a70d1946c86d8b2b82ed3bb606976",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "The secretion extracted by tapping from Chir/Chil or Kail trees.",
+  "required_facts": [
+    [
+      "Chir"
+    ],
+    [
+      "Kail"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "himachal-pradesh-resin-and-resin-products-regulation-of-trad__handle-5707",
+      "key": "section:2"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 2609,
+    "number_ambiguity": 10555,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 811,
+    "tags": [
+      "definitional"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#811"
+  }
+}

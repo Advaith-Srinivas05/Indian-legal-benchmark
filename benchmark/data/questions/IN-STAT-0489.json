@@ -1,0 +1,100 @@
+{
+  "question_id": "IN-STAT-0489",
+  "question": "When Rajasthan abolished its tax tribunal in 1999, did penalties already incurred under the old law lapse?",
+  "category": "cross_reference",
+  "answer_type": "boolean",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "rajasthan-taxation-tribunal-repeal-act-1999__handle-18854",
+          "key": "section:4",
+          "citation": "rajasthan taxation tribunal (repeal) act, 1999, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 1062,
+          "char_end": 1632,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "17a155b036c35c6f30d15fcd184f846444ada0258a772b9e18778840e60476a9",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "rajasthan-taxation-tribunal-repeal-act-1999__handle-18854",
+          "key": "section:3",
+          "citation": "rajasthan taxation tribunal (repeal) act, 1999, s. 3",
+          "unit_path": [
+            {
+              "unit_type": "section",
+              "number": "3"
+            }
+          ],
+          "char_start": 919,
+          "char_end": 1061,
+          "page_start": 1,
+          "page_end": 1,
+          "text_sha256": "1aabc46635151ed8766a2242aca30e38eb86acf63278a4b2fd2f762403854e39",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. Repealing the Rajasthan Taxation Tribunal Act, 1995 does not affect any penalty, forfeiture or punishment already incurred, or pending proceedings.",
+  "required_facts": [
+    [
+      "Taxation Tribunal Act, 1995"
+    ],
+    [
+      "penalty"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "rajasthan-taxation-tribunal-repeal-act-1999__handle-18854",
+      "key": "section:4"
+    },
+    {
+      "document_id": "rajasthan-taxation-tribunal-repeal-act-1999__handle-18854",
+      "key": "section:3"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 570,
+    "number_ambiguity": 8272,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 688,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#688"
+  }
+}

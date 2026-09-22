@@ -1,0 +1,108 @@
+{
+  "question_id": "IN-STAT-0488",
+  "question": "Can a former member of Bengaluru's development authority who has since been declared insolvent be reappointed?",
+  "category": "cross_reference",
+  "answer_type": "abstractive",
+  "jurisdiction_hint": null,
+  "gold_evidence": [
+    {
+      "group_id": "g1",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "bangalore-development-authority-act-1976__handle-7903",
+          "key": "chapter:II/section:7",
+          "citation": "BANGALORE DEVELOPMENT AUTHORITY ACT, 1976, s. 7",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "7"
+            }
+          ],
+          "char_start": 39427,
+          "char_end": 39587,
+          "page_start": 20,
+          "page_end": 20,
+          "text_sha256": "6a2fd549b4a67676d276cc5c8fd6fcf503771a88641e3bb99eeae6f1a4f8cd44",
+          "evidence_confidence": "high",
+          "source": "sampled"
+        }
+      ]
+    },
+    {
+      "group_id": "g2",
+      "requirement": "required",
+      "locations": [
+        {
+          "document_id": "bangalore-development-authority-act-1976__handle-7903",
+          "key": "chapter:II/section:4",
+          "citation": "BANGALORE DEVELOPMENT AUTHORITY ACT, 1976, s. 4",
+          "unit_path": [
+            {
+              "unit_type": "chapter",
+              "number": "II"
+            },
+            {
+              "unit_type": "section",
+              "number": "4"
+            }
+          ],
+          "char_start": 35902,
+          "char_end": 37267,
+          "page_start": 18,
+          "page_end": 19,
+          "text_sha256": "d059c318ae4d9144555fada2684fb51915b997b5822f9d3100be425b981a5bbc",
+          "evidence_confidence": "high",
+          "source": "referenced"
+        }
+      ]
+    }
+  ],
+  "proposed_alternatives": [],
+  "gold_answer": "No. A former member is eligible for reappointment unless disqualified, and an undischarged insolvent is disqualified.",
+  "required_facts": [
+    [
+      "reappointment"
+    ],
+    [
+      "undischarged insolvent"
+    ]
+  ],
+  "must_cite": [
+    {
+      "document_id": "bangalore-development-authority-act-1976__handle-7903",
+      "key": "chapter:II/section:7"
+    },
+    {
+      "document_id": "bangalore-development-authority-act-1976__handle-7903",
+      "key": "chapter:II/section:4"
+    }
+  ],
+  "unanswerable": false,
+  "difficulty": {
+    "char_count": 160,
+    "number_ambiguity": 7124,
+    "title_collisions": 1,
+    "cluster_size": 1,
+    "equivalents": 0,
+    "cross_instrument_equivalents": false
+  },
+  "provenance": {
+    "status": "draft",
+    "sample": "sample-s20260922-n1000.json",
+    "sample_index": 697,
+    "tags": [
+      "cross_reference"
+    ],
+    "drafting_method": "language_model",
+    "verified_by": null,
+    "verified_at": null,
+    "verification_method": null,
+    "verification": {},
+    "ref": "sample-s20260922-n1000.json#697"
+  }
+}
