@@ -318,6 +318,25 @@ def main(argv: Optional[list[str]] = None) -> int:
                      help="Output HTML (default: <data-dir>/benchmark_build/review.html).")
     ver = asub.add_parser("verdicts", help="Apply a verifier's exported verdicts.json.")
     ver.add_argument("file", type=Path)
+    spl = sub.add_parser("split", help="Assign the public dev/test split (30/70, stratified).")
+    spl.add_argument("--seed", type=int, required=True)
+    spl.add_argument("--path", type=Path, default=None,
+                     help="Output split file (default: benchmark/data/splits/split-s<seed>.json).")
+    idx = sub.add_parser("index", help="Build the BM25 baseline index over the corpus.")
+    idx.add_argument("--path", type=Path, default=None,
+                     help="Index file (default: <data-dir>/benchmark_build/bm25.sqlite).")
+    idx.add_argument("--window", type=int, default=None)
+    idx.add_argument("--stride", type=int, default=None)
+    sco = sub.add_parser("score", help="Run a baseline over the question set and score it.")
+    sco.add_argument("--system", required=True, help="oracle | bm25-windows | bm25-two-stage")
+    sco.add_argument("--split", default="test", help="test | dev | all")
+    sco.add_argument("--split-file", type=Path, default=None)
+    sco.add_argument("--index", type=Path, default=None, help="BM25 index (for the BM25 baselines).")
+    sco.add_argument("--budgets", type=int, nargs="+", default=None)
+    sco.add_argument("--tau", type=float, default=None)
+    sco.add_argument("--report", type=Path, default=None, help="Write the JSON report here.")
+    sco.add_argument("--tuned-on-test", action="store_true",
+                     help="Record that this system was tuned on the test split.")
     sub.add_parser("verify", help="Re-check the published corpus files.")
     args = parser.parse_args(argv)
     out = args.out or args.data_dir / config.CORPUS_SUBDIR
@@ -391,6 +410,54 @@ def main(argv: Optional[list[str]] = None) -> int:
             print(f"{authoring.build_review_page(out, page)} questions on {page}")
             return 0
         print(json.dumps(authoring.apply_verdicts(args.file), indent=2))
+        return 0
+
+    if args.command == "split":
+        from . import splits
+        from .authoring import load_questions
+        from .questions import Corpus
+        questions = [q for q in load_questions() if q["provenance"]["status"] == "verified"]
+        path = args.path or splits.SPLITS_DIR / f"split-s{args.seed}.json"
+        record = splits.write_split(questions, path, seed=args.seed, corpus=Corpus(out))
+        print(json.dumps({k: v for k, v in record.items() if k != "assignment"}, indent=2))
+        print(f"wrote {path}")
+        return 0
+
+    if args.command == "index":
+        from .baselines.bm25 import STRIDE_CHARS, WINDOW_CHARS, build_index
+        path = args.path or build_dir / "bm25.sqlite"
+        report = build_index(out, path, window=args.window or WINDOW_CHARS,
+                             stride=args.stride or STRIDE_CHARS, progress=True)
+        print(json.dumps(report, indent=2))
+        print(f"wrote {path}")
+        return 0
+
+    if args.command == "score":
+        from . import baselines, score, splits
+        from .authoring import load_questions
+        from .questions import Corpus
+        verified = [q for q in load_questions() if q["provenance"]["status"] == "verified"]
+        split_file = args.split_file
+        if split_file is None and args.split != "all":
+            found = sorted(splits.SPLITS_DIR.glob("split-s*.json"))
+            if len(found) != 1:
+                print(f"specify --split-file: {len(found)} split files in {splits.SPLITS_DIR}")
+                return 1
+            split_file = found[0]
+        questions = splits.select(verified, split_file, args.split)
+        corpus = Corpus(out)
+        system = baselines.load(args.system, corpus_dir=out, questions=questions,
+                                index_path=args.index)
+        budgets = tuple(args.budgets) if args.budgets else score.DEFAULT_BUDGETS
+        print(f"running {system.name} over {len(questions)} questions at budgets {budgets}")
+        run = score.run_system(system, questions, budgets, progress=True)
+        report = score.score_run(questions, run, system=system.name, corpus_dir=out, corpus=corpus,
+                                 budgets=budgets, tau=args.tau or score.DEFAULT_TAU,
+                                 split=args.split, tuned_on_test=args.tuned_on_test)
+        print(score.format_report(report))
+        if args.report:
+            _write_atomic(args.report, _json(report))
+            print(f"wrote {args.report}")
         return 0
 
     result = verify_corpus(out)
