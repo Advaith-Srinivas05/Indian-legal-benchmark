@@ -298,8 +298,23 @@ def main(argv: Optional[list[str]] = None) -> int:
     smp = sub.add_parser("sample", help="Draw a seeded, stratified sample of gold candidates.")
     smp.add_argument("--seed", type=int, required=True)
     smp.add_argument("--size", type=int, default=config.DEFAULT_SAMPLE_SIZE)
+    smp.add_argument("--tag", help="Draw only provisions with this author tag (a top-up).")
+    smp.add_argument("--exclude-sample", type=Path, metavar="SAMPLE",
+                     help="Never draw an instrument or provision class already in this sample.")
     smp.add_argument("--verify", type=Path, metavar="SAMPLE",
                      help="Instead of drawing, check an existing sample against the corpus.")
+    author = sub.add_parser("author", help="Question authoring and verification.")
+    asub = author.add_subparsers(dest="author_command", required=True)
+    new = asub.add_parser("new", help="Draft a question skeleton from a sample row.")
+    new.add_argument("--sample", type=Path, required=True)
+    new.add_argument("--index", type=int, required=True)
+    new.add_argument("--category", required=True)
+    asub.add_parser("check", help="Validate every question.")
+    rev = asub.add_parser("review", help="Build the verification page.")
+    rev.add_argument("--page", type=Path, default=None,
+                     help="Output HTML (default: <data-dir>/benchmark_build/review.html).")
+    ver = asub.add_parser("verdicts", help="Apply a verifier's exported verdicts.json.")
+    ver.add_argument("file", type=Path)
     sub.add_parser("verify", help="Re-check the published corpus files.")
     args = parser.parse_args(argv)
     out = args.out or args.data_dir / config.CORPUS_SUBDIR
@@ -340,10 +355,31 @@ def main(argv: Optional[list[str]] = None) -> int:
             for p in problems[:50]:
                 print("  " + p)
             return 1 if problems else 0
-        path = write_sample(out, build_dir, seed=args.seed, size=args.size)
+        path = write_sample(out, build_dir, seed=args.seed, size=args.size, tag=args.tag,
+                            exclude_sample=args.exclude_sample)
         sample = json.loads(path.read_text(encoding="utf-8"))
         print(json.dumps(sample["by_category"], indent=2))
         print(f"wrote {len(sample['rows'])} candidates to {path}")
+        return 0
+
+    if args.command == "author":
+        from . import authoring
+        if args.author_command == "new":
+            q = authoring.new_draft(out, args.sample, args.index, args.category)
+            print(f"wrote {authoring.save_question(q)}")
+            return 0
+        if args.author_command == "check":
+            report = authoring.check(out)
+            print(json.dumps({k: v for k, v in report.items() if k != "problems"}, indent=2))
+            for qid, problems in report["problems"].items():
+                for p in problems:
+                    print(f"  {qid}: {p}")
+            return 1 if report["with_problems"] else 0
+        if args.author_command == "review":
+            page = args.page or build_dir / "review.html"
+            print(f"{authoring.build_review_page(out, page)} questions on {page}")
+            return 0
+        print(json.dumps(authoring.apply_verdicts(args.file), indent=2))
         return 0
 
     result = verify_corpus(out)
