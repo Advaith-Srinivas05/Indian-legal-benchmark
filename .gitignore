@@ -14,6 +14,7 @@ htmlcov/
 
 # Documentation and examples are kept out of the repository
 *.md
+!README.md
 /docs/
 /examples/
 
