@@ -449,3 +449,90 @@ def format_report(report: dict) -> str:
     lines.append(f"abstention (B={a['budget']}): unanswerable {a['abstention_rate']} "
                  f"/ false {a['false_abstention']}")
     return "\n".join(lines)
+
+
+# --- Command line ------------------------------------------------------------------------
+
+
+def add_arguments(parser) -> None:
+    """The ``score`` options, shared by the repository CLI and the copied-out kit."""
+    parser.add_argument("--system", help="A shipped baseline: oracle | bm25-windows | bm25-two-stage.")
+    parser.add_argument("--predictions", type=Path,
+                        help="A predictions JSON written by your own system (see benchmark/predictions.py).")
+    parser.add_argument("--corpus", type=Path, default=None,
+                        help="The published corpus directory (default: data/corpus).")
+    parser.add_argument("--questions", type=Path, default=None,
+                        help="Question directory (default: the one inside this package).")
+    parser.add_argument("--split", default="test", help="test | dev | all")
+    parser.add_argument("--split-file", type=Path, default=None)
+    parser.add_argument("--index", type=Path, default=None, help="BM25 index, for the BM25 baselines.")
+    parser.add_argument("--budgets", type=int, nargs="+", default=None)
+    parser.add_argument("--tau", type=float, default=None)
+    parser.add_argument("--report", type=Path, default=None, help="Write the JSON report here.")
+    parser.add_argument("--tuned-on-test", action="store_true",
+                        help="Record that this system was tuned on the test split.")
+
+
+def run(args) -> int:
+    """Score a baseline or a predictions file. Returns a process exit code."""
+    from . import splits
+    from .jsonio import dumps, write_atomic
+    from .questions import QUESTIONS_DIR, Corpus, load_questions
+
+    if bool(args.system) == bool(args.predictions):
+        print("give exactly one of --system (a shipped baseline) or --predictions (your own run)")
+        return 2
+
+    corpus_dir = Path(args.corpus) if args.corpus else Path("data") / config.CORPUS_SUBDIR
+    if not (corpus_dir / config.DOCUMENTS_FILENAME).exists():
+        print(f"no corpus at {corpus_dir} — pass --corpus")
+        return 2
+
+    verified = load_questions(args.questions or QUESTIONS_DIR, verified_only=True)
+    split_file = args.split_file
+    if split_file is None and args.split != "all":
+        found = sorted(splits.SPLITS_DIR.glob("split-s*.json"))
+        if len(found) != 1:
+            print(f"specify --split-file: {len(found)} split files in {splits.SPLITS_DIR}")
+            return 2
+        split_file = found[0]
+    questions = splits.select(verified, split_file, args.split)
+    budgets = tuple(args.budgets) if args.budgets else DEFAULT_BUDGETS
+    corpus = Corpus(corpus_dir)
+    answers = None
+
+    if args.predictions:
+        from . import predictions as predictions_module
+        loaded = predictions_module.load(args.predictions, questions, budgets)
+        name, run_spans, answers = loaded["system"], loaded["run"], loaded["answers"]
+        if loaded["split"] and loaded["split"] != args.split:
+            print(f"WARNING: the file says split {loaded['split']!r}, scoring {args.split!r}")
+        if loaded["missing"]:
+            print(f"WARNING: {len(loaded['missing'])} question(s) have no prediction and are "
+                  f"scored as abstentions, starting with {loaded['missing'][0]}")
+    else:
+        from . import baselines
+        system = baselines.load(args.system, corpus_dir=corpus_dir, questions=questions,
+                                index_path=args.index)
+        name = system.name
+        print(f"running {name} over {len(questions)} questions at budgets {budgets}")
+        run_spans = run_system(system, questions, budgets, progress=True)
+
+    report = score_run(questions, run_spans, system=name, corpus_dir=corpus_dir, corpus=corpus,
+                       answers=answers, budgets=budgets, tau=args.tau or DEFAULT_TAU,
+                       split=args.split, tuned_on_test=args.tuned_on_test)
+    print(format_report(report))
+    if args.report:
+        write_atomic(args.report, dumps(report))
+        print(f"wrote {args.report}")
+    return 0
+
+
+def main(argv: Optional[list[str]] = None) -> int:
+    """Standalone entry point: ``python -m benchmark score …`` in a copied-out kit."""
+    import argparse
+    parser = argparse.ArgumentParser(
+        prog="python -m benchmark score",
+        description="Score a RAG system against the IndiaStatRAG question set.")
+    add_arguments(parser)
+    return run(parser.parse_args(argv))

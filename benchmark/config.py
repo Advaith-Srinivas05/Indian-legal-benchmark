@@ -4,13 +4,23 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from processing import config as processing_config
-
 # --- Inputs ------------------------------------------------------------------------
 
-PROCESSED_SUBDIR = processing_config.PROCESSED_SUBDIR
-DOCUMENT_FILENAME = processing_config.DOCUMENT_FILENAME
-PAGES_FILENAME = processing_config.PAGES_FILENAME
+#: Where the corpus is built *from*. Only the build path reads these, so the
+#: import is optional: the scoring half of this package is copied into other
+#: projects, where ``processing`` does not exist. The fallbacks are checked
+#: against the real values by ``tests/test_benchmark_portable.py`` whenever
+#: ``processing`` is importable, so the two cannot drift apart unnoticed.
+try:
+    from processing import config as processing_config
+
+    PROCESSED_SUBDIR = processing_config.PROCESSED_SUBDIR
+    DOCUMENT_FILENAME = processing_config.DOCUMENT_FILENAME
+    PAGES_FILENAME = processing_config.PAGES_FILENAME
+except ModuleNotFoundError:                     # scoring only, package copied out
+    PROCESSED_SUBDIR = Path("processed") / "indiacode"
+    DOCUMENT_FILENAME = "document.json"
+    PAGES_FILENAME = "pages.json"
 INVENTORY_RELPATH = Path("discovery") / "indiacode_inventory.json"
 
 #: ``document.json`` / ``pages.json`` versions this package understands. A newer

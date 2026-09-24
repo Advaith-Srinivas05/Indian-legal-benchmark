@@ -62,6 +62,26 @@ _UNIT_ABBREVIATION = {"article": "art."}
 _CATEGORY_ABBREVIATION = {"rules": "r.", "regulations": "reg."}
 
 
+#: Where the published question set lives inside this package.
+QUESTIONS_DIR = Path(__file__).resolve().parent / "data" / "questions"
+
+
+def load_questions(directory: Path = QUESTIONS_DIR, *, verified_only: bool = False) -> list[dict]:
+    """Every question file, in id order.
+
+    Lives here rather than in :mod:`benchmark.authoring` so that scoring a
+    system needs nothing from the authoring tools.
+    """
+    directory = Path(directory)
+    if not directory.exists():
+        return []
+    questions = [json.loads(p.read_text(encoding="utf-8"))
+                 for p in sorted(directory.glob("IN-STAT-*.json"))]
+    if verified_only:
+        questions = [q for q in questions if q["provenance"]["status"] == "verified"]
+    return questions
+
+
 # --- Reading the corpus -------------------------------------------------------------
 
 

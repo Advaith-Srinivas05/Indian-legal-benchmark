@@ -24,7 +24,7 @@ from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 from typing import Iterable, Optional
 
-from . import config
+from . import config, jsonio
 from .canonical import build_canonical
 from .errors import BenchmarkError, NotEligibleError
 from .provenance import build_meta, load_inventory, load_raw_metadata, structure_record
@@ -42,19 +42,12 @@ def _paths(out_dir: Path, document_id: str) -> dict[str, Path]:
     }
 
 
-def _write_atomic(path: Path, content: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_name(path.name + ".tmp")
-    # newline="" — never translate "\n" to "\r\n" on Windows; offsets depend on it.
-    with open(tmp, "w", encoding="utf-8", newline="") as handle:
-        handle.write(content)
-    os.replace(tmp, path)
-
-
-def _json(obj, *, compact: bool = False) -> str:
-    if compact:
-        return json.dumps(obj, ensure_ascii=False, separators=(",", ":")) + "\n"
-    return json.dumps(obj, ensure_ascii=False, indent=2) + "\n"
+#: Defined in :mod:`benchmark.jsonio` — atomic, and ``newline=""`` so a platform
+#: cannot move the character offsets gold evidence depends on. They live there
+#: rather than here so the scoring half of the package, which people copy into
+#: their own projects, never has to import the corpus builder.
+_write_atomic = jsonio.write_atomic
+_json = jsonio.dumps
 
 
 def build_document(data_dir: Path, out_dir: Path, document_id: str,
@@ -327,16 +320,13 @@ def main(argv: Optional[list[str]] = None) -> int:
                      help="Index file (default: <data-dir>/benchmark_build/bm25.sqlite).")
     idx.add_argument("--window", type=int, default=None)
     idx.add_argument("--stride", type=int, default=None)
-    sco = sub.add_parser("score", help="Run a baseline over the question set and score it.")
-    sco.add_argument("--system", required=True, help="oracle | bm25-windows | bm25-two-stage")
-    sco.add_argument("--split", default="test", help="test | dev | all")
-    sco.add_argument("--split-file", type=Path, default=None)
-    sco.add_argument("--index", type=Path, default=None, help="BM25 index (for the BM25 baselines).")
-    sco.add_argument("--budgets", type=int, nargs="+", default=None)
-    sco.add_argument("--tau", type=float, default=None)
-    sco.add_argument("--report", type=Path, default=None, help="Write the JSON report here.")
-    sco.add_argument("--tuned-on-test", action="store_true",
-                     help="Record that this system was tuned on the test split.")
+    sco = sub.add_parser("score", help="Score a baseline or your own predictions file.")
+    from .score import add_arguments as add_score_arguments
+    add_score_arguments(sco)
+    exp = sub.add_parser("export", help="Copy the scoring kit into another project.")
+    exp.add_argument("--out", type=Path, required=True)
+    exp.add_argument("--with-corpus", action="store_true",
+                     help="Also copy the corpus text and meta (about 0.8 GB).")
     sub.add_parser("verify", help="Re-check the published corpus files.")
     args = parser.parse_args(argv)
     out = args.out or args.data_dir / config.CORPUS_SUBDIR
@@ -433,31 +423,14 @@ def main(argv: Optional[list[str]] = None) -> int:
         return 0
 
     if args.command == "score":
-        from . import baselines, score, splits
-        from .authoring import load_questions
-        from .questions import Corpus
-        verified = [q for q in load_questions() if q["provenance"]["status"] == "verified"]
-        split_file = args.split_file
-        if split_file is None and args.split != "all":
-            found = sorted(splits.SPLITS_DIR.glob("split-s*.json"))
-            if len(found) != 1:
-                print(f"specify --split-file: {len(found)} split files in {splits.SPLITS_DIR}")
-                return 1
-            split_file = found[0]
-        questions = splits.select(verified, split_file, args.split)
-        corpus = Corpus(out)
-        system = baselines.load(args.system, corpus_dir=out, questions=questions,
-                                index_path=args.index)
-        budgets = tuple(args.budgets) if args.budgets else score.DEFAULT_BUDGETS
-        print(f"running {system.name} over {len(questions)} questions at budgets {budgets}")
-        run = score.run_system(system, questions, budgets, progress=True)
-        report = score.score_run(questions, run, system=system.name, corpus_dir=out, corpus=corpus,
-                                 budgets=budgets, tau=args.tau or score.DEFAULT_TAU,
-                                 split=args.split, tuned_on_test=args.tuned_on_test)
-        print(score.format_report(report))
-        if args.report:
-            _write_atomic(args.report, _json(report))
-            print(f"wrote {args.report}")
+        from . import score as score_cli
+        args.corpus = args.corpus or out
+        return score_cli.run(args)
+
+    if args.command == "export":
+        from .export import export_kit
+        report = export_kit(args.out, corpus_dir=out if args.with_corpus else None)
+        print(json.dumps(report, indent=2))
         return 0
 
     result = verify_corpus(out)

@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import Optional, Sequence
 
 from . import config
-from .corpus import _json, _write_atomic
+from .jsonio import dumps, write_atomic
 from .questions import Corpus
 
 SPLIT_SCHEMA_VERSION = 1
@@ -89,7 +89,7 @@ def write_split(questions: Sequence[dict], path: Path, *, seed: int,
     }
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    _write_atomic(path, _json(record))
+    write_atomic(path, dumps(record))
     return record
 
 

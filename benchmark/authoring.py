@@ -33,6 +33,7 @@ QUESTIONS_DIR = config.SAMPLES_DIR.parent / "questions"
 
 
 def load_questions(directory: Path = QUESTIONS_DIR) -> list[dict]:
+    """Every question file, in id order (see :func:`benchmark.questions.load_questions`)."""
     directory = Path(directory)
     if not directory.exists():
         return []
